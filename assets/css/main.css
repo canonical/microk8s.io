@@ -107,6 +107,13 @@ a:focus {
   outline: 0;
 }
 
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus,
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: #eee;
+}
+
 a:before,
 a:after {
   -webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
@@ -182,7 +189,7 @@ i {
   margin-top: 60px;
   margin-bottom: 15px;
   color: white;
-  font-size: 65px;
+  font-size: 55px;
   font-weight: 300;
   letter-spacing: 1px;
 }
