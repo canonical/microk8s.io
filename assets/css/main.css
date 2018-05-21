@@ -66,33 +66,6 @@ span.faded {
   text-align: center;
 }
 
-@media (max-width: 767px) {
-  span.faded {
-    display: none;
-  }
-
-  #headerwrap hi {
-    font-size: 30px;
-    font-weight: bold;
-  }
-
-  #headerwrap {
-    min-height: 100px;
-    padding-top: 0;
-  }
-
-  .wide-only {
-    display: none;
-  }
-
-  .mobile-only {
-    display: block;
-  }
-
-  h1 {
-    font-size: 30px;
-  }
-}
 
 .mobile-only img {
   max-width: 320px;
@@ -213,4 +186,38 @@ i {
   font-size: 55px;
   font-weight: 300;
   letter-spacing: 1px;
+}
+
+@media (max-width: 767px) {
+  span.faded {
+    font-size: 55px;
+    display: block;
+    font-weight: normal;
+  }
+
+  #headerwrap h1 {
+    margin-top: 0;
+    font-weight: bold;
+  }
+
+  button.navbar-toggle {
+    display: none;
+  }
+
+  #headerwrap {
+    min-height: 100px;
+    padding-top: 0;
+  }
+
+  .wide-only {
+    display: none;
+  }
+
+  .mobile-only {
+    display: block;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
 }
