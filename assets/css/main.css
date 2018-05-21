@@ -17,6 +17,10 @@ h1, h2, h3, h4, h5, h6 {
   color: #333;
 }
 
+.mobile-only {
+  display: none;
+}
+
 h1 {
   font-size: 40px;
 }
@@ -51,6 +55,7 @@ pre, code {
 
 .p-logo-link img {
   max-width: 175px;
+  width: 100%;
 }
 
 span.faded {
@@ -75,6 +80,22 @@ span.faded {
     min-height: 100px;
     padding-top: 0;
   }
+
+  .wide-only {
+    display: none;
+  }
+
+  .mobile-only {
+    display: block;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+}
+
+.mobile-only img {
+  max-width: 320px;
 }
 
 /* Paragraph & Typographic */
