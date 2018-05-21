@@ -57,13 +57,6 @@ span.faded {
   opacity: 0.5;
 }
 
-#headerwrap h1.code:before {
-    content: '$';
-    padding-right: 10px;
-    margin-left: -35px;
-    opacity: 0.5;
-}
-
 #headerwrap h1 {
   text-align: center;
 }
@@ -189,7 +182,7 @@ i {
   margin-top: 60px;
   margin-bottom: 15px;
   color: white;
-  font-size: 45px;
+  font-size: 65px;
   font-weight: 300;
   letter-spacing: 1px;
 }
