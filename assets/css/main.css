@@ -68,6 +68,22 @@ span.faded {
   text-align: center;
 }
 
+@media (max-width: 767px) {
+  span.faded {
+    display: none;
+  }
+
+  #headerwrap hi {
+    font-size: 30px;
+    font-weight: bold;
+  }
+
+  #headerwrap {
+    min-height: 100px;
+    padding-top: 0;
+  }
+}
+
 /* Paragraph & Typographic */
 p {
     line-height: 28px;
