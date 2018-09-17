@@ -1,5 +1,6 @@
 {
   "scripts": {
+    "lint-nginx": "gixy nginx.conf",
     "build": "bundle exec jekyll build",
     "serve": "bundle exec jekyll serve -P ${PORT} -H 0.0.0.0",
     "clean": "rm -rf node_modules yarn-error.log css css *.log *.sqlite _site/ build/ .jekyll-metadata .bundle"

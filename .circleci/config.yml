@@ -1,0 +1,23 @@
+version: 2
+
+defaults: &defaults
+  docker:
+    - image: canonicalwebteam/dev
+
+jobs:
+  nginx-lint:
+    <<: *defaults
+    steps:
+      - checkout
+      - run:
+          name: Install gixy
+          command: pip3 install gixy
+      - run:
+          name: Lint nginx configuration files
+          command: yarn lint-nginx
+
+workflows:
+  version: 2
+  build:
+    jobs:
+      - nginx-lint
