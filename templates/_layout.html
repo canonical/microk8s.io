@@ -1,0 +1,113 @@
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr" itemscope itemtype="http://schema.org/Product">
+<head>
+
+  <title>{% block title %}{% endblock %} | Juju</title>
+
+  <meta charset="UTF-8" />
+  <meta name="description" content="{% block description %}{% endblock %}" />
+
+  <meta name="author" content="Canonical" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!--[if IE]>
+  <meta http-equiv="X-UA-Compatible" content="IE=8">
+  <![endif]-->
+
+  <link rel="shortcut icon" href="/static/img/favicon.ico" type="image/x-icon" />
+
+  <!-- google fonts -->
+  <link href='https://fonts.googleapis.com/css?family=Ubuntu:400,300,300italic,400italic,700,700italic%7CUbuntu+Mono' rel='stylesheet' type='text/css' />
+
+  <!-- stylesheets -->
+  <link rel="stylesheet" type="text/css" media="screen" href="/static/css/styles.css" />
+
+  <script>window.app = {utils: {}};</script>
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@ubuntucloud">
+  <meta name="twitter:creator" content="@ubuntucloud">
+  <meta name="twitter:domain" content="microk8s.io">
+  <meta name="twitter:title" content="microk8s">
+  <meta name="twitter:description" content="">
+  <meta name="twitter:image" content="">
+</head>
+
+<body>
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-K9KCMZ"
+height="0" width="0"
+style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-K9KCMZ');</script>
+<!-- End Google Tag Manager -->
+
+
+<header data-js="navigation" id="navigation" class="p-navigation">
+  <div class="p-navigation__banner">
+    <div class="p-navigation__logo">
+      <a class="p-navigation__link" href="/">
+        LOGO
+      </a>
+    </div>
+    <a href="#navigation" class="p-navigation__toggle--open" title="menu">Menu</a>
+    <a href="#navigation-closed" class="p-navigation__toggle--close" title="close menu">Close menu</a>
+  </div>
+  <nav class="p-navigation__nav" role="menubar">
+    <span class="u-off-screen">
+      <a href="#main-content">Jump to main content</a>
+    </span>
+
+    <ul class="p-navigation__links" role="menu">
+      <li class="p-navigation__link" role="menuitem"><a href="/">Homepage</a></li>
+    </ul>
+  </nav>
+</header>
+
+{% block content %}{% endblock content %}
+
+<script type="text/template" id="cookie-warning-template">
+  <div class="cookie-policy" style="position: fixed; bottom: 0; width: 100%;">
+    <div class="row">
+      <div class="col-12">
+      <div class="p-notification" id="notification">
+        <p class="p-notification__response">
+          We use cookies to improve your experience. By your continued use of this
+          site you accept such use. To change your settings please
+          <a href="http://www.ubuntu.com/legal/terms-and-policies/privacy-policy#cookies">
+            see our policy
+          </a>.
+        </p>
+        <a href="?cp=close" class="link-cta p-icon--close" aria-label="Close notification">Close</a>
+      </div>
+    </div>
+    </div>
+  </div>
+</script>
+
+<footer class="p-footer">
+  <div class="row">
+    <div class="col-8">
+        <div>&copy; 2018 Canonical Ltd. Ubuntu and Canonical are registered trademarks of Canonical Ltd.</div>
+        <ul class="p-footer__links">
+          <li class="p-footer__item">
+            <a class="p-footer__link p-link--external" href="https://www.ubuntu.com/legal">Legal Information</a>
+          </li>
+          <li class="p-footer__item">
+            <a class="p-footer__link" href="https://github.com/canonical-websites/microk8s.io/issues">Report a bug on this site</a>
+          </li>
+        </ul>
+        <nav class="p-footer__nav">
+          <span class="u-off-screen">
+            <a href="#">Go to the top of the page</a>
+          </span>
+        </nav>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

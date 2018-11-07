@@ -11,5 +11,3 @@ After [installing Docker](https://docs.docker.com/install/):
 ```
 
 And browse to http://127.0.0.1:8027.
-
-

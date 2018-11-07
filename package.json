@@ -1,8 +1,39 @@
 {
   "scripts": {
-    "lint-nginx": "gixy nginx.conf",
-    "build": "bundle exec jekyll build",
-    "serve": "bundle exec jekyll serve -P ${PORT} -H 0.0.0.0",
-    "clean": "rm -rf node_modules yarn-error.log css css *.log *.sqlite _site/ build/ .jekyll-metadata .bundle"
+    "lint-scss": "sass-lint static/**/*.scss --verbose --no-exit",
+    "build": "yarn run build-css",
+    "build-css": "node-sass --include-path node_modules static/sass --output static/css && postcss --use autoprefixer --replace 'static/css/**/*.css' && postcss --use cssnano --dir static/minified 'static/css/**/*.css'",
+    "serve": "./entrypoint 0.0.0.0:${PORT}",
+    "watch": "watch -p 'static/sass/**/*.scss' -p 'static/js/**/*.js' -c 'yarn run build'",
+    "watch-scss": "watch -p 'static/sass/**/*.scss' -c 'yarn run build-css'",
+    "clean": "rm -rf node_modules yarn-error.log css static/css *.log",
+    "test": "yarn run python-lint",
+    "python-lint": "flake8 webapp"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "**/*.py": [
+      "./run exec black --line-length 79",
+      "git add"
+    ],
+    "**/*.js": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "dependencies": {
+    "autoprefixer": "^6.3.1",
+    "cssnano": "^3.10.0",
+    "husky": "^1.0.0-rc.13",
+    "lint-staged": "^7.2.2",
+    "node-sass": "^4.5.3",
+    "postcss-cli": "^4.1.0",
+    "sass-lint": "^1.10.2",
+    "vanilla-framework": "1.8.0",
+    "watch-cli": "^0.2.2"
   }
 }
