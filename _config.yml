@@ -1,5 +1,0 @@
-baseurl: ""
-url: "https://microk8s.io"
-incremental: true
-exclude: ["node_modules", "Gemfile*", "package.json", "README.md", "run", "yarn.lock", "*.log", "gulp*", "vendor"]
-include: ["_status"]
