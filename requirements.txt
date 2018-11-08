@@ -1,5 +1,4 @@
 Flask==1.0.2
-gunicorn[gevent]
 raven[flask]==6.5.0
 statsd<3.3.0
 prometheus_client==0.3.1
