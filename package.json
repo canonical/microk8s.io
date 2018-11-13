@@ -7,6 +7,7 @@
     "build-js": "cp node_modules/global-nav/dist/index.js js/global-nav.js",
     "watch": "watch -p '_sass/**/*.scss' -c 'yarn run build'",
     "serve": "bundle exec jekyll serve -P ${PORT} -H 0.0.0.0",
+    "test": "yarn run lint-scss",
     "clean": "rm -rf node_modules yarn-error.log css css *.log *.sqlite _site/ build/ .jekyll-metadata .bundle"
   },
   "dependencies": {

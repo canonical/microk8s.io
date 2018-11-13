@@ -16,8 +16,20 @@ jobs:
           name: Lint nginx configuration files
           command: gixy nginx.conf
 
+  scss-lint:
+    <<: *defaults
+    steps:
+      - checkout
+      - run:
+          name: Install dependencies
+          command: yarn
+      - run:
+          name: Lint sass
+          command: yarn lint-scss
+
 workflows:
   version: 2
   build:
     jobs:
       - nginx-lint
+      - scss-lint
