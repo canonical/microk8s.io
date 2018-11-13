@@ -1,8 +1,23 @@
 {
   "scripts": {
-    "lint-nginx": "gixy nginx.conf",
-    "build": "bundle exec jekyll build",
+    "lint-scss": "sass-lint _sass/**/*.scss --verbose --no-exit",
+    "build": "yarn run build-css && yarn run build-jekyll",
+    "build-jekyll": "bundle exec jekyll build",
+    "build-css": "node-sass --include-path node_modules _sass --output css && postcss --use autoprefixer --replace css/**/*.css && postcss --use cssnano --dir css/minified css/**/*.css",
+    "build-js": "cp node_modules/global-nav/dist/index.js js/global-nav.js",
+    "watch": "watch -p '_sass/**/*.scss' -c 'yarn run build'",
     "serve": "bundle exec jekyll serve -P ${PORT} -H 0.0.0.0",
+    "test": "yarn run lint-scss",
     "clean": "rm -rf node_modules yarn-error.log css css *.log *.sqlite _site/ build/ .jekyll-metadata .bundle"
+  },
+  "dependencies": {
+    "vanilla-framework": "1.8.0",
+    "watch-cli": "^0.2.2",
+    "sass-lint": "^1.10.2",
+    "postcss-cli": "^4.1.0",
+    "node-sass": "^4.5.3",
+    "cssnano": "^3.10.0",
+    "autoprefixer": "^6.3.1",
+    "global-nav": "^1.1.1"
   }
 }
