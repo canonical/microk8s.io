@@ -1,4 +1,150 @@
 @charset 'utf-8';
 
+$color-brand: #326DE6;
+
 // import vanilla
 @import 'vanilla-framework/scss/build';
+
+.p-navigation {
+    background-color: #333333;
+    display: flex;
+    flex-shrink: 0;
+    position: relative; }
+    @media (max-width: 768px) {
+      .p-navigation {
+        flex-direction: column; } }
+    .p-navigation a,
+    .p-navigation a:visited,
+    .p-navigation a:hover,
+    .p-navigation a:focus {
+      color: #ffffff;
+      text-decoration: none; }
+    .p-navigation::after {
+      background: #333333;
+      bottom: 0;
+      content: '';
+      height: 0.0625rem;
+      left: 0;
+      position: absolute;
+      right: 0; }
+    .p-navigation__banner {
+      display: flex;
+      flex: 0 0 auto;
+      justify-content: space-between; }
+    .p-navigation__image {
+      align-self: center;
+      max-height: 2rem;
+      min-height: 1.5rem; }
+    .p-navigation__link > a {
+      display: block;
+      margin-bottom: 0;
+      position: relative; }
+      @media (max-width: 768px) {
+        .p-navigation__link > a {
+          padding: 0.75rem 1.5rem; }
+          .p-navigation__link > a::before {
+            background: #333333;
+            content: '';
+            height: 0.0625rem;
+            left: 0;
+            position: absolute;
+            right: 0;
+            top: 0; } }
+      @media (min-width: 769px) {
+        .p-navigation__link > a {
+          border-left: 0px solid #cdcdcd;
+          padding: 0.75rem 1rem; }
+          .p-navigation__link > a::before {
+            background: #ce2d2d;
+            bottom: 0;
+            content: '';
+            height: 0.0625rem;
+            left: 0;
+            position: absolute;
+            right: 0; } }
+      .p-navigation__link > a:hover {
+        background-color: #222222; }
+    @media (min-width: 769px) {
+      .p-navigation__link.is-selected > a {
+        position: relative; }
+        .p-navigation__link.is-selected > a::before {
+          bottom: 0;
+          background-color: #666;
+          content: '';
+          position: absolute; }
+        .p-navigation__link.is-selected > a::before {
+          height: 0.1875rem;
+          width: auto;
+          left: -1px;
+          right: -1px;
+          z-index: 1; } }
+    .p-navigation__links {
+      list-style: none;
+      margin: 0;
+      padding: 0; }
+      @media (max-width: 768px) {
+        .p-navigation__links {
+          margin-top: -1px; } }
+      @media (min-width: 769px) {
+        .p-navigation__links {
+          display: flex;
+          flex-wrap: wrap; } }
+    .p-navigation__logo {
+      display: flex;
+      flex: 0 0 auto;
+      height: 3rem;
+      margin: 0 1rem 0 0rem; }
+      .p-navigation__logo .p-navigation__link {
+        display: flex; }
+    .p-navigation__nav {
+      display: none; }
+      @media (max-width: 768px) {
+        .p-navigation__nav {
+          flex-direction: column; } }
+      @media (min-width: 769px) {
+        .p-navigation__nav {
+          display: flex;
+          justify-content: space-between;
+          width: 100%; } }
+    .p-navigation .p-search-box {
+      min-width: 10em; }
+      @media (max-width: 768px) {
+        .p-navigation .p-search-box {
+          flex: 1 0 auto;
+          margin: -1px 1.5rem 0.5rem 1.5rem;
+          order: -1; } }
+      @media (min-width: 769px) {
+        .p-navigation .p-search-box {
+          display: flex;
+          flex: 1 1 auto;
+          margin: 0.35rem 1rem auto auto;
+          max-width: 20rem;
+          order: 1; } }
+    .p-navigation__row,
+    .p-navigation .row {
+      display: flex;
+      padding-left: 0;
+      padding-right: 0;
+      width: 100%; }
+      @media (max-width: 768px) {
+        .p-navigation__row,
+        .p-navigation .row {
+          flex-direction: column; } }
+    .p-navigation:target .p-navigation__nav {
+      display: flex; }
+    .p-navigation:target .p-navigation__toggle--open {
+      display: none; }
+    @media (max-width: 768px) {
+      .p-navigation:target .p-navigation__toggle--close {
+        display: block; } }
+    .p-navigation__toggle--open, .p-navigation__toggle--close {
+      display: none;
+      margin: 0 1.5rem auto 1rem;
+      padding: 0.75rem 0; }
+    @media (max-width: 768px) {
+      .p-navigation__toggle--open {
+        display: block; } }
+    .p-navigation .u-image-position .u-image-position--right {
+      order: 2;
+      position: relative;
+      right: unset; }
