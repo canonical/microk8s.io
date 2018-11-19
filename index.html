@@ -134,49 +134,13 @@
       </div>
       </section>
 
-      <div class="p-strip--light is-bordered">
-          <div class="col-12">
-            <ul class="row u-align-center">
-              <li class="col-2 mobile-col-2 tablet-col-2">
-                <a href="https://snapcraft.io">
-                 <img src="https://assets.ubuntu.com/v1/35cbab33-2018-logo-snapcraft.svg" alt="Snapcraft">
-                </a>
-              </li>
-              <li class="col-2 mobile-col-2 tablet-col-2">
-                <a href="https://kubernetes.io">
-                 <img src="https://assets.ubuntu.com/v1/739ef86e-2018-logo-kubernetes.svg" alt="Kubernetes">
-                </a> 
-              </li>
-              <li class="col-2 mobile-col-2 tablet-col-2">
-                <a href="https://docs.snapcraft.io/t/installing-snap-on-ubuntu">  
-                 <img src="https://assets.ubuntu.com/v1/5a8a0172-2018-logo-ubuntu.svg" alt="Ubuntu">
-                </a> 
-              </li>
-              <li class="col-2 mobile-col-2 tablet-col-2">
-                <a href="https://docs.snapcraft.io/t/installing-snap-on-debian">
-                  <img src="https://assets.ubuntu.com/v1/02fa0e19-Debian_01.svg" alt="Debian">
-                </a>
-              </li>
-              <li class="col-2 mobile-col-2 tablet-col-2">
-                <a href="https://docs.snapcraft.io/t/installing-snap-on-debian">
-                  <img src="https://upload.wikimedia.org/wikipedia/sco/thumb/6/6c/RedHat.svg/1280px-RedHat.svg.png" alt="Debian">
-                </a>
-              </li>
-              <li class="col-2 mobile-col-2 tablet-col-2">
-               <a href="https://docs.snapcraft.io/t/installing-snap-on-fedora">  
-                 <img src="https://fedoraproject.org/w/uploads/2/2d/Logo_fedoralogo.png" alt="Fedora">
-               </a>
-            </ul>
-          </div>
-      </div>
-
       <section>
         <div class="p-strip is-bordered">
           <div class="row">
             <h2>Single node Kubernetes done right</h2>
             <h4>Zero-ops k8s on just about any Linux box.</h4>
             <p>It’s not elastic, but it is on rails. Use it for offline development, prototyping, testing, or use it on a VM as a small, cheap, reliable k8s for CI/CD. Makes a great k8s for appliances - develop your IoT apps for k8s and deploy them to microk8s on your boxes. Blaze away.</p>
-            <p><a class="p-button--brand" name="#quick-start" id="quick">Get started with microk8s</a></p>
+            <p><a class="p-button--brand" href="#quick-start" rel="" id="anchor1" class="anchorLink">Get started with microk8s</a></p>
         </div>
       </section>
 
@@ -263,30 +227,42 @@
         </div>
       </section>
 
-      <section><a name="quick-start"></a>
-        <div class="p-strip is-bordered">
-          <div class="row">
+      <section class="p-strip is-bordered"><a name="quick-start"></a>
+        <div class="row">
             <h2>Quick start</h2>
-            <div class="row col-8">
-                <h4>On Ubuntu 16.04 LTS or 18.04 LTS:</h4>
+            <h4>Install on Ubuntu 16.04 LTS or 18.04 LTS:</h4> 
+        </div>    
+        <div class="row u-equal-height">
+          <div class="col-8">
               <div class="p-code-snippet">
                 <input class="p-code-snippet__input" value="sudo snap install microk8s --classic" readonly="readonly">
                 <button class="p-code-snippet__action">Copy to clipboard</button>
               </div>
-              <div class="row">
-                <p>To install on other distributions use the <a href="https://snapcraft.io/docs/core/inststall" class="p-link--external">snapcraft docs.</a></p>
+              <p>To install on other distributions use the <a href="https://snapcraft.io/docs/core/inststall" class="p-link--external">snapcraft docs.</a></p>            
+          </div>
+          <div class="col-1">
+            <h4>Or</h4>
+          </div>
+          <div class="col-3">
+            <a href="https://snapcraft.io/microk8s" title="Get it from the Snap Store">
+              <img src="https://snapcraft.io/static/images/badges/en/snap-store-white.svg" alt="" />
+            </a>
+          </div>
+        </div>
+        <div class="row">
+            <hr>
+          <div class="row col-8">
+            <h4>For the current published versions:</h4>
+              <div class="p-code-snippet">
+                <input class="p-code-snippet__input" value="snap info microk8s" readonly="readonly">
+                <button class="p-code-snippet__action">Copy to clipboard</button>
               </div>
-              <hr>
-              <div class="row">
-                <h4>For the current published versions:</h4>
-                <div class="p-code-snippet">
-                    <input class="p-code-snippet__input" value="snap info microk8s" readonly="readonly">
-                    <button class="p-code-snippet__action">Copy to clipboard</button>
-                  </div>
-                <p>It is possible to select a specific version like 1.11 and get only stable or RC updates to that version. By default you will get the current major version (e.g. 1.12) with upgrades when new major versions are published.</p>
-              </div>
-            </div>
-          </div> 
+            <p>It is possible to select a specific version like 1.11 and get only stable or RC updates to that version. By default you will get the current major version (e.g. 1.12) with upgrades when new major versions are published.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="p-strip is-shallow is-bordered">
         <div class="p-strip is-shallow">
           <div class="row">
             <h2>Useful tips</h2>
@@ -302,7 +278,7 @@
           <div class="row col-8">
             <hr>
               <h4>Try a different version, or a beta, or a daily build</h4>
-              <p>Snaps are published in <i>channels</i> which are made up of a track (or major version), and an expected level of stability. Try <code>snap info microk8s</code> to see what versions are currently published. At the time of writing:</p>
+              <p>Snaps are published in <a href="https://docs.snapcraft.io/channels/551">channels</a> which are made up of a track (or major version), and an expected level of stability. Try <code>snap info microk8s</code> to see what versions are currently published. At the time of writing:</p>
               <div class="p-code-pre">
                 <pre><code>
                   channels:
