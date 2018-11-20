@@ -58,41 +58,22 @@
     </header>
   
     <main id="main-content">
-      <section class="p-strip--image is-dark is-deep u-image-position js-takeover p-improving-prod-takeover">
+      <section class="p-strip--light is-bordered">
         <div class="row u-equal-height u-vertically-center">
           <div class="col-8">
             <h1>Kubernetes for Workstations and Appliances</h1>
             <h4>A single package of k8s that installs on 42 flavours of Linux. Made for developers and great for appliances, microk8s is crisp, clean, upstream k8s that Just Works &#8482;</h4>
-            <p><a class="p-button--neutral" href="#quick-start" rel="" id="anchor1" class="anchorLink">Get started with microk8s</a></p>
+            <p>
+              <a href="https://snapcraft.io/microk8s" title="Get it from the Snap Store">
+              <img src="https://snapcraft.io/static/images/badges/en/snap-store-black.svg" alt="" />
+              </a>
+            </p>
+              <p><a class="p-button--neutral" href="#quick-start" rel="" id="anchor1" class="anchorLink">Get started with microk8s</a></p>
           </div>
             <div class="col-4">
               <img class="p-image-shadowed u-float-right" src="https://raw.githubusercontent.com/cncf/artwork/master/kubernetes/certified-kubernetes/versionless/color/certified-kubernetes-color.png?"  width="180">
             </div>  
         </div>
-        <style>
-          .p-improving-prod-takeover__image {
-            width: 240px;
-            height: 240px;
-          }
-      
-          @media screen and (max-width: 1365px) {
-            .p-improving-prod-takeover {
-              background-image: linear-gradient(74deg, #173D8B 0%, #326DE6 92%)
-            }
-          }
-      
-          @media screen and (min-width: 1366px) {
-            .p-improving-prod-takeover {
-              background-blend-mode: multiply;
-              background-image: url("https://assets.ubuntu.com/v1/c55b9357-suru-letf.png"),
-              url("https://assets.ubuntu.com/v1/335c5ed7-suru+right.png"),
-              linear-gradient(74deg, #173D8B 0%, #326DE6 92%);
-              background-position: bottom left, bottom right;
-              background-repeat: no-repeat;
-              background-size: contain;
-            }
-          }
-        </style>
       </section>
 
       <section class="p-strip is-shallow is-bordered">
@@ -134,7 +115,7 @@
             <h2>Single node Kubernetes done right</h2>
             <h4>Zero-ops k8s on just about any Linux box.</h4>
             <p>It’s not elastic, but it is on rails. Use it for offline development, prototyping, testing, or use it on a VM as a small, cheap, reliable k8s for CI/CD. Makes a great k8s for appliances - develop your IoT apps for k8s and deploy them to microk8s on your boxes. Blaze away.</p>
-            <p><a class="p-button--brand" href="#quick-start" rel="" id="anchor1" class="anchorLink">Get started with microk8s</a></p>
+            <p><a class="p-button--positive" href="#quick-start" rel="" id="anchor1" class="anchorLink">Get started with microk8s</a></p>
         </div>
       </section>
 
@@ -224,7 +205,7 @@
       <section class="p-strip is-bordered"><a name="quick-start"></a>
         <div class="row">
             <h2>Quick start</h2>
-            <h4>Install on Ubuntu 16.04 LTS or 18.04 LTS:</h4> 
+            <h4>Install on Ubuntu 16.04 LTS or 18.04 LTS</h4> 
         </div>    
         <div class="row u-equal-height">
           <div class="col-8">
@@ -234,19 +215,11 @@
               </div>
               <p>To install on other distributions use the <a href="https://snapcraft.io/docs/core/inststall" class="p-link--external">snapcraft docs.</a></p>            
           </div>
-          <div class="col-1">
-            <h4>Or</h4>
-          </div>
-          <div class="col-3">
-            <a href="https://snapcraft.io/microk8s" title="Get it from the Snap Store">
-              <img src="https://snapcraft.io/static/images/badges/en/snap-store-white.svg" alt="" />
-            </a>
-          </div>
         </div>
         <div class="row">
-            <hr>
           <div class="row col-8">
-            <h4>For the current published versions:</h4>
+            <hr>
+            <h4>For the current published versions</h4>
               <div class="p-code-snippet">
                 <input class="p-code-snippet__input" value="snap info microk8s" readonly="readonly">
                 <button class="p-code-snippet__action">Copy to clipboard</button>
