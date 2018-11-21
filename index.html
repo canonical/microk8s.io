@@ -1,227 +1,327 @@
 <!DOCTYPE html>
+
+<!--
+  This is a basic HTML file template to become the new homepage of the site.
+  Currently it simply includes Vanilla styles and not much else.
+
+  When you come to work on it in ernest, please remove this comment
+  and replace index.html with this file.
+-->
+
 <html lang="en">
-  <head>
-    <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-T5SMPTS');</script>
-<!-- End Google Tag Manager -->
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Install Kubernetes locally in under a minute">
-    <meta name="author" content="">
+<head>
+  <link rel="stylesheet" href="/css/styles.css" />
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:creator" content="@ubuntu" />
-    <meta name="twitter:title" content="microk8s - upstream kubernetes, installed locally." />
-    <meta name="twitter:description" content="The fastest way to install a local upstream @kubernetes cluster on your machine to play, test, and develop against Kubernetes">
-    <meta name="twitter:image" content="https://microk8s.io/assets/img/card.jpg">
+  <!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-T5SMPTS');</script>
+  <!-- End Google Tag Manager -->
+</head>
 
-    <meta property="og:title" content="microk8s - local upstream kubernetes">
-    <meta property="og:image" content="assets/img/kubee.png">
-    <meta property="og:description" content="Fastest way to get a secure upstream Kubernetes running locally.">
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T5SMPTS" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
 
-    <link rel="shortcut icon" href="assets/img/kubee.png">
-    <link rel="apple-touch-icon" href="assets/img/kubee.png">
+  <header id="navigation" class="p-navigation">
+    <div class="row">
+      <div class="p-navigation__banner u-vertically-center">
+        <p class="p-navigation__logo u-vertically-center u-align--center u-no-margin u-no-padding">
+          <a href="/">
+            microK8s
+          </a>
+        </p>
+        <a href="#navigation" class="p-navigation__toggle--open" title="menu">Menu</a>
+        <a href="#navigation-closed" class="p-navigation__toggle--close" title="close menu">Close menu</a>
+      </div>
+      <nav class="p-navigation__nav" role="menubar">
+        <span class="u-off-screen">
+          <a href="#main-content">Jump to main content</a>
+        </span>
+        <ul class="p-navigation__links" role="menu">
+          <li class="p-navigation__link" role="menuitem">
+            <a href="">Docs</a>
+          </li>
+          <li class="p-navigation__link" role="menuitem">
+            <a class="p-link--external" href="https://discuss.kubernetes.io/tags/microk8s">Discourse</a>
+          </li>
+          <li class="p-navigation__link" role="menuitem">
+            <a class="p-link--external" href="https://github.com/ubuntu/microk8s">Code</a>
+          </li>
+          <li class="p-navigation__link" role="menuitem">
+            <a class="p-link--external" href="https://github.com/ubuntu/microk8s/issues">Bugs</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-    <title>microk8s - Fast, Light, Upstream Developer Kubernetes</title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="assets/css/bootstrap.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link href="assets/css/main.css" rel="stylesheet">
-
-    <!-- Fonts from Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Ubuntu|Ubuntu+Mono" rel="stylesheet">
-
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-    <![endif]-->
-  </head>
-
-  <body>
-
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T5SMPTS"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-
-    <!-- Fixed navbar -->
-    <div class="navbar navbar-default navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#"><b>microk8s</b></a>
+  <main id="main-content">
+    <section class="p-strip--light is-bordered p-microk8s-hero">
+      <div class="row u-equal-height">
+        <div class="col-8">
+          <h1>Kubernetes for Workstations and Appliances</h1>
+          <h4>A single package of k8s that installs on 42 flavours of Linux. Made for developers and great for
+            appliances, Microk8s is crisp, clean, upstream k8s that Just Works &#8482;</h4>
+          <p class="p-microk8s-hero__link"><a class="p-button--positive" href="#quick-start" rel="" id="anchor1" class="anchorLink">Get
+              started with
+              microk8s</a></p>
         </div>
-        <div class="navbar-collapse collapse">
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="https://github.com/ubuntu/microk8s">Github</a></li>
+        <div class="col-4 u-align--center u-vertically--center p-logo">
+          <img class="p-image-shadowed p-logo-certified" src="https://raw.githubusercontent.com/cncf/artwork/master/kubernetes/certified-kubernetes/versionless/color/certified-kubernetes-color.png?" />
+          <p>
+            <a href="https://snapcraft.io/microk8s" title="Get it from the Snap Store">
+              <img class="p-logo-snap-store" src="https://snapcraft.io/static/images/badges/en/snap-store-black.svg"
+                alt="" />
+            </a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="p-strip is-shallow is-bordered">
+      <div class="row">
+        <h2 class="p-muted-heading">Features</h2>
+      </div>
+      <div class="row u-equal-height">
+        <div class="col-3">
+          <ul class="p-list--divided">
+            <li class="p-list__item is-ticked">Istio</li>
+            <li class="p-list__item is-ticked">GPGPU bindings</li>
+            <li class="p-list__item is-ticked">Daily builds</li>
+          </ul>
+        </div>
+        <div class="col-3">
+          <ul class="p-list--divided">
+            <li class="p-list__item is-ticked">Local storage</li>
+            <li class="p-list__item is-ticked">Local registry</li>
+            <li class="p-list__item is-ticked">Updates</li>
+          </ul>
+        </div>
+        <div class="col-3">
+          <ul class="p-list--divided">
+            <li class="p-list__item is-ticked">Dashboard</li>
+            <li class="p-list__item is-ticked">Metrics</li>
+            <li class="p-list__item is-ticked">Upgrades</li>
+          </ul>
+        </div>
+        <div class="col-3">
+          <ul class="p-list--divided">
+            <li class="p-list__item is-ticked">Ingress</li>
+            <li class="p-list__item is-ticked">DNS</li>
+            <li class="p-list__item is-ticked">Conformant</li>
           </ul>
         </div>
       </div>
-    </div>
+    </section>
 
-  <div id="headerwrap">
-    <div class="container">
+    <section>
+      <div class="p-strip is-bordered">
+        <div class="row">
+          <h2>Single node Kubernetes done right</h2>
+          <h4>Zero-ops k8s on just about any Linux box.</h4>
+          <p>It’s not elastic, but it is on rails. Use it for offline development, prototyping, testing, or use it on a
+            VM as a small, cheap, reliable k8s for CI/CD. Makes a great k8s for appliances - develop your IoT apps for
+            k8s and deploy them to MicroK8s on your boxes.</p>
+          <p><a class="p-button--positive" href="#quick-start">Get started with
+              Microk8s</a></p>
+        </div>
+    </section>
+
+    <section>
+      <div class="p-strip is-bordered">
+        <div class="row">
+          <h2>Reliable, fast, small, upstream. Tasty!</h2>
+        </div>
+        <div class="row">
+          <ul class="p-matrix u-clearfix">
+            <li class="p-matrix__item">
+              <div class="p-matrix__content">
+                <h3 class="p-matrix__title">Fast install</h3>
+                <div class="p-matrix__desc">
+                  <p>Get a full Kubernetes system running in under 60 seconds</p>
+                </div>
+              </div>
+            </li>
+            <li class="p-matrix__item">
+              <div class="p-matrix__content">
+                <h3 class="p-matrix__title">Secure</h3>
+                <div class="p-matrix__desc">
+                  <p>Runs safely on your laptop with state of the art isolation.</p>
+                </div>
+              </div>
+            </li>
+            <li class="p-matrix__item">
+              <div class="p-matrix__content">
+                <h3 class="p-matrix__title">Upstream</h3>
+                <div class="p-matrix__desc">
+                  <p>CNCF binaries delivered to your laptop, with updates and upgrades.</p>
+                </div>
+              </div>
+            </li>
+            <li class="p-matrix__item">
+              <div class="p-matrix__content">
+                <h3 class="p-matrix__title">Complete</h3>
+                <div class="p-matrix__desc">
+                  <p>Includes a docker registry so you can make containers, push them, and deploy them all on your
+                    laptop.</p>
+                </div>
+              </div>
+            </li>
+            <li class="p-matrix__item">
+              <div class="p-matrix__content">
+                <h3 class="p-matrix__title">Featureful</h3>
+                <div class="p-matrix__desc">
+                  <p>Cool things you probably want to try on a small, standard K8s are all built-in. Just enable them
+                    and go.</p>
+                </div>
+              </div>
+            </li>
+            <li class="p-matrix__item">
+              <div class="p-matrix__content">
+                <h3 class="p-matrix__title">Updates</h3>
+                <div class="p-matrix__desc">
+                  <p>Get the daily build if you want it, or betas and milestones, or just stable point releases.</p>
+                </div>
+              </div>
+            </li>
+            <li class="p-matrix__item">
+              <div class="p-matrix__content">
+                <h3 class="p-matrix__title">Upgrades</h3>
+                <div class="p-matrix__desc">
+                  <p>When a new major version comes out, upgrade with a single command (or automatically).</p>
+                </div>
+              </div>
+            </li>
+            <li class="p-matrix__item">
+              <div class="p-matrix__content">
+                <h3 class="p-matrix__title">GPGPU Passthrough</h3>
+                <div class="p-matrix__desc">
+                  <p>Give microk8s a GPGPU and your docker containers can get all nice and CUDA.</p>
+                </div>
+              </div>
+            </li>
+            <li class="p-matrix__item">
+              <div class="p-matrix__content">
+                <h3 class="p-matrix__title"> </h3>
+                <div class="p-matrix__desc">
+                  <p> </p>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+    </section>
+
+    <section class="p-strip is-bordered"><a name="quick-start"></a>
       <div class="row">
-        <div class="col-lg-12">
-          <h1><code><span class="faded">snap </span><span class="faded">install </span>microk8s <span class="faded">--classic </span></code></h1>
-        </div>
+        <h2>Quick start</h2>
+        <h4>On Ubuntu 16.04 LTS or 18.04 LTS, install the <a href="https://snapcraft.io/microk8s">microk8s snap:</a></h4>
       </div>
-    </div>
-  </div>
-
-  <div class="container">
-    <div class="row mt centered">
-        <div class="col-lg-8 col-lg-offset-2">
-          <h1>Fast and Secure upstream Kubernetes</h1>
-          <h3>Designed for developing Kubernetes Workloads locally</h3>
-        </div>
-      </div>
-
-      <div class="row mt centered">
-        <div class="col-sm-4">
-          <img src="assets/img/fast.png" width="180" alt="">
-          <h4>Fast Install</h4>
-          <p>Get a full Upstream Kubernetes system running in under 60 seconds</p>
-        </div>
-
-        <div class="col-sm-4">
-          <img src="assets/img/secure.png" width="180" alt="">
-          <h4>Safe and Secure</h4>
-          <p>Runs safely on your laptop with state of the art isolation.</p>
-        </div>
-
-        <div class="col-sm-4">
-          <img src="assets/img/kubee.png" height="156" alt="">
-          <h4>Pure Upstream</h4>
-          <p>Binaries directly from the source, delivered to you laptop and configured in seconds!</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="container wide white">
-      <div class="container">
-        <div class="row mt centered">
-          <div class="col-lg-8 col-lg-offset-2">
-            <h1>Installs across Linux distributions</h1>
-            <h3>Anywhere <a href="https://snapcraft.io">snaps</a> are installed</h3>
+      <div class="row u-equal-height">
+        <div class="col-8">
+          <div class="p-code-snippet">
+            <input class="p-code-snippet__input" value="sudo snap install microk8s --classic" readonly="readonly">
+            <button class="p-code-snippet__action">Copy to clipboard</button>
           </div>
+          <p>To install on other distributions use the <a href="https://snapcraft.io/docs/core/install" class="p-link--external">snapcraft
+              docs.</a></p>
         </div>
+      </div>
+      <div class="row">
+        <div class="row col-8">
+          <hr>
+          <h4>For the current published versions</h4>
+          <div class="p-code-snippet">
+            <input class="p-code-snippet__input" value="snap info microk8s" readonly="readonly">
+            <button class="p-code-snippet__action">Copy to clipboard</button>
+          </div>
+          <p>It is possible to select a specific version like 1.11 and get only stable or RC updates to that version.
+            By default you will get the current major version (e.g. 1.12) with upgrades when new major versions are
+            published.</p>
+        </div>
+      </div>
+    </section>
 
+    <section class="p-strip is-shallow is-bordered">
+      <div class="p-strip is-shallow">
         <div class="row">
-          <div class="col-xs-4 col-md-2">
-            <a class="p-logo-link" href="https://docs.snapcraft.io/core/install-ubuntu">
-              <img src="https://assets.ubuntu.com/v1/4e18e57c-logo-ubuntu--in-card.png" alt="">
-            </a>
+          <h2>Useful tips</h2>
+          <h4>Start and stop kubernetes</h4>
+          <p>Bring k8s up and take it down as needed to preserve battery life when you don’t need it running:</p>
+          <div class="row col-8">
+            <h4>Turn on standard services</h4>
+            <div class="p-code-snippet">
+              <input class="p-code-snippet__input" value="microk8s.enable dashboard registry istio [...]" readonly="readonly">
+            </div>
+            <p>Enable and disable particular standard add-on services using the <br><code>microk8s.enable</code> and
+              <code>microk8s.disable</code> commands. See the <code>--help</code> for details.</br></p>
           </div>
-          <div class="col-xs-4 col-md-2">
-            <a class="p-logo-link" href="https://docs.snapcraft.io/core/install-debian">
-              <img src="https://assets.ubuntu.com/v1/f7f680fb-debian.png" alt="">
-            </a>
-          </div>
-          <div class="col-xs-4 col-md-2">
-            <a class="p-logo-link" href="https://docs.snapcraft.io/core/install-linux-mint">
-              <img src="https://assets.ubuntu.com/v1/2ce868d9-mint.png" alt="">
-            </a>
-          </div>
-          <div class="col-xs-4 col-md-2">
-            <a class="p-logo-link" href="https://docs.snapcraft.io/core/install-gentoo">
-              <img src="https://assets.ubuntu.com/v1/439fa9d5-gentuu.png" alt="">
-            </a>
-          </div>
-          <div class="col-xs-4 col-md-2">
-            <a class="p-logo-link" href="https://docs.snapcraft.io/core/install-arch-linux">
-              <img src="https://assets.ubuntu.com/v1/44789cf1-arch.png" alt="">
-            </a>
-          </div>
-          <div class="col-xs-4 col-md-2">
-            <a class="p-logo-link" href="https://docs.snapcraft.io/core/install-fedora">
-              <img src="https://assets.ubuntu.com/v1/f24733d2-fedora.png" alt="">
-            </a>
+          <div class="row col-8">
+            <hr>
+            <h4>Try a different version, or a beta, or a daily build</h4>
+            <p>Snaps are published in <a href="https://docs.snapcraft.io/channels/551">channels</a> which are made up
+              of a track (or major version), and an expected level of stability. Try <code>snap info microk8s</code> to
+              see what versions are currently published. At the time of writing:</p>
+            <div class="p-code-pre">
+              <pre><code>
+                  channels:
+                  stable:         v1.12.0 (238) 223MB classic
+                  candidate:      v1.12.2 (266) 224MB classic
+                  beta:           v1.12.2 (266) 224MB classic
+                  edge:           v1.12.2 (266) 224MB classic
+                  1.12/stable:    v1.12.0 (237) 223MB classic
+                  1.12/candidate: v1.12.2 (267) 224MB classic
+                  1.12/beta:      v1.12.2 (267) 224MB classic
+                  1.12/edge:      v1.12.2 (267) 224MB classic
+                  1.11/stable:    v1.11.3 (236) 219MB classic
+                  1.11/candidate: v1.11.4 (255) 219MB classic
+                  1.11/beta:      v1.11.4 (255) 219MB classic
+                  1.11/edge:      v1.11.4 (255) 219MB classic
+                  1.10/stable:    v1.10.8 (234) 175MB classic
+                  1.10/candidate: v1.10.9 (245) 175MB classic
+                  1.10/beta:      v1.10.9 (245) 175MB classic
+                  1.10/edge:      v1.10.9 (245) 175MB classic
+                </code></pre>
+              <p>You can <code>snap refresh --channel=latest/beta microk8s</code> or <code>snap refresh --channel=1.11/stable microk8s</code>
+                and get the expected result.</p>
+            </div>
           </div>
         </div>
+    </section>
+    <div class="p-strip--light">
+      <div class="row">
+        <h2>Working with Microk8s</h2>
+        <h4> Or dive right into the <a href="https://discourse.microk8s.io">docs</a></h4>
+        <p>
+          <script src="https://asciinema.org/a/jUPw2icctB5sSv2JW904qWSej.js" id="asciicast-jUPw2icctB5sSv2JW904qWSej"
+            async="" data-player="[object HTMLDivElement]"></script>
+          <div id="asciicast-container-jUPw2icctB5sSv2JW904qWSej" class="asciicast" style="display: block; float: none; overflow: hidden; padding: 0px; margin: 20px 0px;">
+            <iframe src="https://asciinema.org/a/jUPw2icctB5sSv2JW904qWSej/embed?" id="asciicast-iframe-jUPw2icctB5sSv2JW904qWSej"
+              name="asciicast-iframe-jUPw2icctB5sSv2JW904qWSej" scrolling="no" allowfullscreen="true" style="overflow: hidden; margin: 0px; border: 0px; display: inline-block; width: 1140px; float: none; visibility: visible; height: 931px;">
+            </iframe>
+          </div>
+        </p>
+      </div>
+      </section>
+      <footer class="p-footer">
         <div class="row">
-          <div class="col-xs-4 col-md-2">
-            <a class="p-logo-link" href="https://docs.snapcraft.io/core/install-openwrt">
-              <img src="https://assets.ubuntu.com/v1/0dd4809d-openwrit.png" alt="">
-            </a>
-          </div>
-          <div class="col-xs-4 col-md-2">
-            <a class="p-logo-link" href="https://docs.snapcraft.io/core/install-oe-yocto">
-              <img src="https://assets.ubuntu.com/v1/f131a86c-yocto.png" alt="">
-            </a>
-          </div>
-          <div class="col-xs-4 col-md-2">
-            <a class="p-logo-link" href="https://docs.snapcraft.io/core/install-oe-yocto">
-              <img src="https://assets.ubuntu.com/v1/38659979-openembed.png" alt="">
-            </a>
-          </div>
-          <div class="col-xs-4 col-md-2">
-            <a class="p-logo-link" href="https://docs.snapcraft.io/core/install-opensuse">
-              <img src="https://assets.ubuntu.com/v1/c4c720c6-suse.png" alt="">
-            </a>
-          </div>
-          <div class="col-xs-4 col-md-2">
-            <a class="p-logo-link" href="https://docs.snapcraft.io/core/install-manjaro">
-              <img src="https://assets.ubuntu.com/v1/02d49758-manjaro.png" alt="">
-            </a>
-          </div>
-          <div class="col-xs-4 col-md-2">
-            <a class="p-logo-link" href="https://docs.snapcraft.io/core/install-solus">
-              <img src="https://assets.ubuntu.com/v1/4ea80b29-solus.png" alt="">
-            </a>
+          <div class="col-12">
+            <p class="p-footer__paragraph">Microk8s was built by the dedicated <a href="https://www.ubuntu.com/kubernetes">Kubernetes team at
+                Canonical</a>
+              for the developer community. We also make <a href="https://ubuntu.com/kubernetes/install#cluster">the
+                Charmed Distribution of Kubernetes</a> for multi-cloud scalable clusters</p>
           </div>
         </div>
-      </div>
-    </div>
-
-    <div class="container">
-      <div class="row mt centered">
-        <div class="col-lg-8 col-lg-offset-2">
-          <h1>Quick Start</h1>
-          <h3>After installing snapd here's how to get microk8s</h3>
-        </div>
-      </div>
-
-      <div class="row mt centered wide-only">
-        <div class="col-lg-12">
-          <p>
-            <script src="https://asciinema.org/a/jUPw2icctB5sSv2JW904qWSej.js" id="asciicast-jUPw2icctB5sSv2JW904qWSej" async></script>
-          </p>
-        </div>
-      </div>
-      <div class="row mt centered mobile-only">
-        <div class="col-lg-12">
-          <p>
-            <a href="https://asciinema.org/a/182634" target="_blank">
-              <img src="https://asciinema.org/a/182634.png" />
-            </a>
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <div class="container">
-      <div class="row centered">
-        <div class="col-lg-3"></div>
-      </div>
-      <hr>
-      <p class="centered">microk8s was built by the dedicated <a href="https://www.ubuntu.com/kubernetes" target="_blank">Kubernetes team at Canonical</a> for the developer community</p>
-    </div>
-
-    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-  </body>
-</html>
+      </footer>
+  </main>
+  <script src="/js/global-nav.js"></script>
+  <script>canonicalGlobalNav.createNav({ maxWidth: '64.875rem' });</script>
+</body>

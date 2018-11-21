@@ -1,4 +1,261 @@
 @charset 'utf-8';
-
+$ubuntu-orange: #E95420;
+$mine-shaft: #333333;
+$persian-red: #ce2d2d;
 // import vanilla
 @import 'vanilla-framework/scss/build';
+
+.p-navigation {
+  background-color: $mine-shaft;
+  display: flex;
+  flex-shrink: 0;
+  position: relative;
+}
+
+@media (max-width: $breakpoint-medium) {
+  .p-navigation {
+    flex-direction: column;
+  }
+}
+
+.p-navigation a,
+.p-navigation a:visited,
+.p-navigation a:hover,
+.p-navigation a:focus {
+  color: $color-x-light;
+  text-decoration: none;
+}
+
+.p-navigation::after {
+  background: $mine-shaft;
+  bottom: 0;
+  content: '';
+  height: 0.0625rem;
+  left: 0;
+  position: absolute;
+  right: 0;
+}
+
+.p-navigation__banner {
+  background-color: $ubuntu-orange;
+  padding: 0 1rem;
+}
+
+.p-navigation__image {
+  max-height: 2rem;
+  min-height: 1.5rem;
+}
+
+.p-navigation__link>a {
+  display: block;
+  margin-bottom: 0;
+  position: relative;
+}
+
+@media (max-width: $breakpoint-medium) {
+  .p-navigation__link>a {
+    padding: 0.75rem 1.5rem;
+  }
+
+  .p-navigation__link>a::before {
+    background: $mine-shaft;
+    content: '';
+    height: 0.0625rem;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}
+
+@media (min-width: $breakpoint-medium) {
+  .p-navigation__link>a {
+    border-left: 0px solid $color-mid-light;
+    padding: 0.75rem 1rem;
+  }
+
+  .p-navigation__link>a::before {
+    background: $persian-red;
+    bottom: 0;
+    content: '';
+    height: 0.0625rem;
+    left: 0;
+    position: absolute;
+    right: 0;
+  }
+}
+
+.p-navigation__link>a:hover {
+  background-color: $mine-shaft;
+}
+
+@media (min-width: 769px) {
+  .p-navigation__link.is-selected>a {
+    position: relative;
+  }
+
+  .p-navigation__link.is-selected>a::before {
+    bottom: 0;
+    background-color: $color-mid-dark;
+    content: '';
+    position: absolute;
+  }
+  
+  .p-navigation__link.is-selected>a::before {
+    height: 0.1875rem;
+    width: auto;
+    left: -1px;
+    right: -1px;
+    z-index: 1;
+  }
+}
+
+.p-navigation__links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@media (max-width: $breakpoint-medium) {
+  .p-navigation__links {
+    margin-top: -1px;
+  }
+}
+
+@media (min-width: $breakpoint-medium) {
+  .p-navigation__links {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.p-navigation__nav {
+  display: none;
+}
+
+@media (max-width: $breakpoint-medium) {
+  .p-navigation__nav {
+    flex-direction: column;
+  }
+}
+
+@media (min-width: $breakpoint-medium) {
+  .p-navigation__nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+
+.p-navigation .p-search-box {
+  min-width: 10rem;
+}
+
+@media (max-width: $breakpoint-medium) {
+  .p-navigation .p-search-box {
+    flex: 1 0 auto;
+    margin: -1px 1.5rem 0.5rem 1.5rem;
+    order: -1;
+  }
+}
+
+@media (min-width: $breakpoint-medium) {
+  .p-navigation .p-search-box {
+    display: flex;
+    flex: 1 1 auto;
+    margin: 0.35rem 1rem auto auto;
+    max-width: 20rem;
+    order: 1;
+  }
+}
+
+.p-navigation__row,
+.p-navigation .row {
+  display: flex;
+  padding-left: 0;
+  padding-right: 0;
+  width: 100%;
+}
+
+@media (max-width: $breakpoint-medium) {
+  .p-navigation__row,
+  .p-navigation .row {
+    flex-direction: column;
+  }
+}
+
+.p-navigation:target .p-navigation__nav {
+  display: flex;
+}
+
+.p-navigation:target .p-navigation__toggle--open {
+  display: none;
+}
+
+@media (max-width: $breakpoint-medium) {
+  .p-navigation:target .p-navigation__toggle--close {
+    display: block;
+  }
+}
+
+.p-navigation__toggle--open,
+.p-navigation__toggle--close {
+  display: none;
+  margin: 0 1.5rem auto 1rem;
+  padding: 0.75rem 0;
+}
+
+@media (max-width: $breakpoint-medium) {
+  .p-navigation__toggle--open {
+    display: block;
+  }
+}
+
+.p-navigation .u-image-position .u-image-position--right {
+  order: 2;
+  position: relative;
+  right: unset;
+}
+
+.p-microk8s-hero {
+  background-color: $color-light;
+}
+
+.p-logo {
+  .p-logo-certified {
+    height: 241px;
+    width: 179px;
+  }
+  
+  .p-logo-snap-store {
+    height: 54px;
+    width: 179px;
+  }
+}
+
+@media only screen and (max-width: $breakpoint-medium) {
+  .p-microk8s-hero__link {
+    margin-top: $sp-large ;
+  }
+}
+
+@media only screen and (min-width: $breakpoint-x-small) and (max-width: $breakpoint-medium){
+  .p-logo {
+    justify-content: left !important;
+    text-align: left !important;
+  }
+}
+
+@media (min-width: $breakpoint-medium) {
+  .p-microk8s-hero {
+    background-blend-mode: multiply;
+    background-image: url('https://assets.ubuntu.com/v1/a413af31-suru+left.svg'), url('https://assets.ubuntu.com/v1/78957c9e-suru+right+1.svg'), url('https://assets.ubuntu.com/v1/c5e39473-suru+right+2.svg');
+    background-position: bottom left, right, bottom right;
+    background-size: contain, contain, initial;
+    background-repeat: no-repeat;
+  }
+}
+
+.p-footer__paragraph {
+  max-width: none;
+}
