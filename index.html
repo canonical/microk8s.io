@@ -33,9 +33,9 @@
   <header id="navigation" class="p-navigation">
     <div class="row">
       <div class="p-navigation__banner u-vertically-center">
-        <p class="p-navigation__logo u-vertically-center u-align--center u-no-margin u-no-padding">
+        <p class="p-navigation__logo u-vertically-center u-align--center">
           <a href="/">
-            microK8s
+            MicroK8s
           </a>
         </p>
         <a href="#navigation" class="p-navigation__toggle--open" title="menu">Menu</a>
@@ -47,7 +47,10 @@
         </span>
         <ul class="p-navigation__links" role="menu">
           <li class="p-navigation__link" role="menuitem">
-            <a href="">Docs</a>
+            <a href="/">Overview</a>
+          </li>
+          <li class="p-navigation__link" role="menuitem">
+            <a href="https://discuss.kubernetes.io/tags/microk8s">Docs</a>
           </li>
           <li class="p-navigation__link" role="menuitem">
             <a class="p-link--external" href="https://discuss.kubernetes.io/tags/microk8s">Discourse</a>
@@ -69,17 +72,17 @@
         <div class="col-8">
           <h1>Kubernetes for Workstations and Appliances</h1>
           <h4>A single package of k8s that installs on 42 flavours of Linux. Made for developers and great for
-            appliances, Microk8s is crisp, clean, upstream k8s that Just Works &#8482;</h4>
+            appliances.</h4>
           <p class="p-microk8s-hero__link"><a class="p-button--positive" href="#quick-start" rel="" id="anchor1" class="anchorLink">Get
-              started with
-              microk8s</a></p>
+              started with MicroK8s</a></p>
         </div>
         <div class="col-4 u-align--center u-vertically--center p-logo">
-          <img class="p-image-shadowed p-logo-certified" src="https://raw.githubusercontent.com/cncf/artwork/master/kubernetes/certified-kubernetes/versionless/color/certified-kubernetes-color.png?" />
+          <img class="p-image-shadowed p-logo-certified" src="https://raw.githubusercontent.com/cncf/artwork/master/kubernetes/certified-kubernetes/versionless/color/certified-kubernetes-color.png?"
+            alt="Certified Kubernetes" />
           <p>
             <a href="https://snapcraft.io/microk8s" title="Get it from the Snap Store">
               <img class="p-logo-snap-store" src="https://snapcraft.io/static/images/badges/en/snap-store-black.svg"
-                alt="" />
+                alt="Snap Store" />
             </a>
           </p>
         </div>
@@ -131,8 +134,9 @@
             VM as a small, cheap, reliable k8s for CI/CD. Makes a great k8s for appliances - develop your IoT apps for
             k8s and deploy them to MicroK8s on your boxes.</p>
           <p><a class="p-button--positive" href="#quick-start">Get started with
-              Microk8s</a></p>
+              MicroK8s</a></p>
         </div>
+      </div>
     </section>
 
     <section>
@@ -204,13 +208,13 @@
               <div class="p-matrix__content">
                 <h3 class="p-matrix__title">GPGPU Passthrough</h3>
                 <div class="p-matrix__desc">
-                  <p>Give microk8s a GPGPU and your docker containers can get all nice and CUDA.</p>
+                  <p>Give MicroK8s a GPGPU and your docker containers can get all nice and CUDA.</p>
                 </div>
               </div>
             </li>
             <li class="p-matrix__item">
               <div class="p-matrix__content">
-                <h3 class="p-matrix__title"> </h3>
+                <h3 class="p-matrix__title">&nbsp; </h3>
                 <div class="p-matrix__desc">
                   <p> </p>
                 </div>
@@ -218,12 +222,13 @@
             </li>
           </ul>
         </div>
+      </div>
     </section>
 
-    <section class="p-strip is-bordered"><a name="quick-start"></a>
+    <section class="p-strip is-bordered" id="quick-start">
       <div class="row">
         <h2>Quick start</h2>
-        <h4>On Ubuntu 16.04 LTS or 18.04 LTS, install the <a href="https://snapcraft.io/microk8s">microk8s snap:</a></h4>
+        <h4>On Ubuntu 16.04 LTS or 18.04 LTS, install the <a href="https://snapcraft.io/microk8s">MicroK8s snap:</a></h4>
       </div>
       <div class="row u-equal-height">
         <div class="col-8">
@@ -236,7 +241,7 @@
         </div>
       </div>
       <div class="row">
-        <div class="row col-8">
+        <div class="col-8">
           <hr>
           <h4>For the current published versions</h4>
           <div class="p-code-snippet">
@@ -251,27 +256,35 @@
     </section>
 
     <section class="p-strip is-shallow is-bordered">
-      <div class="p-strip is-shallow">
-        <div class="row">
+      <div class="row">
+        <div class="col-12 u-sv3">
           <h2>Useful tips</h2>
           <h4>Start and stop kubernetes</h4>
           <p>Bring k8s up and take it down as needed to preserve battery life when you don’t need it running:</p>
-          <div class="row col-8">
-            <h4>Turn on standard services</h4>
-            <div class="p-code-snippet">
-              <input class="p-code-snippet__input" value="microk8s.enable dashboard registry istio [...]" readonly="readonly">
-            </div>
-            <p>Enable and disable particular standard add-on services using the <br><code>microk8s.enable</code> and
-              <code>microk8s.disable</code> commands. See the <code>--help</code> for details.</br></p>
+          <div class="p-code-snippet">
+            <input class="p-code-snippet__input" value="sudo microk8s.stop" readonly="readonly">
           </div>
-          <div class="row col-8">
-            <hr>
-            <h4>Try a different version, or a beta, or a daily build</h4>
-            <p>Snaps are published in <a href="https://docs.snapcraft.io/channels/551">channels</a> which are made up
-              of a track (or major version), and an expected level of stability. Try <code>snap info microk8s</code> to
-              see what versions are currently published. At the time of writing:</p>
-            <div class="p-code-pre">
-              <pre><code>
+          <div class="p-code-snippet">
+            <input class="p-code-snippet__input" value="sudo microk8s.start" readonly="readonly">
+          </div>
+        </div>
+        <hr />
+        <div class="col-12">
+          <h4>Turn on standard services</h4>
+          <div class="p-code-snippet">
+            <input class="p-code-snippet__input" value="microk8s.enable dashboard registry istio [...]" readonly="readonly">
+          </div>
+          <p>Enable and disable particular standard add-on services using the <br><code>microk8s.enable</code> and
+            <code>microk8s.disable</code> commands. See the <code>--help</code> for details.</br></p>
+        </div>
+        <div class="col-12">
+          <hr>
+          <h4>Try a different version, or a beta, or a daily build</h4>
+          <p>Snaps are published in <a href="https://docs.snapcraft.io/channels/551">channels</a> which are made up
+            of a track (or major version), and an expected level of stability. Try <code>snap info microk8s</code> to
+            see what versions are currently published. At the time of writing:</p>
+          <div class="p-code-pre">
+            <pre><code>
                   channels:
                   stable:         v1.12.0 (238) 223MB classic
                   candidate:      v1.12.2 (266) 224MB classic
@@ -290,13 +303,13 @@
                   1.10/beta:      v1.10.9 (245) 175MB classic
                   1.10/edge:      v1.10.9 (245) 175MB classic
                 </code></pre>
-              <p>You can <code>snap refresh --channel=latest/beta microk8s</code> or <code>snap refresh --channel=1.11/stable microk8s</code>
-                and get the expected result.</p>
-            </div>
+            <p>You can <code>snap refresh --channel=latest/beta microk8s</code> or <code>snap refresh --channel=1.11/stable microk8s</code>
+              and get the expected result.</p>
           </div>
         </div>
+      </div>
     </section>
-    <div class="p-strip--light">
+    <section class="p-strip is-bordered">
       <div class="row">
         <h2>Working with Microk8s</h2>
         <h4> Or dive right into the <a href="https://discourse.microk8s.io">docs</a></h4>
@@ -305,22 +318,23 @@
             async="" data-player="[object HTMLDivElement]"></script>
           <div id="asciicast-container-jUPw2icctB5sSv2JW904qWSej" class="asciicast" style="display: block; float: none; overflow: hidden; padding: 0px; margin: 20px 0px;">
             <iframe src="https://asciinema.org/a/jUPw2icctB5sSv2JW904qWSej/embed?" id="asciicast-iframe-jUPw2icctB5sSv2JW904qWSej"
-              name="asciicast-iframe-jUPw2icctB5sSv2JW904qWSej" scrolling="no" allowfullscreen="true" style="overflow: hidden; margin: 0px; border: 0px; display: inline-block; width: 1140px; float: none; visibility: visible; height: 931px;">
+              name="asciicast-iframe-jUPw2icctB5sSv2JW904qWSej" allow="fullscreen" style="overflow: hidden; margin: 0px; border: 0px; display: inline-block; width: 1140px; float: none; visibility: visible; height: 931px;">
             </iframe>
           </div>
         </p>
       </div>
-      </section>
-      <footer class="p-footer">
-        <div class="row">
-          <div class="col-12">
-            <p class="p-footer__paragraph">Microk8s was built by the dedicated <a href="https://www.ubuntu.com/kubernetes">Kubernetes team at
-                Canonical</a>
-              for the developer community. We also make <a href="https://ubuntu.com/kubernetes/install#cluster">the
-                Charmed Distribution of Kubernetes</a> for multi-cloud scalable clusters</p>
-          </div>
+    </section>
+    <footer class="p-footer">
+      <div class="row">
+        <div class="col-12">
+          <p class="p-footer__paragraph">Microk8s was built by the dedicated <a href="https://www.ubuntu.com/kubernetes">Kubernetes
+              team at
+              Canonical</a>
+            for the developer community. We also make <a href="https://ubuntu.com/kubernetes/install#cluster">the
+              Charmed Distribution of Kubernetes</a> for multi-cloud scalable clusters</p>
         </div>
-      </footer>
+      </div>
+    </footer>
   </main>
   <script src="/js/global-nav.js"></script>
   <script>canonicalGlobalNav.createNav({ maxWidth: '64.875rem' });</script>
