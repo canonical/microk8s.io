@@ -1,5 +1,6 @@
 ---
 layout: docs
+title: "Private registry addon"
 ---
 # Private registry addon
 

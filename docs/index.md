@@ -1,5 +1,6 @@
 ---
 layout: docs
+title: "User Guide"
 ---
 # MicroK8s documentation
 

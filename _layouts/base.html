@@ -21,7 +21,13 @@
           'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
     })(window, document, 'script', 'dataLayer', 'GTM-T5SMPTS');</script>
   <!-- End Google Tag Manager -->
-  <title>MicroK8s - Fast, Light, Upstream Developer Kubernetes</title>
+   <title>
+    {% if page.title %}
+      {{ page.title }} | MicroK8s
+    {% else %}
+      MicroK8s - Fast, Light, Upstream Developer Kubernetes
+    {% endif %}
+</title>
   <link rel="stylesheet" href="/css/styles.css" />
 </head>
 

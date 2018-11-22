@@ -1,5 +1,6 @@
 ---
 layout: docs
+title: "Release channels and upgrades"
 ---
 # Release channels and upgrades
 
