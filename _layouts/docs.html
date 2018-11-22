@@ -1,126 +1,78 @@
-<!doctype html>
-<html lang="en">
-
-<head>
-  {% include analytics.html %}
-  <title>microk8s - Fast, Light, Upstream Developer Kubernetes</title>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" href="https://assets.ubuntu.com/v1/b3b72cb2-canonical-logo-166.png" type="image/x-icon" />
-  <link rel="stylesheet" href="/css/styles.css" />
-</head>
-
-<body>
-  {% include analytics_no_script.html %}
-  <div class="docs-container">
-    <header id="navigation" class="p-navigation">
-      <div class="p-navigation__banner u-vertically-center">
-        <p class="p-navigation__logo u-vertically-center u-align--center">
-          <a href="/">
-            MicroK8s
-          </a>
-        </p>
-        <a href="#navigation" class="p-navigation__toggle--open" title="menu">Menu</a>
-        <a href="#navigation-closed" class="p-navigation__toggle--close" title="close menu">Close menu</a>
-      </div>
-      <nav class="p-navigation__nav" role="menubar">
-        <span class="u-off-screen">
-          <a href="#main-content">Jump to main content</a>
-        </span>
-        <ul class="p-navigation__links" role="menu">
-          <li class="p-navigation__link" role="menuitem">
-            <a href="/">Overview</a>
-          </li>
-          <li class="p-navigation__link" role="menuitem">
-            <a href="/docs">Docs</a>
-          </li>
-          <li class="p-navigation__link" role="menuitem">
-            <a class="p-link--external" href="https://discuss.kubernetes.io/tags/microk8s">Discourse</a>
-          </li>
-          <li class="p-navigation__link" role="menuitem">
-            <a class="p-link--external" href="https://github.com/ubuntu/microk8s">Code</a>
-          </li>
-          <li class="p-navigation__link" role="menuitem">
-            <a class="p-link--external" href="https://github.com/ubuntu/microk8s/issues">Bugs</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
-
-    <aside class="p-sidebar" id="navigation">
-      <div class="p-sidebar__banner u-hide--medium u-hide--large">
-        <i class="p-sidebar__toggle p-icon--menu"></i>
-      </div>
-      <div class="p-sidebar__content u-hide--small">
-        <!--
+---
+layout: base
+---
+<div class="docs-container">
+  <aside class="p-sidebar" id="navigation">
+    <div class="p-sidebar__banner u-hide--medium u-hide--large">
+      <i class="p-sidebar__toggle p-icon--menu"></i>
+    </div>
+    <div class="p-sidebar__content u-hide--small">
+      <!--
             This navigation is edited manually.
             Please update it whenever you add, remove or move a document,
             and check and update it whenever you get the opportunity.
           -->
-        <nav class="p-sidebar-nav">
-          <ul class="p-sidebar-nav__list" id="docs-list-unsorted">
-            <li class="p-sidebar-nav__item">
-              <strong>Docs</strong>
-              <ul class="p-sidebar-nav__list" id="docs-list-unsorted">
-                <li class="p-sidebar-nav__item"><a class="p-link--soft" href="/docs">User Guide</a></li>
-                <li class="p-sidebar-nav__item"><a class="p-link--soft" href="/docs/dockerd">Dockerd</a></li>
-                <li class="p-sidebar-nav__item"><a class="p-link--soft" href="/docs/registry">Registry</a></li>
-                <li class="p-sidebar-nav__item"><a class="p-link--soft" href="/docs/release-channels">Release Channels</a></li>
-              </ul>
-            </li>
-          </ul>
-        </nav>
-        <script>
-          // Toggle mobile sidebar nav
-          var toggle = document.querySelector('.p-sidebar__toggle');
-          var sidebarContent = document.querySelector('.p-sidebar__content');
+      <nav class="p-sidebar-nav">
+        <ul class="p-sidebar-nav__list" id="docs-list-unsorted">
+          <li class="p-sidebar-nav__item">
+            <strong>Docs</strong>
+            <ul class="p-sidebar-nav__list" id="docs-list-unsorted">
+              <li class="p-sidebar-nav__item"><a class="p-link--soft" href="/docs">User Guide</a></li>
+              <li class="p-sidebar-nav__item"><a class="p-link--soft" href="/docs/dockerd">Dockerd</a></li>
+              <li class="p-sidebar-nav__item"><a class="p-link--soft" href="/docs/registry">Registry</a></li>
+              <li class="p-sidebar-nav__item"><a class="p-link--soft" href="/docs/release-channels">Release Channels</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <script>
+        // Toggle mobile sidebar nav
+        var toggle = document.querySelector('.p-sidebar__toggle');
+        var sidebarContent = document.querySelector('.p-sidebar__content');
 
-          toggle.addEventListener('click', function (e) {
-            toggle.classList.toggle('p-icon--menu');
-            toggle.classList.toggle('p-icon--close');
-            sidebarContent.classList.toggle('u-hide--small');
-          });
+        toggle.addEventListener('click', function (e) {
+          toggle.classList.toggle('p-icon--menu');
+          toggle.classList.toggle('p-icon--close');
+          sidebarContent.classList.toggle('u-hide--small');
+        });
 
-          // Add active class to sidebar nav
-          var navLinks = document.querySelectorAll('.p-sidebar-nav__item > .p-link--soft');
-          navLinks.forEach(function (link) {
-            if (link.getAttribute("href") === window.location.pathname) {
-              link.className += " is-active";
-            }
-          });
-        </script>
+        // Add active class to sidebar nav
+        var navLinks = document.querySelectorAll('.p-sidebar-nav__item > .p-link--soft');
+        navLinks.forEach(function (link) {
+          if (link.getAttribute("href") === window.location.pathname) {
+            link.className += " is-active";
+          }
+        });
+      </script>
+    </div>
+  </aside>
+
+  <main class="p-content" id="main-content">
+    <div class="p-strip is-shallow">
+      <div class="p-content__row">
+        {{ content }}
       </div>
-    </aside>
-
-    <main class="p-content" id="main-content">
-      <div class="p-strip is-shallow">
-        <div class="p-content__row">
-          {{ content }}
+    </div>
+    <footer class="p-footer" role="contentinfo">
+      <div class="p-content__row u-no-margin--left">
+        <div class="col-12">
+          <p>&copy; 2018 Canonical Ltd. Ubuntu and Canonical are registered trademarks of Canonical Ltd.</p>
+          <nav>
+            <ul class="p-inline-list--middot">
+              <li class="p-inline-list__item">
+                <a href="https://www.ubuntu.com/legal" class="p-link--external">Legal info</a>
+              </li>
+              <li class="p-inline-list__item">
+                <a href="https://github.com/canonical-websites/microk8s.io/issues/new" class="p-link--external">Report
+                  a bug with this site</a>
+              </li>
+            </ul>
+            <span class="u-off-screen">
+              <a href="#">Go to the top of the page</a>
+            </span>
+          </nav>
         </div>
       </div>
-      <footer class="p-footer" role="contentinfo">
-        <div class="p-content__row u-no-margin--left">
-          <div class="col-12">
-            <p>&copy; 2018 Canonical Ltd. Ubuntu and Canonical are registered trademarks of Canonical Ltd.</p>
-            <nav>
-              <ul class="p-inline-list--middot">
-                <li class="p-inline-list__item">
-                  <a href="https://www.ubuntu.com/legal" class="p-link--external">Legal info</a>
-                </li>
-                <li class="p-inline-list__item">
-                  <a href="https://github.com/canonical-websites/microk8s.io/issues/new" class="p-link--external">Report
-                    a bug with this site</a>
-                </li>
-              </ul>
-              <span class="u-off-screen">
-                <a href="#">Go to the top of the page</a>
-              </span>
-            </nav>
-          </div>
-        </div>
-      </footer>
-    </main>
-  </div>
-</body>
-
-</html>
+    </footer>
+  </main>
+</div>
