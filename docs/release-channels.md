@@ -1,12 +1,12 @@
 ---
 layout: docs
 ---
-# Release Channels and Upgrades
+# Release channels and upgrades
 
 Microk8s is a snap deploying Kubernetes. Upstream Kubernetes ships a new release about every three months, while old releases get periodic updates. At the time of this writing the latest release series is `v1.12` with `v1.12.0` being the latest release. On the `v1.11` series, `v1.11.3` is the latest release. It is important to remember that upstream Kubernetes is committed to maintain backwards compatibility only within a release series. That means that your Kubernetes will not break due to API changes when you upgrade from `v1.11.x` to `v1.11.y` but may break if you upgrade from `v1.11.x` to `v1.12.z`.
 
 
-## Choosing the Right Channel
+## Choosing the right channel
 
 When installing MicroK8s you can select your desired upstream Kubernetes series with the corresponding snap channel. For example, to install MicroK8s and let it follow the `v1.12` release series you:
 
@@ -29,7 +29,7 @@ Switching from one channel to another is done with [`snap refresh --channel=<new
 snap install microk8s --channel=1.11/stable
 ```
 
-## Availability of Releases and Channels
+## Availability of releases and channels
 
 The `*/stable` channels serve the latest stable upstream Kubernetes release of the respective release series. Upstream releases are propagated to the MicroK8s snap in about a week. This means your MicroK8s will upgrade to the latest upstream release in your selected channel roughly one week after the upstream release.
 

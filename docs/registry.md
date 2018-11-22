@@ -1,12 +1,12 @@
 ---
 layout: docs
 ---
-# Private Registry Addon
+# Private registry addon
 
 Having a private docker registry can significantly improve your productivity by reducing the time spent in uploading and downloading docker images. The registry shipped with microk8s is hosted within the kubernetes cluster and is exposed as a NodePort service on port `32000` of the `localhost`. Note that this is an insecure registry and you may need to take extra steps to limit access to it.
 
 
-## Installation and Usage
+## Installation and usage
 
 You can install the registry with:
 ```
