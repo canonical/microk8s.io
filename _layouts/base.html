@@ -9,45 +9,62 @@
 -->
 
 <html lang="en">
-{% include head.html %}
+
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-T5SMPTS');</script>
+  <!-- End Google Tag Manager -->
+  <title>MicroK8s - Fast, Light, Upstream Developer Kubernetes</title>
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
 
 <body>
-  {% include analytics_no_script.html %}
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T5SMPTS" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
   <header id="navigation" class="p-navigation">
-  <div class="row">
-    <div class="p-navigation__banner u-vertically-center">
-      <p class="p-navigation__logo u-vertically-center u-align--center">
-        <a class="p-navigation-logo__anchor" href="/">
-          MicroK8s
-        </a>
-      </p>
-      <a href="#navigation" class="p-navigation__toggle--open" title="menu">Menu</a>
-      <a href="#navigation-closed" class="p-navigation__toggle--close" title="close menu">Close menu</a>
+    <div class="row">
+      <div class="p-navigation__banner u-vertically-center">
+        <p class="p-navigation__logo u-vertically-center u-align--center">
+          <a class="p-navigation-logo__anchor" href="/">
+            MicroK8s
+          </a>
+        </p>
+        <a href="#navigation" class="p-navigation__toggle--open" title="menu">Menu</a>
+        <a href="#navigation-closed" class="p-navigation__toggle--close" title="close menu">Close menu</a>
+      </div>
+      <nav class="p-navigation__nav" role="menubar">
+        <span class="u-off-screen">
+          <a href="#main-content">Jump to main content</a>
+        </span>
+        <ul class="p-navigation__links" role="menu">
+          <li class="p-navigation__link" role="menuitem">
+            <a href="/">Overview</a>
+          </li>
+          <li class="p-navigation__link" role="menuitem">
+            <a href="/docs">Docs</a>
+          </li>
+          <li class="p-navigation__link" role="menuitem">
+            <a class="p-link--external" href="https://discuss.kubernetes.io/tags/microk8s">Discourse</a>
+          </li>
+          <li class="p-navigation__link" role="menuitem">
+            <a class="p-link--external" href="https://github.com/ubuntu/microk8s/issues">Code</a>
+          </li>
+          <li class="p-navigation__link" role="menuitem">
+            <a class="p-link--external" href="https://github.com/ubuntu/microk8s/issues">Bugs</a>
+          </li>
+        </ul>
+      </nav>
     </div>
-    <nav class="p-navigation__nav" role="menubar">
-      <span class="u-off-screen">
-        <a href="#main-content">Jump to main content</a>
-      </span>
-      <ul class="p-navigation__links" role="menu">
-        <li class="p-navigation__link" role="menuitem">
-          <a href="/">Overview</a>
-        </li>
-        <li class="p-navigation__link" role="menuitem">
-          <a href="/docs">Docs</a>
-        </li>
-        <li class="p-navigation__link" role="menuitem">
-          <a class="p-link--external" href="https://discuss.kubernetes.io/tags/microk8s">Discourse</a>
-        </li>
-        <li class="p-navigation__link" role="menuitem">
-          <a class="p-link--external" href="https://github.com/ubuntu/microk8s/issues">Code</a>
-        </li>
-        <li class="p-navigation__link" role="menuitem">
-          <a class="p-link--external" href="https://github.com/ubuntu/microk8s/issues">Bugs</a>
-        </li>
-      </ul>
-    </nav>
-  </div>
-</header>
-{{content}}
+  </header>
+  {{content}}
 </body>
+
 </html>

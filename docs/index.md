@@ -68,7 +68,6 @@ microk8s.kubectl config view --raw > $HOME/.kube/config
 
 Note: The API server on port 8080 is listening on all network interfaces. In its kubeconfig file microk8s is using the loopback interface, as you can see with `microk8s.kubectl config view`. The `microk8s.config` command will output a kubeconfig with the host machine's IP (instead of the 127.0.0.1) as the API server endpoint.
 
-
 ### Kubernetes Addons
 
 microk8s installs a barebones upstream Kubernetes. This means just the api-server, controller-manager, scheduler, kubelet, cni, kube-proxy are installed and run. Additional services like kube-dns and dashboard can be run using the `microk8s.enable` command
