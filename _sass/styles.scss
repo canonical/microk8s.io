@@ -21,3 +21,15 @@
     max-height: 3rem;
   }
 }
+
+.u-hide--x-small {
+  @media only screen and (max-width: $breakpoint-x-small) {
+    display: none;
+  }
+}
+
+.p-matrix__item:last-of-type {
+  @media only screen and (max-width: $breakpoint-x-small) {
+    padding-bottom: 0;
+  }
+}
