@@ -4,7 +4,7 @@
     "build": "yarn run build-css && yarn run build-js && yarn run build-jekyll",
     "build-jekyll": "bundle exec jekyll build",
     "build-css": "node-sass --include-path node_modules _sass --source-map true --output css && postcss --use autoprefixer --replace css/**/*.css && postcss --map false --use cssnano --dir css/minified css/**/*.css",
-    "build-js": "mkdir js && cp node_modules/global-nav/dist/index.js js/global-nav.js",
+    "build-js": "mkdir -p js && cp node_modules/global-nav/dist/index.js js/global-nav.js",
     "watch": "watch -p '_sass/**/*.scss' -c 'yarn run build'",
     "serve": "bundle exec jekyll serve -P ${PORT} -H 0.0.0.0",
     "test": "yarn run lint-scss",
