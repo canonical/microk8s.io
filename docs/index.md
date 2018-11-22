@@ -1,7 +1,7 @@
 ---
 layout: base
 ---
-# microk8s
+# MicroK8s Documentation
 
 ![](https://img.shields.io/badge/Kubernetes-1.12-326de6.svg)
 
