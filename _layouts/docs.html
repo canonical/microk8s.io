@@ -2,9 +2,7 @@
 <html lang="en">
 
 <head>
-  {% if jekyll.environment == 'production' %}
   {% include analytics.html %}
-  {% endif %}
   <title>microk8s - Fast, Light, Upstream Developer Kubernetes</title>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,9 +11,7 @@
 </head>
 
 <body>
-  {% if jekyll.environment == 'production' %}
   {% include analytics_no_script.html %}
-  {% endif %}
   <div class="docs-container">
     <header id="navigation" class="p-navigation">
       <div class="p-navigation__banner u-vertically-center">
