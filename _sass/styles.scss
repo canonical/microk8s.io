@@ -2388,7 +2388,7 @@ img {
       width: auto; } }
 
 .row, .p-content__row {
-  *zoom: 1;
+  zoom: 1;
   padding-left: 1.5rem;
   padding-right: 1.5rem; }
   .row:before, .p-content__row:before, .row:after, .p-content__row:after {
@@ -2408,7 +2408,7 @@ img {
   float: left;
   min-height: 1px;
   position: relative;
-  *margin-right: -1px;
+  margin-right: -1px;
   margin-left: 7.80829%; }
 
 .row .mobile-col-1:first-child, .p-content__row .mobile-col-1:first-child, .row .mobile-col-2:first-child, .p-content__row .mobile-col-2:first-child, .row .mobile-col-3:first-child, .p-content__row .mobile-col-3:first-child, .first-mobile-col {
@@ -2429,7 +2429,7 @@ img {
     float: left;
     min-height: 1px;
     position: relative;
-    *margin-right: -1px;
+    margin-right: -1px;
     margin-left: 4.93155%; }
   .row .tablet-col-1:first-child, .p-content__row .tablet-col-1:first-child, .row .tablet-col-2:first-child, .p-content__row .tablet-col-2:first-child, .row .tablet-col-3:first-child, .p-content__row .tablet-col-3:first-child, .row .tablet-col-4:first-child, .p-content__row .tablet-col-4:first-child, .row .tablet-col-5:first-child, .p-content__row .tablet-col-5:first-child, .first-tablet-col {
     margin-left: 0; }
@@ -2450,7 +2450,7 @@ img {
     float: left;
     min-height: 1px;
     position: relative;
-    *margin-right: -1px;
+    margin-right: -1px;
     margin-left: 3.2877%; }
   .row .col-1:first-child, .p-content__row .col-1:first-child, .row .col-2:first-child, .p-content__row .col-2:first-child, .row .col-3:first-child, .p-content__row .col-3:first-child, .row .col-4:first-child, .p-content__row .col-4:first-child, .row .col-5:first-child, .p-content__row .col-5:first-child, .row .col-6:first-child, .p-content__row .col-6:first-child, .row .col-7:first-child, .p-content__row .col-7:first-child, .row .col-8:first-child, .p-content__row .col-8:first-child, .row .col-9:first-child, .p-content__row .col-9:first-child, .row .col-10:first-child, .p-content__row .col-10:first-child, .row .col-11:first-child, .p-content__row .col-11:first-child, .first-col {
     margin-left: 0; }
@@ -3238,7 +3238,7 @@ img {
       float: left;
       min-height: 1px;
       position: relative;
-      *margin-right: -1px;
+      margin-right: -1px;
       width: 48.35615%;
       margin-left: 3.2877%; }
     .p-stepped-list--detailed .p-list-step__item > :nth-child(2n+1) {
@@ -3246,7 +3246,7 @@ img {
       float: left;
       min-height: 1px;
       position: relative;
-      *margin-right: -1px;
+      margin-right: -1px;
       width: 48.35615%; } }
 
 @media (min-width: 900px) {
