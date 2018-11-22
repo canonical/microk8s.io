@@ -34,7 +34,7 @@
     <div class="row">
       <div class="p-navigation__banner u-vertically-center">
         <p class="p-navigation__logo u-vertically-center u-align--center">
-          <a href="/">
+          <a class="p-navigation-logo__anchor" href="/">
             MicroK8s
           </a>
         </p>
@@ -50,13 +50,13 @@
             <a href="/">Overview</a>
           </li>
           <li class="p-navigation__link" role="menuitem">
-            <a href="https://discuss.kubernetes.io/tags/microk8s">Docs</a>
+            <a href="https://github.com/ubuntu/microk8s/blob/master/README.md">Docs</a>
           </li>
           <li class="p-navigation__link" role="menuitem">
             <a class="p-link--external" href="https://discuss.kubernetes.io/tags/microk8s">Discourse</a>
           </li>
           <li class="p-navigation__link" role="menuitem">
-            <a class="p-link--external" href="https://github.com/ubuntu/microk8s">Code</a>
+            <a class="p-link--external" href="https://github.com/ubuntu/microk8s/issues">Code</a>
           </li>
           <li class="p-navigation__link" role="menuitem">
             <a class="p-link--external" href="https://github.com/ubuntu/microk8s/issues">Bugs</a>
@@ -67,24 +67,24 @@
   </header>
 
   <main id="main-content">
-    <section class="p-strip--light is-bordered p-microk8s-hero">
-      <div class="row u-equal-height">
-        <div class="col-8">
-          <h1>Kubernetes for Workstations and Appliances</h1>
-          <h4>A single package of k8s that installs on 42 flavours of Linux. Made for developers and great for
-            appliances.</h4>
-          <p class="p-microk8s-hero__link"><a class="p-button--positive" href="#quick-start" rel="" id="anchor1" class="anchorLink">Get
-              started with MicroK8s</a></p>
-        </div>
-        <div class="col-4 u-align--center u-vertically--center p-logo">
-          <img class="p-image-shadowed p-logo-certified" src="https://raw.githubusercontent.com/cncf/artwork/master/kubernetes/certified-kubernetes/versionless/color/certified-kubernetes-color.png?"
-            alt="Certified Kubernetes" />
-          <p>
-            <a href="https://snapcraft.io/microk8s" title="Get it from the Snap Store">
-              <img class="p-logo-snap-store" src="https://snapcraft.io/static/images/badges/en/snap-store-black.svg"
-                alt="Snap Store" />
-            </a>
-          </p>
+    <section class="p-microk8s-hero">
+      <div class="p-microk8s-suru p-strip is-dark is-bordered">
+        <div class="row u-equal-height">
+          <div class="col-8">
+            <h1>Kubernetes for Workstations and Appliances</h1>
+            <h4>A single package of k8s that installs on <s>41</s> 42 flavours of Linux. Made for developers and great for
+              appliances.</h4>
+            <div class="p-logo-snap-store">
+              <a href="https://snapcraft.io/microk8s" title="Get it from the Snap Store">
+                <img class="p-logo-snap-store__image" src="https://assets.ubuntu.com/v1/fa3c60f8-snap-store-white.svg"
+                  alt="Snap Store" />
+              </a>
+            </div>
+          </div>
+          <div class="col-4 u-align--center u-vertically--center p-logo">
+            <img class="p-image-shadowed p-logo-certified" src="https://raw.githubusercontent.com/cncf/artwork/master/kubernetes/certified-kubernetes/versionless/color/certified-kubernetes-color.png?"
+              alt="Certified Kubernetes" />
+          </div>
         </div>
       </div>
     </section>
@@ -150,7 +150,7 @@
               <div class="p-matrix__content">
                 <h3 class="p-matrix__title">Fast install</h3>
                 <div class="p-matrix__desc">
-                  <p>Get a full Kubernetes system running in under 60 seconds</p>
+                  <p>Get a full Kubernetes system running in under 60 seconds.</p>
                 </div>
               </div>
             </li>

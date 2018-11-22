@@ -4,7 +4,6 @@ $mine-shaft: #333333;
 $persian-red: #ce2d2d;
 // import vanilla
 @import 'vanilla-framework/scss/build';
-
 .p-navigation {
   background-color: $mine-shaft;
   display: flex;
@@ -56,7 +55,6 @@ $persian-red: #ce2d2d;
   .p-navigation__link>a {
     padding: 0.75rem $sp-large;
   }
-
   .p-navigation__link>a::before {
     background: $mine-shaft;
     content: '';
@@ -73,7 +71,6 @@ $persian-red: #ce2d2d;
     border-left: 0px solid $color-mid-light;
     padding: 0.75rem $sp-medium;
   }
-
   .p-navigation__link>a::before {
     background: $persian-red;
     bottom: 0;
@@ -93,14 +90,12 @@ $persian-red: #ce2d2d;
   .p-navigation__link.is-selected>a {
     position: relative;
   }
-
   .p-navigation__link.is-selected>a::before {
     bottom: 0;
     background-color: $color-mid-dark;
     content: '';
     position: absolute;
   }
-  
   .p-navigation__link.is-selected>a::before {
     height: 0.1875rem;
     width: auto;
@@ -116,11 +111,16 @@ $persian-red: #ce2d2d;
   padding: 0;
 }
 
+.p-navigation-logo__anchor {
+  font-family: 'Ubuntu', 'Helvetica', 'Arial' !important;
+  font-size: 16px;
+  font-weight: 400;
+}
+
 @media (max-width: $breakpoint-medium) {
   .p-navigation__links {
     margin-top: -1px;
   }
-
   .p-navigation__logo {
     padding-top: 12px !important;
   }
@@ -131,9 +131,9 @@ $persian-red: #ce2d2d;
     display: flex;
     flex-wrap: wrap;
   }
-
   .p-navigation__logo {
     padding-top: 0px !important;
+    margin: 0 8px !important;
   }
 }
 
@@ -226,7 +226,7 @@ $persian-red: #ce2d2d;
 }
 
 .p-microk8s-hero {
-  background-color: $color-light;
+  background-color: $color-x-dark;
 }
 
 .p-logo {
@@ -234,20 +234,39 @@ $persian-red: #ce2d2d;
     height: 241px;
     width: 179px;
   }
-  
+}
+
+.p-logo-snap-store__image {
+  height: 54px;
+  width: 179px;
+}
+
+.p-microk8s-hero {
+  background-color: $color-dark;
+  // background: linear-gradient(-121deg, $color-x-dark 0%, $color-dark 51%, #262626 100%);
+}
+
+.p-strip.is-dark {
+  color: $color-x-light;
+}
+
+@media only screen and (max-width: $breakpoint-x-small) {
   .p-logo-snap-store {
-    height: 54px;
-    width: 179px;
+    justify-content: center !important;
+    text-align: center !important;
   }
 }
 
 @media only screen and (max-width: $breakpoint-medium) {
   .p-microk8s-hero__link {
-    margin-top: $sp-large ;
+    margin-top: $sp-large;
+  }
+  .p-logo-snap-store {
+    padding-top: $sp-medium;
   }
 }
 
-@media only screen and (min-width: $breakpoint-x-small) and (max-width: $breakpoint-medium){
+@media only screen and (min-width: $breakpoint-x-small) and (max-width: $breakpoint-medium) {
   .p-logo {
     justify-content: left !important;
     text-align: left !important;
@@ -255,11 +274,10 @@ $persian-red: #ce2d2d;
 }
 
 @media (min-width: $breakpoint-medium) {
-  .p-microk8s-hero {
-    background-blend-mode: multiply;
-    background-image: url('https://assets.ubuntu.com/v1/a413af31-suru+left.svg'), url('https://assets.ubuntu.com/v1/78957c9e-suru+right+1.svg'), url('https://assets.ubuntu.com/v1/c5e39473-suru+right+2.svg');
-    background-position: bottom left, right, bottom right;
-    background-size: contain, contain, initial;
+  .p-microk8s-suru {
+    // background-blend-mode: mulitply;
+    background-image: url('https://assets.ubuntu.com/v1/28654c8c-microk8s-suru-background.svg');
+    background-size: cover;
     background-repeat: no-repeat;
   }
 }
