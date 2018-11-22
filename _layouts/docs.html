@@ -2,14 +2,9 @@
 <html lang="en">
 
 <head>
-  <!-- Google Tag Manager --
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','{{ tag_manager_code }}');</script>
-    !-- End Google Tag Manager -->
-
+  {% if jekyll.environment == 'production' %}
+  {% include analytics.html %}
+  {% endif %}
   <title>microk8s - Fast, Light, Upstream Developer Kubernetes</title>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -18,11 +13,9 @@
 </head>
 
 <body>
-  <!-- Google Tag Manager (noscript) --
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id={{ tag_manager_code }}"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    !-- End Google Tag Manager (noscript) -->
-
+  {% if jekyll.environment == 'production' %}
+  {% include analytics_no_script.html %}
+  {% endif %}
   <div class="docs-container">
     <header id="navigation" class="p-navigation">
       <div class="p-navigation__banner u-vertically-center">
@@ -119,7 +112,8 @@
                   <a href="https://www.ubuntu.com/legal" class="p-link--external">Legal info</a>
                 </li>
                 <li class="p-inline-list__item">
-                    <a href="https://github.com/canonical-websites/microk8s.io/issues/new" class="p-link--external">Report a bug with this site</a>
+                  <a href="https://github.com/canonical-websites/microk8s.io/issues/new" class="p-link--external">Report
+                    a bug with this site</a>
                 </li>
               </ul>
               <span class="u-off-screen">

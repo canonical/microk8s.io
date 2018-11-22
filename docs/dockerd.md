@@ -1,5 +1,5 @@
 ---
-layout: base
+layout: docs
 ---
 # Dockerd in microk8s
 

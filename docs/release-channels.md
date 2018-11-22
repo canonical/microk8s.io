@@ -1,5 +1,5 @@
 ---
-layout: base
+layout: docs
 ---
 # Release Channels and Upgrades
 

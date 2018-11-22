@@ -1,5 +1,5 @@
 ---
-layout: base
+layout: docs
 ---
 # Private Registry Addon
 
