@@ -12,6 +12,7 @@
 
 <head>
   <link rel="stylesheet" href="/css/styles.css" />
+  <link rel="shortcut icon" type="image/png" href="https://assets.ubuntu.com/v1/9d7268f4-kuberneters-favicon.png">
 
   <!-- Google Tag Manager -->
   <script>(function (w, d, s, l, i) {
@@ -32,12 +33,12 @@
 
   <header id="navigation" class="p-navigation">
     <div class="row">
-      <div class="p-navigation__banner u-vertically-center">
-        <p class="p-navigation__logo u-vertically-center u-align--center">
-          <a class="p-navigation-logo__anchor" href="/">
+      <div class="p-navigation__banner">
+        <div class="p-navigation__logo u-vertically-center">
+          <a class="p-navigation__link" href="/">
             MicroK8s
           </a>
-        </p>
+        </div>
         <a href="#navigation" class="p-navigation__toggle--open" title="menu">Menu</a>
         <a href="#navigation-closed" class="p-navigation__toggle--close" title="close menu">Close menu</a>
       </div>
@@ -47,16 +48,13 @@
         </span>
         <ul class="p-navigation__links" role="menu">
           <li class="p-navigation__link" role="menuitem">
-            <a href="/">Overview</a>
-          </li>
-          <li class="p-navigation__link" role="menuitem">
             <a href="https://github.com/ubuntu/microk8s/blob/master/README.md">Docs</a>
           </li>
           <li class="p-navigation__link" role="menuitem">
             <a class="p-link--external" href="https://discuss.kubernetes.io/tags/microk8s">Discourse</a>
           </li>
           <li class="p-navigation__link" role="menuitem">
-            <a class="p-link--external" href="https://github.com/ubuntu/microk8s/issues">Code</a>
+            <a class="p-link--external" href="https://github.com/ubuntu/microk8s">Code</a>
           </li>
           <li class="p-navigation__link" role="menuitem">
             <a class="p-link--external" href="https://github.com/ubuntu/microk8s/issues">Bugs</a>
@@ -67,24 +65,18 @@
   </header>
 
   <main id="main-content">
-    <section class="p-microk8s-hero">
-      <div class="p-microk8s-suru p-strip is-dark is-bordered">
-        <div class="row u-equal-height">
-          <div class="col-8">
-            <h1>Kubernetes for Workstations and Appliances</h1>
-            <h4>A single package of k8s that installs on <s>41</s> 42 flavours of Linux. Made for developers and great for
-              appliances.</h4>
-            <div class="p-logo-snap-store">
-              <a href="https://snapcraft.io/microk8s" title="Get it from the Snap Store">
-                <img class="p-logo-snap-store__image" src="https://assets.ubuntu.com/v1/fa3c60f8-snap-store-white.svg"
-                  alt="Snap Store" />
-              </a>
-            </div>
-          </div>
-          <div class="col-4 u-align--center u-vertically--center p-logo">
-            <img class="p-image-shadowed p-logo-certified" src="https://raw.githubusercontent.com/cncf/artwork/master/kubernetes/certified-kubernetes/versionless/color/certified-kubernetes-color.png?"
-              alt="Certified Kubernetes" />
-          </div>
+
+    <section class="p-strip--dark" style="background-image: url('https://assets.ubuntu.com/v1/8bc629a7-microk8s-suru-background.svg'); background-size: cover;">
+      <div class="row u-equal-height">
+        <div class="col-8">
+          <h1>Kubernetes for workstations and appliances</h1>
+          <h4>A single package of k8s that installs on <s>41</s> 42 flavours of Linux. Made for developers and great for appliances.</h4>
+          <a href="https://snapcraft.io/microk8s" title="Get it from the Snap Store">
+            <img src="https://assets.ubuntu.com/v1/fa3c60f8-snap-store-white.svg" alt="Snap Store" />
+          </a>
+        </div>
+        <div class="col-4 prefix-1 u-vertically-center">
+          <img src="https://assets.ubuntu.com/v1/6731169e-certified-kubernetes-color.png?w=182" alt="Certified Kubernetes" />
         </div>
       </div>
     </section>
@@ -228,7 +220,7 @@
     <section class="p-strip is-bordered" id="quick-start">
       <div class="row">
         <h2>Quick start</h2>
-        <h4>On Ubuntu 16.04 LTS or 18.04 LTS, install the <a href="https://snapcraft.io/microk8s">MicroK8s snap:</a></h4>
+        <h4>On Ubuntu 16.04 LTS or 18.04 LTS, install the <a href="https://snapcraft.io/microk8s">MicroK8s&nbsp;snap:</a></h4>
       </div>
       <div class="row u-equal-height">
         <div class="col-8">
@@ -257,7 +249,7 @@
 
     <section class="p-strip is-shallow is-bordered">
       <div class="row">
-        <div class="col-12 u-sv3">
+        <div class="col-8 u-sv3">
           <h2>Useful tips</h2>
           <h4>Start and stop kubernetes</h4>
           <p>Bring k8s up and take it down as needed to preserve battery life when you don’t need it running:</p>
@@ -268,51 +260,51 @@
             <input class="p-code-snippet__input" value="sudo microk8s.start" readonly="readonly">
           </div>
         </div>
-        <hr />
-        <div class="col-12">
+      </div>
+      <div class="row">
+        <div class="col-8">
+          <hr>
           <h4>Turn on standard services</h4>
           <div class="p-code-snippet">
             <input class="p-code-snippet__input" value="microk8s.enable dashboard registry istio [...]" readonly="readonly">
           </div>
-          <p>Enable and disable particular standard add-on services using the <br><code>microk8s.enable</code> and
-            <code>microk8s.disable</code> commands. See the <code>--help</code> for details.</br></p>
+          <p>Enable and disable particular standard add-on services using the <code>microk8s.enable</code> and <code>microk8s.disable</code> commands. See the <code>--help</code> for details.</p>
         </div>
-        <div class="col-12">
+      </div>
+      <div class="row">
+        <div class="col-8">
           <hr>
           <h4>Try a different version, or a beta, or a daily build</h4>
           <p>Snaps are published in <a href="https://docs.snapcraft.io/channels/551">channels</a> which are made up
             of a track (or major version), and an expected level of stability. Try <code>snap info microk8s</code> to
             see what versions are currently published. At the time of writing:</p>
           <div class="p-code-pre">
-            <pre><code>
-                  channels:
-                  stable:         v1.12.0 (238) 223MB classic
-                  candidate:      v1.12.2 (266) 224MB classic
-                  beta:           v1.12.2 (266) 224MB classic
-                  edge:           v1.12.2 (266) 224MB classic
-                  1.12/stable:    v1.12.0 (237) 223MB classic
-                  1.12/candidate: v1.12.2 (267) 224MB classic
-                  1.12/beta:      v1.12.2 (267) 224MB classic
-                  1.12/edge:      v1.12.2 (267) 224MB classic
-                  1.11/stable:    v1.11.3 (236) 219MB classic
-                  1.11/candidate: v1.11.4 (255) 219MB classic
-                  1.11/beta:      v1.11.4 (255) 219MB classic
-                  1.11/edge:      v1.11.4 (255) 219MB classic
-                  1.10/stable:    v1.10.8 (234) 175MB classic
-                  1.10/candidate: v1.10.9 (245) 175MB classic
-                  1.10/beta:      v1.10.9 (245) 175MB classic
-                  1.10/edge:      v1.10.9 (245) 175MB classic
-                </code></pre>
-            <p>You can <code>snap refresh --channel=latest/beta microk8s</code> or <code>snap refresh --channel=1.11/stable microk8s</code>
-              and get the expected result.</p>
+            <pre><code>channels:
+stable:         v1.12.0 (238) 223MB classic
+candidate:      v1.12.2 (266) 224MB classic
+beta:           v1.12.2 (266) 224MB classic
+edge:           v1.12.2 (266) 224MB classic
+1.12/stable:    v1.12.0 (237) 223MB classic
+1.12/candidate: v1.12.2 (267) 224MB classic
+1.12/beta:      v1.12.2 (267) 224MB classic
+1.12/edge:      v1.12.2 (267) 224MB classic
+1.11/stable:    v1.11.3 (236) 219MB classic
+1.11/candidate: v1.11.4 (255) 219MB classic
+1.11/beta:      v1.11.4 (255) 219MB classic
+1.11/edge:      v1.11.4 (255) 219MB classic
+1.10/stable:    v1.10.8 (234) 175MB classic
+1.10/candidate: v1.10.9 (245) 175MB classic
+1.10/beta:      v1.10.9 (245) 175MB classic
+1.10/edge:      v1.10.9 (245) 175MB classic</code></pre>
           </div>
+          <p>You can <code>snap refresh --channel=latest/beta microk8s</code> or <code>snap refresh --channel=1.11/stable microk8s</code> and get the expected result.</p>
         </div>
       </div>
     </section>
     <section class="p-strip is-bordered">
       <div class="row">
-        <h2>Working with Microk8s</h2>
-        <h4> Or dive right into the <a href="https://discourse.microk8s.io">docs</a></h4>
+        <h2>Working with MicroK8s</h2>
+        <h4> Or dive right into the <a href="https://discuss.kubernetes.io/tags/microk8s">docs</a></h4>
         <p>
           <script src="https://asciinema.org/a/jUPw2icctB5sSv2JW904qWSej.js" id="asciicast-jUPw2icctB5sSv2JW904qWSej"
             async="" data-player="[object HTMLDivElement]"></script>
@@ -326,16 +318,64 @@
     </section>
     <footer class="p-footer">
       <div class="row">
-        <div class="col-12">
-          <p class="p-footer__paragraph">Microk8s was built by the dedicated <a href="https://www.ubuntu.com/kubernetes">Kubernetes
-              team at
-              Canonical</a>
+        <div>
+          <p>MicroK8s was built by the dedicated <a href="https://www.ubuntu.com/kubernetes">Kubernetes team at Canonical</a>
             for the developer community. We also make <a href="https://ubuntu.com/kubernetes/install#cluster">the
-              Charmed Distribution of Kubernetes</a> for multi-cloud scalable clusters</p>
+            Charmed Distribution of Kubernetes</a> for multi-cloud scalable clusters</p>
+          <p class="u-no-max-width">© 2018 Canonical Ltd. Ubuntu and Canonical are registered trademarks of Canonical&nbsp;Ltd.</p>
+          <nav class="p-footer__nav" role="navigation">
+            <ul class="p-footer__links">
+              <li class="p-footer__item">
+                <a class="p-footer__link" href="https://www.ubuntu.com/legal">Legal information</a>
+              </li>
+              <li class="p-footer__item">
+                <a class="p-footer__link" href="https://github.com/ubuntu/microk8s/issues/new">Report a bug on this site</a>
+              </li>
+            </ul>
+            <span class="u-off-screen">
+              <a href="#">Go to the top of the page</a>
+            </span>
+          </nav>
         </div>
       </div>
     </footer>
   </main>
   <script src="/js/global-nav.js"></script>
   <script>canonicalGlobalNav.createNav({ maxWidth: '64.875rem' });</script>
+  <script>
+  const copyToClipboard = str => {
+    const el = document.createElement('textarea'); // Create a <textarea> element
+    el.value = str; // Set its value to the string that you want copied
+    el.setAttribute('readonly', ''); // Make it readonly to be tamper-proof
+    el.style.position = 'absolute';
+    el.style.left = '-9999px'; // Move outside the screen to make it invisible
+    document.body.appendChild(el); // Append the <textarea> element to the HTML document
+    const selected =
+      document.getSelection().rangeCount > 0 // Check if there is any content selected previously
+        ? document.getSelection().getRangeAt(0) // Store selection if found
+        : false; // Mark as false to know no selection existed before
+    el.select(); // Select the <textarea> content
+    document.execCommand('copy'); // Copy - only works as a result of a user action (e.g. click events)
+    document.body.removeChild(el); // Remove the <textarea> element
+    if (selected) {
+      // If a selection existed before copying
+      document.getSelection().removeAllRanges(); // Unselect everything on the HTML document
+      document.getSelection().addRange(selected); // Restore the original selection
+    }
+  };
+
+  var codeSnippetActions = document.querySelectorAll(
+    '.p-code-snippet__action'
+  );
+  for (var codeSnippetAction of codeSnippetActions) {
+    codeSnippetAction.addEventListener(
+      'click',
+      function(e) {
+        const clipboardValue = this.previousSibling.previousSibling.value;
+        copyToClipboard(clipboardValue);
+      },
+      false
+    );
+  }
+  </script>
 </body>
