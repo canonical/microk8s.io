@@ -1,6 +1,6 @@
-# microk8s.io
+# MicroK8s.io
 
-This is the repo for the [microk8s website](https://microk8s.io).
+This is the repo for the [MicroK8s website](https://microk8s.io).
 
 ## Usage
 
