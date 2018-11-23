@@ -4,8 +4,9 @@
 // Import Vanilla
 @import 'vanilla-framework/scss/build';
 
-// import sidebar styles
+// import additional styles
 @import "sidebar";
+@import "blockquote";
 
 // Custom styles
 .p-navigation__banner {
