@@ -14,9 +14,9 @@ You can install the registry with:
 microk8s.enable registry
 ```
 
-As you can see in the applied [manifest](../microk8s-resources/actions/registry.yaml) a `20Gi` persistent volume is claimed for storing images. To satisfy this claim the storage addon is also enabled along with the registry.
+As you can see in the applied [manifest](https://github.com/ubuntu/microk8s/blob/master/microk8s-resources/actions/registry.yaml) a `20Gi` persistent volume is claimed for storing images. To satisfy this claim the storage addon is also enabled along with the registry.
 
-The docker daemon used by MicroK8s is [configured to trust](../microk8s-resources/default-args/docker-daemon.json) this insecure registry. It is on this daemon we will have to talk to when we want to upload images. The easiest way to do so is by using the `microk8s.docker` client:
+The docker daemon used by MicroK8s is [configured to trust](https://github.com/ubuntu/microk8s/blob/master/microk8s-resources/default-args/docker-daemon.json) this insecure registry. It is on this daemon we will have to talk to when we want to upload images. The easiest way to do so is by using the `microk8s.docker` client:
 
 ```
 microk8s.docker pull busybox
@@ -49,5 +49,5 @@ spec:
 
 
 ## References
- - Insecure registry: https://docs.docker.com/registry/insecure/
- - Test a registry: https://docs.docker.com/registry/deploying/#copy-an-image-from-docker-hub-to-your-registry
+ - Insecure registry: [https://docs.docker.com/registry/insecure/](https://docs.docker.com/registry/insecure/)
+ - Test a registry: [https://docs.docker.com/registry/deploying/#copy-an-image-from-docker-hub-to-your-registry](https://docs.docker.com/registry/deploying/#copy-an-image-from-docker-hub-to-your-registry)

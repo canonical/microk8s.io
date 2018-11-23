@@ -23,7 +23,7 @@ Alternatively, you can select a MicroK8s channel that will follow a specific Kub
 snap install microk8s --classic --channel=1.12/stable
 ```
 
-You can read more on the MicroK8s release channels in the [Release Channels and Upgrades](docs/release-channels.md) doc.
+You can read more on the MicroK8s release channels in the [Release Channels and Upgrades](/docs/release-channels) doc.
 
 At any point you can check MicroK8s' availability with:
 
@@ -39,7 +39,7 @@ microk8s.status --wait-ready
 
 > In order to install MicroK8s make sure
 > - port 8080 is not used and
-> - if you have AppArmor enabled (check with `sudo apparmor_status`) you do not have any other [dockerd installed](docs/dockerd.md). You can use the dockerd coming with MicroK8s.
+> - if you have AppArmor enabled (check with `sudo apparmor_status`) you do not have any other [dockerd installed](/docs/dockerd). You can use the dockerd coming with MicroK8s.
 
 ### Accessing kubernetes
 
@@ -92,7 +92,7 @@ With `microk8s.status` you can see the list of available addons and which ones a
 - **ingress**: Create an ingress controller.
 - **gpu**: Expose GPU(s) to MicroK8s by enabling the nvidia-docker runtime and nvidia-device-plugin-daemonset. Requires NVIDIA drivers to already be installed on the host system.
 - **istio**: Deploy the core [Istio](https://istio.io/) services. You can use the `microk8s.istioctl` command to manage your deployments.
-- **registry**: Deploy a docker private registry and expose it on `localhost:32000`. The storage addon will be enabled as part of this addon. To [use the registry](docs/registry.md) you can use the `microk8s.docker` command.
+- **registry**: Deploy a docker private registry and expose it on `localhost:32000`. The storage addon will be enabled as part of this addon. To [use the registry](/docs/registry) you can use the `microk8s.docker` command.
 - **metrics-server**: Deploy the [Metrics Server](https://kubernetes.io/docs/tasks/debug-application-cluster/core-metrics-pipeline/#metrics-server).
 
 ### Stopping and restarting MicroK8s
