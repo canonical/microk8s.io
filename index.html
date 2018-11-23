@@ -162,7 +162,7 @@ layout: base
       <div class="row u-equal-height">
         <div class="col-8">
           <div class="p-code-snippet">
-            <input class="p-code-snippet__input" value="sudo snap install microk8s --classic" readonly="readonly">
+            <input class="p-code-snippet__input" aria-label="sudo snap install microk8s --classic" value="sudo snap install microk8s --classic" readonly="readonly">
             <button class="p-code-snippet__action">Copy to clipboard</button>
           </div>
           <p>To install on other distributions use the <a href="https://snapcraft.io/docs/core/install" class="p-link--external">snapcraft
@@ -174,7 +174,7 @@ layout: base
           <hr>
           <h4>For the current published versions</h4>
           <div class="p-code-snippet">
-            <input class="p-code-snippet__input" value="snap info microk8s" readonly="readonly">
+            <input class="p-code-snippet__input" aria-label="snap info microk8s" value="snap info microk8s" readonly="readonly">
             <button class="p-code-snippet__action">Copy to clipboard</button>
           </div>
           <p>It is possible to select a specific version like 1.11 and get only stable or RC updates to that version.
@@ -191,10 +191,10 @@ layout: base
           <h4>Start and stop kubernetes</h4>
           <p>Bring k8s up and take it down as needed to preserve battery life when you don’t need it running:</p>
           <div class="p-code-snippet">
-            <input class="p-code-snippet__input" value="sudo microk8s.stop" readonly="readonly">
+            <input class="p-code-snippet__input" aria-label="sudo microk8s.stop" value="sudo microk8s.stop" readonly="readonly">
           </div>
           <div class="p-code-snippet">
-            <input class="p-code-snippet__input" value="sudo microk8s.start" readonly="readonly">
+            <input class="p-code-snippet__input" aria-label="sudo microk8s.start" value="sudo microk8s.start" readonly="readonly">
           </div>
         </div>
       </div>
@@ -203,7 +203,7 @@ layout: base
           <hr>
           <h4>Turn on standard services</h4>
           <div class="p-code-snippet">
-            <input class="p-code-snippet__input" value="microk8s.enable dashboard registry istio [...]" readonly="readonly">
+            <input class="p-code-snippet__input" aria-label="microk8s.enable dashboard registry istio [...]" value="microk8s.enable dashboard registry istio [...]" readonly="readonly">
           </div>
           <p>Enable and disable particular standard add-on services using the <code>microk8s.enable</code> and <code>microk8s.disable</code> commands. See the <code>--help</code> for details.</p>
         </div>
@@ -247,7 +247,8 @@ edge:           v1.12.2 (266) 224MB classic
             async="" data-player="[object HTMLDivElement]"></script>
           <div id="asciicast-container-jUPw2icctB5sSv2JW904qWSej" class="asciicast" style="display: block; float: none; overflow: hidden; padding: 0px; margin: 20px 0px;">
             <iframe src="https://asciinema.org/a/jUPw2icctB5sSv2JW904qWSej/embed?" id="asciicast-iframe-jUPw2icctB5sSv2JW904qWSej"
-              name="asciicast-iframe-jUPw2icctB5sSv2JW904qWSej" allow="fullscreen" style="overflow: hidden; margin: 0px; border: 0px; display: inline-block; width: 1140px; float: none; visibility: visible; height: 931px;">
+              name="asciicast-iframe-jUPw2icctB5sSv2JW904qWSej" allow="fullscreen" style="overflow: hidden; margin: 0px; border: 0px; display: inline-block; width: 1140px; float: none; visibility: visible; height: 931px;"
+              title="A number to steps to get started with MicroK8s">
             </iframe>
           </div>
         </p>
