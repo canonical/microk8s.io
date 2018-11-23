@@ -49,5 +49,5 @@ spec:
 
 
 ## References
- - Insecure registry: https://docs.docker.com/registry/insecure/
- - Test a registry: https://docs.docker.com/registry/deploying/#copy-an-image-from-docker-hub-to-your-registry
+ - Insecure registry: [https://docs.docker.com/registry/insecure/](https://docs.docker.com/registry/insecure/)
+ - Test a registry: [https://docs.docker.com/registry/deploying/#copy-an-image-from-docker-hub-to-your-registry](https://docs.docker.com/registry/deploying/#copy-an-image-from-docker-hub-to-your-registry)

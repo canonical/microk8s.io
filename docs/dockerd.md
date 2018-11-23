@@ -21,4 +21,4 @@ When AppArmor is enabled all docker daemons running in a system will apply the s
 Restarting MicroK8s' dockerd (`sudo systemctl restart snap.microk8s.daemon-docker`) or calling the `microk8s.reset` command will ensure the correct AppArmor profile is loaded.
 
 ## References
- - Issue describing the AppArmor profile limitation: https://forum.snapcraft.io/t/commands-and-aliases/3950
+ - Issue describing the AppArmor profile limitation: [https://forum.snapcraft.io/t/commands-and-aliases/3950](https://forum.snapcraft.io/t/commands-and-aliases/3950)
