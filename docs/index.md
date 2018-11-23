@@ -4,9 +4,9 @@ title: "User Guide"
 ---
 # MicroK8s documentation
 
+<img src="https://raw.githubusercontent.com/cncf/artwork/master/kubernetes/certified-kubernetes/versionless/color/certified-kubernetes-color.png" align="right" width="120px" style="margin-left: 1rem;">
 ![](https://img.shields.io/badge/Kubernetes-1.12-326de6.svg)
 
-<img src="https://raw.githubusercontent.com/cncf/artwork/master/kubernetes/certified-kubernetes/versionless/color/certified-kubernetes-color.png" align="right" width="200px">
 Kubernetes in a [snap](https://snapcraft.io/microk8s) that you can run locally.
 
 ## User guide

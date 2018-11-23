@@ -2,6 +2,10 @@
 .docs-container {
   max-width: 64.875rem;
   margin: 0 auto;
+
+  p {
+    max-width: none;
+  }
 }
 
 .p-navigation {
