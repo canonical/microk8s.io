@@ -1,10 +1,12 @@
-@charset 'utf-8';
-
 // Import scss settings
 @import 'settings';
 
 // Import Vanilla
 @import 'vanilla-framework/scss/build';
+
+// import additional styles
+@import "sidebar";
+@import "blockquote";
 
 // Custom styles
 .p-navigation__banner {

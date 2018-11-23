@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<!--
+  This is a basic HTML file template to become the new homepage of the site.
+  Currently it simply includes Vanilla styles and not much else.
+
+  When you come to work on it in ernest, please remove this comment
+  and replace index.html with this file.
+-->
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="/css/styles.css" />
+  <link rel="shortcut icon" type="image/png" href="https://assets.ubuntu.com/v1/d53eeeac-MicroK8s_favicon_64px_v2.png">
+  <title>
+    {% if page.title %}
+    {{ page.title }} | MicroK8s
+    {% else %}
+    MicroK8s - Fast, Light, Upstream Developer Kubernetes
+    {% endif %}
+  </title>
+
+  <!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-T5SMPTS');</script>
+  <!-- End Google Tag Manager -->
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T5SMPTS" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <header id="navigation" class="p-navigation">
+    <div class="row">
+      <div class="p-navigation__banner">
+        <div class="p-navigation__logo u-vertically-center">
+          <a class="p-navigation__link" href="/">
+            MicroK8s
+          </a>
+        </div>
+        <a href="#navigation" class="p-navigation__toggle--open" title="menu">Menu</a>
+        <a href="#navigation-closed" class="p-navigation__toggle--close" title="close menu">Close menu</a>
+      </div>
+      <nav class="p-navigation__nav" role="menubar">
+        <span class="u-off-screen">
+          <a href="#main-content">Jump to main content</a>
+        </span>
+        <ul class="p-navigation__links" role="menu">
+          <li class="p-navigation__link" role="menuitem">
+            <a href="/docs">Docs</a>
+          </li>
+          <li class="p-navigation__link" role="menuitem">
+            <a class="p-link--external" href="https://discuss.kubernetes.io/tags/microk8s">Discourse</a>
+          </li>
+          <li class="p-navigation__link" role="menuitem">
+            <a class="p-link--external" href="https://github.com/ubuntu/microk8s">Code</a>
+          </li>
+          <li class="p-navigation__link" role="menuitem">
+            <a class="p-link--external" href="https://github.com/ubuntu/microk8s/issues">Bugs</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  {{content}}
+  <script src="/js/global-nav.js"></script>
+  <script>canonicalGlobalNav.createNav({ maxWidth: '64.875rem' });</script>
+</body>
+
+</html>
