@@ -1,7 +1,8 @@
 
 .docs-container {
-  display: flex;
-  flex-wrap: wrap; }
+  max-width: 64.875rem;
+  margin: 0 auto;
+}
 
 .p-navigation {
   flex-basis: 100%; }
