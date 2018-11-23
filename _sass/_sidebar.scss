@@ -21,15 +21,15 @@
   &__item {
     padding-bottom: $spv-intra--condensed / 2;
     padding-top: $spv-intra--condensed / 2;
-  
+
     &:first-of-type {
       padding-top: $spv-intra;
     }
-  
+
     &:last-of-type {
       padding-bottom: $spv-intra + $spv-intra--condensed;
     }
-  
+
     .is-active {
       position: relative;
 
