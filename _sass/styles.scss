@@ -1,9 +1,7 @@
 @charset 'utf-8';
-@import 'old_vanilla';
-
-// The import code above is an older version of https://vanillaframework.io/. It is included to use the .p-sidebar class.
-// Once the classes are back in vanilla the code below can be deleted and the whole framework can be included again.
-@import 'vanilla-framework/scss/settings';
+@import "settings";
+@import 'vanilla-framework/scss/build';
+@import "sidebar";
 
 $ubuntu-orange: #E95420;
 $mine-shaft: #333333;
