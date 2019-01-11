@@ -58,12 +58,19 @@ layout: base
       <div class="p-strip is-bordered">
         <div class="row">
           <h2>Single node Kubernetes done right</h2>
-          <h4>Zero-ops k8s on just about any Linux box.</h4>
-          <p>It’s not elastic, but it is on rails. Use it for offline development, prototyping, testing, or use it on a
-            VM as a small, cheap, reliable k8s for CI/CD. Makes a great k8s for appliances - develop your IoT apps for
-            k8s and deploy them to MicroK8s on your boxes.</p>
-          <p><a class="p-button--positive" href="#quick-start">Get started with
-              MicroK8s</a></p>
+        </div>
+        <div class="row">
+          <div class="col-6">
+            <h4>Zero-ops k8s on just about any Linux box.</h4>
+            <p>It’s not elastic, but it is on rails. Use it for offline development, prototyping, testing, or use it on a VM as a small, cheap, reliable k8s for CI/CD. Makes a great k8s for appliances - develop your IoT apps for k8s and deploy them to MicroK8s on your boxes.</p>
+            <p><a class="p-button--positive" href="#quick-start">Get started with MicroK8s</a></p>
+          </div>
+          <div class="col-6">
+            <blockquote class="p-pull-quote">
+              <p>dear microk8s team: you are awesome. Microk8s has tangibly improved my life and my CI pipelines as a developer of k8s controllers</p>
+              <cite class="p-pull-quote__citation">Posted in <a href="https://kubernetes.slack.com/messages/microk8s/" class=" p-link--external">#microk8s</a></cite>
+            </blockquote>
+          </div>
         </div>
       </div>
     </section>
@@ -143,9 +150,9 @@ layout: base
             </li>
             <li class="p-matrix__item u-hide--x-small">
               <div class="p-matrix__content">
-                <h3 class="p-matrix__title">&nbsp; </h3>
+                <h3 class="p-matrix__title">Small</h3>
                 <div class="p-matrix__desc">
-                  <p> </p>
+                  <p>Use MicroK8s in your CI/CD pipelines and get on with your day without headaches.</p>
                 </div>
               </div>
             </li>
@@ -176,9 +183,7 @@ layout: base
             <input class="p-code-snippet__input" aria-label="snap info microk8s" value="snap info microk8s" readonly="readonly">
             <button class="p-code-snippet__action">Copy to clipboard</button>
           </div>
-          <p>It is possible to select a specific version like 1.11 and get only stable or RC updates to that version.
-            By default you will get the current major version (e.g. 1.12) with upgrades when new major versions are
-            published.</p>
+          <p>It is possible to select a specific version like 1.11 and get only stable or RC updates to that version. By default, you will get the current major version with upgrades when new major versions are published.</p>
         </div>
       </div>
     </section>
@@ -213,25 +218,29 @@ layout: base
           <h4>Try a different version, or a beta, or a daily build</h4>
           <p>Snaps are published in <a href="https://docs.snapcraft.io/channels/551">channels</a> which are made up
             of a track (or major version), and an expected level of stability. Try <code>snap info microk8s</code> to
-            see what versions are currently published. At the time of writing:</p>
+            see what versions are currently published. For example:</p>
           <div class="p-code-pre">
             <pre><code>channels:
-stable:         v1.12.0 (238) 223MB classic
-candidate:      v1.12.2 (266) 224MB classic
-beta:           v1.12.2 (266) 224MB classic
-edge:           v1.12.2 (266) 224MB classic
-1.12/stable:    v1.12.0 (237) 223MB classic
-1.12/candidate: v1.12.2 (267) 224MB classic
-1.12/beta:      v1.12.2 (267) 224MB classic
-1.12/edge:      v1.12.2 (267) 224MB classic
-1.11/stable:    v1.11.3 (236) 219MB classic
-1.11/candidate: v1.11.4 (255) 219MB classic
-1.11/beta:      v1.11.4 (255) 219MB classic
-1.11/edge:      v1.11.4 (255) 219MB classic
-1.10/stable:    v1.10.8 (234) 175MB classic
-1.10/candidate: v1.10.9 (245) 175MB classic
-1.10/beta:      v1.10.9 (245) 175MB classic
-1.10/edge:      v1.10.9 (245) 175MB classic</code></pre>
+  stable:         v1.13.0  (340) 204MB classic
+  candidate:      v1.13.1  (354) 229MB classic
+  beta:           v1.13.1  (354) 229MB classic
+  edge:           v1.13.1  (354) 229MB classic
+  1.13/stable:    v1.13.0  (340) 204MB classic
+  1.13/candidate: v1.13.1  (356) 229MB classic
+  1.13/beta:      v1.13.1  (356) 229MB classic
+  1.13/edge:      v1.13.1  (356) 229MB classic
+  1.12/stable:    v1.12.3  (336) 226MB classic
+  1.12/candidate: v1.12.4  (362) 251MB classic
+  1.12/beta:      v1.12.4  (362) 251MB classic
+  1.12/edge:      v1.12.4  (362) 251MB classic
+  1.11/stable:    v1.11.5  (322) 219MB classic
+  1.11/candidate: v1.11.6  (361) 245MB classic
+  1.11/beta:      v1.11.6  (361) 245MB classic
+  1.11/edge:      v1.11.6  (361) 245MB classic
+  1.10/stable:    v1.10.11 (321) 175MB classic
+  1.10/candidate: v1.10.11 (321) 175MB classic
+  1.10/beta:      v1.10.11 (321) 175MB classic
+  1.10/edge:      v1.10.12 (364) 200MB classic</code></pre>
           </div>
           <p>You can <code>snap refresh --channel=latest/beta microk8s</code> or <code>snap refresh --channel=1.11/stable microk8s</code> and get the expected result.</p>
         </div>
