@@ -1209,9 +1209,9 @@ glob@~3.1.21:
     inherits "1"
     minimatch "~0.2.11"
 
-global-nav@1.2.1:
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/global-nav/-/global-nav-1.2.1.tgz#584f25a3dacbd972707657a1bfe0ccd086dc67e7"
+global-nav@2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/global-nav/-/global-nav-2.0.1.tgz#59c2a97b67f36eba687dfe7388427c935c729739"
 
 globals@^9.2.0:
   version "9.18.0"

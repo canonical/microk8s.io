@@ -18,6 +18,6 @@
     "node-sass": "4.11.0",
     "cssnano": "3.10.0",
     "autoprefixer": "9.4.7",
-    "global-nav": "1.2.1"
+    "global-nav": "2.0.1"
   }
 }
