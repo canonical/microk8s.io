@@ -17,7 +17,7 @@
     "postcss-cli": "4.1.1",
     "node-sass": "4.11.0",
     "cssnano": "3.10.0",
-    "autoprefixer": "6.7.7",
+    "autoprefixer": "9.4.7",
     "global-nav": "1.2.1"
   }
 }
