@@ -14,7 +14,7 @@
     "vanilla-framework": "1.8.1",
     "watch-cli": "0.2.3",
     "sass-lint": "1.12.1",
-    "postcss-cli": "4.1.1",
+    "postcss-cli": "6.1.1",
     "node-sass": "4.11.0",
     "cssnano": "3.10.0",
     "autoprefixer": "9.4.7",
