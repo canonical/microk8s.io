@@ -48,13 +48,14 @@ microk8s.kubectl get nodes
 microk8s.kubectl get services
 ```
 
-If you do not already have a `kubectl` installed you can alias `microk8s.kubectl` to `kubectl` using the following command
+If you do not already have a version of `kubectl` installed you can alias `microk8s.kubectl` to `kubectl` using the
+following command:
 
 ```
 snap alias microk8s.kubectl kubectl
 ```
 
-This measure can be safely reverted at anytime by doing
+This measure can be safely reverted at any time by running:
 
 ```
 snap unalias kubectl
@@ -67,33 +68,33 @@ microk8s.kubectl config view --raw > $HOME/.kube/config
 
 Note: The API server on port 8080 is listening on all network interfaces. In its kubeconfig file MicroK8s is using the loopback interface, as you can see with `microk8s.kubectl config view`. The `microk8s.config` command will output a kubeconfig with the host machine's IP (instead of the 127.0.0.1) as the API server endpoint.
 
-### Kubernetes addons
+### Kubernetes add-ons
 
-MicroK8s installs a barebones upstream Kubernetes. This means just the api-server, controller-manager, scheduler, kubelet, cni, kube-proxy are installed and run. Additional services like kube-dns and dashboard can be run using the `microk8s.enable` command
+MicroK8s installs a barebones upstream Kubernetes. This means just the api-server, controller-manager, scheduler, kubelet, cni, kube-proxy are installed and run. Additional services like kube-dns and dashboard can be run using the `microk8s.enable` command.
 
 ```
 microk8s.enable dns dashboard
 ```
 
-These addons can be disabled at anytime using the `disable` command
+These add-ons can be disabled at anytime using the `disable` command
 
 ```
 microk8s.disable dashboard dns
 ```
 
-With `microk8s.status` you can see the list of available addons and which ones are currently enabled. You can find the addon manifests and/or scripts under `${SNAP}/actions/`, with `${SNAP}` pointing by default to `/snap/microk8s/current`.
+With `microk8s.status` you can see the list of available add-ons and which ones are currently enabled. You can find the add-on manifests and/or scripts under `${SNAP}/actions/`, with `${SNAP}` pointing by default to `/snap/microk8s/current`.
 
-#### List of available addons
-- **dns**: Deploy kube dns. This addon may be required by others thus we recommend you always enable it. In environments where the external dns servers `8.8.8.8` and `8.8.4.4` are blocked you will need to update the upstream dns servers in `microk8s.kubectl -n kube-system edit configmap/kube-dns` after enabling the addon.
-- **dashboard**: Deploy kubernetes dashboard as well as grafana and influxdb. To access grafana point your browser to the url reported by `microk8s.kubectl cluster-info`.
-- **storage**: Create a default storage class. This storage class makes use of the hostpath-provisioner pointing to a directory on the host. Persistent volumes are created under `${SNAP_COMMON}/default-storage`. Upon disabling this addon you will be asked if you want to delete the persistent volumes created.
+#### List of available add-ons
+- **dns**: Deploy kube dns. This add-on may be required by others thus we recommend you always enable it. In environments where the external dns servers `8.8.8.8` and `8.8.4.4` are blocked you will need to update the upstream dns servers in `microk8s.kubectl -n kube-system edit configmap/kube-dns` after enabling the add-on.
+- **dashboard**: Deploy Kubernetes dashboard as well as Grafana and InfluxDB. To access Grafana point your browser to the url reported by `microk8s.kubectl cluster-info`.
+- **storage**: Create a default storage class. This storage class makes use of the hostpath-provisioner pointing to a directory on the host. Persistent volumes are created under `${SNAP_COMMON}/default-storage`. Upon disabling this add-on you will be asked if you want to delete the persistent volumes created.
 - **ingress**: Create an ingress controller.
-- **gpu**: Expose GPU(s) to MicroK8s by enabling the nvidia runtime and nvidia-device-plugin-daemonset. Requires NVIDIA drivers to already be installed on the host system.
+- **gpu**: Expose GPU(s) to MicroK8s by enabling the nvidia runtime and nvidia-device-plugin-daemonset. Requires NVIDIA drivers to be already installed on the host system.
 - **istio**: Deploy the core [Istio](https://istio.io/) services. You can use the `microk8s.istioctl` command to manage your deployments.
-- **registry**: Deploy an image private registry and expose it on `localhost:32000`. The storage addon will be enabled as part of this addon. See [the registry documentation](docs/registry) for more details.
+- **registry**: Deploy a private image registry and expose it on `localhost:32000`. The storage add-on will be enabled as part of this add-on. See [the registry documentation](docs/registry) for more details.
 - **metrics-server**: Deploy the [Metrics Server](https://kubernetes.io/docs/tasks/debug-application-cluster/core-metrics-pipeline/#metrics-server).
 - **prometheus**: Deploy the [Prometheus Operator](https://github.com/coreos/prometheus-operator) v0.25.
-- **fluentd**: Deploy [Elasticsearch-Kibana-Fluentd](https://kubernetes.io/docs/tasks/debug-application-cluster/logging-elasticsearch-kibana/) logging and monitoring solution.
+- **fluentd**: Deploy the [Elasticsearch-Kibana-Fluentd](https://kubernetes.io/docs/tasks/debug-application-cluster/logging-elasticsearch-kibana/) logging and monitoring solution.
 - **jaeger**: Deploy the [Jaeger Operator](https://github.com/jaegertracing/jaeger-operator) v1.8.2 in the "simplest" configuration.
 
 ### Stopping and restarting MicroK8s
@@ -122,6 +123,7 @@ snap remove microk8s
 ```
 
 ### Configuring MicroK8s services
+
 The following systemd services will be running in your system:
 - **snap.microk8s.daemon-apiserver**, is the [kube-apiserver](https://kubernetes.io/docs/reference/command-line-tools-reference/kube-apiserver/) daemon started using the arguments in `${SNAP_DATA}/args/kube-apiserver`
 - **snap.microk8s.daemon-controller-manager**, is the [kube-controller-manager](https://kubernetes.io/docs/reference/command-line-tools-reference/kube-controller-manager/) daemon started using the arguments in `${SNAP_DATA}/args/kube-controller-manager`
@@ -134,6 +136,7 @@ The following systemd services will be running in your system:
 Normally, `${SNAP_DATA}` points to `/var/snap/microk8s/current`.
 
 To reconfigure a service you will need to edit the corresponding file and then restart the respective daemon. For example:
+
 ```
 echo '-l=debug' | sudo tee -a /var/snap/microk8s/current/args/containerd
 sudo systemctl restart snap.microk8s.daemon-containerd.service
@@ -149,32 +152,43 @@ sudo systemctl restart snap.microk8s.daemon-containerd.service
 
 ## Troubleshooting
 
-To troubleshoot a non-functional MicroK8s deployment, start by running the `microk8s.inspect` command. This command performs a set of tests against MicroK8s and collects traces and logs in a report tarball. In case any of the aforementioned daemons are failing you will be urged to look at the respective logs with `journalctl -u snap.microk8s.<daemon>.service`. `microk8s.inspect` may also make suggestions on potential issues it may find. If you do not manage to resolve the issue you are facing please file a [bug](https://github.com/ubuntu/microk8s/issues) attaching the inspection report tarball.
+To troubleshoot a non-functional MicroK8s deployment, start by running the `microk8s.inspect` command. This command performs a set of tests against MicroK8s and collects traces and logs in a report tarball. In case any of the aforementioned daemons are failing you will be urged to look at the respective logs with `journalctl -u snap.microk8s.<daemon>.service`. `microk8s.inspect` may also make suggestions on potential issues it may find. If you do not manage to resolve the issue you are facing please file a [bug](https://github.com/ubuntu/microk8s/issues), attaching the inspection report tarball.
 
 Some common problems and solutions are listed below.
 
-### My dns and dashboard pods are CrashLooping.
+### My dns and dashboard pods are CrashLooping...
+
 The [Kubenet](https://kubernetes.io/docs/concepts/extend-kubernetes/compute-storage-net/network-plugins/) network plugin used by MicroK8s creates a `cbr0` interface when the first pod is created. If you have `ufw` enabled, you'll need to allow traffic on this interface:
 
-`sudo ufw allow in on cbr0 && sudo ufw allow out on cbr0`
+```
+sudo ufw allow in on cbr0 && sudo ufw allow out on cbr0
+```
 
-### My pods can't reach the internet or each other (but my MicroK8s host machine can).
+### My pods can't reach the internet or each other (but my MicroK8s host machine can)...
+
 Make sure packets to/from the pod network interface can be forwarded
 to/from the default interface on the host:
 
-`sudo iptables -P FORWARD ACCEPT`
+```
+sudo iptables -P FORWARD ACCEPT
+```
 
 or, if using `ufw`:
 
-`sudo ufw default allow routed`
+```
+sudo ufw default allow routed
+```
 
 The MicroK8s inspect command can be used to check the firewall configuration:
 
-`microk8s.inspect`
+```
+microk8s.inspect
+```
 
 A warning will be shown if the firewall is not forwarding traffic.
 
-### My log collector is not collecting any logs.
+### My log collector is not collecting any logs...
+
 By default container logs are located in `/var/log/pods/{id}`. You have to mount this location in your log collector for that to work. Following is an example diff for [fluent-bit](https://raw.githubusercontent.com/fluent/fluent-bit-kubernetes-logging/master/output/elasticsearch/fluent-bit-ds.yaml):
 
 ```diff
