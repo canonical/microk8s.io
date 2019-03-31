@@ -44,4 +44,4 @@ spec:
 
 
 ## References
- - Containerd registry: https://github.com/containerd/cri/blob/master/docs/registry.md
+ - [Containerd registry](https://github.com/containerd/cri/blob/master/docs/registry.md)

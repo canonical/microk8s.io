@@ -57,9 +57,9 @@ Currently all requests coming from authenticated sources are authorized as we ha
 
 ## References
 
- - Authentication strategies: https://kubernetes.io/docs/reference/access-authn-authz/authentication/#authentication-strategies
- - kubelet: https://kubernetes.io/docs/reference/command-line-tools-reference/kubelet/
- - kube-proxy: https://kubernetes.io/docs/reference/command-line-tools-reference/kube-proxy/
- - kube-scheduler: https://kubernetes.io/docs/reference/command-line-tools-reference/kube-scheduler/
- - kube-controller-manager: https://kubernetes.io/docs/reference/command-line-tools-reference/kube-controller-manager/
+ - [Authentication strategies](https://kubernetes.io/docs/reference/access-authn-authz/authentication/#authentication-strategies)
+ - [kubelet](https://kubernetes.io/docs/reference/command-line-tools-reference/kubelet/)
+ - [kube-proxy](https://kubernetes.io/docs/reference/command-line-tools-reference/kube-proxy/)
+ - [kube-scheduler](https://kubernetes.io/docs/reference/command-line-tools-reference/kube-scheduler/)
+ - [kube-controller-manager](https://kubernetes.io/docs/reference/command-line-tools-reference/kube-controller-manager/)
 
