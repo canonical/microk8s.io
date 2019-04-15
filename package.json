@@ -14,10 +14,10 @@
     "vanilla-framework": "1.8.1",
     "watch-cli": "0.2.3",
     "sass-lint": "1.12.1",
-    "postcss-cli": "6.1.1",
+    "postcss-cli": "6.1.2",
     "node-sass": "4.11.0",
     "cssnano": "4.1.10",
-    "autoprefixer": "9.4.7",
-    "global-nav": "2.0.1"
+    "autoprefixer": "9.5.1",
+    "global-nav": "2.0.2"
   }
 }
