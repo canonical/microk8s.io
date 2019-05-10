@@ -61,7 +61,6 @@ This will list the images currently known to Docker, for example:
 ```no-highlight
 REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
 mynginx             local               1fe3d8f47868        30 minutes ago      16.1MB
-nginx               alpine              0be75340bd9b        6 days ago          16.1MB
 ```
 
 The image we created is known to Docker. However, Kubernetes is not aware of
@@ -111,7 +110,7 @@ spec:
 We reference the image with `image: mynginx:local`. Kubernetes will behave as though
 there is an image in docker.io (the Dockerhub registry) for which it already has a cached
 copy. This process can be repeated any time changes are made to the image. Note that
-containerd will not cache images with the `latest` tag so make sure you do not use that.
+containerd will not cache images with the `latest` tag so make sure you avoid it.
 
 
 ## Working with public registries
