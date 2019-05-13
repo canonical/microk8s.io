@@ -382,7 +382,7 @@ docker build . -t 10.141.241.175:32000/mynginx:registry
 ```
 
 Pushing  the `mynginx` image at this point will fail because the local Docker does not
-rust the private insecure registry. The docker daemon used for building images should be
+trust the private insecure registry. The docker daemon used for building images should be
 configured to trust the private insecure registry. This is done by marking the registry
 endpoint in `/etc/docker/daemon.json`:
 
