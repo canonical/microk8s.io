@@ -100,7 +100,7 @@ The single question you need to focus on is what channel should be used below:
 sudo snap install microk8s --classic --channel=<which_channel?>
 ```
 
-Here is the channel you have to select based on your needs:
+Here are some suggestions for the channel to use based on your needs:
 
  - I want to always be on the latest stable Kubernetes.
 
