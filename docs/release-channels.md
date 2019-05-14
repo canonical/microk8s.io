@@ -9,7 +9,7 @@ Microk8s is a snap deploying Kubernetes. Upstream Kubernetes ships a new release
 
 ## Choosing the right channel
 
-When installing MicroK8s you can select your desired upstream Kubernetes series with the corresponding snap channel. All channels are shown with `snap info microk8s`. At the time of this writing the available channels are:
+When installing MicroK8s you can select your desired upstream Kubernetes series with the corresponding snap channel. All channels are shown with `snap info microk8s` and at the time of writing we have:
 
 ```
 channels:
@@ -49,7 +49,7 @@ To install MicroK8s and let it follow the `v1.14` release series you:
 snap install microk8s --classic --channel=1.14/stable
 ```
 
-If you omit the `--channel` argument MicroK8s will follow the latest stable upstream Kubernetes. This means that your deployment will eventually upgrade to a new release series. At the time of this writing you will get `v1.14.1` with:
+If you omit the `--channel` argument MicroK8s will follow the latest stable upstream Kubernetes. This means that your deployment will eventually upgrade to a new release series. For example, at the time of writing you will get `v1.14.1` with:
 
 ```
 snap install microk8s --classic
@@ -78,12 +78,12 @@ Keep in mind that edge and beta are snap constructs and do not relate to Kuberne
 On tracks where no stable Kubernetes release is available, MicroK8s ships pre-stable releases under the following scheme. 
 
 - The `*/edge` channel (eg `1.15/edge`) holds the alpha upstream releases. 
-- The `*/beta` channel (eg `1.5/beta`) holds the beta upstream releases.
-- The `*/candidate` channel (eg `1.5/candidate`) holds the release candidate of upstream releases.
+- The `*/beta` channel (eg `1.15/beta`) holds the beta upstream releases.
+- The `*/candidate` channel (eg `1.15/candidate`) holds the release candidate of upstream releases.
 
 Pre-stable releases will be available the same day they are released upstream. 
 
-For example, `v1.14` is the latest stable release at the time of this writing, to test your work against the alpha `v1.15` release simply do:
+For example, assuming `v1.14` is the latest stable release, to test your work against the alpha `v1.15` release simply do:
 
 ```
 sudo snap install microk8s --classic --channel=1.5/edge
@@ -95,26 +95,33 @@ Beware however that pre-stable releases may require you to configure the K8s ser
 ## I am confused. Which channel is right for me?
 
 The single question you need to focus on is what channel should be used below:
-```
-sudo snap install microk8s --classic --channel=<What_to_use_here?>
 
+```
+sudo snap install microk8s --classic --channel=<which_channel?>
 ```
 
 Here is the channel you have to select based on your needs:
 
  - I want to always be on the latest stable Kubernetes.
-Use `--channel=latest`
+
+   -- Use `--channel=latest`
 
  - I want to always be on the latest release in a specific upstream K8s release.
-Use `--channel=<release>/stable`, eg `--channel=1.14/stable`. 
+
+   -- Use `--channel=<release>/stable`, eg `--channel=1.14/stable`. 
 
  - I want to test-drive a pre-stable release.
-Use `--channel=<next_release>/edge` for alpha releases.
-Use `--channel=<next_release>/beta` for beta releases.
-Use `--channel=<next_release>/candidate` for candidate releases.
+
+   -- Use `--channel=<next_release>/edge` for alpha releases.
+
+   -- Use `--channel=<next_release>/beta` for beta releases.
+
+   -- Use `--channel=<next_release>/candidate` for candidate releases.
 
  - I am waiting for a bug fix on MicroK8s:
-Use `--channel=<release>/edge`.
+
+   -- Use `--channel=<release>/edge`.
 
  - I am waiting for a bug fix on upstream Kubernetes:
-Use `--channel=<release>/candidate`.
+
+   -- Use `--channel=<release>/candidate`.
