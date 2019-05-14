@@ -15,10 +15,10 @@ Snaps are frequently updated to match each release of Kubernetes. The quickest w
 snap install microk8s --classic
 ```
 
-Alternatively, you can select a MicroK8s channel that will follow a specific Kubernetes release series. For example, you install MicroK8s and let it follow the `v1.12` series with:
+Alternatively, you can select a MicroK8s channel that will follow a specific Kubernetes release series. For example, you install MicroK8s and let it follow the `v1.14` series with:
 
 ```
-snap install microk8s --classic --channel=1.12/stable
+snap install microk8s --classic --channel=1.14/stable
 ```
 
 You can read more on the MicroK8s release channels in the [Release Channels and Upgrades](/docs/release-channels) doc.
