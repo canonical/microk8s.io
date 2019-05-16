@@ -98,10 +98,10 @@ With `microk8s.status` you can see the list of available add-ons and which ones 
 - **linkerd**: Deploy linkerd2 [Linkerd](https://linkerd.io/2/overview/) service mesh.  By default proxy auto inject
    is not enabled. To enable auto proxy injection, simply use `microk8s.enable linkerd:proxy-auto-inject`.
    If you need to pass more arguments, separate them with `;` and enclose the addons plus arguments with double quotes.
-   Example:  `microk8s.enable "linkerd:proxy-auto-inject;tls=optional;skip-outbound-ports=1234,3456"`.
+   For example:  `microk8s.enable "linkerd:proxy-auto-inject;tls=optional;skip-outbound-ports=1234,3456"`.
    Use `microk8s.linkerd` command to interact with Linkerd.
 - **rbac**: Enable RBAC ([Role-Based Access Control](https://kubernetes.io/docs/reference/access-authn-authz/rbac/))
-   authorization mode. Note that other add-ons may not work with RBAC enabled.
+   authorisation mode. Note that other add-ons may not work with RBAC enabled.
 
 ### Stopping and restarting MicroK8s
 
