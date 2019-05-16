@@ -36,7 +36,7 @@ microk8s.status --wait-ready
 ```
 
 > In order to install MicroK8s make sure
-> - you go though the [list of ports](/docs/ports) that need to be available
+> - you go through the [list of ports](/docs/ports) that need to be available
 
 ### Accessing Kubernetes
 
@@ -69,7 +69,7 @@ Note: The API server on port 8080 is listening on all network interfaces. In its
 
 ### Kubernetes add-ons
 
-MicroK8s installs a barebones upstream Kubernetes. This means just the api-server, controller-manager, scheduler, kubelet, cni, kube-proxy are installed and run. Additional services like kube-dns and dashboard can be run using the `microk8s.enable` command.
+MicroK8s installs a barebones upstream Kubernetes. This means just the `api-server`, `controller-manager`, `scheduler`, `kubelet`, `cni`, `kube-proxy` are installed and run. Additional services like `kube-dns` and `dashboard` can be run using the `microk8s.enable` command.
 
 ```
 microk8s.enable dns dashboard
@@ -95,6 +95,13 @@ With `microk8s.status` you can see the list of available add-ons and which ones 
 - **prometheus**: Deploy the [Prometheus Operator](https://github.com/coreos/prometheus-operator) v0.25.
 - **fluentd**: Deploy the [Elasticsearch-Kibana-Fluentd](https://kubernetes.io/docs/tasks/debug-application-cluster/logging-elasticsearch-kibana/) logging and monitoring solution.
 - **jaeger**: Deploy the [Jaeger Operator](https://github.com/jaegertracing/jaeger-operator) v1.8.2 in the "simplest" configuration.
+- **linkerd**: Deploy linkerd2 [Linkerd](https://linkerd.io/2/overview/) service mesh.  By default proxy auto inject
+   is not enabled. To enable auto proxy injection, simply use `microk8s.enable linkerd:proxy-auto-inject`.
+   If you need to pass more arguments, separate them with `;` and enclose the addons plus arguments with double quotes.
+   Example:  `microk8s.enable "linkerd:proxy-auto-inject;tls=optional;skip-outbound-ports=1234,3456"`.
+   Use `microk8s.linkerd` command to interact with Linkerd.
+- **rbac**: Enable RBAC ([Role-Based Access Control](https://kubernetes.io/docs/reference/access-authn-authz/rbac/))
+   authorization mode. Note that other add-ons may not work with RBAC enabled.
 
 ### Stopping and restarting MicroK8s
 
@@ -166,10 +173,12 @@ sudo ufw allow in on cbr0 && sudo ufw allow out on cbr0
 ### My pods can't reach the internet or each other (but my MicroK8s host machine can)...
 
 Make sure packets to/from the pod network interface can be forwarded
-to/from the default interface on the host:
+to/from the default interface on the host via the `iptables` tool.
+Such changes can be made persistent by installing the `iptables-persistent` package:
 
 ```
 sudo iptables -P FORWARD ACCEPT
+sudo apt-get install iptables-persistent
 ```
 
 or, if using `ufw`:
