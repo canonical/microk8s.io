@@ -59,8 +59,8 @@ docker images
 This will list the images currently known to Docker, for example:
 
 ```no-highlight
-REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
-mynginx             local               1fe3d8f47868        30 minutes ago      16.1MB
+REPOSITORY          TAG                 IMAGE ID            SIZE
+mynginx             local               1fe3d8f47868        16.1MB
 ```
 
 The image we created is known to Docker. However, Kubernetes is not aware of
@@ -150,8 +150,8 @@ docker images
 The ID is listed in the output:
 
 ```no-highlight
-REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
-mynginx             local               1fe3d8f47868        2 hours ago         16.1MB
+REPOSITORY          TAG                 IMAGE ID            SIZE
+mynginx             local               1fe3d8f47868        16.1MB
 ....
 ```
 
@@ -232,8 +232,8 @@ docker images
 The ID is listed in the output:
 
 ```no-highlight
-REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
-mynginx             local               1fe3d8f47868        2 hours ago         16.1MB
+REPOSITORY          TAG                 IMAGE ID            SIZE
+mynginx             local               1fe3d8f47868        16.1MB
 ....
 ```
 
