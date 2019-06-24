@@ -84,8 +84,8 @@ microk8s.disable dashboard dns
 With `microk8s.status` you can see the list of available add-ons and which ones are currently enabled. You can find the add-on manifests and/or scripts under `${SNAP}/actions/`, with `${SNAP}` pointing by default to `/snap/microk8s/current`.
 
 #### List of available add-ons
-- **dns**: Deploy kube dns. This add-on may be required by others thus we recommend you always enable it. In environments where the external dns servers `8.8.8.8` and `8.8.4.4` are blocked you will need to update the upstream dns servers in `microk8s.kubectl -n kube-system edit configmap/kube-dns` after enabling the add-on.
-- **dashboard**: Deploy Kubernetes dashboard as well as Grafana and InfluxDB. To access Grafana point your browser to the url reported by `microk8s.kubectl cluster-info`.
+- **dns**: Deploy CoreDNS. This add-on may be required by others thus we recommend you always enable it. In environments where the external dns servers `8.8.8.8` and `8.8.4.4` are blocked you will need to update the upstream dns servers in `microk8s.kubectl -n kube-system edit configmap/coredns` after enabling the add-on.
+- **dashboard**: Deploy Kubernetes dashboard as well as Grafana and InfluxDB. To access Grafana point your browser to the url reported by `microk8s.kubectl cluster-info`. Access the dashboard with the default token found with `microk8s.kubectl -n kube-system get secret` and `microk8s.kubectl -n kube-system describe secret default-token-{xxxx}`.
 - **storage**: Create a default storage class. This storage class makes use of the hostpath-provisioner pointing to a directory on the host. Persistent volumes are created under `${SNAP_COMMON}/default-storage`. Upon disabling this add-on you will be asked if you want to delete the persistent volumes created.
 - **ingress**: Create an ingress controller.
 - **gpu**: Expose GPU(s) to MicroK8s by enabling the nvidia runtime and nvidia-device-plugin-daemonset. Requires NVIDIA drivers to be already installed on the host system.
@@ -102,6 +102,7 @@ With `microk8s.status` you can see the list of available add-ons and which ones 
    Use `microk8s.linkerd` command to interact with Linkerd.
 - **rbac**: Enable RBAC ([Role-Based Access Control](https://kubernetes.io/docs/reference/access-authn-authz/rbac/))
    authorisation mode. Note that other add-ons may not work with RBAC enabled.
+- **knative**: Enable [Knative](https://knative.dev/) with `microk8s.enable knative`.
 
 ### Stopping and restarting MicroK8s
 
