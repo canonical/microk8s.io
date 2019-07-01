@@ -11,7 +11,7 @@
     "clean": "rm -rf node_modules yarn-error.log css js *.log *.sqlite _site/ build/ .jekyll-metadata .bundle"
   },
   "dependencies": {
-    "vanilla-framework": "1.8.1",
+    "vanilla-framework": "2.0.1",
     "watch-cli": "0.2.3",
     "sass-lint": "1.13.1",
     "postcss-cli": "6.1.2",
