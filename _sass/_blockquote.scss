@@ -3,15 +3,15 @@
 // When it lands in master and the depency is updated in this repo this can be removed
 @import 'vanilla-framework/scss/settings';
 
-$spv-intra--regular: $sp-unit * 2;
+$spv-inner--regular: $sp-unit * 2;
 
 blockquote {
     border-left: 2px solid $color-mid-dark;
-    margin-bottom: $spv-intra--regular;
+    margin-bottom: $spv-inner--regular;
     margin-left: 0;
     margin-top: 0;
     overflow: auto; // include margins of children into it's own height
-    padding-bottom: $spv-intra;
+    padding-bottom: $spv-inner--scaleable;
     padding-left: $sp-large;
 
     & > :last-child {

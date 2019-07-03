@@ -14,20 +14,20 @@
 
   &__list {
     @extend .p-list;
-    margin-bottom: $spv-intra;
-    margin-top: -$spv-intra--condensed;
+    margin-bottom: $spv-inner--scaleable;
+    margin-top: -$spv-inner--x-small--scaleable;
   }
 
   &__item {
-    padding-bottom: $spv-intra--condensed / 2;
-    padding-top: $spv-intra--condensed / 2;
+    padding-bottom: $spv-inner--x-small--scaleable / 2;
+    padding-top: $spv-inner--x-small--scaleable / 2;
 
     &:first-of-type {
-      padding-top: $spv-intra;
+      padding-top: $spv-inner--scaleable;
     }
 
     &:last-of-type {
-      padding-bottom: $spv-intra + $spv-intra--condensed;
+      padding-bottom: $spv-inner--scaleable + $spv-inner--x-small--scaleable;
     }
 
     .is-active {
@@ -35,18 +35,18 @@
 
       &::before {
         background-color: $color-mid-light;
-        bottom: -$spv-intra--condensed;
+        bottom: -$spv-inner--x-small--scaleable;
         content: '';
-        left: -$sph-intra;
+        left: -$sph-inner;
         position: absolute;
-        top: -$spv-intra--condensed;
+        top: -$spv-inner--x-small--scaleable;
         width: $bar-thickness;
       }
     }
   }
 
   &__item > &__list {
-    padding-left: $sph-intra;
+    padding-left: $sph-inner;
   }
 }
 
