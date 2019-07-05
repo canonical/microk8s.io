@@ -11,13 +11,14 @@
     "clean": "rm -rf node_modules yarn-error.log css js *.log *.sqlite _site/ build/ .jekyll-metadata .bundle"
   },
   "dependencies": {
-    "vanilla-framework": "1.8.1",
-    "watch-cli": "0.2.3",
-    "sass-lint": "1.13.1",
-    "postcss-cli": "6.1.2",
-    "node-sass": "4.12.0",
-    "cssnano": "4.1.10",
+    "@canonical/global-nav": "^2.1.0",
     "autoprefixer": "9.6.0",
-    "global-nav": "2.0.2"
+    "cssnano": "4.1.10",
+    "global-nav": "2.0.2",
+    "node-sass": "4.12.0",
+    "postcss-cli": "6.1.2",
+    "sass-lint": "1.13.1",
+    "vanilla-framework": "2.0.1",
+    "watch-cli": "0.2.3"
   }
 }
