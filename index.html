@@ -168,9 +168,9 @@ layout: base
       </div>
       <div class="row u-equal-height">
         <div class="col-8">
-          <div class="p-code-snippet">
-            <input class="p-code-snippet__input" aria-label="sudo snap install microk8s --classic" value="sudo snap install microk8s --classic" readonly="readonly">
-            <button class="p-code-snippet__action">Copy to clipboard</button>
+          <div class="p-code-copyable">
+            <input class="p-code-copyable__input" aria-label="sudo snap install microk8s --classic" value="sudo snap install microk8s --classic" readonly="readonly">
+            <button class="p-code-copyable__action">Copy to clipboard</button>
           </div>
           <p>Don’t have the <code>snap</code> command? <a href="https://snapcraft.io/docs/core/install" class="p-link--external">Install <code>snapd</code> first.</a></p>
         </div>
@@ -179,9 +179,9 @@ layout: base
         <div class="col-8">
           <hr>
           <h4>For the current published versions</h4>
-          <div class="p-code-snippet">
-            <input class="p-code-snippet__input" aria-label="snap info microk8s" value="snap info microk8s" readonly="readonly">
-            <button class="p-code-snippet__action">Copy to clipboard</button>
+          <div class="p-code-copyable">
+            <input class="p-code-copyable__input" aria-label="snap info microk8s" value="snap info microk8s" readonly="readonly">
+            <button class="p-code-copyable__action">Copy to clipboard</button>
           </div>
           <p>It is possible to select a specific version like 1.11 and get only stable or RC updates to that version. By default, you will get the current major version with upgrades when new major versions are published.</p>
         </div>
@@ -194,11 +194,11 @@ layout: base
           <h2>Useful tips</h2>
           <h4>Start and stop kubernetes</h4>
           <p>Bring k8s up and take it down as needed to preserve battery life when you don’t need it running:</p>
-          <div class="p-code-snippet">
-            <input class="p-code-snippet__input" aria-label="sudo microk8s.stop" value="sudo microk8s.stop" readonly="readonly">
+          <div class="p-code-copyable">
+            <input class="p-code-copyable__input" aria-label="sudo microk8s.stop" value="sudo microk8s.stop" readonly="readonly">
           </div>
-          <div class="p-code-snippet">
-            <input class="p-code-snippet__input" aria-label="sudo microk8s.start" value="sudo microk8s.start" readonly="readonly">
+          <div class="p-code-copyable">
+            <input class="p-code-copyable__input" aria-label="sudo microk8s.start" value="sudo microk8s.start" readonly="readonly">
           </div>
         </div>
       </div>
@@ -206,8 +206,8 @@ layout: base
         <div class="col-8">
           <hr>
           <h4>Turn on standard services</h4>
-          <div class="p-code-snippet">
-            <input class="p-code-snippet__input" aria-label="microk8s.enable dashboard registry istio [...]" value="microk8s.enable dashboard registry istio [...]" readonly="readonly">
+          <div class="p-code-copyable">
+            <input class="p-code-copyable__input" aria-label="microk8s.enable dashboard registry istio [...]" value="microk8s.enable dashboard registry istio [...]" readonly="readonly">
           </div>
           <p>Enable and disable particular standard add-on services using the <code>microk8s.enable</code> and <code>microk8s.disable</code> commands. See the <code>--help</code> for details.</p>
         </div>
@@ -300,7 +300,7 @@ layout: base
   };
 
   var codeSnippetActions = document.querySelectorAll(
-    '.p-code-snippet__action'
+    '.p-code-copyable__action'
   );
   for (var codeSnippetAction of codeSnippetActions) {
     codeSnippetAction.addEventListener(
