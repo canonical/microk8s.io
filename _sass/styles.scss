@@ -7,6 +7,9 @@
 // import additional styles
 @import "sidebar";
 @import "blockquote";
+@import "docs";
+
+@include docs;
 
 // Custom styles
 .p-navigation__banner {
