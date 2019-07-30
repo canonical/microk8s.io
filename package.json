@@ -3,7 +3,7 @@
     "lint-scss": "sass-lint _sass/**/*.scss --verbose --no-exit",
     "build": "yarn run build-css && yarn run build-js && yarn run build-jekyll",
     "build-jekyll": "bundle exec jekyll build",
-    "build-css": "node-sass --include-path node_modules _sass --source-map true --output css && postcss --use autoprefixer --replace css/**/*.css && postcss --map false --use cssnano --dir css/minified css/**/*.css",
+    "build-css": "node-sass --include-path node_modules _sass --source-map true --output-style compressed --output css && postcss --use autoprefixer --replace css/**/*.css --no-map",
     "build-js": "mkdir -p js/build/global-nav && cp node_modules/@canonical/global-nav/dist/global-nav.js js/build/global-nav",
     "watch": "watch -p '_sass/**/*.scss' -c 'yarn run build'",
     "serve": "bundle exec jekyll serve -P ${PORT} -H 0.0.0.0",
@@ -13,7 +13,6 @@
   "dependencies": {
     "@canonical/global-nav": "^2.1.0",
     "autoprefixer": "9.6.0",
-    "cssnano": "4.1.10",
     "global-nav": "2.0.2",
     "node-sass": "4.12.0",
     "postcss-cli": "6.1.2",
