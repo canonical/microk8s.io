@@ -2,7 +2,7 @@
 # yarn lockfile v1
 
 
-"@canonical/global-nav@^2.1.0":
+"@canonical/global-nav@2.1.0":
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/@canonical/global-nav/-/global-nav-2.1.0.tgz#67b6a499a39ff8135e15fcc6a275cd1e29b504fa"
 
