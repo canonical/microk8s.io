@@ -4,72 +4,133 @@ layout: base
   <main id="main-content">
 
     <section class="p-strip--image is-dark" style="background-image: url('https://assets.ubuntu.com/v1/8bc629a7-microk8s-suru-background.svg'); background-size: cover;">
-      <div class="row u-equal-height">
+      <div class="row u-vertically-center u-equal-height">
         <div class="col-8">
-          <h1>Kubernetes for workstations and appliances</h1>
-          <p class="p-heading--four">A single package of k8s that installs on <s>41</s> 42 flavours of Linux. Made for developers and great for appliances.</p>
-          <a href="https://snapcraft.io/microk8s" title="Get it from the Snap Store">
-            <img src="https://snapcraft.io/static/images/badges/en/snap-store-white.svg" alt="Get it from the Snap Store" width="200" />
-          </a>
+          <h1>
+            Zero-ops Kubernetes for workstations and edge / IoT
+          </h1>
+          <p class="p-heading--four">
+            A single package of k8s for that installs 42 flavours of Linux. Made for developers, and great for edge, IoT and appliances.
+          </p>
         </div>
-        <div class="col-4 prefix-1 u-vertically-center">
-          <img src="https://assets.ubuntu.com/v1/96d35aa4-certified-kubernetes-logo.svg" alt="Certified Kubernetes" />
+        <div class="col-4 u-align--center u-hide--small">
+          <img src="https://assets.ubuntu.com/v1/96d35aa4-certified-kubernetes-logo.svg" width="150" alt="Certified Kubernetes" />
         </div>
       </div>
     </section>
 
-    <section class="p-strip is-shallow is-bordered">
-      <div class="row">
-        <h2 class="p-muted-heading">Features</h2>
+    <section class="p-strip is-shallow">
+      <div class="row p-divider">
+        <div class="col-4 p-divider__block u-align--center">
+          <h5>Linux</h5>
+          <a href="https://snapcraft.io/microk8s" title="Get it from the Snap Store">
+            <img src="https://snapcraft.io/static/images/badges/en/snap-store-white.svg" alt="Get it from the Snap Store" width="200" />
+          </a>
+        </div>
+        <div class="col-4 p-divider__block u-align--center">
+          <h5>Windows</h5>
+          <p>
+            <a href="https://multipass.run/#install">
+            <img src="https://assets.ubuntu.com/v1/c87ec87a-Multipass-header-option_crop.png" width="150" alt="" />
+            <br />
+            Run it with Multipass
+            </a>
+          </p>
+        </div>
+        <div class="col-4 p-divider__block u-align--center">
+          <h5>macOS</h5>
+          <p>
+            <a href="https://multipass.run/#install">
+            <img src="https://assets.ubuntu.com/v1/c87ec87a-Multipass-header-option_crop.png" width="150" alt="" />
+            <br />
+            Run it with Multipass
+            </a>
+          </p>
+        </div>
       </div>
+    </section>
+
+    <section class="p-strip--light">
+      <div class="row u-vertically-center">
+        <div class="col-6">
+          <blockquote  class="p-pull-quote">
+            <p class="p-pull-quote__quote">
+              Canonical might have assembled the easiest way to provision a single node Kubernetes cluster
+            </p>
+            <cite class="p-pull-quote__citation">
+              &mdash; Kelsey Hightower
+            </cite>
+          </blockquote>
+        </div>
+        <div class="col-6">
+          <blockquote class="p-pull-quote">
+            <p class="p-pull-quote__quote">
+              dear microk8s team: you are awesome. Microk8s has tangibly improved my life and my CI pipelines as a developer of k8s controllers
+            </p>
+            <cite class="p-pull-quote__citation">
+              &mdash; in <a href="https://kubernetes.slack.com/messages/microk8s/" class=" p-link--external">#microk8s</a>
+            </cite>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+    <section class="p-strip is-bordered">
       <div class="row u-equal-height">
-        <div class="col-3">
+        <div class="col-2 col-start-large-2">
           <ul class="p-list--divided">
-            <li class="p-list__item is-ticked">1-click Istio, Knative, Fluentd, Linkerd</li>
-            <li class="p-list__item is-ticked">1-click Jaeger, Prometheus, and more </li>
-            <li class="p-list__item is-ticked">Clustering</li>
+            <li class="p-list__item is-ticked">Conformant</li>
+            <li class="p-list__item is-ticked">Istio</li>
+            <li class="p-list__item is-ticked">Clustering<br /><small class="p-label--in-progress">BETA</small></li>
           </ul>
         </div>
-        <div class="col-3">
+        <div class="col-2">
           <ul class="p-list--divided">
-            <li class="p-list__item is-ticked">Local storage</li>
-            <li class="p-list__item is-ticked">Local registry</li>
+            <li class="p-list__item is-ticked">Storage</li>
+            <li class="p-list__item is-ticked">Registry</li>
             <li class="p-list__item is-ticked">GPGPU bindings</li>
           </ul>
         </div>
-        <div class="col-3">
+        <div class="col-2">
           <ul class="p-list--divided">
             <li class="p-list__item is-ticked">Dashboard</li>
             <li class="p-list__item is-ticked">Metrics</li>
             <li class="p-list__item is-ticked">Automatic Updates</li>
           </ul>
         </div>
-        <div class="col-3">
+        <div class="col-2">
           <ul class="p-list--divided">
             <li class="p-list__item is-ticked">Ingress</li>
             <li class="p-list__item is-ticked">DNS</li>
-            <li class="p-list__item is-ticked">Conformant</li>
+            <li class="p-list__item is-ticked">Linkerd, Fluentd</li>
+          </ul>
+        </div>
+        <div class="col-2">
+          <ul class="p-list--divided">
+            <li class="p-list__item is-ticked">Knative</li>
+            <li class="p-list__item is-ticked">Kubeflow</li>
+            <li class="p-list__item is-ticked">Jaeger, Prometheu</li>
           </ul>
         </div>
       </div>
     </section>
 
+
+
     <section>
       <div class="p-strip is-bordered">
         <div class="row">
-          <h2>Single node Kubernetes done right</h2>
-        </div>
-        <div class="row">
-          <div class="col-6">
-            <h4>Zero-ops k8s on just about any Linux box.</h4>
-            <p>It’s not elastic, but it is on rails. Use it for offline development, prototyping, testing, or use it on a VM as a small, cheap, reliable k8s for CI/CD. Makes a great k8s for appliances - develop your IoT apps for k8s and deploy them to MicroK8s on your boxes.</p>
-            <p><a class="p-button--positive" href="#quick-start">Get started with MicroK8s</a></p>
-          </div>
-          <div class="col-6">
-            <blockquote class="p-pull-quote">
-              <p>dear microk8s team: you are awesome. Microk8s has tangibly improved my life and my CI pipelines as a developer of k8s controllers</p>
-              <cite class="p-pull-quote__citation">Posted in <a href="https://kubernetes.slack.com/messages/microk8s/" class=" p-link--external">#microk8s</a></cite>
-            </blockquote>
+          <div class="col-8">
+            <h2>
+              Single node Kubernetes done right
+            </h2>
+            <p>
+              The smallest, fastest fully-conformant Kubernetes that tracks upstream releases and makes clustering trivial. Use MicroK8s for offline development, prototyping, testing. Use it on a VM as a small, cheap, reliable k8s for CI/CD. Makes a great kubernetes for appliances. Develop IoT apps for k8s and deploy them to MicroK8s on your boxes.
+            </p>
+            <p>
+              <a class="p-button--positive" href="#quick-start">
+                Get started with MicroK8s
+              </a>
+            </p>
           </div>
         </div>
       </div>
@@ -78,7 +139,7 @@ layout: base
     <section>
       <div class="p-strip is-bordered">
         <div class="row">
-          <h2>Reliable, fast, small, upstream. Tasty!</h2>
+          <h2>Reliable, fast, small, upstream.</h2>
         </div>
         <div class="row">
           <ul class="p-matrix u-clearfix">
@@ -110,8 +171,7 @@ layout: base
               <div class="p-matrix__content">
                 <h3 class="p-matrix__title">Complete</h3>
                 <div class="p-matrix__desc">
-                  <p>Includes a docker registry so you can make containers, push them, and deploy them all on your
-                    laptop.</p>
+                  <p>Includes a docker registry so you can make containers, push them, and deploy them all on your laptop.</p>
                 </div>
               </div>
             </li>
@@ -119,8 +179,7 @@ layout: base
               <div class="p-matrix__content">
                 <h3 class="p-matrix__title">Featureful</h3>
                 <div class="p-matrix__desc">
-                  <p>Cool things you probably want to try on a small, standard K8s are all built-in. Just enable them
-                    and go.</p>
+                  <p>Cool things you probably want to try on a small, standard K8s are all built-in. Just enable them and go.</p>
                 </div>
               </div>
             </li>
@@ -164,7 +223,7 @@ layout: base
     <section class="p-strip is-bordered" id="quick-start">
       <div class="row">
         <h2>Quick start</h2>
-        <p>To install the <a href="https://snapcraft.io/microk8s">MicroK8s&nbsp;snap</a>:</p>
+        <p>We recommend you use Ubuntu. On Mac or Windows, you can use Multipass to give yourself Ubuntu VMs on demand. To install the <a href="https://snapcraft.io/microk8s">MicroK8s&nbsp;snap</a>:</p>
       </div>
       <div class="row u-equal-height">
         <div class="col-8">
@@ -172,18 +231,9 @@ layout: base
             <input class="p-code-copyable__input" aria-label="sudo snap install microk8s --classic" value="sudo snap install microk8s --classic" readonly="readonly">
             <button class="p-code-copyable__action">Copy to clipboard</button>
           </div>
-          <p>Don’t have the <code>snap</code> command? <a href="https://snapcraft.io/docs/core/install" class="p-link--external">Install <code>snapd</code> first.</a></p>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-8">
-          <hr>
-          <h4>For the current published versions</h4>
-          <div class="p-code-copyable">
-            <input class="p-code-copyable__input" aria-label="snap info microk8s" value="snap info microk8s" readonly="readonly">
-            <button class="p-code-copyable__action">Copy to clipboard</button>
-          </div>
-          <p>It is possible to select a specific version like 1.11 and get only stable or RC updates to that version. By default, you will get the current major version with upgrades when new major versions are published.</p>
+          <p>
+            Running <code>snap info microK8s</code> shows the current published k8s versions. It is possible to select a specific version like 1.11 and get only stable or RC updates to that version. By default, you will get the current major version with upgrades when new major versions are published.
+          </p>
         </div>
       </div>
     </section>
@@ -191,34 +241,49 @@ layout: base
     <section class="p-strip is-shallow is-bordered">
       <div class="row">
         <div class="col-8 u-sv3">
-          <h2>Useful tips</h2>
-          <h4>Start and stop kubernetes</h4>
-          <p>Bring k8s up and take it down as needed to preserve battery life when you don’t need it running:</p>
+          <h2>
+            Useful tips
+          </h2>
+          <h4>
+            Start and stop kubernetes
+          </h4>
+          <p>
+            Bring k8s up and take it down as needed to preserve battery life when you don’t need it running:
+          </p>
           <div class="p-code-copyable">
             <input class="p-code-copyable__input" aria-label="sudo microk8s.stop" value="sudo microk8s.stop" readonly="readonly">
+            <button class="p-code-copyable__action">Copy to clipboard</button>
           </div>
           <div class="p-code-copyable">
             <input class="p-code-copyable__input" aria-label="sudo microk8s.start" value="sudo microk8s.start" readonly="readonly">
+            <button class="p-code-copyable__action">Copy to clipboard</button>
           </div>
         </div>
       </div>
       <div class="row">
         <div class="col-8">
           <hr>
-          <h4>Turn on standard services</h4>
+          <h4>
+            Turn on standard services
+          </h4>
           <div class="p-code-copyable">
             <input class="p-code-copyable__input" aria-label="microk8s.enable dashboard registry istio [...]" value="microk8s.enable dashboard registry istio [...]" readonly="readonly">
+            <button class="p-code-copyable__action">Copy to clipboard</button>
           </div>
-          <p>Enable and disable particular standard add-on services using the <code>microk8s.enable</code> and <code>microk8s.disable</code> commands. See the <code>--help</code> for details.</p>
+          <p>
+            Enable and disable particular standard add-on services using the <code>microk8s.enable</code> and <code>microk8s.disable</code> commands. See the <code>microk8s.enable --help</code> for details.
+          </p>
         </div>
       </div>
       <div class="row">
         <div class="col-8">
           <hr>
-          <h4>Try a different version, or a beta, or a daily build</h4>
-          <p>Snaps are published in <a href="https://docs.snapcraft.io/channels/551">channels</a> which are made up
-            of a track (or major version), and an expected level of stability. Try <code>snap info microk8s</code> to
-            see what versions are currently published. For example:</p>
+          <h4>
+            Try a different version, or a beta or a daily build
+          </h4>
+          <p>
+            Snaps are published in <a href="https://docs.snapcraft.io/channels">channels</a> which are made up of a track (or major version), and an expected level of stability. Try <code>snap info microk8s</code> to see what versions are currently published. For example:
+          </p>
           <div class="p-code-pre">
             <pre><code>channels:
   stable:         v1.13.0  (340) 204MB classic
@@ -242,24 +307,32 @@ layout: base
   1.10/beta:      v1.10.11 (321) 175MB classic
   1.10/edge:      v1.10.12 (364) 200MB classic</code></pre>
           </div>
-          <p>You can <code>snap refresh --channel=latest/beta microk8s</code> or <code>snap refresh --channel=1.11/stable microk8s</code> and get the expected result.</p>
+          <p>
+            You can <code>snap refresh --channel=latest/beta microk8s</code> or <code>snap refresh --channel=1.11/stable microk8s</code> and get the expected result.
+          </p>
         </div>
       </div>
     </section>
     <section class="p-strip is-bordered u-hide--small">
       <div class="row">
-        <h2>Working with MicroK8s</h2>
-        <h4> Or dive right into the <a href="/docs">docs</a></h4>
+        <h2>
+          Working with MicroK8s
+        </h2>
+        <p class="p-heading--four">
+          Or dive right into the <a href="/docs">docs</a>.
+        </p>
         <div class="asciinema-container"></div>
       </div>
     </section>
     <footer class="p-strip">
       <div class="row">
         <div>
-          <p>MicroK8s was built by the dedicated <a href="https://www.ubuntu.com/kubernetes">Kubernetes team at Canonical</a>
-            for the developer community. We also make <a href="https://ubuntu.com/kubernetes/install#cluster">the
-            Charmed Distribution of Kubernetes</a> for multi-cloud scalable clusters</p>
-          <p class="u-no-max-width">© 2019 Canonical Ltd. Ubuntu and Canonical are registered trademarks of Canonical&nbsp;Ltd.</p>
+          <p>
+            MicroK8s was built by the dedicated <a href="https://www.ubuntu.com/kubernetes">Kubernetes team at Canonical</a> for the developer community. We also make <a href="https://ubuntu.com/kubernetes/install#cluster">the Charmed Distribution of Kubernetes</a> for multi-cloud scalable clusters.
+          </p>
+          <p class="u-no-max-width">
+            © 2019 Canonical Ltd. Ubuntu and Canonical are registered trademarks of Canonical&nbsp;Ltd.
+          </p>
           <nav>
             <ul class="p-inline-list--middot">
               <li class="p-inline-list__item">
