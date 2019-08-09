@@ -30,8 +30,8 @@ layout: base
         <div class="col-4 p-divider__block u-align--center">
           <h5>Windows</h5>
           <p>
-            <a href="https://multipass.run/">
-            <img src="https://assets.ubuntu.com/v1/ea34f006-Multipass+logomark_rgb.svg" width="62" />
+            <a href="https://multipass.run/#install">
+            <img src="https://assets.ubuntu.com/v1/c87ec87a-Multipass-header-option_crop.png" width="150" />
             <br />
             Run it with Multipass
             </a>
@@ -40,8 +40,8 @@ layout: base
         <div class="col-4 p-divider__block u-align--center">
           <h5>macOS</h5>
           <p>
-            <a href="https://multipass.run/">
-            <img src="https://assets.ubuntu.com/v1/ea34f006-Multipass+logomark_rgb.svg" width="62" />
+            <a href="https://multipass.run/#install">
+            <img src="https://assets.ubuntu.com/v1/c87ec87a-Multipass-header-option_crop.png" width="150" />
             <br />
             Run it with Multipass
             </a>
@@ -54,8 +54,8 @@ layout: base
       <div class="row u-vertically-center">
         <div class="col-6">
           <blockquote  class="p-pull-quote">
-            <p>
-              “Canonical might have assembled the easiest way to provision a single node Kubernetes cluster”
+            <p class="p-pull-quote__quote">
+              Canonical might have assembled the easiest way to provision a single node Kubernetes cluster
             </p>
             <cite class="p-pull-quote__citation">
               &mdash; Kelsey Hightower
@@ -64,8 +64,8 @@ layout: base
         </div>
         <div class="col-6">
           <blockquote class="p-pull-quote">
-            <p>
-              “dear microk8s team: you are awesome. Microk8s has tangibly improved my life and my CI pipelines as a developer of k8s controllers”
+            <p class="p-pull-quote__quote">
+              dear microk8s team: you are awesome. Microk8s has tangibly improved my life and my CI pipelines as a developer of k8s controllers
             </p>
             <cite class="p-pull-quote__citation">
               &mdash; in <a href="https://kubernetes.slack.com/messages/microk8s/" class=" p-link--external">#microk8s</a>
@@ -80,7 +80,7 @@ layout: base
           <ul class="p-list--divided">
             <li class="p-list__item is-ticked">Conformant</li>
             <li class="p-list__item is-ticked">Istio</li>
-            <li class="p-list__item is-ticked">Clustering<br /><small style="color: red;">BETA</small></li>
+            <li class="p-list__item is-ticked">Clustering<br /><small class="p-label--in-progress">BETA</small></li>
           </ul>
         </div>
         <div class="col-2">
@@ -232,7 +232,7 @@ layout: base
             <button class="p-code-copyable__action">Copy to clipboard</button>
           </div>
           <p>
-            <code>snap info microK8s</code> shows the current published k8s versions. It is possible to select a specific version like 1.11 and get only stable or RC updates to that version. By default, you will get the current major version with upgrades when new major versions are published.
+            Running <code>snap info microK8s</code> shows the current published k8s versions. It is possible to select a specific version like 1.11 and get only stable or RC updates to that version. By default, you will get the current major version with upgrades when new major versions are published.
           </p>
         </div>
       </div>
@@ -252,9 +252,11 @@ layout: base
           </p>
           <div class="p-code-copyable">
             <input class="p-code-copyable__input" aria-label="sudo microk8s.stop" value="sudo microk8s.stop" readonly="readonly">
+            <button class="p-code-copyable__action">Copy to clipboard</button>
           </div>
           <div class="p-code-copyable">
             <input class="p-code-copyable__input" aria-label="sudo microk8s.start" value="sudo microk8s.start" readonly="readonly">
+            <button class="p-code-copyable__action">Copy to clipboard</button>
           </div>
         </div>
       </div>
@@ -279,7 +281,7 @@ layout: base
             Try a different version, or a beta or a daily build
           </h4>
           <p>
-            Snaps are published in <a href="https://docs.snapcraft.io/channels/551">channels</a> which are made up of a track (or major version), and an expected level of stability. Try <code>snap info microk8s</code> to see what versions are currently published. For example:
+            Snaps are published in <a href="https://docs.snapcraft.io/channels">channels</a> which are made up of a track (or major version), and an expected level of stability. Try <code>snap info microk8s</code> to see what versions are currently published. For example:
           </p>
           <div class="p-code-pre">
             <pre><code>channels:
@@ -315,9 +317,9 @@ layout: base
         <h2>
           Working with MicroK8s
         </h2>
-        <h4>
+        <p class="p-heading--four">
           Or dive right into the <a href="/docs">docs</a>
-        </h4>
+        </p>
         <div class="asciinema-container"></div>
       </div>
     </section>
