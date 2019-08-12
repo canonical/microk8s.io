@@ -44,9 +44,9 @@ solution.
 
 **[jaeger][]**: Deploy the [Jaeger Operator][jaeger-docs] in the “simplest” configuration.
 
-**[knative][]**: Adss the [Knative][knative-docs] middleware to your cluster.
+**[knative][]**: Adds the [Knative][knative-docs] middleware to your cluster.
 
-**[linkerd][]**:Deploys the linkerd service mesh. [See below](#linkerd) for configuration.
+**[linkerd][]**: Deploys the linkerd service mesh. [See below](#linkerd) for configuration.
 
 **[metrics-server][]**: Adds the Kubernetes Metrics Server for API access to service metrics.
 
@@ -75,13 +75,54 @@ This will invoke the `vim` editor so you can alter the configuration.
 ### dashboard
 
 The standard Kubernetes Dashboard is a convenient way to keep track of the
-activity and resource use of microk8s
+activity and resource use of MicroK8s
+
+
+To log in to the Dashboard, you will need the access token. This is generated randomly on deployment, so a few commands are needed to retrieve it:
+
+```bash
+token=$(microk8s.kubectl -n kube-system get secret | grep default-token | cut -d " " -f1)
+microk8s.kubectl -n kube-system describe secret $token
+```
+
+Next, you need a connection to the API server. While the MicroK8s snap will have an IP address on your local network, the recommended way to do this is through the proxy service. You can initiate the proxy with the command:
+
+```bash
+microk8s.kubectl proxy --accept-hosts=.* --address=0.0.0.0 &
+```
+
+You can then access the Dashboard at the address
+
+[http://127.0.0.1:8001/api/v1/namespaces/kube-system/services/https:kubernetes-dashboard:/proxy/]()
+
+![IMAGE of Dashboard]()
+
 
 ### fluentd
 
 
-
 ### gpu
+
+This addon enables GPU support for MicroK8s. Note that this is obviously dependent on the host system having suitable Nvidia GPU hardware and
+relevant drivers.
+
+With the GPU addon enabled, workloads can request the GPU using a limit setting, `nvidia.com/gpu: 1 `. For example:
+
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: cuda-vector-add
+spec:
+  restartPolicy: OnFailure
+  containers:
+    - name: cuda-vector-add
+      image: "k8s.gcr.io/cuda-vector-add:v0.1"
+      resources:
+        limits:
+          nvidia.com/gpu: 1
+```
+
 
 ### ingress
 
@@ -101,9 +142,24 @@ activity and resource use of microk8s
 
 ### registry
 
+The registry shipped with MicroK8s is hosted within the Kubernetes cluster and
+is exposed as a NodePort service on port 32000 of the localhost. Note that this
+is an insecure registry and you may need to take extra steps to limit access to
+it.
+
+For more information on using this private registry, please see the
+[Working with registries documentation](#ref)
+
+
 ### storage
 
-This storage class makes use of the hostpath-provisioner pointing to a directory on the host. Persistent volumes are created under ${SNAP_COMMON}/default-storage. Upon disabling this add-on you will be asked if you want to delete the persistent volumes created.
+This storage class makes use of the hostpath-provisioner pointing to a
+directory on the host. Persistent volumes are created under
+`${SNAP_COMMON}/default-storage`. On an Ubuntu system this is commonly
+`/var/snap/microk8s/common/default-storage/`.
+
+If this addon is subsequently disabled, you will be asked if you wish to
+permanently remove any storage which may have been created.
 
 [efk-upstream]: https://kubernetes.io/docs/tasks/debug-application-cluster/logging-elasticsearch-kibana/
 [istio-docs]: https://istio.io/docs/concepts/what-is-istio/
