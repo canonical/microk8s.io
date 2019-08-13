@@ -95,10 +95,26 @@ You can then access the Dashboard at the address
 
 [http://127.0.0.1:8001/api/v1/namespaces/kube-system/services/https:kubernetes-dashboard:/proxy/]()
 
-![IMAGE of Dashboard]()
+![IMAGE of Dashboard](#ref)
 
 
 ### fluentd
+
+Enabling this addon will add Elasticsearch, Fluentd and Kibana (the EFK stack) to MicroK8s. The components will be installed and connected together.
+
+To access the Kibana dashboard, you should first start the kube proxy service:
+
+```bash
+microk86.kubectl proxy
+```
+
+You will now find the dashboard available at:
+<http://127.0.0.1:8001/api/v1/namespaces/kube-system/services/kibana-logging/proxy/app/kibana>
+
+Note that you will still need to set up Kibana to track whatever you are interested in. For more details see the [upstrem docs on EFK][efk-upstream] and the [official Kibana documentation][kibana-docs].
+
+![IMAGE kibana](#ref)
+
 
 
 ### gpu
@@ -132,6 +148,8 @@ spec:
 
 ### knative
 
+
+
 ### linkerd
 
 ### metrics-server
@@ -161,7 +179,12 @@ directory on the host. Persistent volumes are created under
 If this addon is subsequently disabled, you will be asked if you wish to
 permanently remove any storage which may have been created.
 
+
+
+<-! LINKS ->
+
 [efk-upstream]: https://kubernetes.io/docs/tasks/debug-application-cluster/logging-elasticsearch-kibana/
 [istio-docs]: https://istio.io/docs/concepts/what-is-istio/
 [jaeger-docs]: https://github.com/jaegertracing/jaeger-operator
 [linkerd-docs]: https://linkerd.io/2/overview/
+[kibana-docs]: https://www.elastic.co/guide/en/kibana/current/discover.html
