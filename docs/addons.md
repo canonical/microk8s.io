@@ -158,6 +158,12 @@ spec:
 
 ### rbac
 
+When enabled, the kube-apiserver `authorization-mode` will be set to `RBAC`. Kubernetes will then automatically add all the default roles and rolebindings.
+
+When disabled, the addon will retrun the `authorization-mode` to `AlwaysAllow`.
+
+For more information on using RBAC and the roles and rolebindings, see the [upstrem Kubernetes documentation][kubernetes-rbac].
+
 ### registry
 
 The registry shipped with MicroK8s is hosted within the Kubernetes cluster and
