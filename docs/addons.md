@@ -44,15 +44,15 @@ solution.
 
 **[jaeger][]**: Deploy the [Jaeger Operator][jaeger-docs] in the “simplest” configuration.
 
-**[knative][]**: Adds the [Knative][knative-docs] middleware to your cluster.
+**[knative](#knative)**: Adds the [Knative][knative-docs] middleware to your cluster.
 
-**[linkerd][]**: Deploys the linkerd service mesh. [See below](#linkerd) for configuration.
+**[linkerd](#linkerd)**: Deploys the linkerd service mesh. [See below](#linkerd) for configuration.
 
-**[metrics-server][]**: Adds the Kubernetes Metrics Server for API access to service metrics.
+**[metrics-server](#metrics-server)**: Adds the Kubernetes Metrics Server for API access to service metrics.
 
-**[prometheus]()**: Deploys the [Prometheus Operator][prometheus-docs].
+**[prometheus](#prometheus)**: Deploys the [Prometheus Operator][prometheus-docs].
 
-**[rbac]()**: Enable Role Based Access Control for authorisation. Note that this is incompatible with some other add-ons ([See notes](#rbac))
+**[rbac](#rbac)**: Enable Role Based Access Control for authorisation. Note that this is incompatible with some other add-ons ([See notes](#rbac))
 
 **[registry][]**: Deploy a private image registry and expose it on localhost:32000. The storage add-on will be enabled as part of this add-on. See the registry documentation for more details.
 
@@ -61,7 +61,9 @@ solution.
 
 ### dns
 
-As noted above, this deploys CoreDNS to supply address resolution services to Kubernetes. This service is commonly required by other addons, so it is recommended that you enable it.
+As noted above, this deploys CoreDNS to supply address resolution services to
+Kubernetes. This service is commonly required by other addons, so it is
+recommended that you enable it.
 
 By default it points to Google's 8.8.8.8, 8.8.4.4 servers for resolving
 addresses. This can be changed by running the command:
@@ -78,14 +80,17 @@ The standard Kubernetes Dashboard is a convenient way to keep track of the
 activity and resource use of MicroK8s
 
 
-To log in to the Dashboard, you will need the access token. This is generated randomly on deployment, so a few commands are needed to retrieve it:
+To log in to the Dashboard, you will need the access token. This is generated
+randomly on deployment, so a few commands are needed to retrieve it:
 
 ```bash
 token=$(microk8s.kubectl -n kube-system get secret | grep default-token | cut -d " " -f1)
 microk8s.kubectl -n kube-system describe secret $token
 ```
 
-Next, you need a connection to the API server. While the MicroK8s snap will have an IP address on your local network, the recommended way to do this is through the proxy service. You can initiate the proxy with the command:
+Next, you need a connection to the API server. While the MicroK8s snap will
+have an IP address on your local network, the recommended way to do this is
+through the proxy service. You can initiate the proxy with the command:
 
 ```bash
 microk8s.kubectl proxy --accept-hosts=.* --address=0.0.0.0 &
@@ -100,7 +105,8 @@ You can then access the Dashboard at the address
 
 ### fluentd
 
-Enabling this addon will add Elasticsearch, Fluentd and Kibana (the EFK stack) to MicroK8s. The components will be installed and connected together.
+Enabling this addon will add Elasticsearch, Fluentd and Kibana (the EFK stack)
+to MicroK8s. The components will be installed and connected together.
 
 To access the Kibana dashboard, you should first start the kube proxy service:
 
@@ -111,7 +117,9 @@ microk86.kubectl proxy
 You will now find the dashboard available at:
 <http://127.0.0.1:8001/api/v1/namespaces/kube-system/services/kibana-logging/proxy/app/kibana>
 
-Note that you will still need to set up Kibana to track whatever you are interested in. For more details see the [upstrem docs on EFK][efk-upstream] and the [official Kibana documentation][kibana-docs].
+Note that you will still need to set up Kibana to track whatever you are
+interested in. For more details see the [upstrem docs on EFK][efk-upstream]
+and the [official Kibana documentation][kibana-docs].
 
 ![IMAGE kibana](#ref)
 
@@ -144,6 +152,8 @@ spec:
 
 ### istio
 
+Deploying the [Istio][istio-docs] service mesh will
+
 ### jaeger
 
 ### knative
@@ -156,13 +166,43 @@ spec:
 
 ### prometheus
 
+Prometheus is a popular way to monitor a Kubernetes system, and one which is
+easy to integrate with MicroK8s. To use Grafana to view the collected data,
+it is advisable to also enable the `dashboard` addon at the same time:
+
+```bash
+microk8s.enable dashboard prometheus
+```
+
+You can verify the Grafana dashboard is available by running:
+
+```bash
+microk8s.kubectl cluster-info
+```
+
+Now, run the proxy service
+
+```
+microk8s.kubectl proxy &
+```
+(You may wish to run the proxy in a different shell rather than as a background process).
+
+You can now navigate to the Grafana dashboard at the address:
+<http://127.0.0.1:8001/api/v1/namespaces/kube-system/services/monitoring-grafana/proxy>
+
+
+![IMAGE Grafana](#ref)
+
+
+
 ### rbac
 
 When enabled, the kube-apiserver `authorization-mode` will be set to `RBAC`. Kubernetes will then automatically add all the default roles and rolebindings.
 
 When disabled, the addon will retrun the `authorization-mode` to `AlwaysAllow`.
 
-For more information on using RBAC and the roles and rolebindings, see the [upstrem Kubernetes documentation][kubernetes-rbac].
+For more information on using RBAC and the roles and bindings, see the
+[upstrem Kubernetes documentation][kubernetes-rbac].
 
 ### registry
 
