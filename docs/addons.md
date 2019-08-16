@@ -152,13 +152,34 @@ spec:
 
 ### istio
 
-Deploying the [Istio][istio-docs] service mesh will
+Deploying the [Istio][istio-woe] service mesh will add various traffic management, tuning and security features to MicroK8s.
+
+If you enable this addon, there is a single question to answer during the install process:
+
+```
+Enforce mutual TLS authentication (https://bit.ly/2KB4j04) between sidecars? If unsure, choose N. (y/N):
+```
+
+Istio controls routing and security - if you plan to run services which are not looked after by istio (i.e. a mixed environment) then you should answer 'N' here.
+
+
+You can confirm the istio services are running with:
+
+```bash
+microk8s.kubectl get all -n istio-system
+```
+
+Istio proxy injection may be done on a service by service basis, but if you are intending to run all services through istio, it is more convenient to label the namespace to add istio to all new services:
+
+```bash
+microk8s.kubectl label namespace default istio-injection=true
+```
+
+There is more information about working with istio in the [istio documentation][istio-docs].
 
 ### jaeger
 
 ### knative
-
-
 
 ### linkerd
 
@@ -236,7 +257,8 @@ permanently remove any storage which may have been created.
 <-! LINKS ->
 
 [efk-upstream]: https://kubernetes.io/docs/tasks/debug-application-cluster/logging-elasticsearch-kibana/
-[istio-docs]: https://istio.io/docs/concepts/what-is-istio/
+[istio-woe]: https://istio.io/docs/concepts/what-is-istio/
+[istio-docs]: https://istio.io/docs/
 [jaeger-docs]: https://github.com/jaegertracing/jaeger-operator
 [linkerd-docs]: https://linkerd.io/2/overview/
 [kibana-docs]: https://www.elastic.co/guide/en/kibana/current/discover.html
