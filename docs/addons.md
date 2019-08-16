@@ -164,6 +164,12 @@ Deploying the [Istio][istio-docs] service mesh will
 
 ### metrics-server
 
+The metrics-server addon is a complete implementation of the Kubernetes metrics
+server project. Enabling the metrics-server will provide API access to
+continuously updated metrics for MicroK8s.
+
+More details on the scope and planned functionality of the metrics-server can be found in its [design documentation][metrics-design-doc].
+
 ### prometheus
 
 Prometheus is a popular way to monitor a Kubernetes system, and one which is
@@ -202,7 +208,7 @@ When enabled, the kube-apiserver `authorization-mode` will be set to `RBAC`. Kub
 When disabled, the addon will retrun the `authorization-mode` to `AlwaysAllow`.
 
 For more information on using RBAC and the roles and bindings, see the
-[upstrem Kubernetes documentation][kubernetes-rbac].
+[upstream Kubernetes documentation][kubernetes-rbac].
 
 ### registry
 
@@ -234,3 +240,4 @@ permanently remove any storage which may have been created.
 [jaeger-docs]: https://github.com/jaegertracing/jaeger-operator
 [linkerd-docs]: https://linkerd.io/2/overview/
 [kibana-docs]: https://www.elastic.co/guide/en/kibana/current/discover.html
+[metrics-design-doc]:https://github.com/kubernetes/community/blob/master/contributors/design-proposals/instrumentation/metrics-server.md
