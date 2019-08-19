@@ -183,6 +183,31 @@ There is more information about working with istio in the [istio documentation][
 
 ### linkerd
 
+Enabling this addon will deploy the necessary services and proxies for the linkerd service mesh. To use linkerd effectively it is also required to set up and configure the `linkerd` CLI utility.
+
+The [linkerd documentation][linkerd-docs] suggests the following for installing the command line tool:
+
+```bash
+curl -sL https://run.linkerd.io/install | sh
+```
+
+You should also make sure the `KUBECONFIG` environment variable is set to point to the MicroK8s config file:
+
+```bash
+export KUBECONFIG=$KUBECONFIG:/snap/microk8s/current/client.config
+```
+
+You can verify that linkerd is operating by running:
+
+```bash
+linkerd check
+```
+
+For more on general usage for linkerd, see the [linkerd documentation].
+
+
+
+
 ### metrics-server
 
 The metrics-server addon is a complete implementation of the Kubernetes metrics
