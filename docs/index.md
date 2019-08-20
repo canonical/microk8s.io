@@ -103,6 +103,8 @@ With `microk8s.status` you can see the list of available add-ons and which ones 
 - **rbac**: Enable RBAC ([Role-Based Access Control](https://kubernetes.io/docs/reference/access-authn-authz/rbac/))
    authorisation mode. Note that other add-ons may not work with RBAC enabled.
 - **knative**: Enable [Knative](https://knative.dev/) with `microk8s.enable knative`.
+- **helm**: Enable [helm](https://helm.sh/) with `microk8s.enable helm`.
+- **cilium**: use network policies by enabling the [Cilium](https://cilium.io/) network plugin with `microk8s.enable cilium`.
 
 ### Stopping and restarting MicroK8s
 
