@@ -206,8 +206,6 @@ linkerd check
 For more on general usage for linkerd, see the [linkerd documentation].
 
 
-
-
 ### metrics-server
 
 The metrics-server addon is a complete implementation of the Kubernetes metrics
