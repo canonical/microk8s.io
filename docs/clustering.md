@@ -33,10 +33,10 @@ NAME               STATUS   ROLES    AGE   VERSION
 ip-172-31-20-243   Ready    <none>   53s   v1.15.3
 ```
 
-To remove a node from the cluster we call the `microk8s.remove` command
+To remove a node from the cluster we call the `microk8s.remove-node` command
 and provide the name of the node we want to remove:
 ```
-> microk8s.remove 10.22.254.79
+> microk8s.remove-node 10.22.254.79
 ```
 
 On the removed node we can call `microk8s.leave` so that MicroK8s starts
