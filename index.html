@@ -29,14 +29,14 @@ layout: base
         <div class="col-4 p-divider__block u-align--center">
           <h5>Linux</h5>
           <a href="https://snapcraft.io/microk8s" title="Get it from the Snap Store">
-            <img src="https://snapcraft.io/static/images/badges/en/snap-store-white.svg" alt="Get it from the Snap Store" width="200" />
+            <img src="https://snapcraft.io/static/images/badges/en/snap-store-white.svg" alt="Get it from the Snap Store" width="200" style="padding-top: 2.2rem;"/>
           </a>
         </div>
         <div class="col-4 p-divider__block u-align--center">
           <h5>Windows</h5>
           <p>
             <a href="https://multipass.run/#install">
-            <img src="https://assets.ubuntu.com/v1/c87ec87a-Multipass-header-option_crop.png" width="150" alt="" />
+              <img src="https://assets.ubuntu.com/v1/11ecbd2d-2018-logo-windows.svg" alt="Windows 10 logo">
             <br />
             Run it with Multipass
             </a>
@@ -46,7 +46,7 @@ layout: base
           <h5>macOS</h5>
           <p>
             <a href="https://multipass.run/#install">
-            <img src="https://assets.ubuntu.com/v1/c87ec87a-Multipass-header-option_crop.png" width="150" alt="" />
+              <img src="https://assets.ubuntu.com/v1/236f314d-macos.svg" alt="macOS logo">
             <br />
             Run it with Multipass
             </a>
@@ -108,7 +108,7 @@ layout: base
           <ul class="p-list--divided">
             <li class="p-list__item is-ticked">Knative</li>
             <li class="p-list__item is-ticked">Kubeflow</li>
-            <li class="p-list__item is-ticked">Jaeger, Prometheu</li>
+            <li class="p-list__item is-ticked">Jaeger, Prometheus</li>
           </ul>
         </div>
       </div>
@@ -121,7 +121,7 @@ layout: base
               Single node Kubernetes done right
             </h2>
             <p>
-              The smallest, fastest fully-conformant Kubernetes that tracks upstream releases and makes clustering trivial. Use MicroK8s for offline development, prototyping, testing. Use it on a VM as a small, cheap, reliable k8s for CI/CD. Makes a great kubernetes for appliances. Develop IoT apps for k8s and deploy them to MicroK8s on your boxes.
+              The smallest, fastest, fully-conformant Kubernetes that tracks upstream releases and makes clustering trivial. MicroK8s is great for offline development, prototyping, and testing. Use it on a VM as a small, cheap, reliable k8s for CI/CD. The best kubernetes for appliances. Develop IoT apps for k8s and deploy them to MicroK8s on your Linux boxes.
             </p>
             <p>
               <a class="p-button--positive" href="#quick-start">
@@ -229,7 +229,7 @@ layout: base
             <button class="p-code-copyable__action">Copy to clipboard</button>
           </div>
           <p>
-            Running <code>snap info microK8s</code> shows the current published k8s versions. It is possible to select a specific version like 1.11 and get only stable or RC updates to that version. By default, you will get the current major version with upgrades when new major versions are published.
+            Running <code>snap info microK8s</code> shows the current published k8s versions. It is possible to select a specific version like 1.6 and get only stable or RC updates to that version. By default, you will get the current major version with upgrades when new major versions are published.
           </p>
         </div>
       </div>
@@ -268,7 +268,7 @@ layout: base
             <button class="p-code-copyable__action">Copy to clipboard</button>
           </div>
           <p>
-            Enable and disable particular standard add-on services using the <code>microk8s.enable</code> and <code>microk8s.disable</code> commands. See the <code>microk8s.enable --help</code> for details.
+            Enable and disable particular standard add-on services using the <code>microk8s.enable</code> and <code>microk8s.disable</code> commands. See the <code>microk8s.enable --help</code> for a list of the available services built-in to MicroK8s.
           </p>
         </div>
       </div>
@@ -289,18 +289,7 @@ layout: base
   edge:           v1.13.1  (354) 229MB classic
   1.13/stable:    v1.13.0  (340) 204MB classic
   1.13/candidate: v1.13.1  (356) 229MB classic
-  1.13/beta:      v1.13.1  (356) 229MB classic
-  1.13/edge:      v1.13.1  (356) 229MB classic
-  1.12/stable:    v1.12.3  (336) 226MB classic
-  1.12/candidate: v1.12.4  (362) 251MB classic
-  1.12/beta:      v1.12.4  (362) 251MB classic
-  1.12/edge:      v1.12.4  (362) 251MB classic
-  1.11/stable:    v1.11.5  (322) 219MB classic
-  1.11/candidate: v1.11.6  (361) 245MB classic
-  1.11/beta:      v1.11.6  (361) 245MB classic
-  1.11/edge:      v1.11.6  (361) 245MB classic
-  1.10/stable:    v1.10.11 (321) 175MB classic
-  1.10/candidate: v1.10.11 (321) 175MB classic
+  ...
   1.10/beta:      v1.10.11 (321) 175MB classic
   1.10/edge:      v1.10.12 (364) 200MB classic</code></pre>
           </div>
