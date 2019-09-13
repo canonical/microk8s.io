@@ -1,31 +1,35 @@
 ---
 layout: docs
-title: "Muli-node Clusters"
+title: "Multi-node MicroK8s"
 ---
-# Muli-node Clusters
+# Multi-node MicroK8s
 
+## Adding a node
 
-Forming a cluster out of two or more already running MicroK8s instances is done through
-the `microk8s.add-node` command. The MicroK8s instace on which this command is
-run will be the master of the cluster and will host the kubernetes control plane:
+To create a cluster out of two or more already-running MicroK8s instances,
+use the `microk8s.add-node` command. The MicroK8s instance on which this
+command is
+run will be the master of the cluster and will host the Kubernetes
+control plane:
 ```
-> microk8s.add-node 
+> microk8s.add-node
 Join node with: microk8s.join ip-172-31-20-243:25000/DDOkUupkmaBezNnMheTBqFYHLWINGDbf
 
-If the node you are adding is not reachable through the default interface you can use one of the following:
+If the node you are adding is not reachable through the default
+interface you can use one of the following:
  microk8s.join 10.1.84.0:25000/DDOkUupkmaBezNnMheTBqFYHLWINGDbf
  microk8s.join 10.22.254.77:25000/DDOkUupkmaBezNnMheTBqFYHLWINGDbf
 ```
 
-As shown, `add-node` produces a random, single use token ("DDOkUupkmaBezNnMheTBqFYHLWINGDbf" in this example)
-and displays a message on how a node is to be added to the cluster.
-On the MicroK8s instance that we want to turn into a node we have to:
+The `add-node` command prints a `microk8s.join` command which should
+be executed on the MicroK8s instance that you wish to join to this
+cluster:
 ```
 > microk8s.join ip-172-31-20-243:25000/DDOkUupkmaBezNnMheTBqFYHLWINGDbf
 ```
 
-Joining a node to the cluster should only take a few seconds. Afterwards you should be able
-to see the node with:
+Joining a node to the cluster should only take a few seconds. Afterwards
+you should be able to see the node has joined:
 ```
 > microk8s.kubectl get no
 NAME               STATUS   ROLES    AGE   VERSION
@@ -33,14 +37,15 @@ NAME               STATUS   ROLES    AGE   VERSION
 ip-172-31-20-243   Ready    <none>   53s   v1.15.3
 ```
 
-To remove a node from the cluster we call the `microk8s.remove-node` command
-and provide the name of the node we want to remove:
+## Removing a node
+
+To remove a node from the cluster, use `microk8s.remove-node`:
 ```
 > microk8s.remove-node 10.22.254.79
 ```
 
-On the removed node we can call `microk8s.leave` so that MicroK8s starts
-its own control plane and start acting as a full single node cluster:
+Finally, qn the removed node, run `microk8s.leave`. MicroK8s will restart
+its own control plane and resume operations as a full single node cluster:
 ```
 > microk8s.leave
 ```
