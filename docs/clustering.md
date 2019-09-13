@@ -22,7 +22,7 @@ interface you can use one of the following:
 ```
 
 The `add-node` command prints a `microk8s.join` command which should
-be executed on the MicroK8s instance that you wish to join to this
+be executed on the MicroK8s instance that you wish to join to the
 cluster:
 ```
 > microk8s.join ip-172-31-20-243:25000/DDOkUupkmaBezNnMheTBqFYHLWINGDbf
@@ -44,7 +44,7 @@ To remove a node from the cluster, use `microk8s.remove-node`:
 > microk8s.remove-node 10.22.254.79
 ```
 
-Finally, qn the removed node, run `microk8s.leave`. MicroK8s will restart
+Finally, on the removed node, run `microk8s.leave`. MicroK8s will restart
 its own control plane and resume operations as a full single node cluster:
 ```
 > microk8s.leave
