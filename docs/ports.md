@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: "Services exposed - Authorization and authentication"
----------------------------------------------------------------------
+---
 # Services exposed and ports used
 
 Services can be placed in two groups based on the network interface they bind to. Services binding to the `localhost`
