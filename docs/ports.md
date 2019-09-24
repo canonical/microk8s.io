@@ -50,7 +50,7 @@ Upon deployment MicroK8s creates a CA, a signed server certificate and a service
 
 The authentication [strategies](https://kubernetes.io/docs/reference/access-authn-authz/authentication/#authentication-strategies)
  enabled by default are:
- - Static Password File, with password tokens and usernames are stored in `/var/snap/microk8s/current/credentials/basic_token.csv`
+ - Static Password File, with password tokens and usernames stored in `/var/snap/microk8s/current/credentials/basic_token.csv`
  - Static Token File with tokens in `/var/snap/microk8s/current/credentials/known_tokens.csv`, and
  - X509 Client Certs with the client CA file set to `/var/snap/microk8s/current/certs/ca.crt`.
  Under `/var/snap/microk8s/current/credentials/` you can find the `client.config` kubeconfig file
