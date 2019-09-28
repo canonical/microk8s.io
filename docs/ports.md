@@ -57,7 +57,7 @@ The authentication [strategies](https://kubernetes.io/docs/reference/access-auth
  used by `microk8s.kubectl`.
 
 By default all authenticated requests are authorized as the api-server runs with
-`--authorization-mode=AlwaysAllow`. Turning on [RBAC]((https://kubernetes.io/docs/reference/access-authn-authz/rbac/)) is done through `microk8s.enable rbac`.
+`--authorization-mode=AlwaysAllow`. Turning on [RBAC](https://kubernetes.io/docs/reference/access-authn-authz/rbac/) is done through `microk8s.enable rbac`.
 
 
 ## References
