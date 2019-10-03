@@ -8,12 +8,12 @@ title: "MicroK8s Addons"
 To be as lightweight as possible, MicroK8s only installs the basics of a usable
 Kubernetes install:
 
- - `api-server`
- - `controller-manager`
- - `scheduler`,
- - `kubelet`,
- - `cni`
- - `kube-proxy`
+ - api-server
+ - controller-manager
+ - scheduler
+ - kubelet
+ - cni
+ - kube-proxy
 
 While this does deliver a pure Kubernetes experience with the smallest of
 resource footprints, there are situations where you may require additional
