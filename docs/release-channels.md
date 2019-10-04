@@ -1,6 +1,7 @@
 ---
 layout: docs
 title: "Release channels and upgrades"
+permalink: /docs/release-channels
 ---
 # Release channels and upgrades
 

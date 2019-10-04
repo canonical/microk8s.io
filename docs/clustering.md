@@ -1,6 +1,7 @@
 ---
 layout: docs
 title: "Multi-node MicroK8s"
+permalink: /docs/clustering
 ---
 # Multi-node MicroK8s
 

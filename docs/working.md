@@ -1,6 +1,7 @@
 ---
 layout: docs
 title: "Working with image registries"
+permalink: /docs/working
 ---
 # Working with image registries
 
