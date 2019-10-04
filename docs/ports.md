@@ -1,6 +1,7 @@
 ---
 layout: docs
 title: "Services exposed - Authorization and authentication"
+permalink: /docs/ports
 ---
 # Services exposed and ports used
 
