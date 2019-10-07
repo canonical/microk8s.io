@@ -35,7 +35,7 @@ su - ${USER}
 The Dockerfile we will be using is:
 
 ```
-FROM nginx:alpine
+FROM nginx
 ```
 
 To build the image tagged with `mynginx:local`, navigate to the directory where
@@ -104,6 +104,7 @@ spec:
       containers:
       - name: nginx
         image: mynginx:local
+        imagePullPolicy: Never
         ports:
         - containerPort: 80
 ```
