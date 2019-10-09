@@ -3,6 +3,8 @@ layout: docs
 title: "Fluentd addon"
 ---
 
+# Fluentd addon
+
 Enabling this addon will add Elasticsearch, Fluentd and Kibana (the EFK stack)
 to MicroK8s. The components will be installed and connected together.
 
