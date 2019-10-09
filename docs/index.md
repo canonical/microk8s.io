@@ -5,7 +5,8 @@ title: "User Guide"
 
 <h1 id="microk8s-documentation">MicroK8s documentation <img src="https://assets.ubuntu.com/v1/6731169e-certified-kubernetes-color.png?w=60" style="margin-left: 1rem; position: relative; top: -8px;" align="right"></h1>
 
-Kubernetes in a [snap](https://snapcraft.io/microk8s) that you can run locally.
+MicroK8s is Kubernetes in a [snap](https://snapcraft.io/microk8s) that you can
+run locally.
 
 ## User guide
 
