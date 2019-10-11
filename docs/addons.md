@@ -49,7 +49,7 @@ microk8s.status
 recommended you always enable it. In restricted environments you may need to
 update the upstream DNS servers.
 
-**fluentd**: Deploy the [Elasticsearch-Fluentd-Kibana][kibana-docs] logging and
+**[fluentd](addon-fluentd)**: Deploy the [Elasticsearch-Fluentd-Kibana][kibana-docs] logging and
 monitoring solution.
 
 **gpu**:  Enable support for GPU accelerated workloads using the NVIDIA runtime.
