@@ -1,6 +1,7 @@
 ---
 layout: docs
 title: "Fluentd addon"
+permalink: /docs/addon-fluentd
 ---
 
 # Fluentd addon
