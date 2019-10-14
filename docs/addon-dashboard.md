@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: "Dashboardaddon"
+title: "Dashboard addon"
 permalink: /docs/addon-dashboard
 ---
 
