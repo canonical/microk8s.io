@@ -14,7 +14,7 @@ package - it can be installed on any Linux distribution which supports
 up a cluster quickly for development and testing. Try it on your laptop!
 
 ```bash
-snap install microk8s --classic
+snap install microk8s --classic --channel=1.16/stable
 ```
 
 Most important updates since the last release:
