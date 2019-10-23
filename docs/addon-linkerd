@@ -7,34 +7,21 @@ permalink: /docs/addon-linkerd
 # linkerd
 
 Enabling this addon will deploy the necessary services and proxies for the
-linkerd service mesh. To use linkerd effectively it is also required to set up
-and configure the `linkerd` CLI utility.
+linkerd service mesh.
 
 ```bash
 microk8s.enable linkerd
 ```
 
-The [linkerd documentation][linkerd-docs] suggests the following for installing
-the command line tool:
+Linkerd includes a command line utility. For convenience, MicroK8s ships
+with this utility. You can verify that the utility and linkerd are
+configured and working by running:
 
 ```bash
-curl -sL https://run.linkerd.io/install | sh
+microk8s.linkerd check
 ```
 
-You should also make sure the `KUBECONFIG` environment variable is set to point
-to the MicroK8s config file:
-
-```bash
-export KUBECONFIG=$KUBECONFIG:/snap/microk8s/current/client.config
-```
-
-You can verify that linkerd is operating by running:
-
-```bash
-linkerd check
-```
-
-For more on general usage for linkerd, see the
+For more on linkerd, see the
 [linkerd documentation][linkerd-docs].
 
 <!-- LINKS -->
