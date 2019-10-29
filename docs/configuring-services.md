@@ -30,8 +30,12 @@ which include pods, services, replication controllers, and others. The API
 Server services REST operations and provides the frontend to the cluster’s
 shared state through which all other components interact.
 
+The apiserver daemon is started using the arguments in
+`${SNAP_DATA}/args/kube-apiserver`.
 The service configuration is described in full in the upstream  
 [kube-apiserver documentation][kube-apiserver].
+
+
 
 ### snap.microk8s.daemon-containerd
 
@@ -61,7 +65,7 @@ The etcd daemon is started using the arguments in `${SNAP_DATA}/args/etcd`. For
 more information on the configuration, see the [etcd documentation][etcd]. Note
 that different channels of MicroK8s may use different versions of etcd.
 
-### snap.microk8s.daemon-flanneld 
+### snap.microk8s.daemon-flanneld
 
 Flannel is a CNI which gives a subnet to each host for use with container
 runtimes. The flannel daemon is started using the arguments in
