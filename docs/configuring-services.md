@@ -61,6 +61,12 @@ The etcd daemon is started using the arguments in `${SNAP_DATA}/args/etcd`. For
 more information on the configuration, see the [etcd documentation][etcd]. Note
 that different channels of MicroK8s may use different versions of etcd.
 
+### snap.microk8s.daemon-flanneld 
+
+Flannel is a CNI which gives a subnet to each host for use with container
+runtimes. The flannel daemon is started using the arguments in
+`${SNAP_DATA}/args/flanneld`. For more information on the configuration, see
+the  [flannel documentation][flannel].
 
 ### snap.microk8s.daemon-kubelet
 
@@ -106,3 +112,4 @@ upstream [kube-scheduler documentation][kube-scheduler].
 [kube-proxy]: https://kubernetes.io/docs/reference/command-line-tools-reference/kube-proxy/
 [etcd]: https://etcd.io/docs/v3.4.0/op-guide/configuration/
 [kubelet]: https://kubernetes.io/docs/reference/command-line-tools-reference/kubelet/
+[flannel]: https://coreos.com/flannel/docs/latest/
