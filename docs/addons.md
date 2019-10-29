@@ -1,6 +1,7 @@
 ---
 layout: docs
 title: "MicroK8s Addons"
+permalink: /docs/addons
 ---
 
 # MicroK8s Addons
@@ -63,7 +64,7 @@ configuration.
 
 **knative**: Adds the [Knative][knative-docs] middleware to your cluster.
 
-**linkerd**: Deploys the [linkerd][linkerd-docs] service mesh.
+**[linkerd](/docs/addon-linkerd)**: Deploys the [linkerd][linkerd-docs] service mesh.
 
 **metrics-server**: Adds the [Kubernetes Metrics Server][metrics-design-doc]
 for API access to service metrics.
