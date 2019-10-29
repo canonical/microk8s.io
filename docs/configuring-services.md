@@ -33,39 +33,6 @@ shared state through which all other components interact.
 The service configuration is described in full in the upstream  
 [kube-apiserver documentation][kube-apiserver].
 
-**Default configuration**:
-
-```yaml
---cert-dir=${SNAP_DATA}/certs
---service-cluster-ip-range=10.152.183.0/24
---authorization-mode=AlwaysAllow
---basic-auth-file=${SNAP_DATA}/credentials/basic_auth.csv
---service-account-key-file=${SNAP_DATA}/certs/serviceaccount.key
---client-ca-file=${SNAP_DATA}/certs/ca.crt
---tls-cert-file=${SNAP_DATA}/certs/server.crt
---tls-private-key-file=${SNAP_DATA}/certs/server.key
---kubelet-client-certificate=${SNAP_DATA}/certs/server.crt
---kubelet-client-key=${SNAP_DATA}/certs/server.key
---secure-port=16443
---token-auth-file=${SNAP_DATA}/credentials/known_tokens.csv
---token-auth-file=${SNAP_DATA}/credentials/known_tokens.csv
---etcd-servers='https://127.0.0.1:12379'
---etcd-cafile=${SNAP_DATA}/certs/ca.crt
---etcd-certfile=${SNAP_DATA}/certs/server.crt
---etcd-keyfile=${SNAP_DATA}/certs/server.key
---insecure-port=0
-
-# Enable the aggregation layer
---requestheader-client-ca-file=${SNAP_DATA}/certs/front-proxy-ca.crt
---requestheader-allowed-names=front-proxy-client
---requestheader-extra-headers-prefix=X-Remote-Extra-
---requestheader-group-headers=X-Remote-Group
---requestheader-username-headers=X-Remote-User
---proxy-client-cert-file=${SNAP_DATA}/certs/front-proxy-client.crt
---proxy-client-key-file=${SNAP_DATA}/certs/front-proxy-client.key
-#~Enable the aggregation layer
-```
-
 ### snap.microk8s.daemon-containerd
 
 [Containerd](https://containerd.io/) is the container runtime used by MicroK8s
@@ -73,17 +40,6 @@ to manage images and execute containers.
 
 The containerd daemon started using the configuration in
 `${SNAP_DATA}/args/containerd` and `${SNAP_DATA}/args/containerd-template.toml`.
-
-**Defaults:**
-
-${SNAP_DATA}/args/containerd:
-
-```yaml
---config ${SNAP_DATA}/args/containerd.toml
---root ${SNAP_COMMON}/var/lib/containerd
---state ${SNAP_COMMON}/run/containerd
---address ${SNAP_COMMON}/run/containerd.sock
-```
 
 ### snap.microk8s.daemon-controller-manager
 
@@ -105,18 +61,6 @@ The etcd daemon is started using the arguments in `${SNAP_DATA}/args/etcd`. For
 more information on the configuration, see the [etcd documentation][etcd]. Note
 that different channels of MicroK8s may use different versions of etcd.
 
-
-**Defaults:**
-
-```ỳaml
---data-dir=${SNAP_COMMON}/var/run/etcd
---advertise-client-urls=https://${DEFAULT_INTERFACE_IP_ADDR}:12379
---listen-client-urls=https://0.0.0.0:12379
---client-cert-auth
---trusted-ca-file=${SNAP_DATA}/certs/ca.crt
---cert-file=${SNAP_DATA}/certs/server.crt
---key-file=${SNAP_DATA}/certs/server.key
-```
 
 ### snap.microk8s.daemon-kubelet
 
@@ -153,11 +97,6 @@ necessary.
 The kube-scheduler daemon started using the arguments in
 `${SNAP_DATA}/args/kube-scheduler`. These are explained fully in the
 upstream [kube-scheduler documentation][kube-scheduler].
-
-
-To reconfigure a service you will need to edit the corresponding file and then restart the respective daemon. For example:
-
-
 
 <!-- LINKS -->
 
