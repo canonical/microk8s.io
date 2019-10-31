@@ -168,10 +168,10 @@ Some common problems and solutions are listed below.
 
 ### My dns and dashboard pods are CrashLooping...
 
-The [Kubenet](https://kubernetes.io/docs/concepts/extend-kubernetes/compute-storage-net/network-plugins/) network plugin used by MicroK8s creates a `cbr0` interface when the first pod is created. If you have `ufw` enabled, you'll need to allow traffic on this interface:
+The cni network plugin used by MicroK8s creates a `cni0` interface (`cbr0` on pre v1.16 releases) when the first pod is created. If you have `ufw` enabled, you'll need to allow traffic on this interface:
 
 ```
-sudo ufw allow in on cbr0 && sudo ufw allow out on cbr0
+sudo ufw allow in on cni0 && sudo ufw allow out on cni0
 ```
 
 ### My pods can't reach the internet or each other (but my MicroK8s host machine can)...
