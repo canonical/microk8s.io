@@ -7,7 +7,7 @@ permalink: /docs/configuring-services
 # Configuring MicroK8s services
 
 MicroK8s brings up Kubernetes as a number of different services run through
-`sytemd`. The configuration of these services is read from files stored
+`systemd`. The configuration of these services is read from files stored
 in the $SNAP_DATA directory, which normally points to
 `/var/snap/microk8s/current`.
 
