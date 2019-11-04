@@ -6,9 +6,9 @@ permalink: /docs/setting-snap-channel
 
 # Snap channel overview
 
-Microk8s is a snap deploying Kubernetes. The MicroK8s snap closely follow upstream
-Kubernetes, so understanding a bit about the Kubernetes release cycle is helpful
-for more insight into MicroK8s releases.
+Microk8s is a snap deploying Kubernetes. The MicroK8s snap closely follows
+upstream Kubernetes, so understanding a bit about the Kubernetes release cycle
+is helpful for more insight into MicroK8s releases.
 
 Upstream Kubernetes ships a new release series (e.g. 1.16.x) approximately
 every three months. Prior release series may get periodic bugfix releases: for
@@ -163,18 +163,24 @@ Here are some suggestions for the channel to use based on your needs:
 
      -- Use `--channel=<release>/candidate`.
 
-
 <a id="refresh"> </a>
 ## Changing channels
 
-If you have installed MicroK8s already, and then decide you wish to change
-to a particular channel, you can use the `snap refresh` command to switch to a
-different channel. For example, to switch to the latest alpha release for
-the 1.16 series:
+It is possible to change the snap channel using the refresh command. E.g. to
+transition from 1.16 stable to the latest alpha:
 
 ```bash
 sudo snap refresh microk8s --channel=1.16/edge
 ```
+<div class="p-notification--caution">
+  <p markdown="1" class="p-notification__response">
+    <span class="p-notification__status">Caution:</span>
+    Changing the channel to a
+    different series will almost certainly cause problems, as the configuration
+    from the current version will be retained. If at all possible, it is
+    recommended to re-install MicroK8s rather than refresh to a different channel,
+    as it is not guaranteed to work.
+  </p></div>
 
 ## Changing the refresh schedule
 
