@@ -47,7 +47,7 @@ containerd  | unix:///var/snap/microk8s/common/run/containerd.sock
 
 ## Authentication and authorization
 
-Upon deployment MicroK8s creates a CA, a signed server certificate and a service account key file. These files are stored under `/var/microk8s/current/certs`. Kubelet and the API server are aware of the same CA and so the signed server certificate is used by the API server to authenticate with kubelet (`--kubelet-client-certificate`). Clients talking to the secure port of the API server (`16443`) have to also be aware of the CA (`certificate-authority-data` in user kubeconfig).
+Upon deployment MicroK8s creates a CA, a signed server certificate and a service account key file. These files are stored under `/var/snap/microk8s/current/certs/`. Kubelet and the API server are aware of the same CA and so the signed server certificate is used by the API server to authenticate with kubelet (`--kubelet-client-certificate`). Clients talking to the secure port of the API server (`16443`) have to also be aware of the CA (`certificate-authority-data` in user kubeconfig).
 
 The authentication [strategies](https://kubernetes.io/docs/reference/access-authn-authz/authentication/#authentication-strategies)
  enabled by default are:
