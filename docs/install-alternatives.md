@@ -4,6 +4,8 @@ title: "Alternative Install"
 permalink: /docs/install-alternatives
 ---
 
+# Alternative install methods
+
 MicroK8s is spectacularly easy to install and use on Ubuntu or any Linux which
 supports snaps. For other platforms or less common scenarios, see the relevant
 notes below.
@@ -11,7 +13,7 @@ notes below.
 ## Windows 10
 
 Although Windows 10 now has some very useful features, such as the ability to
-install [Ubuntu as an app][ubuntu-app], the integration even of WSL2 still
+install [Ubuntu as an app][ubuntu-app], the integration  of WSL2 still
 doesn't provide all the Ubuntu functionality required to make MicroK8s run
 smoothly out-of-the-box.
 
