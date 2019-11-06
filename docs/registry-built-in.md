@@ -1,10 +1,10 @@
 ---
 layout: docs
-title: "Using the temporary private registry"
-permalink: /docs/registry-temporary
+title: "Using the built-in private registry"
+permalink: /docs/registry-built-in
 ---
 
-# Working with MicroK8s' registry add-on
+# Working with MicroK8s' built-in registry
 
 Having a private Docker registry can significantly improve your productivity by
 reducing the time spent in uploading and downloading Docker images. The
