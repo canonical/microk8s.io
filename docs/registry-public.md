@@ -6,10 +6,9 @@ permalink: /docs/registry-public
 
 # Working with a public registry
 
-After building an image with `docker build . -t mynginx:local`, it can be
-pushed to one of the mainstream public registries. You will need to create an
-account and register a username. For this example we created an account with
-[https://hub.docker.com/]()  and we log in as `kjackal`.
+After building an image we can push it to one of the mainstream public
+registries. For this example we have created an account with
+https://hub.docker.com/ with the username `kjackal`.
 
 First we run the login command:
 
