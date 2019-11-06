@@ -39,7 +39,7 @@ microk8s.kubectl logs mk8s-redis-7647889b6d-vjwqm
 If the problem you are experiencing indicates a problem with the configuration
 of the Kubernetes components themselves, it could be helpful to examine the
 arguments used to run these components. These are available in the directory
-`${SNAP_DATA}/args`, which on Ubuntu should point to `var/snap/microk8s/current`.
+`${SNAP_DATA}/args`, which on Ubuntu should point to `/var/snap/microk8s/current`.
 Note that the `$SNAP_DATA` environment variable itself is only available to the
 running snap. For more information on the snap environment, check the
 [snap documentation][snap-docs].
