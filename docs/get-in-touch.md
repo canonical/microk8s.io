@@ -8,10 +8,6 @@ The team behind the **MicroK8s** are keen to help and listen to your feedback.
 There are a variety of ways to get in touch with suggestions, problems or just
 to get involved.
 
-## IRC
-
-Join us on freenode.net in **#cdk8s**.
-
 ## Slack
 
 Find us in **#microk8s** on the [Kubernetes slack][slack].
