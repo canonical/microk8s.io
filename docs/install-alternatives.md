@@ -13,7 +13,7 @@ notes below.
 ## Windows 10
 
 Although Windows 10 now has some very useful features, such as the ability to
-install [Ubuntu as an app][ubuntu-app], the integration  of WSL2 still
+install [Ubuntu as an app][ubuntu-app], the integration of WSL2 still
 doesn't provide all the Ubuntu functionality required to make MicroK8s run
 smoothly out-of-the-box.
 
