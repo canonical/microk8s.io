@@ -22,7 +22,7 @@ Alternatively, you can select a MicroK8s channel that will follow a specific Kub
 snap install microk8s --classic --channel=1.14/stable
 ```
 
-You can read more on the MicroK8s release channels in the [Release Channels and Upgrades](/docs/release-channels) doc.
+You can read more on the MicroK8s release channels in the [Release Channels and Upgrades](/docs/setting-snap-channel) doc.
 
 At any point you can check MicroK8s' availability with:
 
