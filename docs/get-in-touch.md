@@ -34,6 +34,7 @@ There are many different ways you can help out and contribute to MicroK8s. Here
 are some of our favourites!
 
 #### Testing  
+
 Try out the `edge` or `candidate` [releases][] and be sure
 to give us your feedback by filing [bugs][] or telling us what is working
 well via [slack][].
@@ -44,6 +45,7 @@ We welcome help with the [docs][], either by filing issues or
 making edits and additions to the current pages.
 
 #### Coding
+
 If you want to contribute to the code -- maybe you have a great
 idea for an [add-on][] or want to squash some pernicious [bugs][] -- please
 take a look at the documentation for [building the microk8s snap][build].
