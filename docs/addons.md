@@ -50,7 +50,7 @@ microk8s.status
 recommended you always enable it. In restricted environments you may need to
 update the upstream DNS servers.
 
-**[fluentd](addon-fluentd)**: Deploy the [Elasticsearch-Fluentd-Kibana][kibana-docs] logging and
+[**fluentd**](addon-fluentd): Deploy the [Elasticsearch-Fluentd-Kibana][kibana-docs] logging and
 monitoring solution.
 
 [**gpu**](addon-gpu):  Enable support for GPU accelerated workloads using the NVIDIA runtime.
@@ -64,7 +64,9 @@ configuration.
 
 **knative**: Adds the [Knative][knative-docs] middleware to your cluster.
 
-**[linkerd](/docs/addon-linkerd)**: Deploys the [linkerd][linkerd-docs] service mesh.
+[**Kubeflow**](addon-kubeflow): The easiest way to access [Kubeflow][], the machine learning toolkit for Kubernetes.<span class="p-label--new">New in 1.16.2 </span>
+
+**[linkerd](addon-linkerd)**: Deploys the [linkerd][linkerd-docs] service mesh.
 
 **metrics-server**: Adds the [Kubernetes Metrics Server][metrics-design-doc]
 for API access to service metrics.
@@ -93,3 +95,4 @@ host directory.
 [metrics-design-doc]:https://github.com/kubernetes/community/blob/master/contributors/design-proposals/instrumentation/metrics-server.md
 [knative-docs]: https://knative.dev/
 [prometheus-docs]: https://prometheus.io/docs/
+[kubeflow]: https://www.kubeflow.org/
