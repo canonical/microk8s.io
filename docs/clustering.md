@@ -12,8 +12,10 @@ use the `microk8s.add-node` command. The MicroK8s instance on which this
 command is
 run will be the master of the cluster and will host the Kubernetes
 control plane:
-```
-> microk8s.add-node
+
+```bash
+microk8s.add-node
+
 Join node with: microk8s.join ip-172-31-20-243:25000/DDOkUupkmaBezNnMheTBqFYHLWINGDbf
 
 If the node you are adding is not reachable through the default
@@ -52,9 +54,9 @@ its own control plane and resume operations as a full single node cluster:
 ```<!-- FEEDBACK -->
 <div class="p-notification--information">
   <p class="p-notification__response">
-    We appreciate your feedback on the docs. You can 
-    <a href="https://github.com/canonical-web-and-design/microk8s.io/edit/master/docs/clustering.md" class="p-notification__action">edit this page</a> 
-    or 
+    We appreciate your feedback on the docs. You can
+    <a href="https://github.com/canonical-web-and-design/microk8s.io/edit/master/docs/clustering.md" class="p-notification__action">edit this page</a>
+    or
     <a href="https://github.com/canonical-web-and-design/microk8s.io/issues/new" class="p-notification__action">file a bug here</a>.
   </p>
 </div>
