@@ -60,3 +60,12 @@ take a look at the documentation for [building the microk8s snap][build].
 [releases]: /docs/setting-snap-channel
 [add-on]: /docs/addons
 [build]: https://github.com/ubuntu/microk8s/blob/master/docs/build.md
+<!-- FEEDBACK -->
+<div class="p-notification--information">
+  <p class="p-notification__response">
+    We appreciate your feedback on the docs. You can 
+    <a href="https://https://github.com/canonical-web-and-design/microk8s.io/edit/master/docs/get-in-touch.md" class="p-notification__action">edit this page</a> 
+    or 
+    <a href="https://github.com/canonical-web-and-design/microk8s.io/issues/new" class="p-notification__action">file a bug here</a>.
+  </p>
+</div>

@@ -93,3 +93,12 @@ host directory.
 [metrics-design-doc]:https://github.com/kubernetes/community/blob/master/contributors/design-proposals/instrumentation/metrics-server.md
 [knative-docs]: https://knative.dev/
 [prometheus-docs]: https://prometheus.io/docs/
+<!-- FEEDBACK -->
+<div class="p-notification--information">
+  <p class="p-notification__response">
+    We appreciate your feedback on the docs. You can 
+    <a href="https://https://github.com/canonical-web-and-design/microk8s.io/edit/master/docs/addons.md" class="p-notification__action">edit this page</a> 
+    or 
+    <a href="https://github.com/canonical-web-and-design/microk8s.io/issues/new" class="p-notification__action">file a bug here</a>.
+  </p>
+</div>

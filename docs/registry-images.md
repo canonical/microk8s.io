@@ -116,3 +116,12 @@ though there is an image in docker.io (the Dockerhub registry) for which it
 already has a cached copy. This process can be repeated any time changes are
 made to the image. Note that containerd will not cache images with the `latest`
 tag so make sure you avoid it.
+<!-- FEEDBACK -->
+<div class="p-notification--information">
+  <p class="p-notification__response">
+    We appreciate your feedback on the docs. You can 
+    <a href="https://https://github.com/canonical-web-and-design/microk8s.io/edit/master/docs/registry-images.md" class="p-notification__action">edit this page</a> 
+    or 
+    <a href="https://github.com/canonical-web-and-design/microk8s.io/issues/new" class="p-notification__action">file a bug here</a>.
+  </p>
+</div>

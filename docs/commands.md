@@ -488,3 +488,12 @@ Halts the current MicroK8s node.
 <!-- LINKS-->
 
 [kubectl-docs]: https://kubernetes.io/docs/reference/kubectl/kubectl/
+<!-- FEEDBACK -->
+<div class="p-notification--information">
+  <p class="p-notification__response">
+    We appreciate your feedback on the docs. You can 
+    <a href="https://https://github.com/canonical-web-and-design/microk8s.io/edit/master/docs/commands.md" class="p-notification__action">edit this page</a> 
+    or 
+    <a href="https://github.com/canonical-web-and-design/microk8s.io/issues/new" class="p-notification__action">file a bug here</a>.
+  </p>
+</div>

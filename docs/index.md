@@ -149,3 +149,12 @@ To start it is recommended to add DNS management to facilitate communication bet
 [feedback]: /docs/get-in-touch
 [snapd-docs]: https://snapcraft.io/docs/installing-snapd
 
+<!-- FEEDBACK -->
+<div class="p-notification--information">
+  <p class="p-notification__response">
+    We appreciate your feedback on the docs. You can 
+    <a href="https://https://github.com/canonical-web-and-design/microk8s.io/edit/master/docs/index.md" class="p-notification__action">edit this page</a> 
+    or 
+    <a href="https://github.com/canonical-web-and-design/microk8s.io/issues/new" class="p-notification__action">file a bug here</a>.
+  </p>
+</div>

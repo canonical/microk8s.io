@@ -173,3 +173,12 @@ additional logs, and a summary of the issue.
 <!--LINKS-->
 [bugs]: https://github.com/ubuntu/microk8s/issues/
 [snap-docs]: https://snapcraft.io/docs/environment-variables
+<!-- FEEDBACK -->
+<div class="p-notification--information">
+  <p class="p-notification__response">
+    We appreciate your feedback on the docs. You can 
+    <a href="https://https://github.com/canonical-web-and-design/microk8s.io/edit/master/docs/troubleshooting.md" class="p-notification__action">edit this page</a> 
+    or 
+    <a href="https://github.com/canonical-web-and-design/microk8s.io/issues/new" class="p-notification__action">file a bug here</a>.
+  </p>
+</div>
