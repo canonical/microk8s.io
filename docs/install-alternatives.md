@@ -10,6 +10,7 @@ MicroK8s is spectacularly easy to install and use on Ubuntu or any Linux which
 supports snaps. For other platforms or less common scenarios, see the relevant
 notes below.
 
+<a id="windows"> </a>
 ## Windows 10
 
 Although Windows 10 now has some very useful features, such as the ability to
@@ -29,6 +30,7 @@ The recommended way to run MicroK8s in a VM on Windows 10 is to use
 [download here][multipass-install], and the notes for installing MicroK8s on
 multipass [here](#multipass).
 
+<a id="macos"> </a>
 ## macOS
 
 As with Windows, the recommended way to run MicroK8s on macOS is to use
@@ -93,7 +95,8 @@ from the host machine.
     multipass delete microk8s-vm
     multipass purge
     ```
-
+    
+<a id="arm"> </a>
 ## Raspberry Pi/ARM
 
 Running MicroK8s on some ARM hardware may run into difficulties because cgroups

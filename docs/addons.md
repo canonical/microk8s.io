@@ -42,6 +42,7 @@ by running:
 microk8s.status
 ```
 
+<a id="list"> </a>
 ## Current MicroK8s Addons
 
 [**dashboard**](addon-dashboard): The standard Kubernetes Dashboard.
