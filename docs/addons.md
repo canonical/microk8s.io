@@ -1,6 +1,7 @@
 ---
 layout: docs
 title: "MicroK8s Addons"
+permalink: /docs/addons
 ---
 
 # MicroK8s Addons
@@ -43,16 +44,16 @@ microk8s.status
 
 ## Current MicroK8s Addons
 
-**dashboard**: The standard Kubernetes Dashboard.
+[**dashboard**](addon-dashboard): The standard Kubernetes Dashboard.
 
-**dns**: Deploys CoreDNS. This add-on may be required by others - it is
+[**dns**](addon-dns): Deploys CoreDNS. This add-on may be required by others - it is
 recommended you always enable it. In restricted environments you may need to
 update the upstream DNS servers.
 
 **[fluentd](addon-fluentd)**: Deploy the [Elasticsearch-Fluentd-Kibana][kibana-docs] logging and
 monitoring solution.
 
-**gpu**:  Enable support for GPU accelerated workloads using the NVIDIA runtime.
+[**gpu**](addon-gpu):  Enable support for GPU accelerated workloads using the NVIDIA runtime.
 
 **ingress**: A simple ingress controller for external access.
 
@@ -63,7 +64,7 @@ configuration.
 
 **knative**: Adds the [Knative][knative-docs] middleware to your cluster.
 
-**linkerd**: Deploys the [linkerd][linkerd-docs] service mesh.
+**[linkerd](/docs/addon-linkerd)**: Deploys the [linkerd][linkerd-docs] service mesh.
 
 **metrics-server**: Adds the [Kubernetes Metrics Server][metrics-design-doc]
 for API access to service metrics.
