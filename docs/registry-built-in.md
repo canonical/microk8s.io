@@ -178,3 +178,12 @@ spec:
 
 Reference the image with `localhost:32000/mynginx:registry` since the registry
 runs inside the VM so it is on `localhost:32000`.
+<!-- FEEDBACK -->
+<div class="p-notification--information">
+  <p class="p-notification__response">
+    We appreciate your feedback on the docs. You can 
+    <a href="https://github.com/canonical-web-and-design/microk8s.io/edit/master/docs/registry-built-in.md" class="p-notification__action">edit this page</a> 
+    or 
+    <a href="https://github.com/canonical-web-and-design/microk8s.io/issues/new" class="p-notification__action">file a bug here</a>.
+  </p>
+</div>

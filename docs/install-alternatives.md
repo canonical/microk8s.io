@@ -195,3 +195,12 @@ For an example, see this [answer on askubuntu][askubuntu].
 [multipass-install]: https://multipass.run/#install
 [askubuntu]: https://askubuntu.com/questions/993139/how-to-create-a-virtual-network-interface-in-ubuntu
 [profile]: https://github.com/ubuntu/microk8s/tree/master/tests/lxc
+<!-- FEEDBACK -->
+<div class="p-notification--information">
+  <p class="p-notification__response">
+    We appreciate your feedback on the docs. You can 
+    <a href="https://github.com/canonical-web-and-design/microk8s.io/edit/master/docs/install-alternatives.md" class="p-notification__action">edit this page</a> 
+    or 
+    <a href="https://github.com/canonical-web-and-design/microk8s.io/issues/new" class="p-notification__action">file a bug here</a>.
+  </p>
+</div>

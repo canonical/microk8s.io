@@ -38,3 +38,12 @@ microk8s.disable fluentd
 <!-- LINKS -->
 [efk-upstream]: https://kubernetes.io/docs/tasks/debug-application-cluster/logging-elasticsearch-kibana/
 [kibana-docs]: https://www.elastic.co/guide/en/kibana/current/discover.html
+<!-- FEEDBACK -->
+<div class="p-notification--information">
+  <p class="p-notification__response">
+    We appreciate your feedback on the docs. You can 
+    <a href="https://github.com/canonical-web-and-design/microk8s.io/edit/master/docs/addon-fluentd.md" class="p-notification__action">edit this page</a> 
+    or 
+    <a href="https://github.com/canonical-web-and-design/microk8s.io/issues/new" class="p-notification__action">file a bug here</a>.
+  </p>
+</div>
