@@ -19,7 +19,11 @@ for k8s and deploy them to MicroK8s on your Linux boxes.
 - An internet connection
 
 <div class="p-notification--positive"><p markdown="1" class="p-notification__response">
-<span class="p-notification__status">Note:</span> If you don't meet these requirements, there are additional ways of installing the <emphasis>MicroK8s</emphasis>, including additional OS support and an offline deploy. See the  <a href="/docs/install-alternatives">alternative install</a> page for details. </p></div>
+<span class="p-notification__status">Note:</span> If you don't meet these
+requirements, there are additional ways of installing
+<emphasis>MicroK8s</emphasis>, including additional OS support and an offline
+deploy. See the  <a href="/docs/install-alternatives">alternative install</a>
+page for details. </p></div>
 
 
 <section class="p-strip--light is-bordered">
@@ -45,7 +49,7 @@ MicroK8s will install a minimal, lightweight Kubernetes you can run and use on p
         <div class="p-stepped-list__content">
 
 MicroK8s has a built-in command to display its status. During installation you
-can use the `--wait-ready` flag to wait for the Kubernetes services to initialise:
+can use the <code>--wait-ready</code> flag to wait for the Kubernetes services to initialise:
           <div class="p-code-copyable">
             <input class="p-code-copyable__input" value="microk8s.status --wait-ready" readonly="readonly">
             <button class="p-code-copyable__action">Copy to clipboard</button>
@@ -62,7 +66,7 @@ commands to monitor and control your Kubernetes. For example, to view your node:
             <input class="p-code-copyable__input" value="microk8s.kubectl get nodes" readonly="readonly">
             <button class="p-code-copyable__action">Copy to clipboard</button>
           </div>
-<p>.. or to see the running services: </p>
+<p>&hellip; or to see the running services: </p>
 <div class="p-code-copyable">
   <input class="p-code-copyable__input" value="microk8s.kubectl get services" readonly="readonly">
   <button class="p-code-copyable__action">Copy to clipboard</button>
@@ -94,7 +98,7 @@ commands to monitor and control your Kubernetes. For example, to view your node:
         <h3 class="p-stepped-list__title"><span class="p-stepped-list__bullet">5</span>Use add-ons</h3>
         <div class="p-stepped-list__content">
           <p>
-MicroK8s uses the minimum of components for a pure, lightweight Kubernetes. However, plenty of extra features are available with a few keystrokes using "add-ons" -- pre-packaged components that will provide extra capabilities for your Kubernetes, from simple DNS management to machine learning with Kubeflow!
+MicroK8s uses the minimum of components for a pure, lightweight Kubernetes. However, plenty of extra features are available with a few keystrokes using "add-ons" &ndash; pre-packaged components that will provide extra capabilities for your Kubernetes, from simple DNS management to machine learning with Kubeflow!
 </p>
 <p>
 To start it is recommended to add DNS management to facilitate communication between services. For applications which need storage, the 'storage' add-on provides directory space on the host. These are easy to set up:</p>
@@ -152,9 +156,9 @@ To start it is recommended to add DNS management to facilitate communication bet
 <!-- FEEDBACK -->
 <div class="p-notification--information">
   <p class="p-notification__response">
-    We appreciate your feedback on the docs. You can 
-    <a href="https://github.com/canonical-web-and-design/microk8s.io/edit/master/docs/index.md" class="p-notification__action">edit this page</a> 
-    or 
+    We appreciate your feedback on the docs. You can
+    <a href="https://github.com/canonical-web-and-design/microk8s.io/edit/master/docs/index.md" class="p-notification__action">edit this page</a>
+    or
     <a href="https://github.com/canonical-web-and-design/microk8s.io/issues/new" class="p-notification__action">file a bug here</a>.
   </p>
 </div>
