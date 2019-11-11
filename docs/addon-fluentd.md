@@ -18,7 +18,7 @@ microk8s enable fluentd
 To access the Kibana dashboard, you should first start the kube proxy service:
 
 ```bash
-microk86.kubectl proxy
+microk8s.kubectl proxy
 ```
 
 You will now find the dashboard available at:
