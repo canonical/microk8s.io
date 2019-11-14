@@ -117,7 +117,7 @@ can be viewed to get a detailed look at every aspect of the system.
       Such changes can be made persistent by installing the <code class="highlighter-rouge">iptables-persistent</code> package:</p>
 
    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   sudo iptables -P FORWARD ACCEPT
-      sudo apt-get install iptables-persistent
+   sudo apt-get install iptables-persistent
    </code></pre></div></div>
 
    <p>or, if using <code class="highlighter-rouge">ufw</code>:</p>
