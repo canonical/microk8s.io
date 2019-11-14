@@ -196,7 +196,7 @@ all snaps on the system. These are outlined in the
 
 
 <!-- LINKS -->
-[snap-docs]: https://snapcraft.io/docs/system-options
+[snap-docs]:  https://snapcraft.io/docs/keeping-snaps-up-to-date#heading--controlling-updates 
 <!-- FEEDBACK -->
 <div class="p-notification--information">
   <p class="p-notification__response">
