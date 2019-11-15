@@ -38,17 +38,21 @@ function setupTabs() {
   
     if (tab.classList.contains('active')) {
       var breakpoint = 620;
+      var yOffset = 200;
       var rect = tabContent.getBoundingClientRect();
-      var yOffset = tab.offsetHeight;
+      var inView = ((window.innerHeight - yOffset) > rect.top);
+      var scrollTarget = window.scrollY + yOffset;
   
       if (window.innerWidth <= breakpoint) {
-        yOffset = 10;
+        scrollTarget = (pageYOffset + rect.top) - 10;
       }
-  
-      window.scroll({
-        behavior: 'smooth',
-        top: (pageYOffset + rect.top) - yOffset
-      });
+
+      if (!inView) {
+        window.scroll({
+          behavior: 'smooth',
+          top: scrollTarget
+        });
+      }
     }
   }
 }
