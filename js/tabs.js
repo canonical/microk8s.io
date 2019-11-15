@@ -38,12 +38,17 @@ function toggleTab(tab) {
   tabContent.classList.toggle('u-hide');
 
   if (tab.classList.contains('active')) {
-    var rect = tabContent.getBoundingClientRect(),
-        tabOffset = tab.offsetHeight;
+    var breakpoint = 620,
+        rect = tabContent.getBoundingClientRect(),
+        yOffset = tab.offsetHeight;
+
+    if (window.innerWidth <= breakpoint) {
+      yOffset = 10;
+    }
 
     window.scroll({
       behavior: 'smooth',
-      top: (pageYOffset + rect.top) - tabOffset
+      top: (pageYOffset + rect.top) - yOffset
     });
   }
 }
