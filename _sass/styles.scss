@@ -12,13 +12,16 @@
 @include docs;
 
 // Custom styles
-.p-card {
+.p-tab {
+  color: $color-mid-dark;
+
+  &:focus,
   &:hover,
   &.active {
     background-color: $color-light;
+    text-decoration: none;
   }
 }
-
 
 .p-navigation__banner {
   background-color: $ubuntu-orange;

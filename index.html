@@ -183,28 +183,28 @@ layout: base
       </div>
     </section>
 
-    <section class="p-strip is-bordered" id="get-started">
+    <section class="p-strip is-bordered" id="get-started" role="tablist">
       <div class="u-fixed-width">
         <h2>Get started with MicroK8s</h2>
         <h3>What OS are you developing on?</h3>
       </div>
 
       <div class="row u-equal-height u-sv3">
-        <a href="#tab-linux" class="col-4 p-card u-align--center u-vertically-center js-tab">
-          <img src="https://assets.ubuntu.com/v1/53c3be42-linuc-logo.svg" style="height: 100px; margin-top: 1rem;" alt="">
-          <h4 class="p-heading--five">Linux</h4>
+        <a id="tab-one" href="#tab-one__content" class="col-4 p-card p-tab u-align--center u-vertically-center js-tab" role="tab">
+          <img src="https://assets.ubuntu.com/v1/53c3be42-linuc-logo.svg" style="height: 90px; margin-top: 1rem;" alt="">
+          <h4 class="p-heading--five p-tab__title">Linux</h4>
         </a>
 
-        <a href="#tab-windows" class="col-4 p-card u-align--center u-vertically-center js-tab">
+        <a id="tab-two" href="#tab-two__content" class="col-4 p-card p-tab u-align--center u-vertically-center js-tab" role="tab">
           <img src="https://assets.ubuntu.com/v1/11ecbd2d-2018-logo-windows.svg" style="height: 145px;" alt="Windows">
         </a>
 
-        <a href="#tab-macos" class="col-4 p-card u-align--center u-vertically-center js-tab">
+        <a id="tab-three" href="#tab-three__content" class="col-4 p-card p-tab u-align--center u-vertically-center js-tab" role="tab">
           <img src="https://assets.ubuntu.com/v1/236f314d-macos.svg" style="height: 145px;" alt="macOS">
         </a>
       </div>
 
-      <div class="row js-tab__content" id="tab-linux">
+      <div class="row js-tab__content" id="tab-one__content" role="tabpanel" aria-labelledby="tab-one">
         <div class="col-6">
           <ol class="p-stepped-list u-no-margin--left">
             <li class="p-stepped-list__item">
@@ -243,7 +243,7 @@ layout: base
         </div>
       </div>
 
-      <div class="row js-tab__content" id="tab-windows">
+      <div class="row js-tab__content" id="tab-two__content" role="tabpanel" aria-labelledby="tab-two">
         <div class="col-6">
           <ol class="p-stepped-list u-no-margin--left">
             <li class="p-stepped-list__item">
@@ -301,7 +301,7 @@ layout: base
         </div>
       </div>
 
-      <div class="row js-tab__content" id="tab-macos">
+      <div class="row js-tab__content" id="tab-three__content" role="tabpanel" aria-labelledby="tab-three">
         <div class="col-6">
           <ol class="p-stepped-list u-no-margin--left">
             <li class="p-stepped-list__item">
