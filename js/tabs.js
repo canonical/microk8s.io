@@ -36,7 +36,16 @@ function toggleTab(tab) {
   tab.setAttribute('aria-selected', 'true');
   tab.classList.toggle('active');
   tabContent.classList.toggle('u-hide');
-  tabContent.scrollIntoView({ behavior: 'smooth' });
+
+  if (tab.classList.contains('active')) {
+    var rect = tabContent.getBoundingClientRect(),
+        tabOffset = tab.offsetHeight;
+
+    window.scroll({
+      behavior: 'smooth',
+      top: (pageYOffset + rect.top) - tabOffset
+    });
+  }
 }
 
 setupTabs();
