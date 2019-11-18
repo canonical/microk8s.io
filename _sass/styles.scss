@@ -12,6 +12,17 @@
 @include docs;
 
 // Custom styles
+.p-tab {
+  color: $color-mid-dark;
+
+  &:focus,
+  &:hover,
+  &.active {
+    background-color: $color-light;
+    text-decoration: none;
+  }
+}
+
 .p-navigation__banner {
   background-color: $ubuntu-orange;
 }
@@ -45,12 +56,6 @@
   }
 }
 
-.u-hide--x-small {
-  @media only screen and (max-width: $breakpoint-x-small) {
-    display: none;
-  }
-}
-
 .p-matrix__item:last-of-type {
   @media only screen and (max-width: $breakpoint-x-small) {
     padding-bottom: 0;
@@ -69,4 +74,18 @@
   background-repeat: no-repeat;
   background-size: 77% 115%, 71% 104%, 100% 99.8%;
   color: $color-x-light;
+}
+
+.u-hide--x-small {
+  @media only screen and (max-width: $breakpoint-x-small) {
+    display: none;
+  }
+}
+
+.u-stepped-list-margin{
+  margin-left: 3.5rem;
+  
+  @media only screen and (max-width: $breakpoint-x-small) {
+    margin-left: 3rem;
+  }
 }
