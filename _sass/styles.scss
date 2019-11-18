@@ -26,7 +26,7 @@
       .p-navigation__logo {
         font-weight: 400;
         margin-right: 0;
-        
+
       }
 
       .p-navigation__toggle {
@@ -36,7 +36,7 @@
         }
       }
     }
-    
+
     .p-navigation__link a {
       height: 100%;
       padding-left: $sph-inner--large ;
@@ -69,4 +69,10 @@
   background-repeat: no-repeat;
   background-size: 77% 115%, 71% 104%, 100% 99.8%;
   color: $color-x-light;
+}
+
+// XXX Steve: 21.06.18
+// https://github.com/vanilla-framework/vanilla-framework/issues/1794
+.u-no-max-width {
+  max-width: none !important;
 }
