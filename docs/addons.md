@@ -82,6 +82,8 @@ documentation for more details.
 **storage**: Create a default storage class which allocates storage from a
 host directory.
 
+**metallb**: Deploys the [MetalLB Loadbalancer][metallb].
+
 
 <!-- LINKS -->
 
@@ -94,6 +96,7 @@ host directory.
 [metrics-design-doc]:https://github.com/kubernetes/community/blob/master/contributors/design-proposals/instrumentation/metrics-server.md
 [knative-docs]: https://knative.dev/
 [prometheus-docs]: https://prometheus.io/docs/
+[metallb]: https://metallb.universe.tf/
 <!-- FEEDBACK -->
 <div class="p-notification--information">
   <p class="p-notification__response">
