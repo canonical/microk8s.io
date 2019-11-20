@@ -273,7 +273,7 @@ layout: base
               <h3 class="p-stepped-list__title">Launch a Multipass instance</h3>
 
               <div class="p-code-copyable u-stepped-list-margin">
-                <input class="p-code-copyable__input" value="multipass launch --name foo" readonly="readonly">
+                <input class="p-code-copyable__input" value="multipass launch --name microk8s-vm --mem 4G --disk 40G" readonly="readonly">
                 <button class="p-code-copyable__action">Copy to clipboard</button>
               </div>
             </li>
@@ -282,7 +282,7 @@ layout: base
               <h3 class="p-stepped-list__title">Install the microk8s snap</h3>
 
               <div class="p-code-copyable u-stepped-list-margin">
-                <input class="p-code-copyable__input" aria-label="sudo snap install microk8s --classic" value="sudo snap install microk8s --classic" readonly="readonly">
+                <input class="p-code-copyable__input" aria-label="multipass exec microk8s-vm -- sudo snap install microk8s --classic" value="multipass exec microk8s-vm -- sudo snap install microk8s --classic" readonly="readonly">
                 <button class="p-code-copyable__action">Copy to clipboard</button>
               </div>
 
@@ -293,7 +293,7 @@ layout: base
               <h3 class="p-stepped-list__title">Turn on standard services</h3>
 
               <div class="p-code-copyable u-stepped-list-margin">
-                <input class="p-code-copyable__input" aria-label="microk8s.enable dashboard registry istio [...]" value="microk8s.enable dashboard registry istio [...]" readonly="readonly">
+                <input class="p-code-copyable__input" aria-label="multipass exec microk8s-vm -- sudo microk8s.enable dashboard registry istio [...]" value="multipass exec microk8s-vm -- sudo microk8s.enable dashboard registry istio [...]" readonly="readonly">
                 <button class="p-code-copyable__action">Copy to clipboard</button>
               </div>
 
@@ -306,7 +306,7 @@ layout: base
               <h3 class="p-stepped-list__title">Start Kubernetes</h3>
 
               <div class="p-code-copyable u-stepped-list-margin">
-                <input class="p-code-copyable__input" aria-label="sudo microk8s.start" value="sudo microk8s.start" readonly="readonly">
+                <input class="p-code-copyable__input" aria-label="multipass exec microk8s-vm -- sudo microk8s.start" value="multipass exec microk8s-vm -- sudo microk8s.start" readonly="readonly">
                 <button class="p-code-copyable__action">Copy to clipboard</button>
               </div>
             </li>
@@ -329,7 +329,7 @@ layout: base
               <h3 class="p-stepped-list__title">Launch a Multipass instance</h3>
 
               <div class="p-code-copyable u-stepped-list-margin">
-                <input class="p-code-copyable__input" value="multipass launch --name foo" readonly="readonly">
+                <input class="p-code-copyable__input" value="multipass launch --name microk8s-vm --mem 4G --disk 40G" readonly="readonly">
                 <button class="p-code-copyable__action">Copy to clipboard</button>
               </div>
             </li>
@@ -338,7 +338,7 @@ layout: base
               <h3 class="p-stepped-list__title">Install the microk8s snap</h3>
 
               <div class="p-code-copyable u-stepped-list-margin">
-                <input class="p-code-copyable__input" aria-label="sudo snap install microk8s --classic" value="sudo snap install microk8s --classic" readonly="readonly">
+                <input class="p-code-copyable__input" aria-label="multipass exec microk8s-vm -- sudo snap install microk8s --classic" value="multipass exec microk8s-vm -- sudo snap install microk8s --classic" readonly="readonly">
                 <button class="p-code-copyable__action">Copy to clipboard</button>
               </div>
 
@@ -349,7 +349,7 @@ layout: base
               <h3 class="p-stepped-list__title">Turn on standard services</h3>
 
               <div class="p-code-copyable u-stepped-list-margin">
-                <input class="p-code-copyable__input" aria-label="microk8s.enable dashboard registry istio [...]" value="microk8s.enable dashboard registry istio [...]" readonly="readonly">
+                <input class="p-code-copyable__input" aria-label="multipass exec microk8s-vm -- sudo microk8s.enable dashboard registry istio [...]" value="multipass exec microk8s-vm -- sudo microk8s.enable dashboard registry istio [...]" readonly="readonly">
                 <button class="p-code-copyable__action">Copy to clipboard</button>
               </div>
 
@@ -362,7 +362,7 @@ layout: base
               <h3 class="p-stepped-list__title">Start Kubernetes</h3>
 
               <div class="p-code-copyable u-stepped-list-margin">
-                <input class="p-code-copyable__input" aria-label="sudo microk8s.start" value="sudo microk8s.start" readonly="readonly">
+                <input class="p-code-copyable__input" aria-label="multipass exec microk8s-vm -- sudo microk8s.start" value="multipass exec microk8s-vm -- sudo microk8s.start" readonly="readonly">
                 <button class="p-code-copyable__action">Copy to clipboard</button>
               </div>
             </li>
