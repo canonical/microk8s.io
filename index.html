@@ -234,10 +234,19 @@ layout: base
             </li>
 
             <li class="p-stepped-list__item">
+              <h3 class="p-stepped-list__title">Check the status</h3>
+
+              <div class="p-code-copyable u-stepped-list-margin">
+                <input class="p-code-copyable__input" aria-label="sudo microk8s.status --wait-ready" value="sudo microk8s.status --wait-ready" readonly="readonly">
+                <button class="p-code-copyable__action">Copy to clipboard</button>
+              </div>
+            </li>
+
+            <li class="p-stepped-list__item">
               <h3 class="p-stepped-list__title">Turn on standard services</h3>
 
               <div class="p-code-copyable u-stepped-list-margin">
-                <input class="p-code-copyable__input" aria-label="microk8s.enable dashboard registry istio [...]" value="microk8s.enable dashboard registry istio [...]" readonly="readonly">
+                <input class="p-code-copyable__input" aria-label="sudo microk8s.enable dns dashboard registry" value="sudo microk8s.enable dns dashboard registry" readonly="readonly">
                 <button class="p-code-copyable__action">Copy to clipboard</button>
               </div>
 
@@ -246,14 +255,6 @@ layout: base
               </p>
             </li>
 
-            <li class="p-stepped-list__item">
-              <h3 class="p-stepped-list__title">Start Kubernetes</h3>
-
-              <div class="p-code-copyable u-stepped-list-margin">
-                <input class="p-code-copyable__input" aria-label="sudo microk8s.start" value="sudo microk8s.start" readonly="readonly">
-                <button class="p-code-copyable__action">Copy to clipboard</button>
-              </div>
-            </li>
           </ol>
         </div>
 
@@ -273,7 +274,16 @@ layout: base
               <h3 class="p-stepped-list__title">Launch a Multipass instance</h3>
 
               <div class="p-code-copyable u-stepped-list-margin">
-                <input class="p-code-copyable__input" value="multipass launch --name foo" readonly="readonly">
+                <input class="p-code-copyable__input" value="multipass launch --name microk8s-vm --mem 4G --disk 40G" readonly="readonly">
+                <button class="p-code-copyable__action">Copy to clipboard</button>
+              </div>
+            </li>
+
+            <li class="p-stepped-list__item">
+              <h3 class="p-stepped-list__title">Enter the VM instance</h3>
+
+              <div class="p-code-copyable u-stepped-list-margin">
+                <input class="p-code-copyable__input" aria-label="multipass shell microk8s-vm" value="multipass shell microk8s-vm" readonly="readonly">
                 <button class="p-code-copyable__action">Copy to clipboard</button>
               </div>
             </li>
@@ -285,30 +295,28 @@ layout: base
                 <input class="p-code-copyable__input" aria-label="sudo snap install microk8s --classic" value="sudo snap install microk8s --classic" readonly="readonly">
                 <button class="p-code-copyable__action">Copy to clipboard</button>
               </div>
+            </li>
 
-              <p class="p-stepped-list__content u-stepped-list-margin">Don’t have the <code>snap</code> command? <a href="https://docs.snapcraft.io/installing-snapd" class="p-link--external">Get set up for snaps.</a></p>
+            <li class="p-stepped-list__item">
+              <h3 class="p-stepped-list__title">Check the status</h3>
+
+              <div class="p-code-copyable u-stepped-list-margin">
+                <input class="p-code-copyable__input" aria-label="sudo microk8s.status --wait-ready" value="sudo microk8s.status --wait-ready" readonly="readonly">
+                <button class="p-code-copyable__action">Copy to clipboard</button>
+              </div>
             </li>
 
             <li class="p-stepped-list__item">
               <h3 class="p-stepped-list__title">Turn on standard services</h3>
 
               <div class="p-code-copyable u-stepped-list-margin">
-                <input class="p-code-copyable__input" aria-label="microk8s.enable dashboard registry istio [...]" value="microk8s.enable dashboard registry istio [...]" readonly="readonly">
+                <input class="p-code-copyable__input" aria-label="sudo microk8s.enable dns dashboard registry istio" value="sudo microk8s.enable dns dashboard registry" readonly="readonly">
                 <button class="p-code-copyable__action">Copy to clipboard</button>
               </div>
 
               <p class="p-stepped-list__content u-stepped-list-margin">
                 Similarly, <code>microk8s.disable</code> turns off a service. Try <code>microk8s.enable --help</code> for a list of available services built in.
               </p>
-            </li>
-
-            <li class="p-stepped-list__item">
-              <h3 class="p-stepped-list__title">Start Kubernetes</h3>
-
-              <div class="p-code-copyable u-stepped-list-margin">
-                <input class="p-code-copyable__input" aria-label="sudo microk8s.start" value="sudo microk8s.start" readonly="readonly">
-                <button class="p-code-copyable__action">Copy to clipboard</button>
-              </div>
             </li>
           </ol>
         </div>
@@ -329,7 +337,16 @@ layout: base
               <h3 class="p-stepped-list__title">Launch a Multipass instance</h3>
 
               <div class="p-code-copyable u-stepped-list-margin">
-                <input class="p-code-copyable__input" value="multipass launch --name foo" readonly="readonly">
+                <input class="p-code-copyable__input" value="multipass launch --name microk8s-vm --mem 4G --disk 40G" readonly="readonly">
+                <button class="p-code-copyable__action">Copy to clipboard</button>
+              </div>
+            </li>
+
+            <li class="p-stepped-list__item">
+              <h3 class="p-stepped-list__title">Enter the VM instance</h3>
+
+              <div class="p-code-copyable u-stepped-list-margin">
+                <input class="p-code-copyable__input" aria-label="multipass shell microk8s-vm" value="multipass shell microk8s-vm" readonly="readonly">
                 <button class="p-code-copyable__action">Copy to clipboard</button>
               </div>
             </li>
@@ -341,15 +358,22 @@ layout: base
                 <input class="p-code-copyable__input" aria-label="sudo snap install microk8s --classic" value="sudo snap install microk8s --classic" readonly="readonly">
                 <button class="p-code-copyable__action">Copy to clipboard</button>
               </div>
+            </li>
 
-              <p class="p-stepped-list__content u-stepped-list-margin">Don’t have the <code>snap</code> command? <a href="https://docs.snapcraft.io/installing-snapd" class="p-link--external">Get set up for snaps.</a></p>
+            <li class="p-stepped-list__item">
+              <h3 class="p-stepped-list__title">Check the status</h3>
+
+              <div class="p-code-copyable u-stepped-list-margin">
+                <input class="p-code-copyable__input" aria-label="sudo microk8s.status --wait-ready" value="sudo microk8s.status --wait-ready" readonly="readonly">
+                <button class="p-code-copyable__action">Copy to clipboard</button>
+              </div>
             </li>
 
             <li class="p-stepped-list__item">
               <h3 class="p-stepped-list__title">Turn on standard services</h3>
 
               <div class="p-code-copyable u-stepped-list-margin">
-                <input class="p-code-copyable__input" aria-label="microk8s.enable dashboard registry istio [...]" value="microk8s.enable dashboard registry istio [...]" readonly="readonly">
+                <input class="p-code-copyable__input" aria-label="sudo microk8s.enable dns dashboard registry" value="sudo microk8s.enable dns dashboard registry" readonly="readonly">
                 <button class="p-code-copyable__action">Copy to clipboard</button>
               </div>
 
@@ -358,14 +382,6 @@ layout: base
               </p>
             </li>
 
-            <li class="p-stepped-list__item">
-              <h3 class="p-stepped-list__title">Start Kubernetes</h3>
-
-              <div class="p-code-copyable u-stepped-list-margin">
-                <input class="p-code-copyable__input" aria-label="sudo microk8s.start" value="sudo microk8s.start" readonly="readonly">
-                <button class="p-code-copyable__action">Copy to clipboard</button>
-              </div>
-            </li>
           </ol>
         </div>
       </div>
