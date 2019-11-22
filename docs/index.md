@@ -45,7 +45,7 @@ MicroK8s will install a minimal, lightweight Kubernetes you can run and use on p
       </li>
 
       <li class="p-stepped-list__item">
-        <h3 class="p-stepped-list__title"><span class="p-stepped-list__bullet">2</span>Check the status</h3>
+        <h3 class="p-stepped-list__title" id="status"><span class="p-stepped-list__bullet">2</span>Check the status</h3>
         <div class="p-stepped-list__content">
 
 MicroK8s has a built-in command to display its status. During installation you
@@ -71,9 +71,25 @@ commands to monitor and control your Kubernetes. For example, to view your node:
   <input class="p-code-copyable__input" value="microk8s.kubectl get services" readonly="readonly">
   <button class="p-code-copyable__action">Copy to clipboard</button>
 </div>
+<p>
+  MicroK8s uses a namespaced <code>kubectl</code> command to prevent conflicts with any
+  existing installs of kubectl. If you don't have an existing install, it is easier to
+  add an alias (append to <code>~/.bash_aliases</code>) like this:
+  </p>
+  <div class="p-code-copyable">
+    <input class="p-code-copyable__input" value="alias kubectl='microk8s.kubetcl'" readonly="readonly">
+    <button class="p-code-copyable__action">Copy to clipboard</button>
+  </div>
+
         </div>
 
       </li>
+
+
+
+
+
+
 
       <li class="p-stepped-list__item">
         <h3 class="p-stepped-list__title"><span class="p-stepped-list__bullet">4</span>Deploy an app</h3>

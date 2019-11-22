@@ -52,13 +52,6 @@ requirements when we launch the VM:
 multipass launch --name microk8s-vm --mem 4G --disk 40G
 ```
 
-To install the MicroK8s snap and configure the network:
-
-```bash
-multipass exec microk8s-vm -- sudo snap install microk8s --classic
-multipass exec microk8s-vm -- sudo iptables -P FORWARD ACCEPT
-```
-
 We can now find the IP address which has been allocated. Running:
 
 ```bash
@@ -74,6 +67,22 @@ microk8s-vm             RUNNING           10.72.145.216    Ubuntu 18.04 LTS
 
 Take a note of this IP as services will become available there when accessed
 from the host machine.
+
+To work within the VM environment more easily, you can run a shell:
+
+```bash
+multipass shell microk8s-vm
+```
+
+Then install the  MicroK8s snap and configure the network:
+
+```bash
+sudo snap install microk8s --classic --channel=1.16/stable
+sudo iptables -P FORWARD ACCEPT
+```
+
+From within the VM shell, you can now follow along the rest of the
+[quick start instructions](index#status)
 
 #### Useful multipass commands
 
@@ -95,7 +104,7 @@ from the host machine.
     multipass delete microk8s-vm
     multipass purge
     ```
-    
+
 <a id="arm"> </a>
 ## Raspberry Pi/ARM
 
@@ -198,9 +207,9 @@ For an example, see this [answer on askubuntu][askubuntu].
 <!-- FEEDBACK -->
 <div class="p-notification--information">
   <p class="p-notification__response">
-    We appreciate your feedback on the docs. You can 
-    <a href="https://github.com/canonical-web-and-design/microk8s.io/edit/master/docs/install-alternatives.md" class="p-notification__action">edit this page</a> 
-    or 
+    We appreciate your feedback on the docs. You can
+    <a href="https://github.com/canonical-web-and-design/microk8s.io/edit/master/docs/install-alternatives.md" class="p-notification__action">edit this page</a>
+    or
     <a href="https://github.com/canonical-web-and-design/microk8s.io/issues/new" class="p-notification__action">file a bug here</a>.
   </p>
 </div>
