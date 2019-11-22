@@ -84,13 +84,6 @@ commands to monitor and control your Kubernetes. For example, to view your node:
         </div>
 
       </li>
-
-
-
-
-
-
-
       <li class="p-stepped-list__item">
         <h3 class="p-stepped-list__title"><span class="p-stepped-list__bullet">4</span>Deploy an app</h3>
         <div class="p-stepped-list__content">
