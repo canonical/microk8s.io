@@ -77,7 +77,7 @@ commands to monitor and control your Kubernetes. For example, to view your node:
   add an alias (append to <code>~/.bash_aliases</code>) like this:
   </p>
   <div class="p-code-copyable">
-    <input class="p-code-copyable__input" value="alias kubectl='microk8s.kubetcl'" readonly="readonly">
+    <input class="p-code-copyable__input" value="alias kubectl='microk8s.kubectl'" readonly="readonly">
     <button class="p-code-copyable__action">Copy to clipboard</button>
   </div>
 
