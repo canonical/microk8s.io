@@ -25,29 +25,30 @@ In an RBAC enabled setup (`microk8s.enable rbac`) you need to create a user with
 restricted permissions as detailed in the
 [upstream Dashboard wiki][upstream-dashboard]
 
-Next, you need a connection to the API server. While the MicroK8s snap will
-have an IP address on your local network, the recommended way to do this is
-through the proxy service. You can initiate the proxy with the command:
+Next, you need to connect to the dashboard service. While the MicroK8s snap will
+have an IP address on your local network (the Cluster IP of the kubernetes-dashboard service), you can also reach the dashboard by forwarding its port to a free one on your host with:
 
 ```bash
-microk8s.kubectl proxy --accept-hosts=.* --address=0.0.0.0
+microk8s.kubectl port-forward -n kube-system service/kubernetes-dashboard 10443:443
 ```
 
-> Note: Although you can run the above command in the background, it is more useful to run it in a different terminal so it is easier to catch any errors
+You can then access the Dashboard at [https://127.0.0.1:10443]()
+
+> Note: If MicroK8s runs in a VM and you need to expose the dashboard to other hosts, you should set the `--address [ IP address_that_your_browser's_host_has ]` option. Set this option to `--address 0.0.0.0` to make the dashboard public: `microk8s.kubectl port-forward -n kube-system service/kubernetes-dashboard 10443:443 --address 0.0.0.0`
+
+Visit the [upstream dashboard documentation][upstream-access-dashboard] to find out of other ways to reach the dashboard.
 
 
-You can then access the Dashboard at the address
-
-[http://127.0.0.1:8001/api/v1/namespaces/kube-system/services/https:kubernetes-dashboard:/proxy/]()
 
 ![IMAGE of Dashboard](https://assets.ubuntu.com/v1/c9cec03a-ubuntu18.04-microk8s+on+QEMU-KVM_007.png)
 
 [upstream-dashboard]: https://github.com/kubernetes/dashboard/wiki/Creating-sample-user
+[upstream-access-dashboard]: https://github.com/kubernetes/dashboard/blob/master/docs/user/accessing-dashboard/1.7.x-and-above.md
 <!-- FEEDBACK -->
 <div class="p-notification--information">
   <p class="p-notification__response">
     We appreciate your feedback on the docs. You can 
-    <a href="https://https://github.com/canonical-web-and-design/microk8s.io/edit/master/docs/addon-dashboard.md" class="p-notification__action">edit this page</a> 
+    <a href="https://github.com/canonical-web-and-design/microk8s.io/edit/master/docs/addon-dashboard.md" class="p-notification__action">edit this page</a>
     or 
     <a href="https://github.com/canonical-web-and-design/microk8s.io/issues/new" class="p-notification__action">file a bug here</a>.
   </p>
