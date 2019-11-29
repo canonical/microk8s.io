@@ -35,11 +35,13 @@ microk8s.kubectl port-forward -n kube-system service/kubernetes-dashboard 10443:
 
 You can then access the Dashboard at [https://127.0.0.1:10443]()
 
-<div class="p-notification--information">
-  <p class="p-notification__response">Note: If MicroK8s runs in a VM and you need to expose the Dashboard to other hosts, you should also use the <code>--address [IP_address_that_your_browser's_host_has]</code> option. Set this option to "--address 0.0.0.0" to make the Dashboard public. For example: <code>microk8s.kubectl port-forward -n kube-system service/kubernetes-dashboard 10443:443 --address 0.0.0.0</code>
-  </p>
-</div>
+If you are running MicroK8s in a VM and you need to expose the Dashboard to other hosts, you
+should also use the `--address [IP_address_that_your_browser's_host_has]` option. Set this option
+to `--address 0.0.0.0` to make the Dashboard public. For example: 
 
+```bash
+microk8s.kubectl port-forward -n kube-system service/kubernetes-dashboard 10443:443 --address 0.0.0.0
+```
 
 Visit the [upstream dashboard documentation][upstream-access-dashboard] to find out other ways to reach the Dashboard.
 
