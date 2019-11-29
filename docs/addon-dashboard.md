@@ -26,7 +26,8 @@ restricted permissions as detailed in the
 [upstream Dashboard wiki][upstream-dashboard]
 
 Next, you need to connect to the dashboard service. While the MicroK8s snap will
-have an IP address on your local network (the Cluster IP of the kubernetes-dashboard service), you can also reach the dashboard by forwarding its port to a free one on your host with:
+have an IP address on your local network (the Cluster IP of the kubernetes-dashboard service),
+you can also reach the dashboard by forwarding its port to a free one on your host with:
 
 ```bash
 microk8s.kubectl port-forward -n kube-system service/kubernetes-dashboard 10443:443
@@ -34,9 +35,13 @@ microk8s.kubectl port-forward -n kube-system service/kubernetes-dashboard 10443:
 
 You can then access the Dashboard at [https://127.0.0.1:10443]()
 
-> Note: If MicroK8s runs in a VM and you need to expose the dashboard to other hosts, you should set the `--address [ IP address_that_your_browser's_host_has ]` option. Set this option to `--address 0.0.0.0` to make the dashboard public: `microk8s.kubectl port-forward -n kube-system service/kubernetes-dashboard 10443:443 --address 0.0.0.0`
+<div class="p-notification--information">
+  <p class="p-notification__response">Note: If MicroK8s runs in a VM and you need to expose the Dashboard to other hosts, you should also use the <code>--address [IP_address_that_your_browser's_host_has]</code> option. Set this option to "--address 0.0.0.0" to make the Dashboard public. For example: <code>microk8s.kubectl port-forward -n kube-system service/kubernetes-dashboard 10443:443 --address 0.0.0.0</code>
+  </p>
+</div>
 
-Visit the [upstream dashboard documentation][upstream-access-dashboard] to find out of other ways to reach the dashboard.
+
+Visit the [upstream dashboard documentation][upstream-access-dashboard] to find out other ways to reach the Dashboard.
 
 
 
