@@ -23,7 +23,7 @@ microk8s.kubectl -n kube-system describe secret $token
 ```
 In an RBAC enabled setup (`microk8s.enable rbac`) you need to create a user with
 restricted permissions as detailed in the
-[upstream Dashboard wiki][upstream-dashboard]
+[upstream Dashboard access control documentation ][upstream-dashboard]
 
 Next, you need to connect to the dashboard service. While the MicroK8s snap will
 have an IP address on your local network (the Cluster IP of the kubernetes-dashboard service),
@@ -48,8 +48,7 @@ Visit the [upstream dashboard documentation][upstream-access-dashboard] to find 
 
 
 ![IMAGE of Dashboard](https://assets.ubuntu.com/v1/c9cec03a-ubuntu18.04-microk8s+on+QEMU-KVM_007.png)
-
-[upstream-dashboard]: https://github.com/kubernetes/dashboard/wiki/Creating-sample-user
+[upstream-dashboard]: https://github.com/kubernetes/dashboard/blob/master/docs/user/access-control/README.md#admin-privileges
 [upstream-access-dashboard]: https://github.com/kubernetes/dashboard/blob/master/docs/user/accessing-dashboard/1.7.x-and-above.md
 <!-- FEEDBACK -->
 <div class="p-notification--information">
