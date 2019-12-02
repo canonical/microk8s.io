@@ -189,7 +189,7 @@ layout: base
         <h3>What OS are you developing on?</h3>
       </div>
 
-      <div class="row u-equal-height u-sv3">
+      <div class="row u-equal-height u-sv3 u-hide js-tabbed-menu">
         <a id="tab-one" href="#tab-one__content" class="col-small-2 col-medium-2 col-4 p-card p-tab u-align--center u-vertically-center js-tab" role="tab">
           <img src="https://assets.ubuntu.com/v1/53c3be42-linuc-logo.svg" style="height: 90px; margin-top: 1rem;" alt="">
           <h4 class="p-heading--five p-tab__title">Linux</h4>
@@ -206,6 +206,10 @@ layout: base
 
       <div class="row">
         <div class="col-6 js-tab__content" id="tab-one__content" role="tabpanel" aria-labelledby="tab-one">
+          <noscript>
+            <img src="https://assets.ubuntu.com/v1/53c3be42-linuc-logo.svg" style="height: 90px; margin-top: 1rem;" alt="">
+            <h4 class="p-heading--five p-tab__title">Linux</h4>
+          </noscript>
           <ol class="p-stepped-list u-no-margin--left">
             <li class="p-stepped-list__item">
               <h3 class="p-stepped-list__title">Install the microk8s snap</h3>
@@ -242,8 +246,13 @@ layout: base
 
           </ol>
         </div>
+      </div>
 
+      <div class="row">
         <div class="col-6 js-tab__content" id="tab-two__content" role="tabpanel" aria-labelledby="tab-two">
+          <noscript>
+            <img src="https://assets.ubuntu.com/v1/11ecbd2d-2018-logo-windows.svg" style="height: 145px;" alt="Windows">
+          </noscript>
           <ol class="p-stepped-list u-no-margin--left">
             <li class="p-stepped-list__item">
               <h3 class="p-stepped-list__title">Install Multipass for Windows</h3>
@@ -305,8 +314,13 @@ layout: base
             </li>
           </ol>
         </div>
+      </div>
 
+      <div class="row">
         <div class="col-6 js-tab__content" id="tab-three__content" role="tabpanel" aria-labelledby="tab-three">
+          <noscript>
+            <img src="https://assets.ubuntu.com/v1/236f314d-macos.svg" style="height: 145px;" alt="macOS">
+          </noscript>
           <ol class="p-stepped-list u-no-margin--left">
             <li class="p-stepped-list__item">
               <h3 class="p-stepped-list__title">Install Multipass for macOS</h3>
