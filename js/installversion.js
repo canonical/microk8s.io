@@ -1,7 +1,10 @@
 function setOSDownloadURLs() {
   var api = 'https://api.github.com/repos/CanonicalLtd/multipass/releases';
   var downloadButtons = document.querySelectorAll('.js-download');
+  var tabbedMenu = document.querySelector('.js-tabbed-menu');
   var json = '';
+
+  tabbedMenu.classList.remove('u-hide');
 
   fetch(api)
   .then(function(response) {
@@ -24,6 +27,7 @@ function setOSDownloadURLs() {
     var assetInfo = getAssetInfo(os);
     if (assetInfo) {
       button.setAttribute('href', assetInfo.url);
+      button.querySelector('.p-link--external').classList.remove('p-link--external');
     }
     if (version) {
       version.innerText = assetInfo.name;
