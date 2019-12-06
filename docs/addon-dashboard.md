@@ -48,8 +48,10 @@ Visit the [upstream dashboard documentation][upstream-access-dashboard] to find 
 
 
 ![IMAGE of Dashboard](https://assets.ubuntu.com/v1/c9cec03a-ubuntu18.04-microk8s+on+QEMU-KVM_007.png)
+
 [upstream-dashboard]: https://github.com/kubernetes/dashboard/blob/master/docs/user/access-control/README.md#admin-privileges
 [upstream-access-dashboard]: https://github.com/kubernetes/dashboard/blob/master/docs/user/accessing-dashboard/1.7.x-and-above.md
+
 <!-- FEEDBACK -->
 <div class="p-notification--information">
   <p class="p-notification__response">
