@@ -43,9 +43,25 @@ MicroK8s will install a minimal, lightweight Kubernetes you can run and use on p
           </p>
         </div>
       </li>
-
       <li class="p-stepped-list__item">
-        <h3 class="p-stepped-list__title" id="status"><span class="p-stepped-list__bullet">2</span>Check the status</h3>
+        <h3 class="p-stepped-list__title" id="status"><span class="p-stepped-list__bullet">2</span>Join the group</h3>
+        <div class="p-stepped-list__content">
+
+MicroK8s creates a group to enable seamless usage of commands which require admin privilege. To add your current user
+to the group, run the following:
+          <div class="p-code-copyable">
+            <input class="p-code-copyable__input" value="sudo usermod -a -G microk8s $USER" readonly="readonly">
+            <button class="p-code-copyable__action">Copy to clipboard</button>
+          </div>
+          You will also need to re-enter the session for the group update to take place:
+          <div class="p-code-copyable">
+            <input class="p-code-copyable__input" value="su - $USER" readonly="readonly">
+            <button class="p-code-copyable__action">Copy to clipboard</button>
+          </div>
+        </div>
+      </li>
+      <li class="p-stepped-list__item">
+        <h3 class="p-stepped-list__title" id="status"><span class="p-stepped-list__bullet">3</span>Check the status</h3>
         <div class="p-stepped-list__content">
 
 MicroK8s has a built-in command to display its status. During installation you
@@ -58,7 +74,7 @@ can use the <code>--wait-ready</code> flag to wait for the Kubernetes services t
       </li>
 
       <li class="p-stepped-list__item">
-        <h3 class="p-stepped-list__title"><span class="p-stepped-list__bullet">3</span>Access Kubernetes</h3>
+        <h3 class="p-stepped-list__title"><span class="p-stepped-list__bullet">4</span>Access Kubernetes</h3>
         <div class="p-stepped-list__content">
 <p>MicroK8s bundles its own version of <code>kubectl</code> for accessing Kubernetes. Use it to run
 commands to monitor and control your Kubernetes. For example, to view your node:</p>
@@ -85,7 +101,7 @@ commands to monitor and control your Kubernetes. For example, to view your node:
 
       </li>
       <li class="p-stepped-list__item">
-        <h3 class="p-stepped-list__title"><span class="p-stepped-list__bullet">4</span>Deploy an app</h3>
+        <h3 class="p-stepped-list__title"><span class="p-stepped-list__bullet">5</span>Deploy an app</h3>
         <div class="p-stepped-list__content">
           <p>Of course, Kubernetes is meant for deploying apps and services. You can use
           the <code>kubectl</code> command to do that as with any Kuberenetes. Try
@@ -104,7 +120,7 @@ commands to monitor and control your Kubernetes. For example, to view your node:
       </li>
 
       <li class="p-stepped-list__item">
-        <h3 class="p-stepped-list__title"><span class="p-stepped-list__bullet">5</span>Use add-ons</h3>
+        <h3 class="p-stepped-list__title"><span class="p-stepped-list__bullet">6</span>Use add-ons</h3>
         <div class="p-stepped-list__content">
           <p>
 MicroK8s uses the minimum of components for a pure, lightweight Kubernetes. However, plenty of extra features are available with a few keystrokes using "add-ons" &ndash; pre-packaged components that will provide extra capabilities for your Kubernetes, from simple DNS management to machine learning with Kubeflow!
@@ -123,7 +139,7 @@ To start it is recommended to add DNS management to facilitate communication bet
       </li>
 
       <li class="p-stepped-list__item">
-        <h3 class="p-stepped-list__title"><span class="p-stepped-list__bullet">6</span>Starting and Stopping MicroK8s</h3>
+        <h3 class="p-stepped-list__title"><span class="p-stepped-list__bullet">7</span>Starting and Stopping MicroK8s</h3>
         <div class="p-stepped-list__content">
           <p>MicroK8s will continue running until you decide to stop it. You can stop and start MicroK8s with these simple commands:</p>
           <div class="p-code-copyable">
