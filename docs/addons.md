@@ -51,6 +51,8 @@ microk8s.status
 recommended you always enable it. In restricted environments you may need to
 update the upstream DNS servers.
 
+**cilium**: Deploys [Cilium](cilium-doc) to support kubernetes network policies using eBPF.
+
 **[fluentd](addon-fluentd)**: Deploy the [Elasticsearch-Fluentd-Kibana][kibana-docs] logging and
 monitoring solution.
 
@@ -87,6 +89,7 @@ host directory.
 
 <!-- LINKS -->
 
+[cilium-doc]: http://docs.cilium.io/en/stable/intro/
 [efk-upstream]: https://kubernetes.io/docs/tasks/debug-application-cluster/logging-elasticsearch-kibana/
 [istio-woe]: https://istio.io/docs/concepts/what-is-istio/
 [istio-docs]: https://istio.io/docs/
