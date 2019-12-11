@@ -6,7 +6,7 @@ permalink: /docs/release-notes
 
 # Release notes
 
-## Microk8s 1.16 - 26 September 2019
+## MicroK8s 1.17 - 11 December 2019
 
 **MicroK8s** is a Kubernetes<sup>&reg;</sup> cluster delivered as a single snap
 package - it can be installed on any Linux distribution which supports
@@ -18,6 +18,27 @@ snap install microk8s --classic --channel=1.16/stable
 ```
 
 Most important updates since the last release:
+
+-   New addon: kubeflow. Give it a try with `microk8s.enable kubeflow`.
+-   MetalLB Loadbalancer addon, try it with `microk8s.enable metallb`. Thank you [@dangtrinhnt][] for your efforts here.
+-   Separate front proxy CA, courtesy of [@giner][]
+-   Linkerd updated to v2.6.0, thank you [@balchua][]
+-   Jaeger operator updated to v1.14.0
+-   Updating prometheus operator (latest). Thanks [@rlankfo][]
+-   Istio upgraded to v1.3.4. Thank you [@nobusugi246][]
+-   Helm upgraded to 2.16.0, thank you [@balchua][], [@fabrichter][] and [@icanhazbroccoli][]
+-   Helm status reported in `microk8s.status`, thank you [@greenyouse][]
+-   Set default namespace of `microk8s.ctr` to `k8s.io`, thank you [@joestringer][]
+-   Better exception handling in the clustering agent, thank you [@shashi278][]
+-   Fixes in cluster upgrades, courtesy of [@strigona-worksight][]
+-   `microk8s.inspect` now cleans priority and storage classes. Thank you [@rbt][]
+-   `microk8s.inspect` will detect missing cgroups v1 and suggest changes on Fedora 31. Thank you [@soumplis][]
+
+
+
+## Microk8s 1.16 - 26 September 2019
+
+### Changelog
 
 -   Clustering - MicroK8s nodes can be joined to create a multi-node cluster,
     see [these docs](clustering) if you want to try it.
@@ -128,8 +149,12 @@ Slack][slack], in the #microk8s channel!
 
 [@balchua]: https://github.com/balchua
 [@davefinster]: https://github.com/davefinster
+[@dangtrinhnt]: https://github.com/dangtrinhnt
+[@fabrichter]: https://github.com/fabrichter
 [@giner]: https://github.com/giner
 [@giorgos-apo]: https://github.com/giorgos-apo
+[@greenyouse]: https://github.com/greenyouse
+[@icanhazbroccoli]: https://github.com/icanhazbroccoli
 [@JimPatterson]: https://github.com/JimPatterson
 [@joestringer]: https://github.com/joestringer
 [@JorritSalverda]: https://github.com/JorritSalverda
@@ -139,17 +164,23 @@ Slack][slack], in the #microk8s channel!
 [@lhotari]: https://github.com/lhotari
 [@magne]: https://github.com/magne
 [@miguelgarcia]: https://github.com/miguelgarcia
+[@nobusugi246]: https://github.com/nobusugi246
 [@olatheander]: https://github.com/olatheander
 [@richardcase]: https://github.com/richardcase
+[@rlankfo]: https://github.com/rlankfo
 [@rzr]: https://github.com/rzr
+[@rbt]: https://github.com/rbt
+[@shashi278]: https://github.com/shashi278
+[@soumplis]: https://github.com/soumplis
+[@strigona-worksight]: https://github.com/strigona-worksight
 [@waquidvp]: https://github.com/waquidvp
 [@wichert]: https://github.com/wichert
 <!-- FEEDBACK -->
 <div class="p-notification--information">
   <p class="p-notification__response">
-    We appreciate your feedback on the docs. You can 
-    <a href="https://github.com/canonical-web-and-design/microk8s.io/edit/master/docs/release-notes.md" class="p-notification__action">edit this page</a> 
-    or 
+    We appreciate your feedback on the docs. You can
+    <a href="https://github.com/canonical-web-and-design/microk8s.io/edit/master/docs/release-notes.md" class="p-notification__action">edit this page</a>
+    or
     <a href="https://github.com/canonical-web-and-design/microk8s.io/issues/new" class="p-notification__action">file a bug here</a>.
   </p>
 </div>
