@@ -23,7 +23,7 @@ this [discourse post on WSL2][windows-post].
 
 For now, the best way to run MicroK8s on Windows is with virtualisation.
 MicroK8s will install without problems on Ubuntu running on number of different
-VMs, including [VirtulBox](https://www.virtualbox.org/).
+VMs, including [VirtualBox](https://www.virtualbox.org/).
 
 The recommended way to run MicroK8s in a VM on Windows 10 is to use
 [multipass][]. The Windows installer is available for
