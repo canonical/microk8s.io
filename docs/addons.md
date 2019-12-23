@@ -45,13 +45,23 @@ microk8s.status
 <a id="list"> </a>
 ## Current MicroK8s Addons
 
-[**dashboard**](addon-dashboard): The standard Kubernetes Dashboard.
+[**dashboard**](addon-dashboard): Enable the Kubernetes dashboard.
 
 [**dns**](addon-dns): Deploys CoreDNS. This add-on may be required by others - it is
 recommended you always enable it. In restricted environments you may need to
 update the upstream DNS servers.
 
-**cilium**: Deploys [Cilium](cilium-doc) to support Kubernetes network policies using eBPF.
+**istio**: Adds the core [Istio][istio-docs] services.
+
+**knative**: Adds the [Knative][knative-docs] middleware to your cluster.
+
+**cilium**: SDN, fast with full network policy. Deploys [Cilium](cilium-doc) to support Kubernetes network policies using eBPF.
+
+**kubeflow**: Enable [Kubeflow][kubeflow] for easy ML deployments
+
+**metallb**: Deploys the [MetalLB Loadbalancer][metallb].
+
+[**juju**]: Model-driven operator engine
 
 **[fluentd](addon-fluentd)**: Deploy the [Elasticsearch-Fluentd-Kibana][kibana-docs] logging and
 monitoring solution.
@@ -60,12 +70,10 @@ monitoring solution.
 
 **ingress**: A simple ingress controller for external access.
 
-**istio**: Adds the core [Istio][istio-docs] services.
+**helm**: Leverage [Helm] charts to manage your Kubernetes apps
 
 **jaeger**: Deploy the [Jaeger Operator][jaeger-docs] in the “simplest”
 configuration.
-
-**knative**: Adds the [Knative][knative-docs] middleware to your cluster.
 
 **[linkerd](/docs/addon-linkerd)**: Deploys the [linkerd][linkerd-docs] service mesh.
 
@@ -84,8 +92,6 @@ documentation for more details.
 **storage**: Create a default storage class which allocates storage from a
 host directory.
 
-**metallb**: Deploys the [MetalLB Loadbalancer][metallb].
-
 
 <!-- LINKS -->
 
@@ -100,6 +106,9 @@ host directory.
 [knative-docs]: https://knative.dev/
 [prometheus-docs]: https://prometheus.io/docs/
 [metallb]: https://metallb.universe.tf/
+[kubeflow]: https://www.kubeflow.org/
+[Helm]: https://helm.sh/
+[**juju**]: https://jaas.ai/docs/what-is-juju
 <!-- FEEDBACK -->
 <div class="p-notification--information">
   <p class="p-notification__response">
