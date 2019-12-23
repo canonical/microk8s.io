@@ -445,22 +445,29 @@ which ones are enabled/disabled.
 
 ```no-highlight
 microk8s is running
+
 addons:
-cilium: disabled
-linkerd: disabled
-jaeger: disabled
-rbac: disabled
-prometheus: disabled
-dns: disabled
-fluentd: disabled
-storage: disabled
-gpu: disabled
-registry: disabled
-knative: disabled
-dashboard: disabled
-ingress: disabled
-metrics-server: disabled
-istio: disabled
+  enabled:
+    cilium:          # SDN, fast with full network policy
+    dashboard:       # Enable the Kubernetes dashboard
+    dns:             # CoreDNS
+  disabled:
+    fluentd:         # Elasticsearch-Fluentd-Kibana logging and monitoring
+    gpu:             # Automatic enablement of Nvidia CUDA
+    helm:            # Leverage Helm charts to manage your Kubernetes apps
+    ingress:         # Ingress controller for external access.
+    istio:           # Core Istio service mesh services
+    jaeger:          # Kubernetes Jaeger operator with its simple config
+    juju:            # Model-driven operator engine
+    knative:         # Add Knative serverless middleware to your cluster
+    kubeflow:        # Enable Kubeflow for easy ML deployments
+    linkerd:         # Deploy the linkerd service mesh
+    metallb:         # Loadbalancer for your Kubernetes cluster
+    metrics-server:  # K8s Metrics Server for API access to service metrics
+    prometheus:      # Prometheus operator for monitoring and logging
+    rbac:            # Enable Role-Based Access Control for authorisation
+    registry:        # Private image registry exposed on localhost:32000
+    storage:         # Storage class; allocates storage from host directory
 ```
 
 ---
