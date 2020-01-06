@@ -72,16 +72,16 @@ Docker daemon and "inject" it into the  MicroK8s image cache like this:
 
 ```bash
 docker save mynginx > myimage.tar
-microk8s.ctr -n k8s.io image import myimage.tar
+microk8s.ctr image import myimage.tar
 ```
 
 Note that when we import the image to MicroK8s we do so under the `k8s.io`
-namespace (the `-n k8s.io` argument).
+namespace.
 
 Now we can list the images present in MicroK8s:
 
 ```bash
-microk8s.ctr -n k8s.io images ls
+microk8s.ctr images ls
 ```
 
 At this point we are ready to `microk8s.kubectl apply -f` a deployment with
