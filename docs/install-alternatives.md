@@ -113,8 +113,12 @@ Running MicroK8s on some ARM hardware may run into difficulties because cgroups
 by editing the boot parameters:
 
 ```bash
-sudo vi /boot/firmware/cmdline.txt
+sudo vi /boot/firmware/nobtcmd.txt
 ```
+
+<div class="p-notification--positive"><p markdown="1" class="p-notification__response">
+<span class="p-notification__status">Note:</span> In older Raspberry Pi versions
+the boot parameters are in `/boot/firmware/cmdline.txt`.</p></div>
 
 And adding the following:
 
