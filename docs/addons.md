@@ -23,7 +23,7 @@ services which can easily be added to MicroK8s. These addons can be enabled
 and disabled at any time, and most are pre-configured to 'just work' without
 any further set up.
 
-For example, to enable the CordDNS addon:
+For example, to enable the CoreDNS addon:
 
 ```bash
 microk8s.enable dns
