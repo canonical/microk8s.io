@@ -58,6 +58,10 @@ monitoring solution.
 
 [**gpu**](addon-gpu):  Enable support for GPU accelerated workloads using the NVIDIA runtime.
 
+**helm**:  Enable [Helm 2](https://v2.helm.sh/docs/) package manager for Kubernates.
+
+**helm3**:  Enable package manager [Helm 3](https://v3.helm.sh/docs/).
+
 **ingress**: A simple ingress controller for external access.
 
 **istio**: Adds the core [Istio][istio-docs] services.
