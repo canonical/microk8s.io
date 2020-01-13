@@ -84,7 +84,8 @@ documentation for more details.
 **storage**: Create a default storage class which allocates storage from a
 host directory.
 
-**metallb**: Deploys the [MetalLB Loadbalancer][metallb].
+**metallb**: Deploys the [MetalLB Loadbalancer][metallb].  Note that this does not
+work under multipass on macOS, due to filtering that macOS applies to network traffic.
 
 
 <!-- LINKS -->
