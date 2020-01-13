@@ -51,7 +51,7 @@ microk8s.status
 recommended you always enable it. In restricted environments you may need to
 update the upstream DNS servers.
 
-**cilium**: Deploys [Cilium](cilium-doc) to support Kubernetes network policies using eBPF.
+**cilium**: Deploys [Cilium][cilium-doc] to support Kubernetes network policies using eBPF.
 
 **[fluentd](addon-fluentd)**: Deploy the [Elasticsearch-Fluentd-Kibana][kibana-docs] logging and
 monitoring solution.
