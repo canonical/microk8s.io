@@ -58,6 +58,8 @@ monitoring solution.
 
 [**gpu**](addon-gpu):  Enable support for GPU accelerated workloads using the NVIDIA runtime.
 
+helm: Installs the [Helm 2][] package manager for Kubernetes. 
+
 **ingress**: A simple ingress controller for external access.
 
 **istio**: Adds the core [Istio][istio-docs] services.
@@ -65,7 +67,11 @@ monitoring solution.
 **jaeger**: Deploy the [Jaeger Operator][jaeger-docs] in the “simplest”
 configuration.
 
+**juju**: Enables a [juju][] client to work with MicroK8s.
+
 **knative**: Adds the [Knative][knative-docs] middleware to your cluster.
+
+**kubeflow**: Adds [KubeFlow][] using the [kubeflow juju bundle][kubeflow-bundle].
 
 **[linkerd](/docs/addon-linkerd)**: Deploys the [linkerd][linkerd-docs] service mesh.
 
@@ -92,11 +98,15 @@ work under multipass on macOS, due to filtering that macOS applies to network tr
 
 [cilium-doc]: http://docs.cilium.io/en/stable/intro/
 [efk-upstream]: https://kubernetes.io/docs/tasks/debug-application-cluster/logging-elasticsearch-kibana/
+[Helm 2]: https://helm.sh
 [istio-woe]: https://istio.io/docs/concepts/what-is-istio/
 [istio-docs]: https://istio.io/docs/
 [jaeger-docs]: https://github.com/jaegertracing/jaeger-operator
+[juju]: https://jaas.ai/docs/what-is-juju
 [linkerd-docs]: https://linkerd.io/2/overview/
 [kibana-docs]: https://www.elastic.co/guide/en/kibana/current/discover.html
+[KubeFlow]: https://www.kubeflow.org/
+[kubeflow-bundle]: https://github.com/juju-solutions/bundle-kubeflow/blob/master/README.md
 [metrics-design-doc]:https://github.com/kubernetes/community/blob/master/contributors/design-proposals/instrumentation/metrics-server.md
 [knative-docs]: https://knative.dev/
 [prometheus-docs]: https://prometheus.io/docs/
