@@ -58,7 +58,7 @@ monitoring solution.
 
 [**gpu**](addon-gpu):  Enable support for GPU accelerated workloads using the NVIDIA runtime.
 
-helm: Installs the [Helm 2][] package manager for Kubernetes. 
+**helm**: Installs the [Helm 2][] package manager for Kubernetes. 
 
 **ingress**: A simple ingress controller for external access.
 
