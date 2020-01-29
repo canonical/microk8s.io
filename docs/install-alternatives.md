@@ -77,7 +77,7 @@ multipass shell microk8s-vm
 Then install the  MicroK8s snap and configure the network:
 
 ```bash
-sudo snap install microk8s --classic --channel=1.16/stable
+sudo snap install microk8s --classic --channel=1.17/stable
 sudo iptables -P FORWARD ACCEPT
 ```
 
