@@ -162,12 +162,12 @@ can be viewed to get a detailed look at every aspect of the system.
 
 <details>
   <summary><strong>My pods are not starting and I use ZFS...</strong></summary>
-  <p>Microk8s switched to <code class="highlighter-rouge">containerd</code> as its container runtime in release 492. When run on ZFS, <code class="highlighter-rouge">containerd</code> must be configured to use ZFS snapshots. Presently neither Microk8s nor <code class="highlighter-rouge">containerd</code> perform this automatically so you must manually update the configuration. Instructions on how to do this are documented <a href="https://github.com/ubuntu/microk8s/issues/401#issuecomment-480945986">here</a>.
+  <p>Microk8s switched to <code class="highlighter-rouge">containerd</code> as its container runtime in release 492. When run on ZFS, <code class="highlighter-rouge">containerd</code> must be configured to use ZFS snapshots. Presently neither Microk8s nor <code class="highlighter-rouge">containerd</code> perform this automatically so you must manually update the configuration. Instructions on how to do this are documented <a href="https://github.com/ubuntu/microk8s/issues/401#issuecomment-480945986">here</a>.</p>
 </details>
 
 <details>
   <summary><strong>My home directory is not in <code class="highlighter-rouge">/home</code> or is on NFS and I can't get Microk8s to work...</strong></summary>
-  <p>While not strictly a Microk8s issue, snaps generally do not work out of the box if your home directory is mounted via NFS, or if it is not located directly under <code class="highlighter-rouge">/home</code>. See <code class="highlighter-rouge">snapd</code> bugs <a href="https://bugs.launchpad.net/ubuntu/+source/snapd/+bug/1662552">#1662552</a> and <a href="https://bugs.launchpad.net/snappy/+bug/1620771">#1620771</a> for further information and possible workarounds.
+  <p>While not strictly a Microk8s issue, snaps generally do not work out of the box if your home directory is mounted via NFS, or if it is not located directly under <code class="highlighter-rouge">/home</code>. See <code class="highlighter-rouge">snapd</code> bugs <a href="https://bugs.launchpad.net/ubuntu/+source/snapd/+bug/1662552">#1662552</a> and <a href="https://bugs.launchpad.net/snappy/+bug/1620771">#1620771</a> for further information and possible workarounds.</p>
 </details>
 
 <a id="report-bug"> </a>
