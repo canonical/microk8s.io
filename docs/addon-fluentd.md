@@ -12,7 +12,7 @@ to MicroK8s. The components will be installed and connected together.
 To enable the addon:
 
 ```bash
-microk8s enable fluentd
+microk8s.enable fluentd
 ```
 
 To access the Kibana dashboard, you should first start the kube proxy service:
