@@ -48,9 +48,13 @@ MicroK8s will install a minimal, lightweight Kubernetes you can run and use on p
         <div class="p-stepped-list__content">
 
 MicroK8s creates a group to enable seamless usage of commands which require admin privilege. To add your current user
-to the group, run the following:
+to the group and gain access to the <code>.kube</code> caching directory, run the following two commands:
           <div class="p-code-copyable">
             <input class="p-code-copyable__input" value="sudo usermod -a -G microk8s $USER" readonly="readonly">
+            <button class="p-code-copyable__action">Copy to clipboard</button>
+          </div>
+          <div class="p-code-copyable">
+            <input class="p-code-copyable__input" value="sudo chown -f -R $USER ~/.kube" readonly="readonly">
             <button class="p-code-copyable__action">Copy to clipboard</button>
           </div>
           You will also need to re-enter the session for the group update to take place:
