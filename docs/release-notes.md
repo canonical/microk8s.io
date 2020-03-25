@@ -6,16 +6,44 @@ permalink: /docs/release-notes
 
 # Release notes
 
-## MicroK8s 1.17 - 11 December 2019
+## MicroK8s 1.18 - XX March 2020
 
 **MicroK8s** is a Kubernetes<sup>&reg;</sup> cluster delivered as a single snap
 package - it can be installed on any Linux distribution which supports
-[snaps][]. MicroK8s is small and simple to install and is a great way to stand
-up a cluster quickly for development and testing. Try it on your laptop!
+[snaps][], as well as MacOS and Windows 10. MicroK8s is small and simple to
+install and is a great way to stand up a cluster quickly for development and
+testing. Try it on your laptop!
 
 ```bash
-snap install microk8s --classic --channel=1.17/stable
+snap install microk8s --classic --channel=1.18/stable
 ```
+
+Most important updates since the last release:
+
+-   Installers for MacOS and Windows
+-   Kubeflow 1.0 addon
+-   Added new snap interface enabling other snaps to detect MicroK8s’ presence.
+-   CoreDNS addon upgraded to v1.6.6, thank you [@balchua][]
+-   New Helm 3 addon, available with `microk8s helm3`, thanks [@qs][]
+-   Ingress RBAC rule to create configmaps, thank you [@nonylene][]
+-   Allow `microk8s kubectl` to use plugins such as krew. Thank you [@balchua][]
+-   `microk8s reset` will attempt to disable add-ons.  Thank you [@balchua][]
+-   etcd upgraded to 3.4 by [@lazzarello][] (for ARM64 only)
+-   Juju has been upgraded to 2.7.3 and is now packaged with the snap
+-   On ZFS, the native snapshotter will be used. Thank you [@sevangelatos][]
+-   Improved `microk8s status` output.  Thank you [@balchua][]
+-   Hostpath can now list events when RBAC is enabled.  Thank you [@Richard87][]
+-   Certificates are set to have a lifespan of 365 days
+-   Linkerd updated to v2.7.0.  Thank you [@balchua][]
+-   knative updated to v0.13.0.
+-   Fix in fetching more stats from cAdvisor. Courtesy of [@nonylene][]
+-   Fix enabling add-ons via the rest API. Thank you [@giorgos-apo][]
+-   Fix metallb privilege escalation on Xenial.  Thank you [@davecahill][]
+
+
+
+
+## MicroK8s 1.17 - 11 December 2019
 
 Most important updates since the last release:
 
@@ -150,6 +178,7 @@ Slack][slack], in the #microk8s channel!
 [@balchua]: https://github.com/balchua
 [@davefinster]: https://github.com/davefinster
 [@dangtrinhnt]: https://github.com/dangtrinhnt
+[@davecahill]: https://github.com/davecahill
 [@fabrichter]: https://github.com/fabrichter
 [@giner]: https://github.com/giner
 [@giorgos-apo]: https://github.com/giorgos-apo
@@ -161,15 +190,20 @@ Slack][slack], in the #microk8s channel!
 [@keshavdv]: https://github.com/keshavdv
 [@khteh]: https://github.com/khteh
 [@klarose]: https://github.com/klarose
+[@lazzarello]: https://github.com/lazzarello
 [@lhotari]: https://github.com/lhotari
 [@magne]: https://github.com/magne
 [@miguelgarcia]: https://github.com/miguelgarcia
 [@nobusugi246]: https://github.com/nobusugi246
+[@nonylene]: https://github.com/nonylene
 [@olatheander]: https://github.com/olatheander
+[@qs]: https://github.com/qs
 [@richardcase]: https://github.com/richardcase
 [@rlankfo]: https://github.com/rlankfo
+[@Richard87]: https://github.com/Richard87
 [@rzr]: https://github.com/rzr
 [@rbt]: https://github.com/rbt
+[@sevangelatos]: https://github.com/sevangelatos
 [@shashi278]: https://github.com/shashi278
 [@soumplis]: https://github.com/soumplis
 [@strigona-worksight]: https://github.com/strigona-worksight
