@@ -63,13 +63,13 @@ See the full file [here](containerd-template.toml).
 Restart MicroK8s to have the new configuration loaded:
 
 ```bash
-microk8s.stop
+microk8s stop
 ```
 
 Allow a few seconds for the service to close fully before starting again:
 
 ```bash
-microk8s.start
+microk8s start
 ```
 
 The image can now be deployed with:
@@ -116,7 +116,7 @@ with Kubernetes.
     users should be aware of the secure registry and the credentials needed to
     access it. As shown above, configuring containerd involves editing
     `/var/snap/microk8s/current/args/containerd-template.toml` and reloading
-    the new configuration via a `microk8s.stop`, `microk8s.start` cycle.
+    the new configuration via a `microk8s stop`, `microk8s start` cycle.
 
 <!-- LINKS -->
 
@@ -124,9 +124,9 @@ with Kubernetes.
 <!-- FEEDBACK -->
 <div class="p-notification--information">
   <p class="p-notification__response">
-    We appreciate your feedback on the docs. You can 
+    We appreciate your feedback on the docs. You can
     <a href="https://github.com/canonical-web-and-design/microk8s.io/edit/master/docs/registry-private.md" class="p-notification__action">edit this page</a> 
-    or 
+    or
     <a href="https://github.com/canonical-web-and-design/microk8s.io/issues/new" class="p-notification__action">file a bug here</a>.
   </p>
 </div>

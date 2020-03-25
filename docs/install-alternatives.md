@@ -135,7 +135,7 @@ you can fix this:
 1.  Stop microk8s:
 
     ```
-    microk8s.stop
+    microk8s stop
     ```
 
 1.  Remove old state of containerd:
@@ -156,7 +156,7 @@ you can fix this:
 1.  Restart microk8s:
 
     ```
-    microk8s.start
+    microk8s start
     ```
 
 ## Offline deployment

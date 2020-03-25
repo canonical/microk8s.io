@@ -18,7 +18,7 @@ logs.
 First determine the resource identifier for the pod:
 
 ```bash
-microk8s.kubectl get pods
+microk8s kubectl get pods
 ```
 This will list the currently available pods, for example:
 
@@ -31,7 +31,7 @@ You can then use `kubectl` to view the log. For example, for the simple redis
 pod above:
 
 ```bash
-microk8s.kubectl logs mk8s-redis-7647889b6d-vjwqm
+microk8s kubectl logs mk8s-redis-7647889b6d-vjwqm
 ```
 
 ### Examining the configuration
@@ -56,7 +56,7 @@ To run the inspection tool, enter the command (admin privilege is required
 to collect all the data):
 
 ```bash
-sudo microk8s.inspect
+sudo microk8s inspect
 ```
 
 You should see output similar to the following:
@@ -127,7 +127,7 @@ can be viewed to get a detailed look at every aspect of the system.
 
    <p>The MicroK8s inspect command can be used to check the firewall configuration:</p>
 
-   <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   microk8s.inspect
+   <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   microk8s inspect
    </code></pre></div></div>
 
    <p>A warning will be shown if the firewall is not forwarding traffic.</p>
@@ -177,7 +177,7 @@ If you cannot solve your issue and believe the fault may lie in MicroK8s,
 please [file an issue on the project repository][bugs].
 
 To help us deal effectively with issues, it is incredibly useful to include
-the report obtained from [`microk8s.inspect`](#inspect), as well as any
+the report obtained from [`microk8s inspect`](#inspect), as well as any
 additional logs, and a summary of the issue.
 
 <!--LINKS-->
@@ -186,9 +186,9 @@ additional logs, and a summary of the issue.
 <!-- FEEDBACK -->
 <div class="p-notification--information">
   <p class="p-notification__response">
-    We appreciate your feedback on the docs. You can 
-    <a href="https://github.com/canonical-web-and-design/microk8s.io/edit/master/docs/troubleshooting.md" class="p-notification__action">edit this page</a> 
-    or 
+    We appreciate your feedback on the docs. You can
+    <a href="https://github.com/canonical-web-and-design/microk8s.io/edit/master/docs/troubleshooting.md" class="p-notification__action">edit this page</a>
+    or
     <a href="https://github.com/canonical-web-and-design/microk8s.io/issues/new" class="p-notification__action">file a bug here</a>.
   </p>
 </div>

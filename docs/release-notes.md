@@ -19,20 +19,20 @@ snap install microk8s --classic --channel=1.17/stable
 
 Most important updates since the last release:
 
--   New addon: kubeflow. Give it a try with `microk8s.enable kubeflow`.
--   MetalLB Loadbalancer addon, try it with `microk8s.enable metallb`. Thank you [@dangtrinhnt][] for your efforts here.
+-   New addon: kubeflow. Give it a try with `microk8s enable kubeflow`.
+-   MetalLB Loadbalancer addon, try it with `microk8s enable metallb`. Thank you [@dangtrinhnt][] for your efforts here.
 -   Separate front proxy CA, courtesy of [@giner][]
 -   Linkerd updated to v2.6.0, thank you [@balchua][]
 -   Jaeger operator updated to v1.14.0
 -   Updating prometheus operator (latest). Thanks [@rlankfo][]
 -   Istio upgraded to v1.3.4. Thank you [@nobusugi246][]
 -   Helm upgraded to 2.16.0, thank you [@balchua][], [@fabrichter][] and [@icanhazbroccoli][]
--   Helm status reported in `microk8s.status`, thank you [@greenyouse][]
--   Set default namespace of `microk8s.ctr` to `k8s.io`, thank you [@joestringer][]
+-   Helm status reported in `microk8s status`, thank you [@greenyouse][]
+-   Set default namespace of `microk8s ctr` to `k8s.io`, thank you [@joestringer][]
 -   Better exception handling in the clustering agent, thank you [@shashi278][]
 -   Fixes in cluster upgrades, courtesy of [@strigona-worksight][]
--   `microk8s.inspect` now cleans priority and storage classes. Thank you [@rbt][]
--   `microk8s.inspect` will detect missing cgroups v1 and suggest changes on Fedora 31. Thank you [@soumplis][]
+-   `microk8s inspect` now cleans priority and storage classes. Thank you [@rbt][]
+-   `microk8s inspect` will detect missing cgroups v1 and suggest changes on Fedora 31. Thank you [@soumplis][]
 
 
 
@@ -42,14 +42,14 @@ Most important updates since the last release:
 
 -   Clustering - MicroK8s nodes can be joined to create a multi-node cluster,
     see [these docs](clustering) if you want to try it.
--   New **Cilium** addon courtesy of [@joestringer][]. Try it with `microk8s.enable cilium`.
--   New **Helm** addon courtesy of [@joestringer][]. Try it with `microk8s.enable helm`.
+-   New **Cilium** addon courtesy of [@joestringer][]. Try it with `microk8s enable cilium`.
+-   New **Helm** addon courtesy of [@joestringer][]. Try it with `microk8s enable helm`.
 -   **RBAC** rules for **CoreDNS** and storage add ons, courtesy of [@wichert][].
 -   **Istio** upgraded to v1.2.2 and now includes kiali.
 -   **Knative** upgraded to v0.9.0.
 -   Enabling of aggregation layer and fix on metrics server **RBAC** rules,
     thank you [@giner][].
--   **microk8s.reset** has now an option to free the disk space reserved by
+-   **microk8s reset** has now an option to free the disk space reserved by
     storage volumes. Thank you [@rzr][].
 -   **Ingress** updated to v0.25.1, thank you [@balchua][].
 -   Improvements in the inspection script, thanks [@giorgos-apo][].
@@ -64,9 +64,9 @@ Slack][slack], in the #microk8s channel!
 
 ### Changelog
 
--   **RBAC** support via a simple `microk8s.enable rbac`, courtesy of [@magne][].
+-   **RBAC** support via a simple `microk8s enable rbac`, courtesy of [@magne][].
 -   Update of the **Dashboard** to 1.10.1 and fixes for RBAC. Thank you [@balchua][].
--   **Knative** addon, try it with `microk8s.enable knative`. Thank you [@olatheander][] for your contribution.
+-   **Knative** addon, try it with `microk8s enable knative`. Thank you [@olatheander][] for your contribution.
 -   **CoreDNS** is now the default. Thanks [@richardcase][] for driving this.
 -   **Ingress** updated to 0.24.1 by [@JorritSalverda][], thank you.
 -   Fix on socat failing on Fedora by [@JimPatterson][], thanks.
