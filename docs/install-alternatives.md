@@ -76,6 +76,7 @@ The recommended way to install MicroK8s on MacOS is with Homebrew
 
     ```
     brew install ubuntu/microk8s/microk8s
+    microk8s install
     ```
 
     [![asciicast](https://asciinema.org/a/IWhwnidik9xaC2YHfjBUIsLin.svg)](https://asciinema.org/a/IWhwnidik9xaC2YHfjBUIsLin)
