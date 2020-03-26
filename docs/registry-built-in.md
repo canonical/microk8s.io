@@ -16,7 +16,7 @@ access to it.
 You can install the registry with:
 
 ```bash
-microk8s.enable registry
+microk8s enable registry
 ```
 
 The add-on registry is backed up by a `20Gi` persistent volume is claimed for
@@ -75,7 +75,7 @@ The new configuration should be loaded with a Docker daemon restart:
 sudo systemctl restart docker
 ```
 
-At this point we are ready to `microk8s.kubectl apply -f` a deployment with our
+At this point we are ready to `microk8s kubectl apply -f` a deployment with our
 image:
 
 ```yaml
@@ -181,9 +181,9 @@ runs inside the VM so it is on `localhost:32000`.
 <!-- FEEDBACK -->
 <div class="p-notification--information">
   <p class="p-notification__response">
-    We appreciate your feedback on the docs. You can 
+    We appreciate your feedback on the docs. You can
     <a href="https://github.com/canonical-web-and-design/microk8s.io/edit/master/docs/registry-built-in.md" class="p-notification__action">edit this page</a> 
-    or 
+    or
     <a href="https://github.com/canonical-web-and-design/microk8s.io/issues/new" class="p-notification__action">file a bug here</a>.
   </p>
 </div>

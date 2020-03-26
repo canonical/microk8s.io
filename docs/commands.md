@@ -6,75 +6,74 @@ permalink: /docs/commands
 
 # Command Reference
 
-MicroK8s adds a number of commands, grouped together with a 'microk8s.' prefix
-for convenience.
+MicroK8s adds the 'microk8s' command with a number of commands:
 
--   [microk8s.add-node](#microk8s.add-node)
--   [microk8s.config](#microk8s.config)
--   [microk8s.ctr](#microk8s.ctr)
--   [microk8s.disable](#microk8s.disable)
--   [microk8s.enable](#microk8s.enable)
--   [microk8s.inspect](#microk8s.inspect)
--   [microk8s.join](#microk8s.join)
--   [microk8s.kubectl](#microk8s.kubectl)
--   [microk8s.leave](#microk8s.leave)
--   [microk8s.remove-node](#microk8s.remove-node)  
--   [microk8s.reset](#microk8s.reset)
--   [microk8s.start](#microk8s.start)
--   [microk8s.status](#microk8s.status)
--   [microk8s.stop](#microk8s.stop)
+-   [microk8s add-node](#microk8s-add-node)
+-   [microk8s config](#microk8s-config)
+-   [microk8s ctr](#microk8s-ctr)
+-   [microk8s disable](#microk8s-disable)
+-   [microk8s enable](#microk8s-enable)
+-   [microk8s inspect](#microk8s-inspect)
+-   [microk8s join](#microk8s-join)
+-   [microk8s kubectl](#microk8s-kubectl)
+-   [microk8s leave](#microk8s-leave)
+-   [microk8s remove-node](#microk8s-remove-node)  
+-   [microk8s reset](#microk8s-reset)
+-   [microk8s start](#microk8s-start)
+-   [microk8s status](#microk8s-status)
+-   [microk8s stop](#microk8s-stop)
 
 ## Addon helper commands
 
 Some commands are specific to particular addons (e.g.
-`microk8s.cilium`) and may not do anything useful if the respective addon is
+`microk8s cilium`) and may not do anything useful if the respective addon is
 not currently enabled. For more information on these commands, see the
 [Addon documentation](addons).
 
--   `microk8s.cilium`
--   `microk8s.helm`
--   `microk8s.istioctl`
--   `microk8s.linkerd`
+-   `microk8s cilium`
+-   `microk8s helm`
+-   `microk8s istioctl`
+-   `microk8s linkerd`
 
 ---
-<a id="microk8s.add-node"> </a>
-### microk8s.add-node
+<a id="microk8s-add-node"> </a>
+### microk8s add-node
 
-**Usage:** `microk8s.add-node`
+**Usage:** `microk8s add-node`
 
 **Options:**
 
 **Description:**
 Running this command will generate a connection string and output a list of
-suggested `microk8s.join` commands to add an additional MicroK8s node to
+suggested `microk8s join` commands to add an additional MicroK8s node to
 the current cluster.
 
 **Examples:**
 
-`microk8s.add-node`
+`microk8s add-node`
 
 ...will result in output similar to:
 
 ```no-highlight
-Join node with: microk8s.join 192.168.0.2:25000/eLCTbltkDzxOnSKAkmVMbOPYgSrAieEl
+Join node with: microk8s join 192.168.0.2:25000/eLCTbltkDzxOnSKAkmVMbOPYgSrAieEl
 
 If the node you are adding is not reachable through the default interface you can
 use one of the following:
- microk8s.join 192.168.0.2:25000/eLCTbltkDzxOnSKAkmVMbOPYgSrAieEl
- microk8s.join 192.168.250.1:25000/eLCTbltkDzxOnSKAkmVMbOPYgSrAieEl
- microk8s.join 10.57.200.1:25000/eLCTbltkDzxOnSKAkmVMbOPYgSrAieEl
- microk8s.join 10.128.63.1:25000/eLCTbltkDzxOnSKAkmVMbOPYgSrAieEl
- microk8s.join 172.17.0.1:25000/eLCTbltkDzxOnSKAkmVMbOPYgSrAieEl
- microk8s.join 10.1.37.68:25000/eLCTbltkDzxOnSKAkmVMbOPYgSrAieEl
- microk8s.join 192.168.122.1:25000/eLCTbltkDzxOnSKAkmVMbOPYgSrAieEl
+ microk8s join 192.168.0.2:25000/eLCTbltkDzxOnSKAkmVMbOPYgSrAieEl
+ microk8s join 192.168.250.1:25000/eLCTbltkDzxOnSKAkmVMbOPYgSrAieEl
+ microk8s join 10.57.200.1:25000/eLCTbltkDzxOnSKAkmVMbOPYgSrAieEl
+ microk8s join 10.128.63.1:25000/eLCTbltkDzxOnSKAkmVMbOPYgSrAieEl
+ microk8s join 172.17.0.1:25000/eLCTbltkDzxOnSKAkmVMbOPYgSrAieEl
+ microk8s join 10.1.37.68:25000/eLCTbltkDzxOnSKAkmVMbOPYgSrAieEl
+ microk8s join 192.168.122.1:25000/eLCTbltkDzxOnSKAkmVMbOPYgSrAieEl
 ```
 
 ---
 
-<a id="microk8s.config"> </a>
-### microk8s.config
+<a id="microk8s-config"> </a>
+### microk8s config
 
-**Usage:** `microk8s.config [-l]`
+**Usage:** `microk8s config [-l]`
 
 **Options:**
 
@@ -87,7 +86,7 @@ to that returned by `kubectl`).
 
 **Examples:**
 
-`microk8s.config`
+`microk8s config`
 
 ...will result in output similar to:
 
@@ -114,10 +113,10 @@ users:
 
 ```
 ---
-<a id="microk8s.ctr"> </a>
-### microk8s.ctr
+<a id="microk8s-ctr"> </a>
+### microk8s ctr
 
-**Usage:** `microk8s.ctr [command]`
+**Usage:** `microk8s ctr [command]`
 
 **Options:**
 
@@ -127,11 +126,11 @@ users:
 This command provides access to the containerd CLI command `ctr`. It is
 provided as a convenience, for more information on
 using `ctr`, please see the relevant manpage with `man ctr` or run the built-in
-help with `microk8s.ctr`.
+help with `microk8s ctr`.
 
 **Examples:**
 
-`microk8s.ctr version`
+`microk8s ctr version`
 
 ...will result in output similar to:
 
@@ -143,10 +142,10 @@ Client:
 
 ---
 
-<a id="microk8s.disable"> </a>
-### microk8s.disable
+<a id="microk8s-disable"> </a>
+### microk8s disable
 
-**Usage:** `microk8s.disable addon [addon ...]`
+**Usage:** `microk8s disable addon [addon ...]`
 
 **Options:**
 
@@ -160,7 +159,7 @@ continue to work properly if addons are removed.
 
 **Examples:**
 
-`microk8s.disable dns`
+`microk8s disable dns`
 
 ...will usually result in output detailing what has been done. In this case,
 the ouput will be similar to:
@@ -180,10 +179,10 @@ clusterrolebinding.rbac.authorization.k8s.io "coredns" deleted
 
 ---
 
-<a id="microk8s.enable"> </a>
-### microk8s.enable
+<a id="microk8s-enable"> </a>
+### microk8s enable
 
-**Usage:** `microk8s.enable addon [addon ... ]`
+**Usage:** `microk8s enable addon [addon ... ]`
 
 **Options:**
 
@@ -196,11 +195,11 @@ MicroK8s to enable it. For more details, see the documentation for the
 specific addon in question in the [addons documentation](addons).
 
 For a list of the current available addons, and whether or not they are
-enabled, run `microk8s.status`.
+enabled, run `microk8s status`.
 
 **Examples:**
 
-`microk8s.enable storage`
+`microk8s enable storage`
 
 ...will result in output similar to:
 
@@ -216,36 +215,36 @@ Storage will be available soon
 
 ---
 
-<a id="microk8s.inspect"> </a>
-### microk8s.inspect
+<a id="microk8s-inspect"> </a>
+### microk8s inspect
 
-**Usage:** `microk8s.inspect`
+**Usage:** `microk8s inspect`
 
 **Options:**
 
 
 **Description:**
 This command creates a detailed profile of the current state of the running
-MicroK8s. This is primarily useful for troubleshooting and reporting bugs.
+MicroK8s.  This is primarily useful for troubleshooting and reporting bugs.
 
 **Examples:**
 
-`microk8s.inspect`
+`microk8s inspect`
 
 ...will result in output similar to:
 
 ```no-highlight
 Inspecting services
-  Service snap.microk8s.daemon-cluster-agent is running
-  Service snap.microk8s.daemon-flanneld is running
-  Service snap.microk8s.daemon-containerd is running
-  Service snap.microk8s.daemon-apiserver is running
-  Service snap.microk8s.daemon-apiserver-kicker is running
-  Service snap.microk8s.daemon-proxy is running
-  Service snap.microk8s.daemon-kubelet is running
-  Service snap.microk8s.daemon-scheduler is running
-  Service snap.microk8s.daemon-controller-manager is running
-  Service snap.microk8s.daemon-etcd is running
+  Service snap.microk8s daemon-cluster-agent is running
+  Service snap.microk8s daemon-flanneld is running
+  Service snap.microk8s daemon-containerd is running
+  Service snap.microk8s daemon-apiserver is running
+  Service snap.microk8s daemon-apiserver-kicker is running
+  Service snap.microk8s daemon-proxy is running
+  Service snap.microk8s daemon-kubelet is running
+  Service snap.microk8s daemon-scheduler is running
+  Service snap.microk8s daemon-controller-manager is running
+  Service snap.microk8s daemon-etcd is running
   Copy service arguments to the final report tarball
 Inspecting AppArmor configuration
 Gathering system information
@@ -268,34 +267,34 @@ Building the report tarball
 
 ---
 
-<a id="microk8s.join"> </a>
-### microk8s.join
+<a id="microk8s-join"> </a>
+### microk8s join
 
-**Usage:** `microk8s.join <master>:<port>/<token>`
+**Usage:** `microk8s join <master>:<port>/<token>`
 
 **Options:**
 
 **Description:**
 Used to join the local MicroK8s node in to a remote cluster. An 'invitation' in
 the form of a token is required, which is issued by running the
-`microk8s.add-node` command on the master MicroK8s node.
+`microk8s add-node` command on the master MicroK8s node.
 
-Running `microk8s.add-node` will output a number of different commands which can
+Running `microk8s add-node` will output a number of different commands which can
 be used from the node wishing to join, taking into account different
-network addressing. The `microk8s.join` command will need the address and port
+network addressing. The `microk8s join` command will need the address and port
 number of the master node, as well as the token, in order for this command to
 be successful.
 
 **Examples:**
 
-`microk8s.join 10.128.63.163:25000/JGoShFJfHtbieSOsMhmkgsOHrwtxDKRH`
+`microk8s join 10.128.63.163:25000/JGoShFJfHtbieSOsMhmkgsOHrwtxDKRH`
 
 ---
 
-<a id="microk8s.kubectl"> </a>
-### microk8s.kubectl
+<a id="microk8s-kubectl"> </a>
+### microk8s kubectl
 
-**Usage:** `microk8s.kubectl [command]`
+**Usage:** `microk8s kubectl [command]`
 
 **Options:**
 
@@ -306,7 +305,7 @@ This command runs the standard Kubernetes `kubectl` which ships with MicroK8s.
 
 **Examples:**
 
-`microk8s.kubectl get all`
+`microk8s kubectl get all`
 
 ...will result in output similar to:
 
@@ -318,28 +317,28 @@ service/kubernetes   ClusterIP   10.152.183.1   <none>        443/TCP   108m
 
 ---
 
-<a id="microk8s.leave"> </a>
-### microk8s.leave
+<a id="microk8s-leave"> </a>
+### microk8s leave
 
-**Usage:** `microk8s.leave`
+**Usage:** `microk8s leave`
 
 **Options:**
 
 **Description:**
-When run on a node which has previously joined a cluster with `microk8s.join`,
+When run on a node which has previously joined a cluster with `microk8s join`,
 this command will remove the current node from the cluster and return it to
 single node operation.
 
 **Examples:**
 
-`microk8s.leave`
+`microk8s leave`
 
 ---
 
-<a id="microk8s.remove-node"> </a>
-### microk8s.remove-node
+<a id="microk8s-remove-node"> </a>
+### microk8s remove-node
 
-**Usage:** `microk8s.remove-node address`
+**Usage:** `microk8s remove-node address`
 
 **Options:**
 
@@ -350,21 +349,21 @@ Removes a specified node from the current cluster. The node should be
 identified by hostname/IP address by which it is known to the cluster. To
 retrieve this information you can run:
 
-`microk8s.kubectl get nodes`
+`microk8s kubectl get nodes`
 
 This command only works on the master node of the cluster. To remove the local
-node from a remote cluster, see [`microk8s.leave`](#microk8s.leave).
+node from a remote cluster, see [`microk8s leave`](#microk8s leave).
 
 **Examples:**
 
-`microk8s.remove-node 10.128.63.163`
+`microk8s remove-node 10.128.63.163`
 
 ---
 
-<a id="microk8s.reset"> </a>
-### microk8s.reset
+<a id="microk8s-reset"> </a>
+### microk8s reset
 
-**Usage:** `microk8s.reset [--destroy-storage]`
+**Usage:** `microk8s reset [--destroy-storage]`
 
 **Options:**
 
@@ -382,7 +381,7 @@ wihout having to reinstall anything.
 
 **Examples:**
 
-`microk8s.reset`
+`microk8s reset`
 
 ...will result in output similar to:
 
@@ -400,20 +399,20 @@ service "kubernetes" deleted
 
 ---
 
-<a id="microk8s.start"> </a>
-### microk8s.start
+<a id="microk8s-start"> </a>
+### microk8s start
 
-**Usage:** `microk8s.start`
+**Usage:** `microk8s start`
 
 **Options:**
 
 **Description:**
 Will start MicroK8s, if the MicorK8s node has previously been halted
-with `microk8s.stop`.
+with `microk8s stop`.
 
 **Examples:**
 
-`microk8s.start`
+`microk8s start`
 
 ...will result in output similar to:
 
@@ -425,10 +424,10 @@ node/ubuntu1804 already uncordoned
 
 ---
 
-<a id="microk8s.status"> </a>
-### microk8s.status
+<a id="microk8s-status"> </a>
+### microk8s status
 
-**Usage:** `microk8s.status`
+**Usage:** `microk8s status`
 
 **Options:**
 
@@ -439,7 +438,7 @@ which ones are enabled/disabled.
 
 **Examples:**
 
-`microk8s.status`
+`microk8s status`
 
 ...will result in output similar to:
 
@@ -472,10 +471,10 @@ addons:
 
 ---
 
-<a id="microk8s.stop"> </a>
-### microk8s.stop
+<a id="microk8s-stop"> </a>
+### microk8s stop
 
-**Usage:** `microk8s.stop`
+**Usage:** `microk8s stop`
 
 **Options:**
 
@@ -484,7 +483,7 @@ Halts the current MicroK8s node.
 
 **Examples:**
 
-`microk8s.stop`
+`microk8s stop`
 
 ...will result in output describing the shutdown process.
 
@@ -498,9 +497,9 @@ Halts the current MicroK8s node.
 <!-- FEEDBACK -->
 <div class="p-notification--information">
   <p class="p-notification__response">
-    We appreciate your feedback on the docs. You can 
-    <a href="https://github.com/canonical-web-and-design/microk8s.io/edit/master/docs/commands.md" class="p-notification__action">edit this page</a> 
-    or 
+    We appreciate your feedback on the docs. You can
+    <a href="https://github.com/canonical-web-and-design/microk8s.io/edit/master/docs/commands.md" class="p-notification__action">edit this page</a>
+    or
     <a href="https://github.com/canonical-web-and-design/microk8s.io/issues/new" class="p-notification__action">file a bug here</a>.
   </p>
 </div>

@@ -72,7 +72,7 @@ Docker daemon and "inject" it into the  MicroK8s image cache like this:
 
 ```bash
 docker save mynginx > myimage.tar
-microk8s.ctr image import myimage.tar
+microk8s ctr image import myimage.tar
 ```
 
 Note that when we import the image to MicroK8s we do so under the `k8s.io`
@@ -81,10 +81,10 @@ namespace.
 Now we can list the images present in MicroK8s:
 
 ```bash
-microk8s.ctr images ls
+microk8s ctr images ls
 ```
 
-At this point we are ready to `microk8s.kubectl apply -f` a deployment with
+At this point we are ready to `microk8s kubectl apply -f` a deployment with
 this image:
 
 ```yaml
@@ -119,9 +119,9 @@ tag so make sure you avoid it.
 <!-- FEEDBACK -->
 <div class="p-notification--information">
   <p class="p-notification__response">
-    We appreciate your feedback on the docs. You can 
+    We appreciate your feedback on the docs. You can
     <a href="https://github.com/canonical-web-and-design/microk8s.io/edit/master/docs/registry-images.md" class="p-notification__action">edit this page</a> 
-    or 
+    or
     <a href="https://github.com/canonical-web-and-design/microk8s.io/issues/new" class="p-notification__action">file a bug here</a>.
   </p>
 </div>
