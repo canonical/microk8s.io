@@ -215,7 +215,7 @@ layout: base
               <h3 class="p-stepped-list__title">Install the microk8s snap</h3>
 
               <div class="p-code-copyable u-stepped-list-margin">
-                <input class="p-code-copyable__input" aria-label="sudo snap install microk8s --classic" value="sudo snap install microk8s --classic" readonly="readonly">
+                <input class="p-code-copyable__input" aria-label="sudo snap install microk8s --classic --channel=1.18/stable" value="sudo snap install microk8s --classic --channel=1.18/stable" readonly="readonly">
                 <button class="p-code-copyable__action">Copy to clipboard</button>
               </div>
 
@@ -226,7 +226,7 @@ layout: base
               <h3 class="p-stepped-list__title">Check the status</h3>
 
               <div class="p-code-copyable u-stepped-list-margin">
-                <input class="p-code-copyable__input" aria-label="sudo microk8s.status --wait-ready" value="sudo microk8s.status --wait-ready" readonly="readonly">
+                <input class="p-code-copyable__input" aria-label="sudo microk8s status --wait-ready" value="sudo microk8s status --wait-ready" readonly="readonly">
                 <button class="p-code-copyable__action">Copy to clipboard</button>
               </div>
             </li>
@@ -235,12 +235,12 @@ layout: base
               <h3 class="p-stepped-list__title">Turn on standard services</h3>
 
               <div class="p-code-copyable u-stepped-list-margin">
-                <input class="p-code-copyable__input" aria-label="sudo microk8s.enable dns dashboard registry" value="sudo microk8s.enable dns dashboard registry" readonly="readonly">
+                <input class="p-code-copyable__input" aria-label="sudo microk8s enable dns dashboard registry" value="sudo microk8s enable dns dashboard registry" readonly="readonly">
                 <button class="p-code-copyable__action">Copy to clipboard</button>
               </div>
 
               <p class="p-stepped-list__content u-stepped-list-margin">
-                Similarly, <code>microk8s.disable</code> turns off a service. Try <code>microk8s.enable --help</code> for a list of available services built in.
+                Similarly, <code>microk8s disable</code> turns off a service. Try <code>microk8s enable --help</code> for a list of available services built in.
               </p>
             </li>
 
@@ -295,7 +295,7 @@ layout: base
               <h3 class="p-stepped-list__title">Check the status</h3>
 
               <div class="p-code-copyable u-stepped-list-margin">
-                <input class="p-code-copyable__input" aria-label="sudo microk8s.status --wait-ready" value="sudo microk8s.status --wait-ready" readonly="readonly">
+                <input class="p-code-copyable__input" aria-label="sudo microk8s status --wait-ready" value="sudo microk8s status --wait-ready" readonly="readonly">
                 <button class="p-code-copyable__action">Copy to clipboard</button>
               </div>
             </li>
@@ -304,12 +304,12 @@ layout: base
               <h3 class="p-stepped-list__title">Turn on standard services</h3>
 
               <div class="p-code-copyable u-stepped-list-margin">
-                <input class="p-code-copyable__input" aria-label="sudo microk8s.enable dns dashboard registry istio" value="sudo microk8s.enable dns dashboard registry" readonly="readonly">
+                <input class="p-code-copyable__input" aria-label="sudo microk8s enable dns dashboard registry istio" value="sudo microk8s enable dns dashboard registry" readonly="readonly">
                 <button class="p-code-copyable__action">Copy to clipboard</button>
               </div>
 
               <p class="p-stepped-list__content u-stepped-list-margin">
-                Similarly, <code>microk8s.disable</code> turns off a service. Try <code>microk8s.enable --help</code> for a list of available services built in.
+                Similarly, <code>microk8s disable</code> turns off a service. Try <code>microk8s enable --help</code> for a list of available services built in.
               </p>
             </li>
           </ol>
@@ -323,7 +323,7 @@ layout: base
           </noscript>
           <ol class="p-stepped-list u-no-margin--left">
             <li class="p-stepped-list__item">
-              <h3 class="p-stepped-list__title">Install Multipass for macOS</h3>
+              <h3 class="p-stepped-list__title">Install Homebrew</h3>
 
               <p class="p-stepped-list__content u-stepped-list-margin">
                 <a href="https://github.com/CanonicalLtd/multipass/releases" class="p-button--positive js-download" data-os="mac">
@@ -363,7 +363,7 @@ layout: base
               <h3 class="p-stepped-list__title">Check the status</h3>
 
               <div class="p-code-copyable u-stepped-list-margin">
-                <input class="p-code-copyable__input" aria-label="sudo microk8s.status --wait-ready" value="sudo microk8s.status --wait-ready" readonly="readonly">
+                <input class="p-code-copyable__input" aria-label="sudo microk8s status --wait-ready" value="sudo microk8s status --wait-ready" readonly="readonly">
                 <button class="p-code-copyable__action">Copy to clipboard</button>
               </div>
             </li>
@@ -372,12 +372,12 @@ layout: base
               <h3 class="p-stepped-list__title">Turn on standard services</h3>
 
               <div class="p-code-copyable u-stepped-list-margin">
-                <input class="p-code-copyable__input" aria-label="sudo microk8s.enable dns dashboard registry" value="sudo microk8s.enable dns dashboard registry" readonly="readonly">
+                <input class="p-code-copyable__input" aria-label="sudo microk8s enable dns dashboard registry" value="sudo microk8s enable dns dashboard registry" readonly="readonly">
                 <button class="p-code-copyable__action">Copy to clipboard</button>
               </div>
 
               <p class="p-stepped-list__content u-stepped-list-margin">
-                Similarly, <code>microk8s.disable</code> turns off a service. Try <code>microk8s.enable --help</code> for a list of available services built in.
+                Similarly, <code>microk8s disable</code> turns off a service. Try <code>microk8s enable --help</code> for a list of available services built in.
               </p>
             </li>
 

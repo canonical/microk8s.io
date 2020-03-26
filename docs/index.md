@@ -34,7 +34,7 @@ page for details. </p></div>
         <div class="col-8 p-stepped-list__content" >
 MicroK8s will install a minimal, lightweight Kubernetes you can run and use on practically any machine. It can be installed with a snap:
           <div class="p-code-copyable">
-            <input class="p-code-copyable__input" value="sudo snap install microk8s --classic --channel=1.17/stable" readonly="readonly">
+            <input class="p-code-copyable__input" value="sudo snap install microk8s --classic --channel=1.18/stable" readonly="readonly">
             <button class="p-code-copyable__action">Copy to clipboard</button>
           </div>
           <script id="asciicast-279765" src="https://asciinema.org/a/279765.js" async data-autoplay="true" data-rows="4"></script>
