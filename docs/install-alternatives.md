@@ -33,12 +33,36 @@ multipass [here](#multipass).
 <a id="macos"> </a>
 ## macOS
 
-As with Windows, the recommended way to run MicroK8s on macOS is to use
-[multipass][], although it is possible to run under other VMs.
+The recommended way to install MicroK8s on MacOS is with Homebrew
 
-There is an installer for multipass available on the
-[multipass site][multipass-install]. See the notes for running MicroK8s on
-multipass below.
+1.  **Install Homebrew**
+
+    Open a terminal and run the installer:
+
+    ```
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+    ```
+
+1.  **Install MicroK8s**
+
+    Run the command:
+
+    ```
+    brew install ubuntu/microk8s/microk8s
+    ```
+
+    [![asciicast](https://asciinema.org/a/IWhwnidik9xaC2YHfjBUIsLin.svg)](https://asciinema.org/a/IWhwnidik9xaC2YHfjBUIsLin)
+
+1.  **Wait for MicroK8s to start**
+
+    ```
+    microk8s status --wait-ready
+    ```
+
+1.  **Congrats!**
+
+    MicroK8s is now running! Continue to explore by following the
+    _Getting Started_ instructions [here](/docs/index#rejoin)
 
 
 <a id="multipass"> </a>

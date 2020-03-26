@@ -72,7 +72,7 @@ can use the <code>--wait-ready</code> flag to wait for the Kubernetes services t
           </div>
         </div>
       </li>
-
+      <a id="rejoin"> </a>
       <li class="p-stepped-list__item">
         <h3 class="p-stepped-list__title"><span class="p-stepped-list__bullet">4</span>Access Kubernetes</h3>
         <div class="p-stepped-list__content">
