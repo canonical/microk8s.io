@@ -13,22 +13,49 @@ notes below.
 <a id="windows"> </a>
 ## Windows 10
 
-Although Windows 10 now has some very useful features, such as the ability to
-install [Ubuntu as an app][ubuntu-app], the integration of WSL2 still
-doesn't provide all the Ubuntu functionality required to make MicroK8s run
-smoothly out-of-the-box.
+From 1.18, MicroK8s now has an official Windows installer, which is the
+recommended way to install MicroK8s
 
-If you wish to experiment with running MicroK8s semi-natively, take a look at
-this [discourse post on WSL2][windows-post].
+1.  Download the installer
 
-For now, the best way to run MicroK8s on Windows is with virtualisation.
-MicroK8s will install without problems on Ubuntu running on number of different
-VMs, including [VirtualBox](https://www.virtualbox.org/).
+    The Windows installer is available on the MicroK8s GitHub page.
+    [Download it here](https://github.com/ubuntu/microk8s/releases/download/installer-v1.0.0/microk8s-installer.exe)
 
-The recommended way to run MicroK8s in a VM on Windows 10 is to use
-[multipass][]. The Windows installer is available for
-[download here][multipass-install], and the notes for installing MicroK8s on
-multipass [here](#multipass).
+1.  Run the installer
+
+    Once the installer is downloaded, run it to begin installation.
+
+    You will be asked a few questions as usual when installing software. Some
+    things to note:
+
+    ![](https://assets.ubuntu.com/v1/141d9f8b-winmk8s-01.png)
+
+    We recommend installing for 'All users'
+
+    ![](https://assets.ubuntu.com/v1/c7d0a5a7-winmk8s-03.png)
+
+    The installer also requires the Ubuntu VM system, [Multipass][], to be
+    installed. This will be done automatically when you click 'Yes' here.
+
+1.  Open the command line:
+
+    Use PowerShell or the standard Windows 'cmd' to open a commandline.
+
+    ![](https://assets.ubuntu.com/v1/a5fe14a5-winmk8s-04.png)
+
+1.  Check MicroK8s is running
+
+    Run the command:
+
+    ```
+    microk8s status --wait-ready
+    ```
+
+1.  Explore what you can do!
+
+    Congrats! MicroK8s is now running on your Windows machine and is ready
+    for you to explore and use Kubernetes. See the
+    [main install](/docs/index#rejoin) page for your next steps!
 
 <a id="macos"> </a>
 ## macOS
