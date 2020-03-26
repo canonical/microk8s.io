@@ -16,12 +16,12 @@ notes below.
 From 1.18, MicroK8s now has an official Windows installer, which is the
 recommended way to install MicroK8s
 
-1.  Download the installer
+1.  **Download the installer**
 
     The Windows installer is available on the MicroK8s GitHub page.
     [Download it here](https://github.com/ubuntu/microk8s/releases/download/installer-v1.0.0/microk8s-installer.exe)
 
-1.  Run the installer
+1.  **Run the installer**
 
     Once the installer is downloaded, run it to begin installation.
 
@@ -37,13 +37,13 @@ recommended way to install MicroK8s
     The installer also requires the Ubuntu VM system, [Multipass][], to be
     installed. This will be done automatically when you click 'Yes' here.
 
-1.  Open the command line:
+1.  **Open the command line:**
 
     Use PowerShell or the standard Windows 'cmd' to open a commandline.
 
     ![](https://assets.ubuntu.com/v1/a5fe14a5-winmk8s-04.png)
 
-1.  Check MicroK8s is running
+1.  **Check MicroK8s is running**
 
     Run the command:
 
@@ -51,7 +51,7 @@ recommended way to install MicroK8s
     microk8s status --wait-ready
     ```
 
-1.  Explore what you can do!
+1.  **Explore what you can do!**
 
     Congrats! MicroK8s is now running on your Windows machine and is ready
     for you to explore and use Kubernetes. See the
