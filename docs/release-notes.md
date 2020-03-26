@@ -6,7 +6,7 @@ permalink: /docs/release-notes
 
 # Release notes
 
-## MicroK8s 1.18 - XX March 2020
+## MicroK8s 1.18 - 26 March 2020
 
 **MicroK8s** is a Kubernetes<sup>&reg;</sup> cluster delivered as a single snap
 package - it can be installed on any Linux distribution which supports
