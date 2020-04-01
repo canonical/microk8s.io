@@ -5,9 +5,13 @@ layout: base
   <section class="p-strip--header is-dark">
     <div class="row u-vertically-center u-equal-height">
       <div class="col-8">
-        <h1>Zero-ops Kubernetes for workstations and edge / IoT</h1>
+        <h1>
+          Autonomous low-ops Kubernetes for clusters, workstations, edge and IoT
+        </h1>
 
-        <p class="p-heading--four u-sv3">A single package of k8s for 42 flavours of Linux. Made for developers, and great for edge, IoT and appliances.</p>
+        <p class="p-heading--four u-sv3">
+          Super-simple production-grade upstream K8s. One-command install on 42 flavours of Linux. Made for developers and devops. Great for edge and IoT.
+        </p>
 
         <p><a class="p-button--positive is-inline" href="#get-started">Get started</a>&nbsp;&nbsp;for Linux, Windows or macOS</p>
 
@@ -48,24 +52,28 @@ layout: base
     <div class="row u-equal-height">
       <div class="col-3">
         <ul class="p-list--divided">
+          <li class="p-list__item is-ticked">High availability</li>
+          <li class="p-list__item is-ticked">Self-healing</li>
           <li class="p-list__item is-ticked">Conformant</li>
           <li class="p-list__item is-ticked">Istio</li>
-          <li class="p-list__item is-ticked">Storage</li>
           <li class="p-list__item is-ticked">Clustering</li>
         </ul>
       </div>
 
       <div class="col-3">
         <ul class="p-list--divided">
+          <li class="p-list__item is-ticked">Storage</li>
           <li class="p-list__item is-ticked">Registry</li>
           <li class="p-list__item is-ticked">GPGPU bindings</li>
-          <li class="p-list__item is-ticked">Dashboard</li>
-          <li class="p-list__item is-ticked">Metrics</li></ul>
+          <li class="p-list__item is-ticked">Metrics</li>
+          <li class="p-list__item is-ticked">Confinement</li>
+        </ul>
         </div>
 
         <div class="col-3">
           <ul class="p-list--divided">
-            <li class="p-list__item is-ticked">Automatic Updates</li>
+            <li class="p-list__item is-ticked">Dashboard</li>
+            <li class="p-list__item is-ticked">Automatic updates</li>
             <li class="p-list__item is-ticked">Ingress</li>
             <li class="p-list__item is-ticked">DNS</li>
             <li class="p-list__item is-ticked">Linkerd, Fluentd</li>
@@ -74,6 +82,8 @@ layout: base
 
         <div class="col-3">
           <ul class="p-list--divided">
+            <li class="p-list__item is-ticked">Windows</li>
+            <li class="p-list__item is-ticked">macOS</li>
             <li class="p-list__item is-ticked">Knative</li>
             <li class="p-list__item is-ticked">Kubeflow</li>
             <li class="p-list__item is-ticked">Jaeger, Prometheus</li>
@@ -85,9 +95,13 @@ layout: base
     <section class="p-strip">
       <div class="row">
         <div class="col-8">
-          <h2>Lightweight Kubernetes done right</h2>
+          <h2>
+            Lightweight Kubernetes done right
+          </h2>
 
-          <p>The smallest, fastest, fully-conformant Kubernetes that tracks upstream releases and makes clustering trivial. MicroK8s is great for offline development, prototyping, and testing. Use it on a VM as a small, cheap, reliable k8s for CI/CD. The best kubernetes for appliances. Develop IoT apps for k8s and deploy them to MicroK8s on your Linux boxes.</p>
+          <p>
+            The smallest, fastest, fully-conformant upstream Kubernetes that makes clustering trivial. A single package for multiple flavours of Linux means MicroK8s is great for offline development, prototyping, and testing. Use it on a VM as a small, free, reliable K8s for CI/CD. Strict confinement and automatic updates make MicroK8s best Kubernetes for appliances. Develop IoT apps for K8s and deploy them to MicroK8s on your Linux boxes.
+          </p>
         </div>
       </div>
     </section>
@@ -186,7 +200,6 @@ layout: base
     <section class="p-strip is-bordered" id="get-started" role="tablist">
       <div class="u-fixed-width">
         <h2>Get started with MicroK8s</h2>
-        <h3>What OS are you developing on?</h3>
       </div>
 
       <div class="row u-equal-height u-sv3 u-hide js-tabbed-menu">
@@ -312,115 +325,115 @@ layout: base
               <p> You can open a terminal and copy in the command below, or
                 visit <a href="http://brew.sh"> the Homebrew website</a> for
                 alternatives. </p>
-              <div class="p-code-copyable u-stepped-list-margin">
+                <div class="p-code-copyable u-stepped-list-margin">
 
-                <input class="p-code-copyable__input" value='/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-" readonly="readonly'>
-                <button class="p-code-copyable__action">Copy to clipboard</button>
-              </div>
-            </li>
-
-            <li class="p-stepped-list__item">
-              <h3 class="p-stepped-list__title">Install MicroK8s</h3>
-
-              <div class="p-code-copyable u-stepped-list-margin">
-                <input class="p-code-copyable__input" value="brew install ubuntu/microk8s/microk8s" readonly="readonly">
-                <button class="p-code-copyable__action">Copy to clipboard</button>
-              </div>
-
-            </li>
-            <li class="p-stepped-list__item">
-              <h3 class="p-stepped-list__title">Start MicroK8s</h3>
-
-              <div class="p-code-copyable u-stepped-list-margin">
-                <input class="p-code-copyable__input" value="microk8s install" readonly="readonly">
-                <button class="p-code-copyable__action">Copy to clipboard</button>
-              </div>
-
-            </li>
-
-            <li class="p-stepped-list__item">
-              <h3 class="p-stepped-list__title">Check the status</h3>
-
-              <div class="p-code-copyable u-stepped-list-margin">
-                <input class="p-code-copyable__input" aria-label="microk8s status --wait-ready" value="microk8s status --wait-ready" readonly="readonly">
-                <button class="p-code-copyable__action">Copy to clipboard</button>
-              </div>
-            </li>
-
-            <li class="p-stepped-list__item">
-              <h3 class="p-stepped-list__title">Turn on standard services</h3>
-
-              <div class="p-code-copyable u-stepped-list-margin">
-                <input class="p-code-copyable__input" aria-label="microk8s enable dns dashboard registry istio" value="microk8s enable dns dashboard registry" readonly="readonly">
-                <button class="p-code-copyable__action">Copy to clipboard</button>
-              </div>
-
-              <p class="p-stepped-list__content u-stepped-list-margin">
-                Similarly, <code>microk8s disable</code> turns off a service. Try <code>microk8s enable --help</code> for a list of available services built in.
-              </p>
-            </li>
-
-          </ol>
-        </div>
-      </div>
-    </section>
-
-    <section class="p-strip is-bordered u-hide--small">
-      <div class="row">
-        <h2>
-          Working with MicroK8s
-        </h2>
-        <p class="p-heading--four">
-          Or dive right into the <a href="/docs/">docs</a>.
-        </p>
-        <div class="asciinema-container"></div>
-      </div>
-    </section>
-    <footer class="p-strip">
-      <div class="row">
-        <div>
-          <p>
-            MicroK8s was built by the dedicated <a href="https://www.ubuntu.com/kubernetes">Kubernetes team at Canonical</a> for the developer community. We also make <a href="https://ubuntu.com/kubernetes/install#cluster">Charmed Kubernetes</a> for multi-cloud scalable clusters.
-          </p>
-          <p class="u-no-max-width">
-            © {{ 'now' | date: "%Y" }} Canonical Ltd. Ubuntu and Canonical are registered trademarks of Canonical&nbsp;Ltd.
-          </p>
-          <nav>
-            <ul class="p-inline-list--middot">
-              <li class="p-inline-list__item">
-                <a href="https://www.ubuntu.com/legal">Legal information</a>
+                  <input class="p-code-copyable__input" value='/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+                  " readonly="readonly'>
+                  <button class="p-code-copyable__action">Copy to clipboard</button>
+                </div>
               </li>
-              <li class="p-inline-list__item">
-                <a class="p-footer__link" href="https://github.com/canonical-websites/microk8s.io/issues/new">Report a bug on this site</a>
+
+              <li class="p-stepped-list__item">
+                <h3 class="p-stepped-list__title">Install MicroK8s</h3>
+
+                <div class="p-code-copyable u-stepped-list-margin">
+                  <input class="p-code-copyable__input" value="brew install ubuntu/microk8s/microk8s" readonly="readonly">
+                  <button class="p-code-copyable__action">Copy to clipboard</button>
+                </div>
+
               </li>
-            </ul>
-            <span class="u-off-screen">
-              <a href="#">Go to the top of the page</a>
-            </span>
-          </nav>
+              <li class="p-stepped-list__item">
+                <h3 class="p-stepped-list__title">Start MicroK8s</h3>
+
+                <div class="p-code-copyable u-stepped-list-margin">
+                  <input class="p-code-copyable__input" value="microk8s install" readonly="readonly">
+                  <button class="p-code-copyable__action">Copy to clipboard</button>
+                </div>
+
+              </li>
+
+              <li class="p-stepped-list__item">
+                <h3 class="p-stepped-list__title">Check the status</h3>
+
+                <div class="p-code-copyable u-stepped-list-margin">
+                  <input class="p-code-copyable__input" aria-label="microk8s status --wait-ready" value="microk8s status --wait-ready" readonly="readonly">
+                  <button class="p-code-copyable__action">Copy to clipboard</button>
+                </div>
+              </li>
+
+              <li class="p-stepped-list__item">
+                <h3 class="p-stepped-list__title">Turn on standard services</h3>
+
+                <div class="p-code-copyable u-stepped-list-margin">
+                  <input class="p-code-copyable__input" aria-label="microk8s enable dns dashboard registry istio" value="microk8s enable dns dashboard registry" readonly="readonly">
+                  <button class="p-code-copyable__action">Copy to clipboard</button>
+                </div>
+
+                <p class="p-stepped-list__content u-stepped-list-margin">
+                  Similarly, <code>microk8s disable</code> turns off a service. Try <code>microk8s enable --help</code> for a list of available services built in.
+                </p>
+              </li>
+
+            </ol>
+          </div>
         </div>
-      </div>
-    </footer>
-  </main>
+      </section>
 
-  <script>
-    var asciinemaContainer = document.querySelector('.asciinema-container');
-    var clientWidth = document.documentElement.clientWidth;
-    var asciinemaContent = '<script src="https://asciinema.org/a/jUPw2icctB5sSv2JW904qWSej.js" id="asciicast-jUPw2icctB5sSv2JW904qWSej"'+
-    'async="" data-player="[object HTMLDivElement]"><\/script>'+
-    '<div id="asciicast-container-jUPw2icctB5sSv2JW904qWSej" class="asciicast" style="display: block; float: none; overflow: hidden; padding: 0px; margin: 20px 0px;">'+
-      '<iframe class="lazyload" data-src="https://asciinema.org/a/jUPw2icctB5sSv2JW904qWSej/embed?" id="asciicast-iframe-jUPw2icctB5sSv2JW904qWSej"'+
-      'name="asciicast-iframe-jUPw2icctB5sSv2JW904qWSej" allow="fullscreen" style="overflow: hidden; margin: 0px; border: 0px; display: inline-block; width: 1140px; float: none; visibility: visible; height: 931px;"'+
-      'title="A number to steps to get started with MicroK8s">'+
-      '</iframe>'+
-      '</div>';
+      <section class="p-strip is-bordered u-hide--small">
+        <div class="row">
+          <h2>
+            Working with MicroK8s
+          </h2>
+          <p class="p-heading--four">
+            Or dive right into the <a href="/docs/">docs</a>.
+          </p>
+          <div class="asciinema-container"></div>
+        </div>
+      </section>
+      <footer class="p-strip">
+        <div class="row">
+          <div>
+            <p>
+              MicroK8s was built by the dedicated <a href="https://www.ubuntu.com/kubernetes">Kubernetes team at Canonical</a> for the developer community. We also make <a href="https://ubuntu.com/kubernetes/install#cluster">Charmed Kubernetes</a> for multi-cloud scalable clusters.
+            </p>
+            <p class="u-no-max-width">
+              © {{ 'now' | date: "%Y" }} Canonical Ltd. Ubuntu and Canonical are registered trademarks of Canonical&nbsp;Ltd.
+            </p>
+            <nav>
+              <ul class="p-inline-list--middot">
+                <li class="p-inline-list__item">
+                  <a href="https://www.ubuntu.com/legal">Legal information</a>
+                </li>
+                <li class="p-inline-list__item">
+                  <a class="p-footer__link" href="https://github.com/canonical-websites/microk8s.io/issues/new">Report a bug on this site</a>
+                </li>
+              </ul>
+              <span class="u-off-screen">
+                <a href="#">Go to the top of the page</a>
+              </span>
+            </nav>
+          </div>
+        </div>
+      </footer>
+    </main>
 
-      if (clientWidth >= 620 && asciinemaContainer) {
-        asciinemaContainer.innerHTML = asciinemaContent;
-      }
-    </script>
+    <script>
+      var asciinemaContainer = document.querySelector('.asciinema-container');
+      var clientWidth = document.documentElement.clientWidth;
+      var asciinemaContent = '<script src="https://asciinema.org/a/jUPw2icctB5sSv2JW904qWSej.js" id="asciicast-jUPw2icctB5sSv2JW904qWSej"'+
+      'async="" data-player="[object HTMLDivElement]"><\/script>'+
+      '<div id="asciicast-container-jUPw2icctB5sSv2JW904qWSej" class="asciicast" style="display: block; float: none; overflow: hidden; padding: 0px; margin: 20px 0px;">'+
+        '<iframe class="lazyload" data-src="https://asciinema.org/a/jUPw2icctB5sSv2JW904qWSej/embed?" id="asciicast-iframe-jUPw2icctB5sSv2JW904qWSej"'+
+        'name="asciicast-iframe-jUPw2icctB5sSv2JW904qWSej" allow="fullscreen" style="overflow: hidden; margin: 0px; border: 0px; display: inline-block; width: 1140px; float: none; visibility: visible; height: 931px;"'+
+        'title="A number to steps to get started with MicroK8s">'+
+        '</iframe>'+
+        '</div>';
 
-    <script defer src="/js/copytoclipboard.js"></script>
-    <script defer src="/js/installversion.js"></script>
-    <script defer src="/js/tabs.js"></script>
+        if (clientWidth >= 620 && asciinemaContainer) {
+          asciinemaContainer.innerHTML = asciinemaContent;
+        }
+      </script>
+
+      <script defer src="/js/copytoclipboard.js"></script>
+      <script defer src="/js/installversion.js"></script>
+      <script defer src="/js/tabs.js"></script>
