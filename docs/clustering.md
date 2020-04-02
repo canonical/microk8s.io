@@ -15,13 +15,20 @@ control plane:
 
 ```bash
 microk8s add-node
-Join node with: microk8s join ip-172-31-20-243:25000/DDOkUupkmaBezNnMheTBqFYHLWINGDbf
+```
+
+Join node with:
+
+```bash
+microk8s join ip-172-31-20-243:25000/DDOkUupkmaBezNnMheTBqFYHLWINGDbf
+```
 
 If the node you are adding is not reachable through the default
 interface you can use one of the following:
 
- microk8s join 10.1.84.0:25000/DDOkUupkmaBezNnMheTBqFYHLWINGDbf
- microk8s join 10.22.254.77:25000/DDOkUupkmaBezNnMheTBqFYHLWINGDbf
+```bash
+microk8s join 10.1.84.0:25000/DDOkUupkmaBezNnMheTBqFYHLWINGDbf
+microk8s join 10.22.254.77:25000/DDOkUupkmaBezNnMheTBqFYHLWINGDbf
 ```
 
 The `add-node` command prints a `microk8s join` command which should
