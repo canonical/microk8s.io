@@ -55,10 +55,10 @@ The authentication [strategies](https://kubernetes.io/docs/reference/access-auth
  - Static Token File with tokens in `/var/snap/microk8s/current/credentials/known_tokens.csv`, and
  - X509 Client Certs with the client CA file set to `/var/snap/microk8s/current/certs/ca.crt`.
  Under `/var/snap/microk8s/current/credentials/` you can find the `client.config` kubeconfig file
- used by `microk8s kubectl`.
+ used by `microk8s.kubectl`.
 
 By default all authenticated requests are authorized as the api-server runs with
-`--authorization-mode=AlwaysAllow`. Turning on [RBAC](https://kubernetes.io/docs/reference/access-authn-authz/rbac/) is done through `microk8s enable rbac`.
+`--authorization-mode=AlwaysAllow`. Turning on [RBAC](https://kubernetes.io/docs/reference/access-authn-authz/rbac/) is done through `microk8s.enable rbac`.
 
 
 ## References
@@ -72,9 +72,9 @@ By default all authenticated requests are authorized as the api-server runs with
 <!-- FEEDBACK -->
 <div class="p-notification--information">
   <p class="p-notification__response">
-    We appreciate your feedback on the docs. You can
+    We appreciate your feedback on the docs. You can 
     <a href="https://github.com/canonical-web-and-design/microk8s.io/edit/master/docs/ports.md" class="p-notification__action">edit this page</a> 
-    or
+    or 
     <a href="https://github.com/canonical-web-and-design/microk8s.io/issues/new" class="p-notification__action">file a bug here</a>.
   </p>
 </div>

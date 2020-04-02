@@ -20,7 +20,6 @@ snap install microk8s --classic --channel=1.18/stable
 
 Most important updates since the last release:
 
--   Installers for MacOS and Windows
 -   Kubeflow 1.0 addon
 -   Added new snap interface enabling other snaps to detect MicroK8s’ presence.
 -   CoreDNS addon upgraded to v1.6.6, thank you [@balchua][]

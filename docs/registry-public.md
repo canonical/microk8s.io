@@ -57,7 +57,7 @@ Now that the image is tagged correctly, it can be pushed to the registry:
 docker push kjackal/mynginx
 ```
 
-At this point we are ready to `microk8s kubectl apply -f` a deployment with our
+At this point we are ready to `microk8s.kubectl apply -f` a deployment with our
 image:
 
 ```yaml
@@ -88,9 +88,9 @@ search for the image in its default registry, `docker.io`.
 <!-- FEEDBACK -->
 <div class="p-notification--information">
   <p class="p-notification__response">
-    We appreciate your feedback on the docs. You can
+    We appreciate your feedback on the docs. You can 
     <a href="https://github.com/canonical-web-and-design/microk8s.io/edit/master/docs/registry-public.md" class="p-notification__action">edit this page</a> 
-    or
+    or 
     <a href="https://github.com/canonical-web-and-design/microk8s.io/issues/new" class="p-notification__action">file a bug here</a>.
   </p>
 </div>

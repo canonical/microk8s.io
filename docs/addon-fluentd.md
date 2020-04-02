@@ -12,13 +12,13 @@ to MicroK8s. The components will be installed and connected together.
 To enable the addon:
 
 ```bash
-microk8s enable fluentd
+microk8s.enable fluentd
 ```
 
 To access the Kibana dashboard, you should first start the kube proxy service:
 
 ```bash
-microk8s kubectl proxy
+microk8s.kubectl proxy
 ```
 
 You will now find the dashboard available at:
@@ -31,7 +31,7 @@ and the [official Kibana documentation][kibana-docs].
 The addon can be disabled at any time with the command:
 
 ```bash
-microk8s disable fluentd
+microk8s.disable fluentd
 ```
 
 
@@ -41,9 +41,9 @@ microk8s disable fluentd
 <!-- FEEDBACK -->
 <div class="p-notification--information">
   <p class="p-notification__response">
-    We appreciate your feedback on the docs. You can
-    <a href="https://github.com/canonical-web-and-design/microk8s.io/edit/master/docs/addon-fluentd.md" class="p-notification__action">edit this page</a>
-    or
+    We appreciate your feedback on the docs. You can 
+    <a href="https://github.com/canonical-web-and-design/microk8s.io/edit/master/docs/addon-fluentd.md" class="p-notification__action">edit this page</a> 
+    or 
     <a href="https://github.com/canonical-web-and-design/microk8s.io/issues/new" class="p-notification__action">file a bug here</a>.
   </p>
 </div>

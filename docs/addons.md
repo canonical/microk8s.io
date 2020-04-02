@@ -26,20 +26,20 @@ any further set up.
 For example, to enable the CoreDNS addon:
 
 ```bash
-microk8s enable dns
+microk8s.enable dns
 ```
 
 These add-ons can be disabled at anytime using the `disable` command:
 
 ```bash
-microk8s disable dns
+microk8s.disable dns
 ```
 
 ... and you can check the list of available and installed addons at any time
 by running:
 
 ```bash
-microk8s status
+microk8s.status
 ```
 
 <a id="list"> </a>
@@ -58,7 +58,7 @@ monitoring solution.
 
 [**gpu**](addon-gpu):  Enable support for GPU accelerated workloads using the NVIDIA runtime.
 
-**helm**: Installs the [Helm 2][] package manager for Kubernetes.
+**helm**: Installs the [Helm 2][] package manager for Kubernetes. 
 
 **ingress**: A simple ingress controller for external access.
 
@@ -115,9 +115,9 @@ work under multipass on macOS, due to filtering that macOS applies to network tr
 <!-- FEEDBACK -->
 <div class="p-notification--information">
   <p class="p-notification__response">
-    We appreciate your feedback on the docs. You can
-    <a href="https://github.com/canonical-web-and-design/microk8s.io/edit/master/docs/addons.md" class="p-notification__action">edit this page</a>
-    or
+    We appreciate your feedback on the docs. You can 
+    <a href="https://github.com/canonical-web-and-design/microk8s.io/edit/master/docs/addons.md" class="p-notification__action">edit this page</a> 
+    or 
     <a href="https://github.com/canonical-web-and-design/microk8s.io/issues/new" class="p-notification__action">file a bug here</a>.
   </p>
 </div>
