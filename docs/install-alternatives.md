@@ -13,84 +13,48 @@ notes below.
 <a id="windows"> </a>
 ## Windows 10
 
-From 1.18, MicroK8s now has an official Windows installer, which is the
-recommended way to install MicroK8s
+<div class="p-notification--information">
+  <p class="p-notification__response">
+    Installing MicroK8s with Multipass requires Windows 10 Professional or
+    Windows 10 Enterprise, as it relies on the <em>Hyper-V</em> hypervisor. It
+    will also require at least 4GB of available RAM and 40GB of storage.
+  </p>
+</div>
 
-1.  **Download the installer**
+Although Windows 10 now has some very useful features, such as the ability to
+install [Ubuntu as an app][ubuntu-app], the integration of WSL2 still
+doesn't provide all the Ubuntu functionality required to make MicroK8s run
+smoothly out-of-the-box.
 
-    The Windows installer is available on the MicroK8s GitHub page.
-    [Download it here](https://github.com/ubuntu/microk8s/releases/download/installer-v1.0.0/microk8s-installer.exe)
+If you wish to experiment with running MicroK8s semi-natively, take a look at
+this [discourse post on WSL2][windows-post].
 
-1.  **Run the installer**
+For now, the best way to run MicroK8s on Windows is with virtualisation.
+MicroK8s will install without problems on Ubuntu running on number of different
+VMs, including [VirtualBox](https://www.virtualbox.org/).
 
-    Once the installer is downloaded, run it to begin installation.
-
-    You will be asked a few questions as usual when installing software. Some
-    things to note:
-
-    ![](https://assets.ubuntu.com/v1/141d9f8b-winmk8s-01.png)
-
-    We recommend installing for 'All users'
-
-    ![](https://assets.ubuntu.com/v1/c7d0a5a7-winmk8s-03.png)
-
-    The installer also requires the Ubuntu VM system, [Multipass][], to be
-    installed. This will be done automatically when you click 'Yes' here.
-
-1.  **Open the command line:**
-
-    Use PowerShell or the standard Windows 'cmd' to open a commandline.
-
-    ![](https://assets.ubuntu.com/v1/a5fe14a5-winmk8s-04.png)
-
-1.  **Check MicroK8s is running**
-
-    Run the command:
-
-    ```
-    microk8s status --wait-ready
-    ```
-
-1.  **Explore what you can do!**
-
-    Congrats! MicroK8s is now running on your Windows machine and is ready
-    for you to explore and use Kubernetes. See the
-    [main install](/docs/index#rejoin) page for your next steps!
+The recommended way to run MicroK8s in a VM on Windows 10 is to use
+[multipass][]. The Windows installer is available for
+[download here][multipass-install], and the notes for installing MicroK8s on
+multipass [here](#multipass).
 
 <a id="macos"> </a>
 ## macOS
 
-The recommended way to install MicroK8s on MacOS is with Homebrew
+<div class="p-notification--information">
+  <p class="p-notification__response">
+    Installing MicroK8s with Multipass requires <em>macOS Yosemite</em>, version
+    10.10.3 or later installed on hardware from 2010 onwards. It
+    will also require at least 4GB of available RAM and 40GB of storage.
+  </p>
+</div>
 
-1.  **Install Homebrew**
+As with Windows, the recommended way to run MicroK8s on macOS is to use
+[multipass][], although it is possible to run under other VMs.
 
-    Open a terminal and run the installer:
-
-    ```
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-    ```
-
-1.  **Install MicroK8s**
-
-    Run the command:
-
-    ```
-    brew install ubuntu/microk8s/microk8s
-    microk8s install
-    ```
-
-    [![asciicast](https://asciinema.org/a/IWhwnidik9xaC2YHfjBUIsLin.svg)](https://asciinema.org/a/IWhwnidik9xaC2YHfjBUIsLin)
-
-1.  **Wait for MicroK8s to start**
-
-    ```
-    microk8s status --wait-ready
-    ```
-
-1.  **Congrats!**
-
-    MicroK8s is now running! Continue to explore by following the
-    _Getting Started_ instructions [here](/docs/index#rejoin)
+There is an installer for multipass available on the
+[multipass site][multipass-install]. See the notes for running MicroK8s on
+multipass below.
 
 
 <a id="multipass"> </a>
@@ -129,7 +93,7 @@ multipass shell microk8s-vm
 Then install the  MicroK8s snap and configure the network:
 
 ```bash
-sudo snap install microk8s --classic --channel=1.17/stable
+sudo snap install microk8s --classic --channel=1.18/stable
 sudo iptables -P FORWARD ACCEPT
 ```
 
