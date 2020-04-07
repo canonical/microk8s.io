@@ -63,7 +63,7 @@ to `--address 0.0.0.0` to make the Dashboard public. For example:
 multipass exec MicroK8sVM -- sudo /snap/bin/microk8s kubectl port-forward -n kube-system service/kubernetes-dashboard 10443:443 --address 0.0.0.0
 ```
 
-Leave the proxy running and get the container's IP address:
+Leave the proxy running and get the VM's IP address:
 
 ```bash
 multipass info MicroK8sVM | grep IPv4 | awk '{ print $2 }'
