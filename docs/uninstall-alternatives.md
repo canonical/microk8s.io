@@ -8,17 +8,29 @@ permalink: /docs/uninstall-alternatives
 
 ## Windows 10
 
-Uninstall MicroK8s via [Apps & features](https://support.microsoft.com/en-us/help/4028054/windows-10-repair-or-remove-programs).  When uninstalling MicroK8s, the VM will also be removed but Multipass will not.  This can also be removed from [Apps & features](https://support.microsoft.com/en-us/help/4028054/windows-10-repair-or-remove-programs).
+If you just want to remove the VM but keep the installer:
+
+```bash
+microk8s uninstall
+```
+
+Uninstall the MicroK8s installer via [Apps & features](https://support.microsoft.com/en-us/help/4028054/windows-10-repair-or-remove-programs).  When uninstalling MicroK8s, the VM will also be removed but Multipass will not.  This can also be removed from [Apps & features](https://support.microsoft.com/en-us/help/4028054/windows-10-repair-or-remove-programs).
 
 ## MacOS
 
-Uninstall MicroK8s with the following command:
+If you just want to remove the VM but keep the installer:
+
+```bash
+microk8s uninstall
+```
+
+If you also want to remove the MicroK8s installer you do this via `brew`.  This will *not* remove the VM, so please run the command above first.
 
 ```bash
 brew remove microk8s
 ```
 
-This will *not* remove the VM.  To also remove the VM:
+If not, you will have to remove the VM, directly, via `multipass`.
 
 ```bash
 multipass delete -p MicroK8sVM
