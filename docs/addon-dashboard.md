@@ -7,11 +7,17 @@ permalink: /docs/addon-dashboard
 # Dashboard addon
 
 The standard Kubernetes Dashboard is a convenient way to keep track of the
-activity and resource use of MicroK8s
+activity and resource use of MicroK8s.
+
+On all platforms, you can install the dashboard with one command:
 
 ```bash
 microk8s enable dashboard
 ```
+
+To access the installed dashboard, you'll need to follow the guide for the relevant platform:
+
+## On Linux
 
 To log in to the Dashboard, you will need the access token (unless RBAC has
 also been enabled). This is generated randomly on deployment, so a few commands
@@ -21,9 +27,10 @@ are needed to retrieve it:
 token=$(microk8s kubectl -n kube-system get secret | grep default-token | cut -d " " -f1)
 microk8s kubectl -n kube-system describe secret $token
 ```
+
 In an RBAC enabled setup (`microk8s enable rbac`) you need to create a user with
 restricted permissions as detailed in the
-[upstream Dashboard access control documentation ][upstream-dashboard]
+[upstream Dashboard access control documentation ][upstream-dashboard].
 
 Next, you need to connect to the dashboard service. While the MicroK8s snap will
 have an IP address on your local network (the Cluster IP of the kubernetes-dashboard service),
@@ -33,15 +40,38 @@ you can also reach the dashboard by forwarding its port to a free one on your ho
 microk8s kubectl port-forward -n kube-system service/kubernetes-dashboard 10443:443
 ```
 
-You can then access the Dashboard at [https://127.0.0.1:10443](https://127.0.0.1:10443)
+You can then access the Dashboard at [https://127.0.0.1:10443](https://127.0.0.1:10443).
 
-If you are running MicroK8s in a VM and you need to expose the Dashboard to other hosts, you
+## On MacOS and Windows
+
+To log in to the Dashboard, you will need the access token (unless RBAC has
+also been enabled). This is generated randomly on deployment, so we can get it with this command:
+
+```bash
+multipass exec MicroK8sVM -- sudo /snap/bin/microk8s kubectl -n kube-system describe secret $(multipass exec MicroK8sVM -- sudo /snap/bin/microk8s kubectl -n kube-system get secret | grep default-token | cut -d " " -f1)
+```
+
+In an RBAC enabled setup (`microk8s enable rbac`) you need to create a user with
+restricted permissions as detailed in the
+[upstream Dashboard access control documentation ][upstream-dashboard].
+
+Because you are running MicroK8s in a VM and you need to expose the Dashboard to other hosts, you
 should also use the `--address [IP_address_that_your_browser's_host_has]` option. Set this option
 to `--address 0.0.0.0` to make the Dashboard public. For example:
 
 ```bash
-microk8s kubectl port-forward -n kube-system service/kubernetes-dashboard 10443:443 --address 0.0.0.0
+multipass exec MicroK8sVM -- sudo /snap/bin/microk8s kubectl port-forward -n kube-system service/kubernetes-dashboard 10443:443 --address 0.0.0.0
 ```
+
+Leave the proxy running and get the VM's IP address:
+
+```bash
+multipass info MicroK8sVM | grep IPv4 | awk '{ print $2 }'
+```
+
+You can then access the Dashboard at `https://$CONTAINER_IP:10443`.
+
+## Upsteam Documentation
 
 Visit the [upstream dashboard documentation][upstream-access-dashboard] to find out other ways to reach the Dashboard.
 
