@@ -178,6 +178,35 @@ spec:
 
 Reference the image with `localhost:32000/mynginx:registry` since the registry
 runs inside the VM so it is on `localhost:32000`.
+
+## Using the local registry from another node in a microk8s cluster
+
+If you have joined up other machines into a cluster with the machine that has the registry, you need to change the configuration files to point to the IP of the master node:
+```yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-deployment
+  labels:
+    app: nginx
+spec:
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: nginx
+        image: <IP of the master node>:32000/mynginx:registry
+        ports:
+        - containerPort: 80
+```
+
+And you need to manually edit the containerd TOML on the worker machines, per [the private registry instructions](https://microk8s.io/docs/registry-private) to trust the insecure registry.
+
 <!-- FEEDBACK -->
 <div class="p-notification--information">
   <p class="p-notification__response">
