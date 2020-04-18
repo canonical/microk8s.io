@@ -47,7 +47,27 @@ containerd  | unix:///var/snap/microk8s/common/run/containerd.sock
 <a id="auth"> </a>
 ## Authentication and authorization
 
-Upon deployment MicroK8s creates a CA, a signed server certificate and a service account key file. These files are stored under `/var/snap/microk8s/current/certs/`. Kubelet and the API server are aware of the same CA and so the signed server certificate is used by the API server to authenticate with kubelet (`--kubelet-client-certificate`). Clients talking to the secure port of the API server (`16443`) have to also be aware of the CA (`certificate-authority-data` in user kubeconfig).
+Upon deployment MicroK8s creates a Certificate Authority, a signed server certificate and a service account key file. These files are stored under `/var/snap/microk8s/current/certs/`. Kubelet and the API server are aware of the same CA and so the signed server certificate is used by the API server to authenticate with kubelet (`--kubelet-client-certificate`). 
+
+Initially the server certificates will be issued for: 
+* localhost and all the ip addresses avaliable on the machine, typically it's LAN address
+* various mDNS addresses, such as kubernetes.default and kubernetes.default.svc.cluster.local
+
+This will only allow Kubectl to access the API server locally, to access it through the internet and a real domain name you must add it to the file `/var/snap/microk8s/current/certs/csr.conf.template`, for example: 
+
+```
+[ alt_names ]
+DNS.1 = kubernetes
+DNS.2 = kubernetes.default
+DNS.3 = kubernetes.default.svc
+DNS.4 = kubernetes.default.svc.cluster
+DNS.5 = kubernetes.default.svc.cluster.local
+DNS.6 = mydomain.com
+```
+After changing, the `apiserver-kicker` will automatically detect the difference, generate new certs and restart the apiserver. Your DNS server settings and `kubeconfig` file must be updated appropriately.
+
+
+Clients talking to the secure port of the API server (`16443`), such as the Kubectl command line utility, have to be aware of the CA (`certificate-authority-data` in user kubeconfig).  
 
 The authentication [strategies](https://kubernetes.io/docs/reference/access-authn-authz/authentication/#authentication-strategies)
  enabled by default are:
