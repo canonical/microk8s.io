@@ -22,6 +22,13 @@ FROM yarn-dependencies AS build-css
 ADD static/sass static/sass
 RUN yarn run build-css
 
+# Build stage: Run "yarn run build-js"
+# ===
+FROM yarn-dependencies AS build-js
+WORKDIR /srv
+ADD . .
+RUN yarn run build-js
+
 # Build the production image
 # ===
 FROM ubuntu:focal
@@ -41,6 +48,7 @@ WORKDIR /srv
 ADD . .
 RUN rm -rf package.json yarn.lock .babelrc webpack.config.js requirements.txt
 COPY --from=build-css /srv/static/css static/css
+COPY --from=build-js /srv/static/js static/js
 
 # Set revision ID
 ARG BUILD_ID
