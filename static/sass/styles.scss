@@ -9,7 +9,7 @@
 @import "blockquote";
 @import "docs";
 
-@include docs;
+@include layout-documentation;
 
 // Custom styles
 .p-tab {

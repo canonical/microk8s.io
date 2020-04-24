@@ -1,35 +1,57 @@
-@mixin docs {
-  $sidebar-width: 18rem;
+@mixin layout-documentation {
+  @include pattern-sidebar-nav;
 
-  .l-docs {
+  .l-documentation {
+    @extend .row;
     display: flex;
-    flex-wrap: wrap;
-    margin: 0 auto;
-    max-width: $grid-max-width;
-  }
 
-  .l-docs-sidebar {
-    border-right: $border;
-    flex: 0 0 $sidebar-width;
-    top: 0;
+    .p-notification,
+    .p-notification--caution,
+    .p-notification--floating .p-notification,
+    .p-notification--information,
+    .p-notification--negative,
+    .p-notification--positive {
+      margin: 2rem 0.1rem;
+    }
 
-    @media only screen and (max-width: $breakpoint-navigation-threshold) {
-      border-bottom: $border;
-      border-right: 0;
-      flex: auto;
-      height: inherit;
-      overflow: hidden;
-      position: static;
-      width: 100%;
+    pre {
+      max-width: 700px;
+      overflow-x: auto;
+      white-space: pre;
+      width: 95vmax;
+    }
+
+    img {
+      margin: 2rem 0 2rem 0;
+    }
+
+    h2,
+    h3,
+    h4 {
+      padding-top: 1.55rem;
+    }
+
+    @media (max-width: $breakpoint-medium) {
+      flex-direction: column;
+    }
+
+    &__content {
+      flex: 5;
+
+      @media (min-width: $breakpoint-medium) {
+        margin: 2rem 0;
+        padding-left: 5%;
+      }
     }
   }
+}
 
-  .p-sidenav__body {
-    padding: $sp-large / 2 $sp-large;
+@mixin pattern-sidebar-nav {
+  .p-sidebar {
+    overflow: hidden;
+  }
 
-    // Fix p-sidebar-nav to understand
-    // h3 headings, and not require any classes on the <ul>s and <li>s
-    // Because the markup is pulled directly in from Discourse
+  .p-sidebar-nav {
     h3 {
       font-size: 1rem;
       font-weight: 400;
@@ -50,7 +72,7 @@
 
       a,
       a:visited {
-        color: $color-dark;
+        color: $color-x-dark;
         text-decoration: none;
       }
 
@@ -60,51 +82,28 @@
       }
 
       .is-active {
-        @include vf-highlight-bar($bg-color: $color-mid-light, $position: left);
+        position: relative;
 
         &::before {
+          background-color: $color-mid-light;
           bottom: -0.25rem;
+          content: "";
           left: -1rem;
+          position: absolute;
           top: -0.25rem;
+          width: 0.1875rem;
         }
       }
     }
   }
 
-  .l-docs-content {
-    flex: 5;
-    margin-top: 0;
-    overflow: hidden;
-
-    @media only screen and (max-width: $breakpoint-navigation-threshold) {
-      flex: auto;
-    }
-
-    .meta {
-      display: none;
-    }
-
-    details + p,
-    details + h3 {
-      margin-top: $sp-large;
-    }
+  .p-sidebar__banner {
+    text-align: right;
   }
 
-  .l-docs-row {
-    @extend .row;
-
-    margin-left: inherit;
-    padding: 0 $sp-xxx-large;
-
-    @media only screen and (max-width: $breakpoint-navigation-threshold) {
-      padding-left: $sph-outer--large;
-    }
-  }
-
-  .p-sidenav__toggle {
-    background-size: $sp-medium;
+  .p-sidebar__toggle {
+    background-size: 1rem;
     cursor: pointer;
-    float: right;
-    padding: $sp-x-large;
+    padding: 2rem;
   }
 }
