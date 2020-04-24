@@ -1,23 +1,22 @@
 <!DOCTYPE html>
 
-<!--
-  This is a basic HTML file template to become the new homepage of the site.
-  Currently it simply includes Vanilla styles and not much else.
-
-  When you come to work on it in ernest, please remove this comment
-  and replace index.html with this file.
--->
-
 <html lang="en">
 
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="copydoc" content="https://docs.google.com/document/d/1ObWmhRc4GCIhrBi8gT7yIIs0J_dn_8ravfLtcwhr3uQ/edit">
-  
+
+  <meta name="description" content="{% block meta_description %}The simplest production-grade upstream K8s. Single command install on Linux, Windows and macOS. Made for devops, great for edge, appliances and IoT.{% endblock %}" />
+  <meta name="copydoc" content="{% block meta_copydoc %}https://docs.google.com/document/d/1ObWmhRc4GCIhrBi8gT7yIIs0J_dn_8ravfLtcwhr3uQ/edit{% endblock %}">
+  <meta name="author" content="Canonical Ltd" />
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ request.url }}">
+  <meta property="og:site_name" content="MicroK8s">
+
   <title>
-    MicroK8s - Fast, Light, Upstream Developer Kubernetes
+    {% block title %}MicroK8s - Fast, Light, Upstream Developer Kubernetes{% endblock %}
   </title>
 
   <!-- Google Analytics and Google Optimize -->
@@ -45,12 +44,12 @@
           'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
     })(window, document, 'script', 'dataLayer', 'GTM-T5SMPTS');</script>
   <!-- End Google Tag Manager -->
-  <link rel="stylesheet" href="/static/css/styles.css" />
   <link rel="shortcut icon" type="image/png" href="https://assets.ubuntu.com/v1/d53eeeac-MicroK8s_favicon_64px_v2.png">
 
-  <script src="/static/js/lazysizes.min.js" defer></script>
+  <link rel="stylesheet" type="text/css" media="screen" href="{{ versioned_static('css/styles.css') }}" />
+
   <!-- GitHub buttons - https://buttons.github.io/ -->
-  <script async defer src="https://buttons.github.io/buttons.js"></script>
+  <script defer src="https://buttons.github.io/buttons.js"></script>
 </head>
 
 <body>
@@ -58,42 +57,16 @@
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T5SMPTS" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
 
-  <header id="navigation" class="p-navigation">
-    <div class="p-navigation__row">
-      <div class="p-navigation__banner">
-        <div class="p-navigation__logo u-vertically-center">
-          <a class="p-navigation__link" href="/" style="color:white">
-            MicroK8s
-          </a>
-        </div>
-        <a href="#navigation" class="p-navigation__toggle--open" title="menu">Menu</a>
-        <a href="#navigation-closed" class="p-navigation__toggle--close" title="close menu">Close menu</a>
-      </div>
-      <nav class="p-navigation__nav">
-        <span class="u-off-screen">
-          <a href="#main-content">Jump to main content</a>
-        </span>
-        <ul class="p-navigation__links" role="menu">
-          <li class="p-navigation__link " role="menuitem">
-            <a href="/docs/">Docs</a>
-          </li>
-          <li class="p-navigation__link" role="menuitem">
-            <a class="p-link--external" href="https://discuss.kubernetes.io/tags/microk8s">Discourse</a>
-          </li>
-          <li class="p-navigation__link" role="menuitem">
-            <a class="p-link--external" href="https://github.com/ubuntu/microk8s">Code</a>
-          </li>
-          <li class="p-navigation__link" role="menuitem">
-            <a class="p-link--external" href="https://github.com/ubuntu/microk8s/issues">Bugs</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+  <script src="{{ versioned_static('js/dist/global-nav.js') }}"></script>
 
-  {% block content %}{% endblock %}
-  <script src="/static/js/global-nav.js"></script>
-	<script>canonicalGlobalNav.createNav({maxWidth:"72rem"});</script>
+  {% include 'partial/_navigation.html' %}
+
+  <main id="main-content">
+    {% block content %}{% endblock %}
+  </main>
+
+  {% include 'partial/_footer.html' %}
+
 </body>
 
 </html>
