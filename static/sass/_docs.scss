@@ -47,10 +47,6 @@
 }
 
 @mixin pattern-sidebar-nav {
-  .p-sidebar {
-    overflow: hidden;
-  }
-
   .p-sidebar-nav {
     h3 {
       font-size: 1rem;
