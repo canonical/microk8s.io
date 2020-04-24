@@ -20,7 +20,7 @@ RUN --mount=type=cache,target=/usr/local/share/.cache/yarn yarn install
 # ===
 FROM yarn-dependencies AS build-css
 ADD static/sass static/sass
-COPY static/dist static/dist
+COPY static/css static/css
 RUN yarn run build-css
 
 # Build the production image
