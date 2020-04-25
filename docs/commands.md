@@ -42,6 +42,8 @@ not currently enabled. For more information on these commands, see the
 **Usage:** `microk8s add-node`
 
 **Options:**
+- `-l, --token-ttl` : Specify how many seconds the token is valid for.
+-  `-t, --token` : Provide your own token instead of having a random one generated.
 
 **Description:**
 Running this command will generate a connection string and output a list of
@@ -430,6 +432,10 @@ node/ubuntu1804 already uncordoned
 **Usage:** `microk8s status`
 
 **Options:**
+- `--format {short,pretty,yaml}` : Print cluster and addon status, output can be in yaml, pretty or short
+- `-w, --wait-ready` : Wait until the cluster is in ready state
+- `-t, --timeout` : Specify a timeout in seconds when waiting for the cluster to be ready
+- `-a, --addon` : check the status of an addon
 
 **Description:**
 This command outputs some useful status information, including the current state
