@@ -67,7 +67,10 @@ jobs:
       - checkout
       - run:
           name: Install requirements
-          command: pip3 install -r requirements.txt
+          command: yarn && pip3 install -r requirements.txt
+      - run:
+          name: Build the site resources
+          command: yarn run build
       - run:
           name: Install coverage
           command: pip3 install coverage

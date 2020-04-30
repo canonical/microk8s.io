@@ -1,5 +1,8 @@
 function setupTabs() {
   var tabs = document.querySelectorAll(".js-tab");
+  const selectPlatformHint = document.querySelector(
+    '[data-js="select-platform-hint"]'
+  );
 
   for (var i = 0; i < tabs.length; i += 1) {
     var tab = tabs[i];
@@ -43,6 +46,14 @@ function setupTabs() {
       var inView = window.innerHeight - yOffset > rect.top;
       var scrollTarget = window.scrollY + yOffset;
 
+      // hide the select platform hint text if there is a platform selected
+      if (
+        selectPlatformHint &&
+        !selectPlatformHint.classList.contains("u-hide")
+      ) {
+        selectPlatformHint.classList.add("u-hide");
+      }
+
       if (window.innerWidth <= breakpoint) {
         scrollTarget = pageYOffset + rect.top - 10;
       }
@@ -52,6 +63,14 @@ function setupTabs() {
           behavior: "smooth",
           top: scrollTarget,
         });
+      }
+    } else {
+      // show the select platform hint text if there is no platform selected
+      if (
+        selectPlatformHint &&
+        selectPlatformHint.classList.contains("u-hide")
+      ) {
+        selectPlatformHint.classList.remove("u-hide");
       }
     }
   }
