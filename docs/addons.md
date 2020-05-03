@@ -60,7 +60,7 @@ monitoring solution.
 
 **helm**: Installs the [Helm 2][] package manager for Kubernetes.
 
-**ingress**: A simple ingress controller for external access.
+[**ingress**](addon-ingress): A simple ingress controller for external access.
 
 **istio**: Adds the core [Istio][istio-docs] services.
 
