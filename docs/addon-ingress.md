@@ -73,4 +73,3 @@ spec:
     <a href="https://github.com/canonical-web-and-design/microk8s.io/issues/new" class="p-notification__action">file a bug here</a>.
   </p>
 </div>
-microk8s
