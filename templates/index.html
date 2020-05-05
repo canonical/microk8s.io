@@ -5,24 +5,278 @@
   <div class="row u-vertically-center u-equal-height">
     <div class="col-8">
       <h1>
-        Autonomous low-ops Kubernetes for clusters, workstations, edge and IoT
+        Simple, standard Kubernetes for clusters, workstations, edge and IoT
       </h1>
 
       <p class="p-heading--four u-sv3">
-        Super-simple production-grade upstream K8s. One-command install on 42 flavours of Linux. Made for developers and devops. Great for edge and IoT.
+        The simplest production-grade upstream K8s. Single command install on Linux, Windows and macOS. Made for devops, great for edge, appliances and IoT.
       </p>
 
-      <p><a class="p-button--positive is-inline u-no-margin--left" href="#get-started">Get started</a>&nbsp;&nbsp;for Linux, Windows or macOS</p>
+      <p class="u-hide--large">
+        <a class="twitter-share-button" href="https://twitter.com/intent/tweet" data-size="large" data-hashtags="microk8s">Tweet</a>
+      </p>
 
-      <div>
+      <div class="u-hide--large">
         <a class="github-button" data-size="large" href="https://github.com/ubuntu/microk8s" aria-label="Follow @ubuntu on GitHub"></a>
         <a class="github-button" data-size="large" href="https://github.com/ubuntu/microk8s" data-icon="octicon-star" data-show-count="true" aria-label="Star ubuntu/microk8s on GitHub"></a>
         <a class="github-button" data-size="large" href="https://github.com/ubuntu/microk8s/fork" data-icon="octicon-repo-forked" data-show-count="true" aria-label="Fork ubuntu/microk8s on GitHub"></a>
       </div>
+
     </div>
 
     <div class="col-4 u-align--center u-hide--small">
       <img src="https://assets.ubuntu.com/v1/4b663a6c-certified-kubernetes-logo.svg" width="150" alt="Certified Kubernetes" />
+    </div>
+  </div>
+</section>
+
+<section class="p-strip is-bordered" id="get-started" role="tablist">
+  <div class="row u-equal-height u-sv3 u-hide js-tabbed-menu">
+    <a id="tab-one" href="#tab-one__content" class="col-small-2 col-medium-2 col-4 p-card p-tab u-align--center u-vertically-center js-tab" role="tab">
+      <img src="https://assets.ubuntu.com/v1/53c3be42-linuc-logo.svg" style="height: 90px; margin-top: 1rem;" alt="">
+      <h4 class="p-heading--five p-tab__title">Linux</h4>
+    </a>
+
+    <a id="tab-two" href="#tab-two__content" class="col-small-2 col-medium-2 col-4 p-card p-tab u-align--center u-vertically-center js-tab" role="tab">
+      <img src="https://assets.ubuntu.com/v1/11ecbd2d-2018-logo-windows.svg" style="height: 145px;" alt="Windows">
+    </a>
+
+    <a id="tab-three" href="#tab-three__content" class="col-small-2 col-medium-2 col-4 p-card p-tab u-align--center u-vertically-center js-tab" role="tab">
+      <img src="https://assets.ubuntu.com/v1/236f314d-macos.svg" style="height: 145px;" alt="macOS">
+    </a>
+  </div>
+
+  <div class="u-fixed-width u-align-text--center" data-js="select-platform-hint">
+    <p class="u-no-max-width"><i>Select platform for install instructions</i></p>
+  </div>
+
+  <div class="row">
+    <div class="col-6 js-tab__content" id="tab-one__content" role="tabpanel" aria-labelledby="tab-one">
+      <noscript>
+        <img src="https://assets.ubuntu.com/v1/53c3be42-linuc-logo.svg" style="height: 90px; margin-top: 1rem;" alt="">
+        <h4 class="p-heading--five p-tab__title">Linux</h4>
+      </noscript>
+      <ol class="p-stepped-list u-no-margin--left">
+        <li class="p-stepped-list__item">
+          <h3 class="p-stepped-list__title">Install Microk8s</h3>
+
+          <div class="p-code-copyable u-stepped-list-margin">
+            <input class="p-code-copyable__input" aria-label="sudo snap install microk8s --classic" value="sudo snap install microk8s --classic" readonly="readonly">
+            <button class="p-code-copyable__action">Copy to clipboard</button>
+          </div>
+
+          <p class="p-stepped-list__content u-stepped-list-margin">Don’t have the <code>snap</code> command? <a href="https://docs.snapcraft.io/installing-snapd" class="p-link--external">Get set up for snaps.</a></p>
+        </li>
+
+        <li class="p-stepped-list__item">
+          <h3 class="p-stepped-list__title">Check the status</h3>
+
+          <div class="p-code-copyable u-stepped-list-margin">
+            <input class="p-code-copyable__input" aria-label="sudo microk8s status --wait-ready" value="sudo microk8s status --wait-ready" readonly="readonly">
+            <button class="p-code-copyable__action">Copy to clipboard</button>
+          </div>
+        </li>
+
+        <li class="p-stepped-list__item">
+          <h3 class="p-stepped-list__title">Turn on the services you probably want</h3>
+
+          <div class="p-code-copyable u-stepped-list-margin">
+            <input class="p-code-copyable__input" aria-label="microk8s enable dashboard registry dns istio" value="microk8s enable dashboard registry dns istio" readonly="readonly">
+            <button class="p-code-copyable__action">Copy to clipboard</button>
+          </div>
+
+          <p class="p-stepped-list__content u-stepped-list-margin">
+            Similarly, <code>microk8s disable</code> turns off a service. Try <code>microk8s enable --help</code> for a list of available services built in.
+          </p>
+        </li>
+
+        <li class="p-stepped-list__item">
+          <h3 class="p-stepped-list__title">Start using Kubernetes</h3>
+
+          <div class="p-code-copyable u-stepped-list-margin">
+            <input class="p-code-copyable__input" aria-label="microk8s kubectl get all --all-namespaces" value="microk8s kubectl get all --all-namespaces" readonly="readonly">
+            <button class="p-code-copyable__action">Copy to clipboard</button>
+          </div>
+
+          <p class="p-stepped-list__content u-stepped-list-margin">
+            If you mainly use MicroK8s you can make our kubectl the default one on your command-line with <code>alias mkctl=”microk8s kubectl”</code>. Since it is a standard upstream kubectl you can also drive other Kubernetes clusters with it by pointing to the respective kubeconfig file via the <code>--kubeconfig</code> argument.
+          </p>
+        </li>
+
+        <li class="p-stepped-list__item">
+          <h3 class="p-stepped-list__title">Access the Kubernetes dashboard</h3>
+
+          <p class="p-stepped-list__content u-stepped-list-margin">
+            <a href="https://ubuntu.com/tutorials/install-a-local-kubernetes-with-microk8s#4-accessing-the-kubernetes-and-grafana-dashboards" class="p-link--external">Follow the detailed tutorial</a>
+          </p>
+        </li>
+
+        <li class="p-stepped-list__item">
+          <h3 class="p-stepped-list__title">Start and stop Kubernetes to save battery</h3>
+
+          <p class="p-stepped-list__content u-stepped-list-margin">
+            Kubernetes is a collection of system services that talk to each other all the time. If you don’t need them running in the background then you will save battery by stopping them. <code>microk8s start</code> and <code>microk8s stop</code> will do the work for you.
+          </p>
+        </li>
+
+      </ol>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-6 js-tab__content" id="tab-two__content" role="tabpanel" aria-labelledby="tab-two">
+      <noscript>
+        <img src="https://assets.ubuntu.com/v1/11ecbd2d-2018-logo-windows.svg" style="height: 145px;" alt="Windows">
+      </noscript>
+      <ol class="p-stepped-list u-no-margin--left">
+        <li class="p-stepped-list__item">
+          <h3 class="p-stepped-list__title">Download the installer for Windows</h3>
+
+          <p class="p-stepped-list__content u-stepped-list-margin">
+            <a href="https://github.com/ubuntu/microk8s/releases/download/installer-v1.0.0/microk8s-installer.exe" class="p-button--positive js-download" data-os="win-win">
+              <span class="p-link--external">Download MicroK8s for Windows</span>
+            </a>
+          </p>
+        </li>
+
+        <li class="p-stepped-list__item">
+          <h3 class="p-stepped-list__title">Run the Installer</h3>
+
+          <p class="p-stepped-list__content u-stepped-list-margin">
+            <img src="https://assets.ubuntu.com/v1/141d9f8b-winmk8s-01.png" alt="" width="479" height="371">
+          </p>
+        </li>
+
+        <li class="p-stepped-list__item">
+          <h3 class="p-stepped-list__title">Open a command line</h3>
+
+          <p class="p-stepped-list__content u-stepped-list-margin">
+            <img src="https://assets.ubuntu.com/v1/a5fe14a5-winmk8s-04.png" alt="" width="479" height="371">
+          </p>
+        </li>
+
+        <li class="p-stepped-list__item">
+          <h3 class="p-stepped-list__title">Check the status while it is coming up</h3>
+
+          <div class="p-code-copyable u-stepped-list-margin">
+            <input class="p-code-copyable__input" aria-label="microk8s status --wait-ready" value="microk8s status --wait-ready" readonly="readonly">
+            <button class="p-code-copyable__action">Copy to clipboard</button>
+          </div>
+        </li>
+
+        <li class="p-stepped-list__item">
+          <h3 class="p-stepped-list__title">Turn on the services you probably want</h3>
+
+          <div class="p-code-copyable u-stepped-list-margin">
+            <input class="p-code-copyable__input" aria-label="microk8s enable dashboard registry dns istio" value="microk8s enable dashboard registry dns istio" readonly="readonly">
+            <button class="p-code-copyable__action">Copy to clipboard</button>
+          </div>
+          <p class="p-stepped-list__content u-stepped-list-margin">
+            Similarly, <code>microk8s disable</code> turns off a service. Try <code>microk8s enable --help</code> for a list of available services and built in.
+          </p>
+        </li>
+
+        <li class="p-stepped-list__item">
+          <h3 class="p-stepped-list__title">Start using Kubernetes</h3>
+
+          <div class="p-code-copyable u-stepped-list-margin">
+            <input class="p-code-copyable__input" aria-label="microk8s kubectl get all --all-namespaces" value="microk8s kubectl get all --all-namespaces" readonly="readonly">
+            <button class="p-code-copyable__action">Copy to clipboard</button>
+          </div>
+        </li>
+
+        <li class="p-stepped-list__item">
+          <h3 class="p-stepped-list__title">Access the Kubernetes dashboard</h3>
+
+          <p class="p-stepped-list__content u-stepped-list-margin">
+            <a href="https://ubuntu.com/tutorials/install-a-local-kubernetes-with-microk8s#4-accessing-the-kubernetes-and-grafana-dashboards" class="p-link--external">Follow the detailed tutorial</a>
+          </p>
+        </li>
+
+        <li class="p-stepped-list__item">
+          <h3 class="p-stepped-list__title">Start and stop Kubernetes to save battery</h3>
+
+          <p class="p-stepped-list__content u-stepped-list-margin">
+            Kubernetes is a collection of system services that talk to each other all the time. If you don’t need them running in the background then you will save battery by stopping them. <code>microk8s start</code> and <code>microk8s stop</code> will do the work for you.
+          </p>
+        </li>
+
+      </ol>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-6 js-tab__content" id="tab-three__content" role="tabpanel" aria-labelledby="tab-three">
+      <noscript>
+        <img src="https://assets.ubuntu.com/v1/236f314d-macos.svg" style="height: 145px;" alt="macOS">
+      </noscript>
+      <ol class="p-stepped-list u-no-margin--left">
+        <li class="p-stepped-list__item">
+          <h3 class="p-stepped-list__title">Install MicroK8s</h3>
+
+          <div class="p-code-copyable u-stepped-list-margin">
+            <input class="p-code-copyable__input" aria-label="brew install ubuntu/microk8s/microk8s" value="brew install ubuntu/microk8s/microk8s" readonly="readonly">
+            <button class="p-code-copyable__action">Copy to clipboard</button>
+          </div>
+          <div class="p-code-copyable u-stepped-list-margin">
+            <input class="p-code-copyable__input" aria-label="microk8s install" value="microk8s install" readonly="readonly">
+            <button class="p-code-copyable__action">Copy to clipboard</button>
+          </div>
+          <p class="p-stepped-list__content u-stepped-list-margin">
+            Don't have the <code>brew</code> command? Get it from the <a href="http://brew.sh/" class="p-link--external">Homebrew website</a>.
+          </p>
+          <p class="p-stepped-list__content u-stepped-list-margin">
+            <img src="https://assets.ubuntu.com/v1/8929cabc-image5.png" alt="" width="479" height="371">
+          </p>
+        </li>
+
+        <li class="p-stepped-list__item">
+          <h3 class="p-stepped-list__title">Check the status</h3>
+
+          <div class="p-code-copyable u-stepped-list-margin">
+            <input class="p-code-copyable__input" aria-label="microk8s status --wait-ready" value="microk8s status --wait-ready" readonly="readonly">
+            <button class="p-code-copyable__action">Copy to clipboard</button>
+          </div>
+        </li>
+
+        <li class="p-stepped-list__item">
+          <h3 class="p-stepped-list__title">Turn on the services you probably want</h3>
+
+          <div class="p-code-copyable u-stepped-list-margin">
+            <input class="p-code-copyable__input" aria-label="microk8s enable dashboard registry dns istio" value="microk8s enable dashboard registry dns istio" readonly="readonly">
+            <button class="p-code-copyable__action">Copy to clipboard</button>
+          </div>
+          <p class="p-stepped-list__content u-stepped-list-margin">
+            Similarly, <code>microk8s disable</code> turns off a service. Try <code>microk8s enable --help</code> for a list of available services and built in.
+          </p>
+        </li>
+
+        <li class="p-stepped-list__item">
+          <h3 class="p-stepped-list__title">Start using Kubernetes</h3>
+
+          <div class="p-code-copyable u-stepped-list-margin">
+            <input class="p-code-copyable__input" aria-label="microk8s kubectl get all --all-namespaces" value="microk8s kubectl get all --all-namespaces" readonly="readonly">
+            <button class="p-code-copyable__action">Copy to clipboard</button>
+          </div>
+        </li>
+
+        <li class="p-stepped-list__item">
+          <h3 class="p-stepped-list__title">Access the Kubernetes dashboard</h3>
+
+          <p class="p-stepped-list__content u-stepped-list-margin">
+            <a href="https://ubuntu.com/tutorials/install-a-local-kubernetes-with-microk8s#4-accessing-the-kubernetes-and-grafana-dashboards" class="p-link--external">Follow the detailed tutorial</a>
+          </p>
+        </li>
+
+        <li class="p-stepped-list__item">
+          <h3 class="p-stepped-list__title">Start and stop Kubernetes to save battery</h3>
+
+          <p class="p-stepped-list__content u-stepped-list-margin">
+            Kubernetes is a collection of system services that talk to each other all the time. If you don’t need them running in the background then you will save battery by stopping them. <code>microk8s start</code> and <code>microk8s stop</code> will do the work for you.
+          </p>
+        </li>
+
+      </ol>
     </div>
   </div>
 </section>
@@ -39,7 +293,7 @@
 
     <div class="col-6">
       <blockquote class="p-pull-quote">
-        <p class="p-pull-quote__quote">dear microk8s team: you are awesome. Microk8s has tangibly improved my life and my CI pipelines as a developer of k8s controllers</p>
+        <p class="p-pull-quote__quote">dear microk8s team: you are awesome. Microk8s has tangibly improved my life and my CI pipelines</p>
 
         <cite class="p-pull-quote__citation">&mdash; in <a href="https://kubernetes.slack.com/messages/microk8s/" class=" p-link--external">#microk8s</a></cite>
       </blockquote>
@@ -51,11 +305,11 @@
   <div class="row u-equal-height">
     <div class="col-3">
       <ul class="p-list--divided">
-        <li class="p-list__item is-ticked">High availability</li>
-        <li class="p-list__item is-ticked">Self-healing</li>
         <li class="p-list__item is-ticked">Conformant</li>
         <li class="p-list__item is-ticked">Istio</li>
         <li class="p-list__item is-ticked">Clustering</li>
+        <li class="p-list__item is-ticked">Fluentd</li>
+        <li class="p-list__item is-ticked">Prometheus</li>
       </ul>
     </div>
 
@@ -75,7 +329,7 @@
         <li class="p-list__item is-ticked">Automatic updates</li>
         <li class="p-list__item is-ticked">Ingress</li>
         <li class="p-list__item is-ticked">DNS</li>
-        <li class="p-list__item is-ticked">Linkerd, Fluentd</li>
+        <li class="p-list__item is-ticked">Linkerd</li>
       </ul>
     </div>
 
@@ -85,7 +339,7 @@
         <li class="p-list__item is-ticked">macOS</li>
         <li class="p-list__item is-ticked">Knative</li>
         <li class="p-list__item is-ticked">Kubeflow</li>
-        <li class="p-list__item is-ticked">Jaeger, Prometheus</li>
+        <li class="p-list__item is-ticked">Jaeger</li>
       </ul>
     </div>
   </div>
@@ -99,7 +353,7 @@
       </h2>
 
       <p>
-        The smallest, fastest, fully-conformant upstream Kubernetes that makes clustering trivial. A single package for multiple flavours of Linux means MicroK8s is great for offline development, prototyping, and testing. Use it on a VM as a small, free, reliable K8s for CI/CD. Strict confinement and automatic updates make MicroK8s best Kubernetes for appliances. Develop IoT apps for K8s and deploy them to MicroK8s on your Linux boxes.
+        MicroK8s is a conformant upstream Kubernetes, packaged for simplicity and resilience in production. Great for offline development and testing, too! A single package for all major operating systems brings all the benefits of Kubernetes and minimises the overhead of installation and cluster configuration. Use it on a VM as a small, free, reliable K8s for CI/CD. Strict confinement and automatic updates make MicroK8s best Kubernetes for appliances. Develop IoT apps for K8s and deploy them on MicroK8s anywhere.
       </p>
     </div>
   </div>
@@ -125,7 +379,7 @@
         <div class="p-matrix__content">
           <h3 class="p-matrix__title">Secure</h3>
           <div class="p-matrix__desc">
-            <p>Runs safely on your laptop with state of the art isolation.</p>
+            <p>State of the art confinement and zero-downtime security maintenance.</p>
           </div>
         </div>
       </li>
@@ -134,7 +388,7 @@
         <div class="p-matrix__content">
           <h3 class="p-matrix__title">Upstream</h3>
           <div class="p-matrix__desc">
-            <p>CNCF binaries delivered to your laptop, with updates and upgrades.</p>
+            <p>CNCF binaries delivered to your system, with updates and upgrades.</p>
           </div>
         </div>
       </li>
@@ -152,7 +406,7 @@
         <div class="p-matrix__content">
           <h3 class="p-matrix__title">Featureful</h3>
           <div class="p-matrix__desc">
-            <p>Cool things you probably want to try on a small, standard K8s are all built-in. Just enable them and go.</p>
+            <p><a href="https://microk8s.io/docs/addons#list">Cool things</a> you probably want to try are all built-in. Just enable them and go.</p>
           </div>
         </div>
       </li>
@@ -196,220 +450,17 @@
   </div>
 </section>
 
-<section class="p-strip is-bordered" id="get-started" role="tablist">
-  <div class="u-fixed-width">
-    <h2>Get started with MicroK8s</h2>
-  </div>
-
-  <div class="row u-equal-height u-sv3 u-hide js-tabbed-menu">
-    <a id="tab-one" href="#tab-one__content" class="col-small-2 col-medium-2 col-4 p-card p-tab u-align--center u-vertically-center js-tab" role="tab">
-      <img src="https://assets.ubuntu.com/v1/53c3be42-linuc-logo.svg" style="height: 90px; margin-top: 1rem;" alt="">
-      <h4 class="p-heading--five p-tab__title">Linux</h4>
-    </a>
-
-    <a id="tab-two" href="#tab-two__content" class="col-small-2 col-medium-2 col-4 p-card p-tab u-align--center u-vertically-center js-tab" role="tab">
-      <img src="https://assets.ubuntu.com/v1/11ecbd2d-2018-logo-windows.svg" style="height: 145px;" alt="Windows">
-    </a>
-
-    <a id="tab-three" href="#tab-three__content" class="col-small-2 col-medium-2 col-4 p-card p-tab u-align--center u-vertically-center js-tab" role="tab">
-      <img src="https://assets.ubuntu.com/v1/236f314d-macos.svg" style="height: 145px;" alt="macOS">
-    </a>
-  </div>
-
-  <div class="row">
-    <div class="col-6 js-tab__content" id="tab-one__content" role="tabpanel" aria-labelledby="tab-one">
-      <noscript>
-        <img src="https://assets.ubuntu.com/v1/53c3be42-linuc-logo.svg" style="height: 90px; margin-top: 1rem;" alt="">
-        <h4 class="p-heading--five p-tab__title">Linux</h4>
-      </noscript>
-      <ol class="p-stepped-list u-no-margin--left">
-        <li class="p-stepped-list__item">
-          <h3 class="p-stepped-list__title">Install the microk8s snap</h3>
-
-          <div class="p-code-copyable u-stepped-list-margin">
-            <input class="p-code-copyable__input" aria-label="sudo snap install microk8s --classic --channel=1.18/stable" value="sudo snap install microk8s --classic --channel=1.18/stable" readonly="readonly">
-            <button class="p-code-copyable__action">Copy to clipboard</button>
-          </div>
-
-          <p class="p-stepped-list__content u-stepped-list-margin">Don’t have the <code>snap</code> command? <a href="https://docs.snapcraft.io/installing-snapd" class="p-link--external">Get set up for snaps.</a></p>
-        </li>
-
-        <li class="p-stepped-list__item">
-          <h3 class="p-stepped-list__title">Check the status</h3>
-
-          <div class="p-code-copyable u-stepped-list-margin">
-            <input class="p-code-copyable__input" aria-label="sudo microk8s status --wait-ready" value="sudo microk8s status --wait-ready" readonly="readonly">
-            <button class="p-code-copyable__action">Copy to clipboard</button>
-          </div>
-        </li>
-
-        <li class="p-stepped-list__item">
-          <h3 class="p-stepped-list__title">Turn on standard services</h3>
-
-          <div class="p-code-copyable u-stepped-list-margin">
-            <input class="p-code-copyable__input" aria-label="sudo microk8s enable dns dashboard registry" value="sudo microk8s enable dns dashboard registry" readonly="readonly">
-            <button class="p-code-copyable__action">Copy to clipboard</button>
-          </div>
-
-          <p class="p-stepped-list__content u-stepped-list-margin">
-            Similarly, <code>microk8s disable</code> turns off a service. Try <code>microk8s enable --help</code> for a list of available services built in.
-          </p>
-        </li>
-
-      </ol>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-6 js-tab__content" id="tab-two__content" role="tabpanel" aria-labelledby="tab-two">
-      <noscript>
-        <img src="https://assets.ubuntu.com/v1/11ecbd2d-2018-logo-windows.svg" style="height: 145px;" alt="Windows">
-      </noscript>
-      <ol class="p-stepped-list u-no-margin--left">
-        <li class="p-stepped-list__item">
-          <h3 class="p-stepped-list__title">Install Multipass for Windows</h3>
-
-          <p class="p-stepped-list__content u-stepped-list-margin">
-            <a href="https://github.com/CanonicalLtd/multipass/releases" class="p-button--positive js-download" data-os="win-win">
-              <span class="p-link--external">Download Multipass for Windows</span>
-            </a>
-          </p>
-        </li>
-
-        <li class="p-stepped-list__item">
-          <h3 class="p-stepped-list__title">Launch a Multipass instance</h3>
-
-          <div class="p-code-copyable u-stepped-list-margin">
-            <input class="p-code-copyable__input" value="multipass launch --name microk8s-vm --mem 4G --disk 40G" readonly="readonly">
-            <button class="p-code-copyable__action">Copy to clipboard</button>
-          </div>
-        </li>
-
-        <li class="p-stepped-list__item">
-          <h3 class="p-stepped-list__title">Enter the VM instance</h3>
-
-          <div class="p-code-copyable u-stepped-list-margin">
-            <input class="p-code-copyable__input" aria-label="multipass shell microk8s-vm" value="multipass shell microk8s-vm" readonly="readonly">
-            <button class="p-code-copyable__action">Copy to clipboard</button>
-          </div>
-        </li>
-
-        <li class="p-stepped-list__item">
-          <h3 class="p-stepped-list__title">Install the microk8s snap</h3>
-
-          <div class="p-code-copyable u-stepped-list-margin">
-            <input class="p-code-copyable__input" aria-label="sudo snap install microk8s --classic" value="sudo snap install microk8s --classic" readonly="readonly">
-            <button class="p-code-copyable__action">Copy to clipboard</button>
-          </div>
-        </li>
-
-        <li class="p-stepped-list__item">
-          <h3 class="p-stepped-list__title">Check the status</h3>
-
-          <div class="p-code-copyable u-stepped-list-margin">
-            <input class="p-code-copyable__input" aria-label="sudo microk8s status --wait-ready" value="sudo microk8s status --wait-ready" readonly="readonly">
-            <button class="p-code-copyable__action">Copy to clipboard</button>
-          </div>
-        </li>
-
-        <li class="p-stepped-list__item">
-          <h3 class="p-stepped-list__title">Turn on standard services</h3>
-
-          <div class="p-code-copyable u-stepped-list-margin">
-            <input class="p-code-copyable__input" aria-label="sudo microk8s enable dns dashboard registry istio" value="sudo microk8s enable dns dashboard registry" readonly="readonly">
-            <button class="p-code-copyable__action">Copy to clipboard</button>
-          </div>
-
-          <p class="p-stepped-list__content u-stepped-list-margin">
-            Similarly, <code>microk8s disable</code> turns off a service. Try <code>microk8s enable --help</code> for a list of available services built in.
-          </p>
-        </li>
-      </ol>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-6 js-tab__content" id="tab-three__content" role="tabpanel" aria-labelledby="tab-three">
-      <noscript>
-        <img src="https://assets.ubuntu.com/v1/236f314d-macos.svg" style="height: 145px;" alt="macOS">
-      </noscript>
-      <ol class="p-stepped-list u-no-margin--left">
-        <li class="p-stepped-list__item">
-          <h3 class="p-stepped-list__title">Install Multipass for macOS</h3>
-
-          <p class="p-stepped-list__content u-stepped-list-margin">
-            <a href="https://github.com/CanonicalLtd/multipass/releases" class="p-button--positive js-download" data-os="mac">
-              <span class="p-link--external">Download Multipass for macOS</span>
-            </a>
-          </p>
-        </li>
-
-        <li class="p-stepped-list__item">
-          <h3 class="p-stepped-list__title">Launch a Multipass instance</h3>
-
-          <div class="p-code-copyable u-stepped-list-margin">
-            <input class="p-code-copyable__input" value="multipass launch --name microk8s-vm --mem 4G --disk 40G" readonly="readonly">
-            <button class="p-code-copyable__action">Copy to clipboard</button>
-          </div>
-        </li>
-
-        <li class="p-stepped-list__item">
-          <h3 class="p-stepped-list__title">Enter the VM instance</h3>
-
-          <div class="p-code-copyable u-stepped-list-margin">
-            <input class="p-code-copyable__input" aria-label="multipass shell microk8s-vm" value="multipass shell microk8s-vm" readonly="readonly">
-            <button class="p-code-copyable__action">Copy to clipboard</button>
-          </div>
-        </li>
-
-        <li class="p-stepped-list__item">
-          <h3 class="p-stepped-list__title">Install the microk8s snap</h3>
-
-          <div class="p-code-copyable u-stepped-list-margin">
-            <input class="p-code-copyable__input" aria-label="sudo snap install microk8s --classic" value="sudo snap install microk8s --classic" readonly="readonly">
-            <button class="p-code-copyable__action">Copy to clipboard</button>
-          </div>
-        </li>
-
-        <li class="p-stepped-list__item">
-          <h3 class="p-stepped-list__title">Check the status</h3>
-
-          <div class="p-code-copyable u-stepped-list-margin">
-            <input class="p-code-copyable__input" aria-label="sudo microk8s status --wait-ready" value="sudo microk8s status --wait-ready" readonly="readonly">
-            <button class="p-code-copyable__action">Copy to clipboard</button>
-          </div>
-        </li>
-
-        <li class="p-stepped-list__item">
-          <h3 class="p-stepped-list__title">Turn on standard services</h3>
-
-          <div class="p-code-copyable u-stepped-list-margin">
-            <input class="p-code-copyable__input" aria-label="sudo microk8s enable dns dashboard registry" value="sudo microk8s enable dns dashboard registry" readonly="readonly">
-            <button class="p-code-copyable__action">Copy to clipboard</button>
-          </div>
-
-          <p class="p-stepped-list__content u-stepped-list-margin">
-            Similarly, <code>microk8s disable</code> turns off a service. Try <code>microk8s enable --help</code> for a list of available services built in.
-          </p>
-        </li>
-
-      </ol>
-    </div>
-  </div>
-</section>
-
 <section class="p-strip is-bordered u-hide--small">
   <div class="row">
     <h2>
       Working with MicroK8s
     </h2>
     <p class="p-heading--four">
-      Or dive right into the <a href="/docs/">docs</a>.
+      Here’s a quick introductory video, or you can dive right into the <a href="/docs/">docs</a>.
     </p>
     <div class="asciinema-container"></div>
   </div>
 </section>
-
 
 <script>
   var asciinemaContainer = document.querySelector('.asciinema-container');
