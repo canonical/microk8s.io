@@ -71,7 +71,7 @@ multipass info MicroK8sVM | grep IPv4 | awk '{ print $2 }'
 
 You can then access the Dashboard at `https://$CONTAINER_IP:10443`.
 
-## Upsteam Documentation
+## Upstream Documentation
 
 Visit the [upstream dashboard documentation][upstream-access-dashboard] to find out other ways to reach the Dashboard.
 
