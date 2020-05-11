@@ -93,7 +93,7 @@ host directory.
 **metallb**: Deploys the [MetalLB Loadbalancer][metallb].  Note that currently this does not
 work under multipass on macOS, due to filtering that macOS applies to network traffic.
 
-**host-access**: Create a local interface so pods can connect to services running on the host
+[**host-access**](addon-host-access): Create a local interface so pods can connect to services running on the host
 via a fixed IP.
 
 
