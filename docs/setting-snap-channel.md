@@ -10,14 +10,14 @@ Microk8s is a snap deploying Kubernetes. The MicroK8s snap closely follows
 upstream Kubernetes, so understanding a bit about the Kubernetes release cycle
 is helpful for more insight into MicroK8s releases.
 
-Upstream Kubernetes ships a new release series (e.g. 1.16.x) approximately
+Upstream Kubernetes ships a new release series (e.g. 1.17.x) approximately
 every three months. Prior release series may get periodic bugfix releases: for
 example, the latest 1.15 release is 1.15.5.
 
 It is important to remember that upstream Kubernetes is committed to maintain
 backwards compatibility **only within a release series**. That means that your
-Kubernetes should not break when you upgrade from `v1.16.x` to `v1.16.y`, but
-there is no such guarantee when upgrading from `v1.15.x` to `v1.16.x`.
+Kubernetes should not break when you upgrade from `v1.17.x` to `v1.17.y`, but
+there is no such guarantee when upgrading from `v1.16.x` to `v1.17.x`.
 
 ## Choosing the right channel
 
@@ -27,39 +27,53 @@ by choosing the corresponding snap channel.
 All the currently available channels are shown if you run `snap info microk8s`:
 
 ```
-stable:         v1.16.2  2019-10-22 (993) 187MB classic
-candidate:      v1.16.2  2019-10-22 (993) 187MB classic
-beta:           v1.16.2  2019-10-22 (993) 187MB classic
-edge:           v1.16.2  2019-10-23 (998) 187MB classic
-1.16/stable:    v1.16.2  2019-10-22 (989) 187MB classic
-1.16/candidate: v1.16.2  2019-10-22 (989) 187MB classic
-1.16/beta:      v1.16.2  2019-10-22 (989) 187MB classic
-1.16/edge:      v1.16.2  2019-10-23 (999) 187MB classic
-1.15/stable:    v1.15.4  2019-09-30 (876) 171MB classic
-1.15/candidate: v1.15.5  2019-10-22 (984) 171MB classic
-1.15/beta:      v1.15.5  2019-10-22 (984) 171MB classic
-1.15/edge:      v1.15.5  2019-10-16 (984) 171MB classic
-1.14/stable:    v1.14.8  2019-10-24 (979) 217MB classic
-1.14/candidate: v1.14.8  2019-10-16 (979) 217MB classic
-1.14/beta:      v1.14.8  2019-10-16 (979) 217MB classic
-1.14/edge:      v1.14.8  2019-10-22 (997) 217MB classic
-1.13/stable:    v1.13.6  2019-06-06 (581) 237MB classic
-1.13/candidate: v1.13.6  2019-05-09 (581) 237MB classic
-1.13/beta:      v1.13.6  2019-05-09 (581) 237MB classic
-1.13/edge:      v1.13.7  2019-06-06 (625) 244MB classic
-1.12/stable:    v1.12.9  2019-06-06 (612) 259MB classic
-1.12/candidate: v1.12.9  2019-06-04 (612) 259MB classic
-1.12/beta:      v1.12.9  2019-06-04 (612) 259MB classic
-1.12/edge:      v1.12.9  2019-05-28 (612) 259MB classic
-1.11/stable:    v1.11.10 2019-05-10 (557) 258MB classic
-1.11/candidate: v1.11.10 2019-05-02 (557) 258MB classic
-1.11/beta:      v1.11.10 2019-05-02 (557) 258MB classic
-1.11/edge:      v1.11.10 2019-05-01 (557) 258MB classic
-1.10/stable:    v1.10.13 2019-04-22 (546) 222MB classic
-1.10/candidate: v1.10.13 2019-04-22 (546) 222MB classic
-1.10/beta:      v1.10.13 2019-04-22 (546) 222MB classic
-1.10/edge:      v1.10.13 2019-04-22 (546) 222MB classic
-installed:        v1.16.2             (993) 187MB classic
+channels:
+  stable:           v1.17.2         2020-01-26 (1173) 179MB classic
+  candidate:        v1.17.2         2020-01-25 (1173) 179MB classic
+  beta:             v1.17.2         2020-01-25 (1173) 179MB classic
+  edge:             v1.17.2         2020-01-24 (1173) 179MB classic
+  dqlite/stable:    –                                       
+  dqlite/candidate: –                                       
+  dqlite/beta:      –                                       
+  dqlite/edge:      v1.16.2         2019-11-07 (1038) 189MB classic
+  1.18/stable:      –                                       
+  1.18/candidate:   –                                       
+  1.18/beta:        –                                       
+  1.18/edge:        v1.18.0-alpha.2 2020-01-22 (1172) 179MB classic
+  1.17/stable:      v1.17.0         2019-12-10 (1109) 179MB classic
+  1.17/candidate:   v1.17.2         2020-01-26 (1176) 179MB classic
+  1.17/beta:        v1.17.2         2020-01-26 (1176) 179MB classic
+  1.17/edge:        v1.17.2         2020-01-25 (1176) 179MB classic
+  1.16/stable:      v1.16.4         2020-01-13 (1117) 188MB classic
+  1.16/candidate:   v1.16.6         2020-01-24 (1163) 179MB classic
+  1.16/beta:        v1.16.6         2020-01-24 (1163) 179MB classic
+  1.16/edge:        v1.16.6         2020-01-25 (1175) 179MB classic
+  1.15/stable:      v1.15.7         2020-01-06 (1114) 171MB classic
+  1.15/candidate:   v1.15.9         2020-01-23 (1165) 171MB classic
+  1.15/beta:        v1.15.9         2020-01-23 (1165) 171MB classic
+  1.15/edge:        v1.15.9         2020-01-25 (1178) 171MB classic
+  1.14/stable:      v1.14.10        2020-01-06 (1120) 217MB classic
+  1.14/candidate:   v1.14.10        2019-12-14 (1120) 217MB classic
+  1.14/beta:        v1.14.10        2019-12-14 (1120) 217MB classic
+  1.14/edge:        v1.14.10        2020-01-26 (1181) 217MB classic
+  1.13/stable:      v1.13.6         2019-06-06  (581) 237MB classic
+  1.13/candidate:   v1.13.6         2019-05-09  (581) 237MB classic
+  1.13/beta:        v1.13.6         2019-05-09  (581) 237MB classic
+  1.13/edge:        v1.13.7         2019-06-06  (625) 244MB classic
+  1.12/stable:      v1.12.9         2019-06-06  (612) 259MB classic
+  1.12/candidate:   v1.12.9         2019-06-04  (612) 259MB classic
+  1.12/beta:        v1.12.9         2019-06-04  (612) 259MB classic
+  1.12/edge:        v1.12.9         2019-05-28  (612) 259MB classic
+  1.11/stable:      v1.11.10        2019-05-10  (557) 258MB classic
+  1.11/candidate:   v1.11.10        2019-05-02  (557) 258MB classic
+  1.11/beta:        v1.11.10        2019-05-02  (557) 258MB classic
+  1.11/edge:        v1.11.10        2019-05-01  (557) 258MB classic
+  1.10/stable:      v1.10.13        2019-04-22  (546) 222MB classic
+  1.10/candidate:   v1.10.13        2019-04-22  (546) 222MB classic
+  1.10/beta:        v1.10.13        2019-04-22  (546) 222MB classic
+  1.10/edge:        v1.10.13        2019-04-22  (546) 222MB classic
+installed:          v1.17.2                    (1173) 179MB classic
+
 ```
 
 To install the latest stable version, simply run:
@@ -73,15 +87,15 @@ Bear in mind that this could include a new Kubernetes series, and therefore is
 not guaranteed to continue running. For anything more than an ephemeral
 Kubernetes install, you are strongly advised to select a series.
 
-For example, to install MicroK8s and let it follow the `v1.16` stable release
+For example, to install MicroK8s and let it follow the `v1.17` stable release
 series you can run:
 
 ```
-snap install microk8s --classic --channel=1.16/stable
+snap install microk8s --classic --channel=1.17/stable
 ```
 
-In this case you will only receive updates for the 1.16 release of Kubernetes,
-and MicroK8s will never upgrade to 1.17, unless you explicitly
+In this case you will only receive updates for the 1.17 release of Kubernetes,
+and MicroK8s will never upgrade to 1.18, unless you explicitly
 [refresh the snap](#refresh)
 
 
@@ -94,10 +108,10 @@ upstream release in your selected channel roughly one week after the upstream
 release.
 
 The `*/candidate` and `*/beta` channels get updated within hours of an upstream
-release. Getting a MicroK8s deployment pointing to `1.16/beta` is as simple as:
+release. Getting a MicroK8s deployment pointing to `1.17/beta` is as simple as:
 
 ```
-snap install microk8s --classic --channel=1.16/beta
+snap install microk8s --classic --channel=1.17/beta
 ```
 
 The `*/edge` channels get updated on each MicroK8s patch or upstream
@@ -112,17 +126,17 @@ specific Kubernetes release names.
 On tracks where no stable Kubernetes release is available, MicroK8s ships
 pre-release versions under the following scheme:
 
--   The `*/edge` channel (eg `1.16/edge`) holds the alpha upstream releases. 
--   The `*/beta` channel (eg `1.16/beta`) holds the beta upstream releases.
--   The `*/candidate` channel (eg `1.16/candidate`) holds the release candidate
+-   The `*/edge` channel (eg `1.17/edge`) holds the alpha upstream releases. 
+-   The `*/beta` channel (eg `1.17/beta`) holds the beta upstream releases.
+-   The `*/candidate` channel (eg `1.17/candidate`) holds the release candidate
     of upstream releases.
 
 Pre-release versions will be available the same day they are released upstream. 
 
-For example, to test your work against the alpha `v1.16` release simply run:
+For example, to test your work against the alpha `v1.18` release simply run:
 
 ```
-sudo snap install microk8s --classic --channel=1.16/edge
+sudo snap install microk8s --classic --channel=1.18/edge
 ```
 
 However, be aware that pre-release versions may require you to configure the
@@ -167,10 +181,10 @@ Here are some suggestions for the channel to use based on your needs:
 ## Changing channels
 
 It is possible to change the snap channel using the refresh command. E.g. to
-transition from 1.16 stable to the latest alpha:
+transition from 1.17 stable to the latest alpha:
 
 ```bash
-sudo snap refresh microk8s --channel=1.16/edge
+sudo snap refresh microk8s --channel=1.17/edge
 ```
 <div class="p-notification--caution">
   <p markdown="1" class="p-notification__response">
@@ -196,13 +210,13 @@ all snaps on the system. These are outlined in the
 
 
 <!-- LINKS -->
-[snap-docs]:  https://snapcraft.io/docs/keeping-snaps-up-to-date#heading--controlling-updates 
+[snap-docs]:  https://snapcraft.io/docs/keeping-snaps-up-to-date#heading--controlling-updates
 <!-- FEEDBACK -->
 <div class="p-notification--information">
   <p class="p-notification__response">
-    We appreciate your feedback on the docs. You can 
-    <a href="https://github.com/canonical-web-and-design/microk8s.io/edit/master/docs/setting-snap-channel.md" class="p-notification__action">edit this page</a> 
-    or 
+    We appreciate your feedback on the docs. You can
+    <a href="https://github.com/canonical-web-and-design/microk8s.io/edit/master/docs/setting-snap-channel.md" class="p-notification__action">edit this page</a>
+    or
     <a href="https://github.com/canonical-web-and-design/microk8s.io/issues/new" class="p-notification__action">file a bug here</a>.
   </p>
 </div>

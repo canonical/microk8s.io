@@ -9,7 +9,7 @@ permalink: /docs/addon-gpu
 This addon enables NVIDIA GPU support for MicroK8s.
 
 ```bash
-microk8s.enable gpu
+microk8s enable gpu
 ```
 
 Note that this is obviously dependent on the host system having suitable
@@ -35,9 +35,9 @@ spec:
 <!-- FEEDBACK -->
 <div class="p-notification--information">
   <p class="p-notification__response">
-    We appreciate your feedback on the docs. You can 
-    <a href="https://github.com/canonical-web-and-design/microk8s.io/edit/master/docs/addon-gpu.md" class="p-notification__action">edit this page</a> 
-    or 
+    We appreciate your feedback on the docs. You can
+    <a href="https://github.com/canonical-web-and-design/microk8s.io/edit/master/docs/addon-gpu.md" class="p-notification__action">edit this page</a>
+    or
     <a href="https://github.com/canonical-web-and-design/microk8s.io/issues/new" class="p-notification__action">file a bug here</a>.
   </p>
 </div>

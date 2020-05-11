@@ -13,6 +13,14 @@ notes below.
 <a id="windows"> </a>
 ## Windows 10
 
+<div class="p-notification--information">
+  <p class="p-notification__response">
+    Installing MicroK8s with Multipass requires Windows 10 Professional or
+    Windows 10 Enterprise, as it relies on the <em>Hyper-V</em> hypervisor. It
+    will also require at least 4GB of available RAM and 40GB of storage.
+  </p>
+</div>
+
 Although Windows 10 now has some very useful features, such as the ability to
 install [Ubuntu as an app][ubuntu-app], the integration of WSL2 still
 doesn't provide all the Ubuntu functionality required to make MicroK8s run
@@ -32,6 +40,14 @@ multipass [here](#multipass).
 
 <a id="macos"> </a>
 ## macOS
+
+<div class="p-notification--information">
+  <p class="p-notification__response">
+    Installing MicroK8s with Multipass requires <em>macOS Yosemite</em>, version
+    10.10.3 or later installed on hardware from 2010 onwards. It
+    will also require at least 4GB of available RAM and 40GB of storage.
+  </p>
+</div>
 
 As with Windows, the recommended way to run MicroK8s on macOS is to use
 [multipass][], although it is possible to run under other VMs.
@@ -77,7 +93,7 @@ multipass shell microk8s-vm
 Then install the  MicroK8s snap and configure the network:
 
 ```bash
-sudo snap install microk8s --classic --channel=1.16/stable
+sudo snap install microk8s --classic --channel=1.18/stable
 sudo iptables -P FORWARD ACCEPT
 ```
 
@@ -135,7 +151,7 @@ you can fix this:
 1.  Stop microk8s:
 
     ```
-    microk8s.stop
+    microk8s stop
     ```
 
 1.  Remove old state of containerd:
@@ -156,7 +172,7 @@ you can fix this:
 1.  Restart microk8s:
 
     ```
-    microk8s.start
+    microk8s start
     ```
 
 ## Offline deployment

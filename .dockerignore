@@ -9,6 +9,9 @@
 cache.sqlite
 README.md
 HACKING.md
+renovate.json
+LICENCE
+.sass-lint.yml
 
 # The run script isn't needed
 run
@@ -19,6 +22,4 @@ run
 .env.local
 
 # Node is only needed for building, not running
-package.json
 node_modules
-yarn.lock

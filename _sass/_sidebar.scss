@@ -1,7 +1,8 @@
-
 .docs-container {
-  max-width: 64.875rem;
+  display: flex;
+  flex-wrap: wrap;
   margin: 0 auto;
+  max-width: 64.875rem;
 
   p {
     max-width: none;
@@ -9,11 +10,13 @@
 }
 
 .p-navigation {
-  flex-basis: 100%; }
-.p-sidebar-nav {
+  flex-basis: 100%;
+}
 
+.p-sidebar-nav {
   &__list {
     @extend .p-list;
+
     margin-bottom: $spv-inner--scaleable;
     margin-top: -$spv-inner--x-small--scaleable;
   }
@@ -76,66 +79,70 @@
     padding: $sp-x-large;
   }
 }
-.docs-container {
-  display: flex;
-  flex-wrap: wrap; }
 
-.p-navigation {
-  flex-basis: 100%; }
-
-.p-sidebar {
-  border-right: 0.0625rem solid #cdcdcd;
-  flex: 0 0 18rem; }
-  @supports (position: sticky) {
-    .p-sidebar {
-      height: 100vh;
-      overflow-y: scroll;
-      position: sticky;
-      top: 0; } }
-  .p-sidebar__banner {
-    display: flex;
-    justify-content: flex-end; }
-  .p-sidebar__content {
-    padding: 1.5rem; }
-  .p-sidebar__toggle {
-    background-size: 1rem;
-    cursor: pointer;
-    padding: 2rem; }
+@supports (position: sticky) {
+  .p-sidebar {
+    height: 100vh;
+    overflow-y: scroll;
+    position: sticky;
+    top: 0;
+  }
+}
 
 .p-content {
+  flex: 5;
   margin-top: 0;
-  flex: 5; }
-  .p-content__row {
-    margin-left: inherit;
-    padding: 0 5%; }
+}
+
+.p-content__row {
+  margin-left: inherit;
+  padding: 0 5%;
+}
 
 .p-aside {
   flex: 1;
-  width: 12rem; }
-  @supports (position: sticky) {
-    .p-aside {
-      height: 100vh;
-      position: sticky;
-      top: 0; } }
+  width: 12rem;
+}
+
+@supports (position: sticky) {
+  .p-aside {
+    height: 100vh;
+    position: sticky;
+    top: 0;
+  }
+}
 
 .p-footer {
-  flex-basis: 100%; }
+  flex-basis: 100%;
+}
 
 @media only screen and (max-width: 900px) {
   .docs-container {
-    display: block; }
+    display: block;
+  }
+
   .p-sidebar {
     border-bottom: 0.0625rem solid #cdcdcd;
     border-right: 0;
     flex: auto;
     height: inherit;
+    overflow: hidden;
     position: static;
-    overflow: hidden; }
-    .p-sidebar__content {
-      padding: 0 1.5rem 1.5rem 1.5rem; }
+  }
+
+  .p-sidebar__content {
+    padding: 0 1.5rem 1.5rem 1.5rem;
+  }
+
   .p-content {
-    flex: auto; }
-    .p-content__row {
-      padding-left: 1.5rem; }
+    flex: auto;
+  }
+
+  .p-content__row {
+    padding-left: 1.5rem;
+  }
+
   .p-aside {
-    display: none; } }
+    display: none;
+  }
+}

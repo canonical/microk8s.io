@@ -6,33 +6,61 @@ permalink: /docs/release-notes
 
 # Release notes
 
-## MicroK8s 1.17 - 11 December 2019
+## MicroK8s 1.18 - 26 March 2020
 
 **MicroK8s** is a Kubernetes<sup>&reg;</sup> cluster delivered as a single snap
 package - it can be installed on any Linux distribution which supports
-[snaps][]. MicroK8s is small and simple to install and is a great way to stand
-up a cluster quickly for development and testing. Try it on your laptop!
+[snaps][], as well as MacOS and Windows 10. MicroK8s is small and simple to
+install and is a great way to stand up a cluster quickly for development and
+testing. Try it on your laptop!
 
 ```bash
-snap install microk8s --classic --channel=1.17/stable
+snap install microk8s --classic --channel=1.18/stable
 ```
 
 Most important updates since the last release:
 
--   New addon: kubeflow. Give it a try with `microk8s.enable kubeflow`.
--   MetalLB Loadbalancer addon, try it with `microk8s.enable metallb`. Thank you [@dangtrinhnt][] for your efforts here.
+-   Installers for MacOS and Windows
+-   Kubeflow 1.0 addon
+-   Added new snap interface enabling other snaps to detect MicroK8s’ presence.
+-   CoreDNS addon upgraded to v1.6.6, thank you [@balchua][]
+-   New Helm 3 addon, available with `microk8s helm3`, thanks [@qs][]
+-   Ingress RBAC rule to create configmaps, thank you [@nonylene][]
+-   Allow `microk8s kubectl` to use plugins such as krew. Thank you [@balchua][]
+-   `microk8s reset` will attempt to disable add-ons.  Thank you [@balchua][]
+-   etcd upgraded to 3.4 by [@lazzarello][] (for ARM64 only)
+-   Juju has been upgraded to 2.7.3 and is now packaged with the snap
+-   On ZFS, the native snapshotter will be used. Thank you [@sevangelatos][]
+-   Improved `microk8s status` output.  Thank you [@balchua][]
+-   Hostpath can now list events when RBAC is enabled.  Thank you [@Richard87][]
+-   Certificates are set to have a lifespan of 365 days
+-   Linkerd updated to v2.7.0.  Thank you [@balchua][]
+-   knative updated to v0.13.0.
+-   Fix in fetching more stats from cAdvisor. Courtesy of [@nonylene][]
+-   Fix enabling add-ons via the rest API. Thank you [@giorgos-apo][]
+-   Fix metallb privilege escalation on Xenial.  Thank you [@davecahill][]
+
+
+
+
+## MicroK8s 1.17 - 11 December 2019
+
+Most important updates since the last release:
+
+-   New addon: kubeflow. Give it a try with `microk8s enable kubeflow`.
+-   MetalLB Loadbalancer addon, try it with `microk8s enable metallb`. Thank you [@dangtrinhnt][] for your efforts here.
 -   Separate front proxy CA, courtesy of [@giner][]
 -   Linkerd updated to v2.6.0, thank you [@balchua][]
 -   Jaeger operator updated to v1.14.0
 -   Updating prometheus operator (latest). Thanks [@rlankfo][]
 -   Istio upgraded to v1.3.4. Thank you [@nobusugi246][]
 -   Helm upgraded to 2.16.0, thank you [@balchua][], [@fabrichter][] and [@icanhazbroccoli][]
--   Helm status reported in `microk8s.status`, thank you [@greenyouse][]
--   Set default namespace of `microk8s.ctr` to `k8s.io`, thank you [@joestringer][]
+-   Helm status reported in `microk8s status`, thank you [@greenyouse][]
+-   Set default namespace of `microk8s ctr` to `k8s.io`, thank you [@joestringer][]
 -   Better exception handling in the clustering agent, thank you [@shashi278][]
 -   Fixes in cluster upgrades, courtesy of [@strigona-worksight][]
--   `microk8s.inspect` now cleans priority and storage classes. Thank you [@rbt][]
--   `microk8s.inspect` will detect missing cgroups v1 and suggest changes on Fedora 31. Thank you [@soumplis][]
+-   `microk8s inspect` now cleans priority and storage classes. Thank you [@rbt][]
+-   `microk8s inspect` will detect missing cgroups v1 and suggest changes on Fedora 31. Thank you [@soumplis][]
 
 
 
@@ -42,14 +70,14 @@ Most important updates since the last release:
 
 -   Clustering - MicroK8s nodes can be joined to create a multi-node cluster,
     see [these docs](clustering) if you want to try it.
--   New **Cilium** addon courtesy of [@joestringer][]. Try it with `microk8s.enable cilium`.
--   New **Helm** addon courtesy of [@joestringer][]. Try it with `microk8s.enable helm`.
+-   New **Cilium** addon courtesy of [@joestringer][]. Try it with `microk8s enable cilium`.
+-   New **Helm** addon courtesy of [@joestringer][]. Try it with `microk8s enable helm`.
 -   **RBAC** rules for **CoreDNS** and storage add ons, courtesy of [@wichert][].
 -   **Istio** upgraded to v1.2.2 and now includes kiali.
 -   **Knative** upgraded to v0.9.0.
 -   Enabling of aggregation layer and fix on metrics server **RBAC** rules,
     thank you [@giner][].
--   **microk8s.reset** has now an option to free the disk space reserved by
+-   **microk8s reset** has now an option to free the disk space reserved by
     storage volumes. Thank you [@rzr][].
 -   **Ingress** updated to v0.25.1, thank you [@balchua][].
 -   Improvements in the inspection script, thanks [@giorgos-apo][].
@@ -64,9 +92,9 @@ Slack][slack], in the #microk8s channel!
 
 ### Changelog
 
--   **RBAC** support via a simple `microk8s.enable rbac`, courtesy of [@magne][].
+-   **RBAC** support via a simple `microk8s enable rbac`, courtesy of [@magne][].
 -   Update of the **Dashboard** to 1.10.1 and fixes for RBAC. Thank you [@balchua][].
--   **Knative** addon, try it with `microk8s.enable knative`. Thank you [@olatheander][] for your contribution.
+-   **Knative** addon, try it with `microk8s enable knative`. Thank you [@olatheander][] for your contribution.
 -   **CoreDNS** is now the default. Thanks [@richardcase][] for driving this.
 -   **Ingress** updated to 0.24.1 by [@JorritSalverda][], thank you.
 -   Fix on socat failing on Fedora by [@JimPatterson][], thanks.
@@ -150,6 +178,7 @@ Slack][slack], in the #microk8s channel!
 [@balchua]: https://github.com/balchua
 [@davefinster]: https://github.com/davefinster
 [@dangtrinhnt]: https://github.com/dangtrinhnt
+[@davecahill]: https://github.com/davecahill
 [@fabrichter]: https://github.com/fabrichter
 [@giner]: https://github.com/giner
 [@giorgos-apo]: https://github.com/giorgos-apo
@@ -161,15 +190,20 @@ Slack][slack], in the #microk8s channel!
 [@keshavdv]: https://github.com/keshavdv
 [@khteh]: https://github.com/khteh
 [@klarose]: https://github.com/klarose
+[@lazzarello]: https://github.com/lazzarello
 [@lhotari]: https://github.com/lhotari
 [@magne]: https://github.com/magne
 [@miguelgarcia]: https://github.com/miguelgarcia
 [@nobusugi246]: https://github.com/nobusugi246
+[@nonylene]: https://github.com/nonylene
 [@olatheander]: https://github.com/olatheander
+[@qs]: https://github.com/qs
 [@richardcase]: https://github.com/richardcase
 [@rlankfo]: https://github.com/rlankfo
+[@Richard87]: https://github.com/Richard87
 [@rzr]: https://github.com/rzr
 [@rbt]: https://github.com/rbt
+[@sevangelatos]: https://github.com/sevangelatos
 [@shashi278]: https://github.com/shashi278
 [@soumplis]: https://github.com/soumplis
 [@strigona-worksight]: https://github.com/strigona-worksight

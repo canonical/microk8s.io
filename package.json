@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "lint-scss": "sass-lint _sass/**/*.scss --verbose --no-exit",
+    "lint-scss": "stylelint _sass/**/*.scss",
     "build": "yarn run build-css && yarn run build-js && yarn run build-jekyll",
     "build-jekyll": "bundle exec jekyll build",
     "build-css": "node-sass --include-path node_modules _sass --source-map true --output-style compressed --output css && postcss --use autoprefixer --replace css/**/*.css --no-map",
@@ -11,14 +11,18 @@
     "clean": "rm -rf node_modules yarn-error.log css js *.log *.sqlite _site/ build/ .jekyll-metadata .bundle"
   },
   "dependencies": {
-    "@canonical/global-nav": "2.1.0",
+    "@canonical/global-nav": "2.4.0",
     "autoprefixer": "9.7.1",
     "global-nav": "2.0.2",
     "lazysizes": "5.1.2",
     "node-sass": "4.13.0",
     "postcss-cli": "6.1.3",
-    "sass-lint": "1.13.1",
     "vanilla-framework": "2.4.1",
     "watch-cli": "0.2.3"
+  },
+  "devDependencies": {
+    "stylelint": "13.2.1",
+    "stylelint-config-standard": "20.0.0",
+    "stylelint-order": "4.0.0"
   }
 }

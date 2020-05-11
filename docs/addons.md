@@ -26,20 +26,20 @@ any further set up.
 For example, to enable the CoreDNS addon:
 
 ```bash
-microk8s.enable dns
+microk8s enable dns
 ```
 
 These add-ons can be disabled at anytime using the `disable` command:
 
 ```bash
-microk8s.disable dns
+microk8s disable dns
 ```
 
 ... and you can check the list of available and installed addons at any time
 by running:
 
 ```bash
-microk8s.status
+microk8s status
 ```
 
 <a id="list"> </a>
@@ -51,7 +51,7 @@ microk8s.status
 recommended you always enable it. In restricted environments you may need to
 update the upstream DNS servers.
 
-**cilium**: Deploys [Cilium](cilium-doc) to support Kubernetes network policies using eBPF.
+**cilium**: Deploys [Cilium][cilium-doc] to support Kubernetes network policies using eBPF.
 
 **[fluentd](addon-fluentd)**: Deploy the [Elasticsearch-Fluentd-Kibana][kibana-docs] logging and
 monitoring solution.
@@ -69,7 +69,11 @@ monitoring solution.
 **jaeger**: Deploy the [Jaeger Operator][jaeger-docs] in the “simplest”
 configuration.
 
+**juju**: Enables a [juju][] client to work with MicroK8s.
+
 **knative**: Adds the [Knative][knative-docs] middleware to your cluster.
+
+**kubeflow**: Adds [KubeFlow][] using the [kubeflow juju bundle][kubeflow-bundle].
 
 **[linkerd](/docs/addon-linkerd)**: Deploys the [linkerd][linkerd-docs] service mesh.
 
@@ -88,28 +92,34 @@ documentation for more details.
 **storage**: Create a default storage class which allocates storage from a
 host directory.
 
-**metallb**: Deploys the [MetalLB Loadbalancer][metallb].
+**metallb**: Deploys the [MetalLB Loadbalancer][metallb].  Note that currently this does not
+work under multipass on macOS, due to filtering that macOS applies to network traffic.
 
 
 <!-- LINKS -->
 
 [cilium-doc]: http://docs.cilium.io/en/stable/intro/
 [efk-upstream]: https://kubernetes.io/docs/tasks/debug-application-cluster/logging-elasticsearch-kibana/
+[Helm 2]: https://helm.sh
 [istio-woe]: https://istio.io/docs/concepts/what-is-istio/
 [istio-docs]: https://istio.io/docs/
 [jaeger-docs]: https://github.com/jaegertracing/jaeger-operator
+[juju]: https://jaas.ai/docs/what-is-juju
 [linkerd-docs]: https://linkerd.io/2/overview/
 [kibana-docs]: https://www.elastic.co/guide/en/kibana/current/discover.html
+[KubeFlow]: https://www.kubeflow.org/
+[kubeflow-bundle]: https://github.com/juju-solutions/bundle-kubeflow/blob/master/README.md
 [metrics-design-doc]:https://github.com/kubernetes/community/blob/master/contributors/design-proposals/instrumentation/metrics-server.md
 [knative-docs]: https://knative.dev/
 [prometheus-docs]: https://prometheus.io/docs/
 [metallb]: https://metallb.universe.tf/
+
 <!-- FEEDBACK -->
 <div class="p-notification--information">
   <p class="p-notification__response">
-    We appreciate your feedback on the docs. You can 
-    <a href="https://github.com/canonical-web-and-design/microk8s.io/edit/master/docs/addons.md" class="p-notification__action">edit this page</a> 
-    or 
+    We appreciate your feedback on the docs. You can
+    <a href="https://github.com/canonical-web-and-design/microk8s.io/edit/master/docs/addons.md" class="p-notification__action">edit this page</a>
+    or
     <a href="https://github.com/canonical-web-and-design/microk8s.io/issues/new" class="p-notification__action">file a bug here</a>.
   </p>
 </div>

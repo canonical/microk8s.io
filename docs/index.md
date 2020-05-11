@@ -34,7 +34,7 @@ page for details. </p></div>
         <div class="col-8 p-stepped-list__content" >
 MicroK8s will install a minimal, lightweight Kubernetes you can run and use on practically any machine. It can be installed with a snap:
           <div class="p-code-copyable">
-            <input class="p-code-copyable__input" value="sudo snap install microk8s --classic --channel=1.16/stable" readonly="readonly">
+            <input class="p-code-copyable__input" value="sudo snap install microk8s --classic --channel=1.18/stable" readonly="readonly">
             <button class="p-code-copyable__action">Copy to clipboard</button>
           </div>
           <script id="asciicast-279765" src="https://asciinema.org/a/279765.js" async data-autoplay="true" data-rows="4"></script>
@@ -48,9 +48,13 @@ MicroK8s will install a minimal, lightweight Kubernetes you can run and use on p
         <div class="p-stepped-list__content">
 
 MicroK8s creates a group to enable seamless usage of commands which require admin privilege. To add your current user
-to the group, run the following:
+to the group and gain access to the <code>.kube</code> caching directory, run the following two commands:
           <div class="p-code-copyable">
             <input class="p-code-copyable__input" value="sudo usermod -a -G microk8s $USER" readonly="readonly">
+            <button class="p-code-copyable__action">Copy to clipboard</button>
+          </div>
+          <div class="p-code-copyable">
+            <input class="p-code-copyable__input" value="sudo chown -f -R $USER ~/.kube" readonly="readonly">
             <button class="p-code-copyable__action">Copy to clipboard</button>
           </div>
           You will also need to re-enter the session for the group update to take place:
@@ -67,24 +71,24 @@ to the group, run the following:
 MicroK8s has a built-in command to display its status. During installation you
 can use the <code>--wait-ready</code> flag to wait for the Kubernetes services to initialise:
           <div class="p-code-copyable">
-            <input class="p-code-copyable__input" value="microk8s.status --wait-ready" readonly="readonly">
+            <input class="p-code-copyable__input" value="microk8s status --wait-ready" readonly="readonly">
             <button class="p-code-copyable__action">Copy to clipboard</button>
           </div>
         </div>
       </li>
-
+      <a id="rejoin"> </a>
       <li class="p-stepped-list__item">
         <h3 class="p-stepped-list__title"><span class="p-stepped-list__bullet">4</span>Access Kubernetes</h3>
         <div class="p-stepped-list__content">
 <p>MicroK8s bundles its own version of <code>kubectl</code> for accessing Kubernetes. Use it to run
 commands to monitor and control your Kubernetes. For example, to view your node:</p>
           <div class="p-code-copyable">
-            <input class="p-code-copyable__input" value="microk8s.kubectl get nodes" readonly="readonly">
+            <input class="p-code-copyable__input" value="microk8s kubectl get nodes" readonly="readonly">
             <button class="p-code-copyable__action">Copy to clipboard</button>
           </div>
 <p>&hellip; or to see the running services: </p>
 <div class="p-code-copyable">
-  <input class="p-code-copyable__input" value="microk8s.kubectl get services" readonly="readonly">
+  <input class="p-code-copyable__input" value="microk8s kubectl get services" readonly="readonly">
   <button class="p-code-copyable__action">Copy to clipboard</button>
 </div>
 <p>
@@ -93,7 +97,7 @@ commands to monitor and control your Kubernetes. For example, to view your node:
   add an alias (append to <code>~/.bash_aliases</code>) like this:
   </p>
   <div class="p-code-copyable">
-    <input class="p-code-copyable__input" value="alias kubectl='microk8s.kubectl'" readonly="readonly">
+    <input class="p-code-copyable__input" value="alias kubectl='microk8s kubectl'" readonly="readonly">
     <button class="p-code-copyable__action">Copy to clipboard</button>
   </div>
 
@@ -107,13 +111,13 @@ commands to monitor and control your Kubernetes. For example, to view your node:
           the <code>kubectl</code> command to do that as with any Kuberenetes. Try
           installing a demo app:</p>
           <div class="p-code-copyable">
-            <input class="p-code-copyable__input" value="microk8s.kubectl create deployment kubernetes-bootcamp --image=gcr.io/google-samples/kubernetes-bootcamp:v1" readonly="readonly">
+            <input class="p-code-copyable__input" value="microk8s kubectl create deployment kubernetes-bootcamp --image=gcr.io/google-samples/kubernetes-bootcamp:v1" readonly="readonly">
             <button class="p-code-copyable__action">Copy to clipboard</button>
           </div>
           <p>It may take a minute or two to install, but you can check the status:</p>
 
           <div class="p-code-copyable">
-            <input class="p-code-copyable__input" value="microk8s.kubectl get pods" readonly="readonly">
+            <input class="p-code-copyable__input" value="microk8s kubectl get pods" readonly="readonly">
             <button class="p-code-copyable__action">Copy to clipboard</button>
           </div>
         </div>
@@ -128,7 +132,7 @@ MicroK8s uses the minimum of components for a pure, lightweight Kubernetes. Howe
 <p>
 To start it is recommended to add DNS management to facilitate communication between services. For applications which need storage, the 'storage' add-on provides directory space on the host. These are easy to set up:</p>
           <div class="p-code-copyable">
-            <input class="p-code-copyable__input" value="microk8s.enable dns storage" readonly="readonly">
+            <input class="p-code-copyable__input" value="microk8s enable dns storage" readonly="readonly">
             <button class="p-code-copyable__action">Copy to clipboard</button>
           </div>
           <p>
@@ -143,12 +147,12 @@ To start it is recommended to add DNS management to facilitate communication bet
         <div class="p-stepped-list__content">
           <p>MicroK8s will continue running until you decide to stop it. You can stop and start MicroK8s with these simple commands:</p>
           <div class="p-code-copyable">
-            <input class="p-code-copyable__input" value="microk8s.stop" readonly="readonly">
+            <input class="p-code-copyable__input" value="microk8s stop" readonly="readonly">
             <button class="p-code-copyable__action">Copy to clipboard</button>
           </div>
           <p>... will stop MicroK8s and its services. You can start again any time by running:</p>
           <div class="p-code-copyable">
-            <input class="p-code-copyable__input" value="microk8s.start" readonly="readonly">
+            <input class="p-code-copyable__input" value="microk8s start" readonly="readonly">
             <button class="p-code-copyable__action">Copy to clipboard</button>
           </div>
         </div>
