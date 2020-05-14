@@ -71,10 +71,11 @@ Clients talking to the secure port of the API server (`16443`), such as the Kube
 
 The authentication [strategies](https://kubernetes.io/docs/reference/access-authn-authz/authentication/#authentication-strategies)
  enabled by default are:
- - Static Password File, with password tokens and usernames stored in `/var/snap/microk8s/current/credentials/basic_auth.csv`
- - Static Token File with tokens in `/var/snap/microk8s/current/credentials/known_tokens.csv`, and
- - X509 Client Certs with the client CA file set to `/var/snap/microk8s/current/certs/ca.crt`.
- Under `/var/snap/microk8s/current/credentials/` you can find the `client.config` kubeconfig file
+ - Static Token File with tokens in `/var/snap/microk8s/current/credentials/known_tokens.csv`,
+ - X509 Client Certs with the client CA file set to `/var/snap/microk8s/current/certs/ca.crt`,
+ - Static Password File with password tokens and usernames stored in `/var/snap/microk8s/current/credentials/basic_auth.csv`. This strategy is available only in releases prior to v1.19.
+
+Under `/var/snap/microk8s/current/credentials/` you can find the `client.config` kubeconfig file
  used by `microk8s kubectl`.
 
 By default all authenticated requests are authorized as the api-server runs with
