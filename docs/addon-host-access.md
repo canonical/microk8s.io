@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: "Host-acces addon"
+title: "Host-access addon"
 permalink: /docs/addon-host-access
 ---
 
