@@ -18,12 +18,6 @@ app = FlaskBase(
     template_500="500.html",
 )
 
-from canonicalwebteam.discourse_docs import (
-    DiscourseDocs,
-    DocParser,
-    DiscourseAPI,
-)
-
 doc_parser = DocParser(
     api=DiscourseAPI(base_url="https://discourse.ubuntu.com/"),
     index_topic_id=15536,
