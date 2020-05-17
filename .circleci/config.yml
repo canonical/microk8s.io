@@ -45,5 +45,5 @@ workflows:
   build:
     jobs:
       - test-site
-      - lint-nginx
+      - run-tests
       - lint-scss
