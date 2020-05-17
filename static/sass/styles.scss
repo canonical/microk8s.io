@@ -3,6 +3,9 @@
 
 // Import Vanilla
 @import 'vanilla-framework/scss/build';
+@import "layout_docs";
+
+@include microk8s-l-docs;
 
 // import additional styles
 @import "sidebar";
