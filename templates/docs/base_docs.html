@@ -1,6 +1,6 @@
----
-layout: base
----
+{% extends 'base_layout.html' %}
+
+{% block content %}
 <div class="l-docs">
   <aside class="l-docs-sidebar" id="navigation">
     <div class="p-sidebar__banner u-hide--medium u-hide--large">
@@ -88,7 +88,7 @@ layout: base
   <main class="l-docs-content" id="main-content">
     <div class="p-strip is-shallow">
       <div class="l-docs-row">
-        {{ content }}
+        {% block docs_content %}{% endblock docs_content %}
       </div>
     </div>
     <footer class="p-footer" role="contentinfo">
@@ -115,4 +115,5 @@ layout: base
   </main>
 </div>
 
-<script src="/js/copytoclipboard.js" defer></script>
+<script src="{{ versioned_static('js/dist/base.js') }}"></script>
+{% endblock %}

@@ -15,13 +15,9 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="copydoc" content="https://docs.google.com/document/d/1ObWmhRc4GCIhrBi8gT7yIIs0J_dn_8ravfLtcwhr3uQ/edit">
-  
+
   <title>
-    {% if page.title %}
-    {{ page.title }} | MicroK8s
-    {% else %}
-    MicroK8s - Fast, Light, Upstream Developer Kubernetes
-    {% endif %}
+    {% block title %}MicroK8s - Fast, Light, Upstream Developer Kubernetes{% endblock %}
   </title>
 
   <!-- Google Analytics and Google Optimize -->
@@ -49,12 +45,36 @@
           'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
     })(window, document, 'script', 'dataLayer', 'GTM-T5SMPTS');</script>
   <!-- End Google Tag Manager -->
-  <link rel="stylesheet" href="/css/styles.css" />
+
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
   <link rel="shortcut icon" type="image/png" href="https://assets.ubuntu.com/v1/d53eeeac-MicroK8s_favicon_64px_v2.png">
 
-  <script src="/js/build/lazysizes/lazysizes.min.js" defer></script>
-  <!-- GitHub buttons - https://buttons.github.io/ -->
-  <script async defer src="https://buttons.github.io/buttons.js"></script>
+  <link rel="preload" as="font" type="font/woff2" href="https://assets.ubuntu.com/v1/e8c07df6-Ubuntu-L_W.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="https://assets.ubuntu.com/v1/7f100985-Ubuntu-Th_W.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="https://assets.ubuntu.com/v1/f8097dea-Ubuntu-LI_W.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="https://assets.ubuntu.com/v1/fff37993-Ubuntu-R_W.woff2" crossorigin>
+
+  <meta name="description" content="{% block meta_description %}The smallest, fastest, fully-conformant Kubernetes that tracks upstream releases and makes clustering trivial. MicroK8s is great for offline development, prototyping, and testing.{% endblock %}">
+
+  <meta name="theme-color" content="#E95420">
+  <meta name="twitter:account_id" content="4503599627481511">
+  <meta name="twitter:site" content="@ubuntu">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="http://microk8s.io">
+  <meta property="og:site_name" content="microk8s.io">
+
+  {% if self.title() %}
+  <meta name="twitter:title" content="{{ self.title() }} | MicroK8s">
+  <meta property="og:title" content="{{ self.title() }} | MicroK8s">
+  {% endif %}
+
+  {% if self.meta_description() %}
+  <meta name="twitter:description" content="{{ self.meta_description() }}">
+  <meta property="og:description" content="{{ self.meta_description() }}">
+  {% endif %}
+
+  <link rel="stylesheet" type="text/css" media="screen" href="{{ versioned_static('css/styles.css') }}" />
 </head>
 
 <body>
@@ -62,41 +82,17 @@
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T5SMPTS" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
 
-  <header id="navigation" class="p-navigation">
-    <div class="p-navigation__row">
-      <div class="p-navigation__banner">
-        <div class="p-navigation__logo u-vertically-center">
-          <a class="p-navigation__link" href="/" style="color:white">
-            MicroK8s
-          </a>
-        </div>
-        <a href="#navigation" class="p-navigation__toggle--open" title="menu">Menu</a>
-        <a href="#navigation-closed" class="p-navigation__toggle--close" title="close menu">Close menu</a>
-      </div>
-      <nav class="p-navigation__nav">
-        <span class="u-off-screen">
-          <a href="#main-content">Jump to main content</a>
-        </span>
-        <ul class="p-navigation__links" role="menu">
-          <li class="p-navigation__link {% if page.layout == 'docs' %}is-selected{% endif %}" role="menuitem">
-            <a href="/docs/">Docs</a>
-          </li>
-          <li class="p-navigation__link" role="menuitem">
-            <a class="p-link--external" href="https://discuss.kubernetes.io/tags/microk8s">Discourse</a>
-          </li>
-          <li class="p-navigation__link" role="menuitem">
-            <a class="p-link--external" href="https://github.com/ubuntu/microk8s">Code</a>
-          </li>
-          <li class="p-navigation__link" role="menuitem">
-            <a class="p-link--external" href="https://github.com/ubuntu/microk8s/issues">Bugs</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-  {{content}}
-  <script src="/js/build/global-nav/global-nav.js"></script>
-	<script>canonicalGlobalNav.createNav({maxWidth:"72rem"});</script>
+  {% include "partial/_navigation.html" %}
+
+  <div id="main-content">
+    {% block content %}{% endblock content %}
+  </div>
+
+  {% include "partial/_footer.html" %}
+
+  <script src="{{ versioned_static('js/dist/global-nav.js') }}"></script>
+  <script src="{{ versioned_static('js/dist/main.js') }}"></script>
+
 </body>
 
 </html>
