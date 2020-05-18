@@ -11,7 +11,7 @@ from canonicalwebteam.discourse_docs import (
 # Rename your project below
 app = FlaskBase(
     __name__,
-    "dqlite.io",
+    "microk8s.io",
     template_folder="../templates",
     static_folder="../static",
     template_404="404.html",
