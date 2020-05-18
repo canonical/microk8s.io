@@ -3,7 +3,6 @@
   "plugins": [
     "stylelint-order"
   ],
-  "ignoreFiles": ["static/sass/_hljs.scss"],
   "rules": {
     "order/properties-alphabetical-order": true,
     "at-rule-no-unknown": [ true, {

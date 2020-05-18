@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<!--
+  This is a basic HTML file template to become the new homepage of the site.
+  Currently it simply includes Vanilla styles and not much else.
+
+  When you come to work on it in ernest, please remove this comment
+  and replace index.html with this file.
+-->
+
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="copydoc" content="https://docs.google.com/document/d/1ObWmhRc4GCIhrBi8gT7yIIs0J_dn_8ravfLtcwhr3uQ/edit">
+
+  <title>
+    {% block title %}MicroK8s - Fast, Light, Upstream Developer Kubernetes{% endblock %}
+  </title>
+
+  <!-- Google Analytics and Google Optimize -->
+  <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-1018242-59', 'auto', {'allowLinker': true, 'siteSpeedSampleRate': 100});
+  ga('require', 'GTM-WVQJJBD');
+  ga('require', 'linker');
+  ga('linker:autoLink', ['conjure-up.io', 'login.ubuntu.com', 'www.ubuntu.com',
+  'ubuntu.com', 'insights.ubuntu.com', 'developer.ubuntu.com', 'cn.ubuntu.com',
+  'design.ubuntu.com', 'maas.io', 'canonical.com', 'landscape.canonical.com',
+  'pages.ubuntu.com', 'tutorials.ubuntu.com', 'docs.ubuntu.com']);
+  </script>
+  <!-- End Google Analytics and Google Optimize -->
+
+  <!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-T5SMPTS');</script>
+  <!-- End Google Tag Manager -->
+
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+  <link rel="shortcut icon" type="image/png" href="https://assets.ubuntu.com/v1/d53eeeac-MicroK8s_favicon_64px_v2.png">
+
+  <link rel="preload" as="font" type="font/woff2" href="https://assets.ubuntu.com/v1/e8c07df6-Ubuntu-L_W.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="https://assets.ubuntu.com/v1/7f100985-Ubuntu-Th_W.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="https://assets.ubuntu.com/v1/f8097dea-Ubuntu-LI_W.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="https://assets.ubuntu.com/v1/fff37993-Ubuntu-R_W.woff2" crossorigin>
+
+  <meta name="description" content="{% block meta_description %}The smallest, fastest, fully-conformant Kubernetes that tracks upstream releases and makes clustering trivial. MicroK8s is great for offline development, prototyping, and testing.{% endblock %}">
+
+  <meta name="theme-color" content="#E95420">
+  <meta name="twitter:account_id" content="4503599627481511">
+  <meta name="twitter:site" content="@ubuntu">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="http://microk8s.io">
+  <meta property="og:site_name" content="microk8s.io">
+
+  {% if self.title() %}
+  <meta name="twitter:title" content="{{ self.title() }} | MicroK8s">
+  <meta property="og:title" content="{{ self.title() }} | MicroK8s">
+  {% endif %}
+
+  {% if self.meta_description() %}
+  <meta name="twitter:description" content="{{ self.meta_description() }}">
+  <meta property="og:description" content="{{ self.meta_description() }}">
+  {% endif %}
+
+  <link rel="stylesheet" type="text/css" media="screen" href="{{ versioned_static('css/styles.css') }}" />
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T5SMPTS" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  {% include "partial/_navigation.html" %}
+
+  <div id="main-content">
+    {% block content %}{% endblock content %}
+  </div>
+
+  {% include "partial/_footer.html" %}
+
+  <script src="{{ versioned_static('js/dist/global-nav.js') }}"></script>
+  <script src="{{ versioned_static('js/dist/main.js') }}"></script>
+
+</body>
+
+</html>
