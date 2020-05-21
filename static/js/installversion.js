@@ -27,7 +27,6 @@ function setOSDownloadURLs() {
     var assetInfo = getAssetInfo(os);
     if (assetInfo) {
       button.setAttribute('href', assetInfo.url);
-      button.querySelector('.p-link--external').classList.remove('p-link--external');
     }
     if (version) {
       version.innerText = assetInfo.name;
