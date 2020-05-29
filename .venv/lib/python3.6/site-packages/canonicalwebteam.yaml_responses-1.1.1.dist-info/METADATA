@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: canonicalwebteam.yaml-responses
+Version: 1.1.1
+Summary: Functions to read from yaml files to providegeneric responses to URLs in Django and Flask
+Home-page: https://github.com/canonical-webteam/yaml-responses
+Author: Canonical Webteam
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: pyyaml
+Requires-Dist: yamlloader
+Provides-Extra: django
+Requires-Dist: Django ; extra == 'django'
+Provides-Extra: flask
+Requires-Dist: flask ; extra == 'flask'
+
+UNKNOWN
+
+

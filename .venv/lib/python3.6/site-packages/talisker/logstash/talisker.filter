@@ -1,0 +1,147 @@
+filter {
+  if [type] == "talisker" {
+    multiline {
+        pattern => "^%{TIMESTAMP_ISO8601}"
+        negate => true
+        what => "previous"
+    }
+    ruby {
+      code => "
+        if event['message'].length > 20000
+            event.tag 'message truncated'
+            event['message'] = event['message'][0..20000] + '...'
+        end
+      "
+    }
+    grok {
+        patterns_dir => "./patterns"
+        match => {"message"=>"(?m)%{TIMESTAMP_ISO8601:timestamp} %{LOGLEVEL:loglevel} %{MODULE:module} \"%{ESCAPED_QUOTES:logmsg}(\"|(\.\.\.))( ?)%{OPTIONAL_REST_OF_LINE:logfmt}(\n?)%{GREEDYDATA:traceback}"}
+        remove_field => [ "message" ]
+    }
+    # this filter is based on the code from the logfmt ruby gem
+    ruby {
+        init => "
+            DOUBLEQUOTE = 34.chr
+            ESCAPE = 92.chr
+
+            GARBAGE = 0
+            KEY = 1
+            EQUAL = 2
+            IVALUE = 3
+            QVALUE = 4
+
+            def numeric?(s)
+            s.is_a?(Numeric) || s.to_s.match(/\A[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)?\Z/)
+            end
+
+            def integer?(s)
+            s.is_a?(Integer) || s.to_s.match(/\A[-+]?[0-9]+\Z/)
+            end
+        "
+        code => "
+            line = event['logfmt']
+            if not line
+                return [event]
+            end
+
+            key, value = '', ''
+            escaped = false
+            state = GARBAGE
+            i = 0
+            line.each_char do |c|
+                i += 1
+                if state == GARBAGE
+                    if c > ' ' && c != DOUBLEQUOTE && c != '='
+                        key = c
+                        state = KEY
+                    end
+                    next
+                end
+                if state == KEY
+                    if c > ' ' && c != DOUBLEQUOTE && c != '='
+                        state = KEY
+                        key << c
+                    elsif c == '='
+                        event[key.strip] = true
+                        state = EQUAL
+                    else
+                        event[key.strip] = true
+                        state = GARBAGE
+                    end
+                    event[key.strip] = true if i >= line.length
+                    next
+                end
+                if state == EQUAL
+                    if c > ' ' && c != DOUBLEQUOTE && c != '='
+                        value = c
+                        state = IVALUE
+                    elsif c == DOUBLEQUOTE
+                        value = ''
+                        escaped = false
+                        state = QVALUE
+                    else
+                        # modification: 'foo= ' is parsed as foo=nil, rather foo=true
+                        event[key.strip] = nil
+                        state = GARBAGE
+                    end
+                    if i >= line.length
+                        if integer?(value)
+                            value = value.to_i
+                        elsif numeric?(value)
+                            value = value.to_f
+                        end
+                        event[key.strip] = value || true
+                    end
+                    next
+                end
+                if state == IVALUE
+                    if !(c > ' ' && c != DOUBLEQUOTE)
+                        if integer?(value)
+                            value = value.to_i
+                        elsif numeric?(value)
+                            value = value.to_f
+                        end
+                        event[key.strip] = value
+                        state = GARBAGE
+                    else
+                        value << c
+                    end
+                    if i >= line.length
+                        if integer?(value)
+                            value = value.to_i
+                        elsif numeric?(value)
+                            value = value.to_f
+                        end
+                        event[key.strip] = value
+                    end
+                    next
+                end
+                if state == QVALUE
+                    if c == ESCAPE
+                        escaped = true
+                        value << ESCAPE
+                    elsif c == DOUBLEQUOTE
+                        if escaped
+                            escaped = false
+                            value.chop! << c
+                            next
+                        end
+                        event[key.strip] = value
+                        state = GARBAGE
+                    else
+                        escaped = false
+                        value << c
+                    end
+                    next
+                end
+            end
+            [event]
+        "
+        remove_field => ["logfmt"]
+    }
+    date {
+        match => [ "timestamp", "yyyy-MM-dd HH:mm:ss.SSSZ"]
+        remove_field => [ "timestamp" ]
+    }
+  }
+}

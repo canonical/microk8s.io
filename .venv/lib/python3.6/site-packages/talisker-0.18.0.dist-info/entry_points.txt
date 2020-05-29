@@ -1,0 +1,9 @@
+[console_scripts]
+talisker = talisker:run_gunicorn [gunicorn]
+talisker.celery = talisker:run_celery [celery]
+talisker.gunicorn = talisker:run_gunicorn [gunicorn]
+talisker.gunicorn.eventlet = talisker:run_gunicorn_eventlet [gunicorn]
+talisker.gunicorn.gevent = talisker:run_gunicorn_gevent [gunicorn]
+talisker.help = talisker:run_help
+talisker.run = talisker:run
+

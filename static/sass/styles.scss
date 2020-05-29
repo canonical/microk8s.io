@@ -11,8 +11,10 @@
 @import "sidebar";
 @import "blockquote";
 @import "docs";
+@import "pattern_github_buttons";
 
 @include docs;
+@include microk8s-github-buttons;
 
 // Custom styles
 .p-tab {

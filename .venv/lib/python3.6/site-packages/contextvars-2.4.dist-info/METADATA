@@ -1,0 +1,105 @@
+Metadata-Version: 2.1
+Name: contextvars
+Version: 2.4
+Summary: PEP 567 Backport
+Home-page: http://github.com/MagicStack/contextvars
+Author: MagicStack Inc
+Author-email: hello@magic.io
+License: Apache License, Version 2.0
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Intended Audience :: Developers
+Provides: contextvars
+Requires-Dist: immutables (>=0.9)
+
+.. image:: https://travis-ci.org/MagicStack/contextvars.svg?branch=master
+    :target: https://travis-ci.org/MagicStack/contextvars
+
+
+PEP 567 Backport
+================
+
+This package implements a backport of Python 3.7 ``contextvars``
+module (see PEP 567) for Python 3.6.
+
+**Important:** at this moment this package does not provide an
+asyncio event loop with PEP 567 support yet.  Stay tuned for updates.
+
+
+Original "contextvars" Package
+==============================
+
+This package replaces the old "contextvars" PyPI package which
+repository is available `here <https://github.com/gawen/contextvars>`_.
+
+
+Documentation
+=============
+
+Read the official ``contextvars`` module documentation here:
+https://docs.python.org/3.7/library/contextvars.html
+
+
+`PEP 567 <https://www.python.org/dev/peps/pep-0567/>`_ also provides
+a comprehensive overview of the API and explains all design choices.
+
+
+Installation
+============
+
+.. code-block:: bash
+
+    $ pip install contextvars
+
+
+Usage
+=====
+
+.. code-block:: python
+
+    import contextvars
+
+    my_var = contextvars.ContextVar('my_var')
+
+    # ...
+
+
+Listing as a Dependency
+=======================
+
+The good news is that the standard library always takes the
+precedence over site packages, so even if a local ``contextvars``
+module is installed, the one from the standard library will be used.
+Therefore you can simply list "contextvars" in your
+``requirements.txt`` or ``setup.py`` files.
+
+Another option is to use `"platform specific dependencies"
+<http://setuptools.readthedocs.io/en/latest/setuptools.html\
+#declaring-platform-specific-dependencies>`_ setuptools feature:
+
+.. code-block:: python
+
+    import setuptools
+
+    setuptools.setup(
+        name="Project",
+        ...
+        install_requires=[
+            'contextvars;python_version<"3.7"'
+        ]
+    )
+
+
+License
+=======
+
+Apache 2.0.
+
+
