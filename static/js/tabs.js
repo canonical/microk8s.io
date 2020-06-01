@@ -12,6 +12,7 @@ function setupTabs() {
 
       tab.addEventListener("click", function (e) {
         e.preventDefault();
+        e.stopPropagation();
         toggleTab(e.currentTarget);
       });
     }
@@ -35,8 +36,8 @@ function setupTabs() {
 
     tab.setAttribute("aria-selected", "true");
     tab.classList.toggle("active");
-    tabContent.classList.toggle("u-hide");
-    tabHeading.classList.toggle("u-hide");
+    tabContent.classList.remove("u-hide");
+    tabHeading.classList.remove("u-hide");
 
     if (tab.classList.contains("active")) {
       var breakpoint = 620;
