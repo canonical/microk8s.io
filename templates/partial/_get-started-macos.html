@@ -12,7 +12,7 @@
         <img src="https://assets.ubuntu.com/v1/670398bd-mac1.png" alt="macOS terminal installing MicroK8s">
       </p>
       <p>
-        Don't have the brew command? Get it from the <a class="p-link--external" href="http://brew.sh/">Homebrew website</a>
+        Don't have the <code>brew</code> command? Get it from the <a class="p-link--external" href="http://brew.sh/">Homebrew website</a>
       </p>
     </div>
   </li>
@@ -24,6 +24,17 @@
     <div class="p-stepped-list__content">
       <p>
         <code>microk8s status --wait-ready</code>
+      </p>
+    </div>
+  </li>
+
+  <li class="p-stepped-list__item">
+    <h3 class="p-stepped-list__title">
+      Turn on the services you want
+    </h3>
+    <div class="p-stepped-list__content">
+      <p>
+        <code>microk8s enable dashboard dns registry istio</code>
       </p>
       <p>
         Try <code>microk8s enable --help</code> for a list of available services built in. <code>microk8s disable</code> turns off a service.
