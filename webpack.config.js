@@ -17,7 +17,6 @@ module.exports = {
   entry: {
     "global-nav": "./static/js/global-nav.js",
     main: [
-      "./static/js/installversion.js",
       "./static/js/tabs.js",
       "./static/js/copytoclipboard.js",
     ],

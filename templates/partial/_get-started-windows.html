@@ -1,0 +1,109 @@
+<ol class="p-stepped-list u-no-margin--left">
+  <li class="p-stepped-list__item">
+    <h3 class="p-stepped-list__title">
+      Download the installer for Windows
+    </h3>
+    <div class="p-stepped-list__content">
+      <p>
+        <a class="p-button--positive" href="https://github.com/ubuntu/microk8s/releases/download/installer-v2.0.0/microk8s-installer.exe">Download MicroK8s for Windows</a>
+      </p>
+    </div>
+  </li>
+
+  <li class="p-stepped-list__item">
+    <h3 class="p-stepped-list__title">
+      Run the Installer
+    </h3>
+    <div class="p-stepped-list__content">
+      <p>
+        <img src="https://assets.ubuntu.com/v1/40617546-win2.png" alt="Windows installer">
+      </p>
+    </div>
+  </li>
+
+  <li class="p-stepped-list__item">
+    <h3 class="p-stepped-list__title">
+      Open a command line
+    </h3>
+    <div class="p-stepped-list__content">
+      <p>
+        <img src="https://assets.ubuntu.com/v1/a2f7ab2a-win1.png" alt="Windows commandline">
+      </p>
+    </div>
+  </li>
+
+  <li class="p-stepped-list__item">
+    <h3 class="p-stepped-list__title">
+      Check the status while Kubernetes starts
+    </h3>
+    <div class="p-stepped-list__content">
+      <p>
+        <code>microk8s status --wait-ready</code>
+      </p>
+    </div>
+  </li>
+
+
+  <li class="p-stepped-list__item">
+    <h3 class="p-stepped-list__title">
+      Turn on the services you want
+    </h3>
+    <div class="p-stepped-list__content">
+      <p>
+        <code>microk8s enable dashboard dns registry istio</code>
+      </p>
+      <p>
+        Try <code>microk8s enable --help</code> for a list of available services built in. microk8s disable turns off a service.
+      </p>
+    </div>
+  </li>
+
+  <li class="p-stepped-list__item">
+    <h3 class="p-stepped-list__title">
+      Start using Kubernetes
+    </h3>
+    <div class="p-stepped-list__content">
+      <p>
+        <code>microk8s kubectl get all --all-namespaces</code>
+      </p>
+      <p>
+        If you mainly use MicroK8s you can run the native Windows version of kubectl on your command-line.
+      </p>
+      <p>
+        <a href="/docs/working-with-kubectl#heading--kubectl-windows">Learn how&nbsp;&rsaquo;</a>
+      </p>
+    </div>
+  </li>
+
+  <li class="p-stepped-list__item">
+    <h3 class="p-stepped-list__title">
+      Access the Kubernetes dashboard
+    </h3>
+    <div class="p-stepped-list__content">
+      <p>
+        <code>microk8s dashboard-proxy</code>
+      </p>
+    </div>
+  </li>
+
+  <li class="p-stepped-list__item">
+    <h3 class="p-stepped-list__title">
+      Start and stop Kubernetes to save battery
+    </h3>
+    <div class="p-stepped-list__content">
+      <p>
+        Kubernetes is a collection of system services that talk to each other all the time. If you don’t need them running in the background then you will save battery by stopping them. <code>microk8s start</code> and <code>microk8s stop</code> will do the work for you.
+      </p>
+      <p>
+        <a href="/docs">Read the docs to learn more&nbsp;&rsaquo;</a>
+      </p>
+      <h3>
+        Join the community
+      </h3>
+      <p>
+        <a href="https://discuss.kubernetes.io/tags/microk8s">Connect with our community and see what others are doing with MicroK8s&nbsp;&rsaquo;</a>
+      </p>
+    </div>
+  </li>
+
+</ol>

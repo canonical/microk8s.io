@@ -37,3 +37,13 @@ discourse_docs.init_app(app)
 @app.route("/")
 def index():
     return render_template("index.html")
+
+
+@app.route("/contact-us")
+def contact():
+    return render_template("contact-us.html")
+
+
+@app.route("/thank-you")
+def thankyou():
+    return render_template("thank-you.html")

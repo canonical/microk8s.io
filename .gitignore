@@ -35,6 +35,8 @@ bower_components/
 vendor/
 # Normally lockfiles would be committed, but we use yarn instead of NPM for locking dependencies
 package-lock.json
+.venv
+.dotrun.json
 
 # [build] Built files
 /build/
