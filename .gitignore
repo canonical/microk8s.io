@@ -63,3 +63,5 @@ env[23]/
 # Project-specific ignores
 static/js/dist
 
+.dotrun.json
+.venv/
