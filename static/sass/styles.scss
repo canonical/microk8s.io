@@ -76,29 +76,29 @@
   background-image:
     linear-gradient(to bottom left, rgba(216, 216, 216, 0.54) 0, rgba(216, 216, 216, 0.54) 49.9%, transparent 50%),
     linear-gradient(to bottom right, rgba(228, 228, 228, 0.54) 0, rgba(228, 228, 228, 0.54) 49.9%, transparent 50%),
-    linear-gradient(to top left, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 49.3%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0) 100%),
+    linear-gradient(to top left, rgba(247, 247, 247, 1) 0%, rgba(247, 247, 247, 1) 49.3%, rgba(247, 247, 247, 0) 50%, rgba(247, 247, 247, 0) 100%),
     linear-gradient(201deg, #4e4e4e 0%, #333 46%, #111 90%);
 
   @supports not (background-blend-mode: multiply) {
     background-image:
       linear-gradient(to bottom left, rgba(216, 216, 216, 0.14) 0, rgba(216, 216, 216, 0.14) 49.9%, transparent 50%),
       linear-gradient(to bottom right, rgba(228, 228, 228, 0.14) 0, rgba(228, 228, 228, 0.14) 49.9%, transparent 50%),
-      linear-gradient(to top left, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 49.3%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0) 100%),
+      linear-gradient(to top left, rgba(247, 247, 247, 1) 0%, rgba(247, 247, 247, 1) 49.3%, rgba(247, 247, 247, 0) 50%, rgba(247, 247, 247, 0) 100%),
       linear-gradient(201deg, #4e4e4e 0%, #333 46%, #111 90%);
   }
 
   background-position: top right, top left, right bottom -1px, left top;
   background-repeat: no-repeat;
-  background-size: 114% 87.83%, 98% 91%, 192.8% 23.26%, 100% 99.8%;
+  background-size: 74% 99.83%, 98% 91%, 192.8% 23.26%, 100% 99.8%;
   color: $color-x-light;
   margin: 0;
-  padding-bottom: 11rem;
-  padding-top: 6rem;
+  padding-bottom: 6rem;
+  padding-top: 2rem;
 
   @media (max-width: $breakpoint-medium) {
     background-position: top right, top left, right bottom -1px, left top;
     background-repeat: no-repeat;
-    background-size: 82% 91.83%, 148% 83%, 119% 13%, 100% 99.83%;
+    background-size: 74% 99.83%, 148% 83%, 119% 13%, 100% 99.83%;
     padding-bottom: 8rem;
     padding-top: 4rem;
   }
@@ -117,6 +117,20 @@
   background-repeat: no-repeat;
   background-size: 77% 115%, 71% 104%, 100% 99.8%;
   color: $color-x-light;
+}
+
+.p-strip--lightsuru {
+  @extend %vf-strip;
+
+  background-blend-mode: initial, initial, initial;
+  background-color: #f7f7f7;
+  background-image:
+    linear-gradient(to bottom left, rgba(216, 216, 216, 0.54) 0, rgba(216, 216, 216, 0.54) 49.9%, transparent 50%),
+    linear-gradient(to bottom right, rgba(228, 228, 228, 0.54) 0, rgba(228, 228, 228, 0.54) 49.9%, transparent 50%),
+    linear-gradient(201deg, #e5e5e5 0%, #f7f7f7 90%);
+  background-position: top right, top left, left top;
+  background-repeat: no-repeat;
+  background-size: 86% 125%, 77% 57%, 100% 99.8%;
 }
 
 .u-hide--x-small {

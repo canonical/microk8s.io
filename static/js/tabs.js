@@ -20,6 +20,7 @@ function setupTabs() {
   function toggleTab(tab) {
     var tabSelector = tab.getAttribute("href");
     var tabContent = document.querySelector(tabSelector);
+    var tabHeading = document.getElementById("js-tab__heading");
 
     for (var i = 0; i < tabs.length; i += 1) {
       if (tabs[i] !== tab) {
@@ -35,6 +36,7 @@ function setupTabs() {
     tab.setAttribute("aria-selected", "true");
     tab.classList.toggle("active");
     tabContent.classList.toggle("u-hide");
+    tabHeading.classList.toggle("u-hide");
 
     if (tab.classList.contains("active")) {
       var breakpoint = 620;
