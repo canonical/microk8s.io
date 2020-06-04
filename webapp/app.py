@@ -19,9 +19,8 @@ app = FlaskBase(
 )
 
 doc_parser = DocParser(
-    api=DiscourseAPI(base_url="https://discourse.ubuntu.com/"),
-    index_topic_id=15536,
-    category_id=41,
+    api=DiscourseAPI(base_url="https://discuss.kubernetes.io/"),
+    index_topic_id=11243,
     url_prefix="/docs",
 )
 if app.debug:
