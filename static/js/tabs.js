@@ -37,7 +37,11 @@ function setupTabs() {
     tab.setAttribute("aria-selected", "true");
     tab.classList.toggle("active");
     tabContent.classList.toggle("u-hide");
-    tabHeading.classList.toggle("u-hide");
+    if (tabContent.classList.contains("u-hide")) {
+      tabHeading.classList.remove("u-hide");
+    } else {
+      tabHeading.classList.add("u-hide");
+    }
 
     if (tab.classList.contains("active")) {
       var breakpoint = 620;
