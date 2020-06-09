@@ -22,21 +22,21 @@
 
   <section class="p-strip--light is-shallow u-no-padding--top" id="get-started" role="tablist">
     <div class="row p-divider">
-      <a id="tab-one" href="#tab-one__content" class="col-small-2 col-medium-2 col-4 p-divider__block p-tab u-align--center u-vertically-center js-tab" role="tab" aria-selected="false">
+      <a id="tab-one" href="#tab-one__content" class="col-medium-2 col-4 p-divider__block p-tab u-align--center u-vertically-center js-tab" role="tab" aria-selected="false">
         <img src="https://assets.ubuntu.com/v1/b7441512-linux-penguin.png" style="height: 85px; margin-top: 0.5rem;" alt="">
-        <p>
+        <p class="u-no-margin--bottom">
           Linux
         </p>
       </a>
-      <a id="tab-two" href="#tab-two__content" class="col-small-2 col-medium-2 col-4 p-divider__block p-tab u-align--center u-vertically-center js-tab" role="tab" aria-selected="true">
-        <img src="https://assets.ubuntu.com/v1/ce52589b-windows.png" style="height: 55px;" alt="Windows">
-        <p>
+      <a id="tab-two" href="#tab-two__content" class="col-medium-2 col-4 p-divider__block p-tab u-align--center u-vertically-center js-tab" role="tab" aria-selected="true">
+        <img src="https://assets.ubuntu.com/v1/429929de-2020-logo-windows.svg" style="height: 55px;" alt="Windows">
+        <p class="u-no-margin--bottom">
           Windows <span class="p-label--new">NEW</span>
         </p>
       </a>
-      <a id="tab-three" href="#tab-three__content" class="col-small-2 col-medium-2 col-4 p-divider__block p-tab u-align--center u-vertically-center js-tab" role="tab" aria-selected="false">
+      <a id="tab-three" href="#tab-three__content" class="col-medium-2 col-4 p-divider__block p-tab u-align--center u-vertically-center js-tab" role="tab" aria-selected="false">
         <img src="https://assets.ubuntu.com/v1/d2f8dca7-macOS.png" style="height: 40px;" alt="macOS">
-        <p>
+        <p class="u-no-margin--bottom">
           macOS <span class="p-label--new">NEW</span>
         </p>
       </a>
@@ -45,7 +45,7 @@
       <div class="col-12">
         <h5 class="u-align--center u-no-max-width u-no-margin--bottom">
           <em>
-            Select platform for install steps
+            Click for install steps
           </em>
         </h5>
       </div>
@@ -73,8 +73,8 @@
         <p>
           MicroK8s is pure upstream Kubernetes, not a subset.
         </p>
-        <p>
-          We keep it small with sensible choices that just work. That makes a quick install, with easy upgrades and great security - and leaves your options open later.
+        <p class="u-no-margin--bottom">
+          We keep it small with sensible choices that just work. That makes a quick install, with easy upgrades and great security &mdash; and leaves your options open later.
         </p>
       </div>
       <div class="col-5 u-hide--small u-align--center u-vertically-center">
@@ -87,7 +87,7 @@
   <section class="p-strip--light">
     <div class="row u-equal-height">
       <div class="col-3">
-        <ul class="p-list--divided">
+        <ul class="p-list--divided u-no-margin--bottom">
           <li class="p-list__item is-ticked">Conformant</li>
           <li class="p-list__item is-ticked">Clustering</li>
           <li class="p-list__item is-ticked">Dashboard</li>
@@ -95,9 +95,10 @@
           <li class="p-list__item is-ticked">Prometheus</li>
           <li class="p-list__item is-ticked">Windows</li>
         </ul>
+        <hr class="u-hide u-show--small u-no-margin--bottom"/>
       </div>
       <div class="col-3">
-        <ul class="p-list--divided">
+        <ul class="p-list--divided u-no-margin--bottom">
           <li class="p-list__item is-ticked">Lightweight</li>
           <li class="p-list__item is-ticked">Automatic updates</li>
           <li class="p-list__item is-ticked">DNS</li>
@@ -105,9 +106,10 @@
           <li class="p-list__item is-ticked">Fluentd</li>
           <li class="p-list__item is-ticked">macOS</li>
         </ul>
+        <hr class="u-hide u-show--small u-no-margin--bottom"/>
       </div>
       <div class="col-3">
-        <ul class="p-list--divided">
+        <ul class="p-list--divided u-no-margin--bottom">
           <li class="p-list__item is-ticked">Confinement</li>
           <li class="p-list__item is-ticked">Registry</li>
           <li class="p-list__item is-ticked">Knative</li>
@@ -115,9 +117,10 @@
           <li class="p-list__item is-ticked">Intel</li>
           <li class="p-list__item is-ticked">ARM</li>
         </ul>
+        <hr class="u-hide u-show--small u-no-margin--bottom"/>
       </div>
       <div class="col-3">
-        <ul class="p-list--divided">
+        <ul class="p-list--divided u-no-margin--bottom">
           <li class="p-list__item is-ticked">Storage</li>
           <li class="p-list__item is-ticked">Kubeflow</li>
           <li class="p-list__item is-ticked">Ingress</li>
@@ -165,9 +168,9 @@
         <h2>
           Fit for Edge and IoT
         </h2>
-        <h4>
-          Solo or cluster. ARM or Intel. Minimal footprint, maximum edge.
-        </h4>
+        <p class="p-heading--four">
+          Solo or cluster. ARM or Intel.<br />Minimal space, maximum edge.
+        </p>
         <p>
           Popular on a Raspberry Pi. Peerless on a PC too. With easy clusters on a few. Compressed over-the-air updates for ultra-reliable remote operations with optimised bandwidth.
         </p>
@@ -188,11 +191,11 @@
         <h2>
           Native Windows and macOS installers
         </h2>
-        <h4>
+        <p class="p-heading--four">
           A single-package install for K8s at your fingertips.
-        </h4>
+        </p>
         <p>
-          Upstream Kubernetes on your Windows or Mac machine - just like Linux.  Get <code>kubectl</code> at the command line, and drive a local K8s with no network required.
+          Upstream Kubernetes on your Windows or Mac machine &mdash; just like Linux.  Get <code>kubectl</code> at the command line, and drive a local K8s with no network required.
         </p>
         <p>
           Perfectly aligned with every cloud Kubernetes. A smooth onramp from dev to test and production.
@@ -202,7 +205,7 @@
         </p>
       </div>
       <div class="col-6 u-hide--small u-align--center u-vertically-center">
-        <img src="https://assets.ubuntu.com/v1/e3dfcc67-native-installer-win-mac.svg" alt="" width="386" height="233" style="height: 233px;" loading="auto">
+        <img src="https://assets.ubuntu.com/v1/6471bdc4-native-installer-win-mac.svg" alt="" width="386" height="233" style="height: 233px;" loading="auto">
       </div>
     </div>
   </section>
@@ -217,9 +220,9 @@
         <h2>
           Clusters for scale
         </h2>
-        <h4>
+        <p class="p-heading--four">
           Join two or more nodes into a single bigger cluster
-        </h4>
+        </p>
         <p>
           Production workloads often need to spread out across a cluster.
         </p>
@@ -246,7 +249,7 @@
         <p>
           As the publishers of MicroK8s, we deliver the world’s most efficient multi-cloud, multi-platform, multi-arch Kubernetes solution.
         </p>
-        <p>
+        <p class="u-no-margin--bottom">
           <a href="/contact-us" class="p-button--positive">Contact us</a>
         </p>
       </div>
@@ -260,7 +263,7 @@
   <section class="p-strip">
     <div class="row u-equal-height">
       <div class="col-6 u-align--center u-vertically-center u-hide--small">
-        <img src="https://assets.ubuntu.com/v1/dc735dc5-single-line-install.svg" alt="" width="263" height="150" style="height: 150px;" loading="auto">
+        <img src="https://assets.ubuntu.com/v1/dc735dc5-single-line-install.svg" alt="" width="351" height="200" style="height: 200px;" loading="auto">
       </div>
       <div class="col-6">
         <h2>
@@ -328,41 +331,23 @@
 
       <div class="col-6">
         <img class="u-hide--small" src="https://assets.ubuntu.com/v1/4861949e-automatic-updates.svg" alt="" width="190" height="85" style="height: 85px;" loading="auto">
-        <h2>
-          Automatic updates
-        </h2>
-        <h4>
-          Let it roll or take control
-        </h4>
-        <p>
-          Choose your channel - stable releases only, or get ahead of the curve with release candidates, betas or edge for daily builds. MicroK8s can update automatically, with rollback on failure.
-        </p>
-        <p>
-          Stick with a major version, or follow the latest upstream work. Go with the flow, or take control in the enterprise to specify exactly which versions go where and when, with perfect precision.
-        </p>
+        <h2>Automatic updates</h2>
+        <p class="p-heading--four">Let it roll or take control</p>
+        <p>Choose your channel &mdash; stable releases only, or get ahead of the curve with release candidates, betas or edge for daily builds. MicroK8s can update automatically, with rollback on failure.</p>
+        <p>Stick with a major version, or follow the latest upstream work. Go with the flow, or take control in the enterprise to specify exactly which versions go where and when, with perfect precision.</p>
       </div>
 
       <div class="col-6">
         <img class="u-hide--small" src="https://assets.ubuntu.com/v1/675369aa-fully-containerised.svg" alt="" width="104" height="85" style="height: 85px;"" loading="auto">
-        <h2>
-          Fully containerised Kubernetes
-        </h2>
-        <h4>
-          MicroK8s runs Kubernetes inside an immutable container
-        </h4>
-        <p>
-          People love Docker images because they have no awkward moving parts. That makes for better operations and better security.
-        </p>
-        <p>
-          MicroK8s also runs as an immutable container, so your Kubernetes itself is fully containerised and gets all the same benefits.
-        </p>
-        <p>
-          Yes, it sounds like an infinite loop, but it just works.
-        </p>
+        <h2>Fully containerised Kubernetes</h2>
+        <p class="p-heading--four">MicroK8s runs Kubernetes inside an immutable container</p>
+        <p>People love Docker images because they have no awkward moving parts. That makes for better operations and better security.</p>
+        <p>MicroK8s also runs as an immutable container, so your Kubernetes itself is fully containerised and gets all the same benefits.</p>
+        <p>Yes, it sounds like an infinite loop, but it just works.</p>
       </div>
     </div>
 
-    <div class="u-fixed-width">
+    <div class="u-fixed-width u-hide--small">
       <p class="u-sv3">
         &nbsp;
       </p>
@@ -371,30 +356,16 @@
     <div class="row u-equal-height">
       <div class="col-6">
         <img class="u-hide--small" src="https://assets.ubuntu.com/v1/b4cacac4-safe_and_easy-ci-cd.svg" alt="" width="142" height="85" style="height: 85px;" loading="auto">
-        <h2>
-          Safe and easy CI/CD
-        </h2>
-        <h4>
-          Dockerized app developers love their pipelines
-        </h4>
-        <p>
-          So your CI/CD machine spins up a clean VM for each test run? Just install MicroK8s at the top of your script, and you have a crisp, clean K8s ready to run your tests. Throw it away when you’re done, it only takes a second to make another.
-        </p>
+        <h2>Safe and easy CI/CD</h2>
+        <p class="p-heading--four">Dockerized app developers love their pipelines</p>
+        <p>So your CI/CD machine spins up a clean VM for each test run? Just install MicroK8s at the top of your script, and you have a crisp, clean K8s ready to run your tests. Throw it away when you’re done, it only takes a second to make another.</p>
       </div>
       <div class="col-6">
         <img class="u-hide--small" src="https://assets.ubuntu.com/v1/27d39ef6-gpgpu-for-you.svg" alt="" width="126" height="85" style="height: 85px;" loading="auto">
-        <h2>
-          GPGPU for you
-        </h2>
-        <h4>
-          Nvidia ready and AI/ML steady
-        </h4>
-        <p>
-          Pass GPUs to docker apps, for deep learning dev and test. Define your AI workflows with Kubeflow on your workstation. MicroK8s is your home edition HPC.
-        </p>
-        <p>
-          We work with Amazon, Azure, Google, Oracle and IBM to simplify multi-cloud GPU accelerated workload development. Start here, then deploy to any cloud.
-        </p>
+        <h2>GPGPU for you</h2>
+        <p class="p-heading--four">Nvidia ready and AI/ML steady</h4>
+        <p>Pass GPUs to docker apps, for deep learning dev and test. Define your AI workflows with Kubeflow on your workstation. MicroK8s is your home edition HPC.</p>
+        <p>We work with Amazon, Azure, Google, Oracle and IBM to simplify multi-cloud GPU accelerated workload development. Start here, then deploy to any cloud.</p>
       </div>
     </div>
   </section>

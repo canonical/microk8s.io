@@ -1,8 +1,8 @@
 // Import scss settings
-@import 'settings';
+@import "settings";
 
 // Import Vanilla
-@import 'vanilla-framework/scss/build';
+@import "vanilla-framework/scss/build";
 @import "layout_docs";
 
 @include microk8s-l-docs;
@@ -73,20 +73,26 @@
 
   background-blend-mode: multiply, multiply, normal, normal;
   background-color: #111;
-  background-image:
-    linear-gradient(to bottom left, rgba(216, 216, 216, 0.54) 0, rgba(216, 216, 216, 0.54) 49.9%, transparent 50%),
-    linear-gradient(to bottom right, rgba(228, 228, 228, 0.54) 0, rgba(228, 228, 228, 0.54) 49.9%, transparent 50%),
-    linear-gradient(to top left, rgba(247, 247, 247, 1) 0%, rgba(247, 247, 247, 1) 49.3%, rgba(247, 247, 247, 0) 50%, rgba(247, 247, 247, 0) 100%),
+  background-image: linear-gradient(
+      to bottom left,
+      rgba(216, 216, 216, 0.54) 0,
+      rgba(216, 216, 216, 0.54) 49.9%,
+      transparent 50%
+    ),
+    linear-gradient(
+      to bottom right,
+      rgba(228, 228, 228, 0.54) 0,
+      rgba(228, 228, 228, 0.54) 49.9%,
+      transparent 50%
+    ),
+    linear-gradient(
+      to top left,
+      rgba(247, 247, 247, 1) 0%,
+      rgba(247, 247, 247, 1) 49.3%,
+      rgba(247, 247, 247, 0) 50%,
+      rgba(247, 247, 247, 0) 100%
+    ),
     linear-gradient(201deg, #4e4e4e 0%, #333 46%, #111 90%);
-
-  @supports not (background-blend-mode: multiply) {
-    background-image:
-      linear-gradient(to bottom left, rgba(216, 216, 216, 0.14) 0, rgba(216, 216, 216, 0.14) 49.9%, transparent 50%),
-      linear-gradient(to bottom right, rgba(228, 228, 228, 0.14) 0, rgba(228, 228, 228, 0.14) 49.9%, transparent 50%),
-      linear-gradient(to top left, rgba(247, 247, 247, 1) 0%, rgba(247, 247, 247, 1) 49.3%, rgba(247, 247, 247, 0) 50%, rgba(247, 247, 247, 0) 100%),
-      linear-gradient(201deg, #4e4e4e 0%, #333 46%, #111 90%);
-  }
-
   background-position: top right, top left, right bottom -1px, left top;
   background-repeat: no-repeat;
   background-size: 74% 99.83%, 98% 91%, 192.8% 23.26%, 100% 99.8%;
@@ -94,6 +100,29 @@
   margin: 0;
   padding-bottom: 6rem;
   padding-top: 2rem;
+
+  @supports not (background-blend-mode: multiply) {
+    background-image: linear-gradient(
+        to bottom left,
+        rgba(216, 216, 216, 0.14) 0,
+        rgba(216, 216, 216, 0.14) 49.9%,
+        transparent 50%
+      ),
+      linear-gradient(
+        to bottom right,
+        rgba(228, 228, 228, 0.14) 0,
+        rgba(228, 228, 228, 0.14) 49.9%,
+        transparent 50%
+      ),
+      linear-gradient(
+        to top left,
+        rgba(247, 247, 247, 1) 0%,
+        rgba(247, 247, 247, 1) 49.3%,
+        rgba(247, 247, 247, 0) 50%,
+        rgba(247, 247, 247, 0) 100%
+      ),
+      linear-gradient(201deg, #4e4e4e 0%, #333 46%, #111 90%);
+  }
 
   @media (max-width: $breakpoint-medium) {
     background-position: top right, top left, right bottom -1px, left top;
@@ -109,9 +138,18 @@
 
   background-blend-mode: multiply, multiply, normal;
   background-color: #111;
-  background-image:
-    linear-gradient(to bottom left, rgba(216, 216, 216, 0.54) 0, rgba(216, 216, 216, 0.54) 49.9%, transparent 50%),
-    linear-gradient(to bottom right, rgba(228, 228, 228, 0.54) 0, rgba(228, 228, 228, 0.54) 49.9%, transparent 50%),
+  background-image: linear-gradient(
+      to bottom left,
+      rgba(216, 216, 216, 0.54) 0,
+      rgba(216, 216, 216, 0.54) 49.9%,
+      transparent 50%
+    ),
+    linear-gradient(
+      to bottom right,
+      rgba(228, 228, 228, 0.54) 0,
+      rgba(228, 228, 228, 0.54) 49.9%,
+      transparent 50%
+    ),
     linear-gradient(201deg, #4e4e4e 0%, #333 46%, #111 90%);
   background-position: top right, top left, left top;
   background-repeat: no-repeat;
@@ -122,15 +160,27 @@
 .p-strip--lightsuru {
   @extend %vf-strip;
 
-  background-blend-mode: initial, initial, initial;
   background-color: #f7f7f7;
-  background-image:
-    linear-gradient(to bottom left, rgba(216, 216, 216, 0.54) 0, rgba(216, 216, 216, 0.54) 49.9%, transparent 50%),
-    linear-gradient(to bottom right, rgba(228, 228, 228, 0.54) 0, rgba(228, 228, 228, 0.54) 49.9%, transparent 50%),
-    linear-gradient(201deg, #f7f7f7 30%, #e5e5e5 90%);
-  background-position: top right, top left, left top;
-  background-repeat: no-repeat;
-  background-size: 86% 125%, 77% 57%, 100% 99.8%;
+
+  @media (min-width: $breakpoint-medium) {
+    background-blend-mode: initial;
+    background-image: linear-gradient(
+        to bottom left,
+        rgba(216, 216, 216, 0.54) 0,
+        rgba(216, 216, 216, 0.54) 49.9%,
+        transparent 50%
+      ),
+      linear-gradient(
+        to bottom right,
+        rgba(228, 228, 228, 0.54) 0,
+        rgba(228, 228, 228, 0.54) 49.9%,
+        transparent 50%
+      ),
+      linear-gradient(201deg, #f7f7f7 30%, #e5e5e5 90%);
+    background-position: top right, top left, left top;
+    background-repeat: no-repeat;
+    background-size: 86% 125%, 77% 57%, 100% 99.8%;
+  }
 }
 
 .u-hide--x-small {
