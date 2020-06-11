@@ -18,8 +18,9 @@ app = FlaskBase(
     template_500="500.html",
 )
 
+session = talisker.requests.get_session()
 doc_parser = DocParser(
-    api=DiscourseAPI(base_url="https://discuss.kubernetes.io/"),
+    api=DiscourseAPI(base_url="https://discuss.kubernetes.io/", session=session),
     index_topic_id=11243,
     url_prefix="/docs",
 )
