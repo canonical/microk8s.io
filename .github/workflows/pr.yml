@@ -49,11 +49,24 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Build image
-        run: DOCKER_BUILDKIT=1 docker build --tag microk8s-io .
+      - name: Install requirements
+        run: |
+          sudo apt-get update && sudo apt-get install --yes python3-setuptools
+          sudo pip3 install -r requirements.txt
 
-      - name: Run tests
-        run: docker run --env SECRET_KEY=insecure_secret_key --entrypoint python3 microk8s-io -m unittest discover tests
+      - name: Install dependencies
+        run: sudo pip3 install coverage
+
+      - name: Install node dependencies
+        run: yarn install --immutable
+
+      - name: Build resources
+        run: yarn build
+
+      - name: Run tests with coverage
+        run: |
+          coverage run  --source=. -m unittest discover tests
+          bash <(curl -s https://codecov.io/bash) -cF python
 
   test-js:
     runs-on: ubuntu-latest

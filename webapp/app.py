@@ -1,6 +1,7 @@
 # Packages
 from canonicalwebteam.flask_base.app import FlaskBase
 from flask import render_template
+import talisker
 
 from canonicalwebteam.discourse_docs import (
     DiscourseDocs,
@@ -20,7 +21,9 @@ app = FlaskBase(
 
 session = talisker.requests.get_session()
 doc_parser = DocParser(
-    api=DiscourseAPI(base_url="https://discuss.kubernetes.io/", session=session),
+    api=DiscourseAPI(
+        base_url="https://discuss.kubernetes.io/", session=session
+    ),
     index_topic_id=11243,
     url_prefix="/docs",
 )
