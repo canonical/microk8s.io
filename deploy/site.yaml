@@ -1,0 +1,38 @@
+domain: microk8s.io
+
+image: prod-comms.docker-registry.canonical.com/microk8s.io
+
+useProxy: true
+
+extraHosts:
+  - domain: microk8s.com
+
+env:
+  - name: SENTRY_DSN
+    value: https://3c9a25a1976d4a97981997bb5a1ca7b4@sentry.is.canonical.com//28
+
+# Overrides for production
+production:
+  replicas: 5
+  nginxConfigurationSnippet: |
+    if ($host != 'microk8s.io' ) {
+      rewrite ^ https://microk8s.io$request_uri? permanent;
+    }
+    more_set_headers "Link: <https://assets.ubuntu.com>; rel=preconnect; crossorigin, <https://assets.ubuntu.com>; rel=preconnect";
+  nginxServerSnippet: |
+    location /install/ {
+      rewrite ^/install/(.*).exe /ubuntu/microk8s/releases/download/installer-$1/microk8s-installer.exe break;
+      proxy_pass https://github.com/;
+    }
+
+# Overrides for staging
+staging:
+  replicas: 3
+  nginxConfigurationSnippet: |
+    more_set_headers "X-Robots-Tag: noindex";
+    more_set_headers "Link: <https://assets.ubuntu.com>; rel=preconnect; crossorigin, <https://assets.ubuntu.com>; rel=preconnect";
+  nginxServerSnippet: |
+    location /install/ {
+      rewrite ^/install/(.*).exe /ubuntu/microk8s/releases/download/installer-$1/microk8s-installer.exe break;
+      proxy_pass https://github.com/;
+    }
