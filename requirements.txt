@@ -1,2 +1,2 @@
-canonicalwebteam.flask-base==0.6.3
+canonicalwebteam.flask-base==0.6.4
 canonicalwebteam.discourse-docs==1.0.1
