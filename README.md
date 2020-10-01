@@ -1,4 +1,4 @@
-# MicroK8s.io
+# MicroK8s.io - dicjer for installing
 [![CircleCI build status](https://circleci.com/gh/canonical-web-and-design/microk8s.io.svg?style=shield)](https://circleci.com/gh/canonical-web-and-design/microk8s.io) [![Code coverage](https://codecov.io/gh/canonical-web-and-design/microk8s.io/branch/master/graph/badge.svg)](https://codecov.io/gh/canonical-web-and-design/microk8s.io)
 
 This is the repo for the [MicroK8s website](https://microk8s.io).
