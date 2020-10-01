@@ -14,4 +14,4 @@ After [installing Docker](https://docs.docker.com/install/):
 And browse to http://127.0.0.1:8027.
 
 # Deploy
-You can find the deployment config in the deploy folder.
+You can find the deployment config in the deploy folder to make it accessible online.
