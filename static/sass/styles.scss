@@ -7,6 +7,9 @@
 
 @include microk8s-l-docs;
 
+// import cookie policy
+@import "@canonical/cookie-policy/build/css/cookie-policy";
+
 // import additional styles
 @import "sidebar";
 @import "blockquote";
