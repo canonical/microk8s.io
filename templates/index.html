@@ -20,35 +20,31 @@
  </section>
  
  <section class="p-strip" id="get-started" role="tablist">
-   <div class="row p-divider">
-     <a id="tab-one" href="#tab-one__content" class="col-medium-2 col-4 p-divider__block p-tab u-align--center u-vertically-center js-tab" role="tab" aria-selected="false">
-       <img src="https://assets.ubuntu.com/v1/b7441512-linux-penguin.png" style="height: 85px; margin-top: 0.5rem;" alt="">
-       <p class="u-no-margin--bottom">
-         Linux
-       </p>
-     </a>
-     <a id="tab-two" href="#tab-two__content" class="col-medium-2 col-4 p-divider__block p-tab u-align--center u-vertically-center js-tab" role="tab" aria-selected="true">
-       <img src="https://assets.ubuntu.com/v1/429929de-2020-logo-windows.svg" style="height: 55px;" alt="Windows">
-       <p class="u-no-margin--bottom">
-         Windows
-       </p>
-     </a>
-     <a id="tab-three" href="#tab-three__content" class="col-medium-2 col-4 p-divider__block p-tab u-align--center u-vertically-center js-tab" role="tab" aria-selected="false">
-       <img src="https://assets.ubuntu.com/v1/d2f8dca7-macOS.png" style="height: 40px;" alt="macOS">
-       <p class="u-no-margin--bottom">
-         macOS
-       </p>
-     </a>
-   </div>
-   <div class="row" id="js-tab__heading" style="padding-top: 0.25rem;">
+   <div class="row" id="js-tab__heading">
      <div class="col-12">
-       <h5 class="u-align--center u-no-max-width u-no-margin--bottom">
-         <em>
+       <h2 class="u-align--left u-no-max-width u-sv2">
            Select platform for install steps
-         </em>
-       </h5>
+       </h2>
      </div>
    </div>
+   <div class="row u-equal-height">
+      <a id="tab-one" href="#tab-one__content"
+        class="col-small-2 col-medium-2 col-4 p-card p-tab u-align--center u-vertically-center js-tab" role="tab">
+        <img src="https://assets.ubuntu.com/v1/53c3be42-linuc-logo.svg" style="height: 90px; margin-top: 1rem;" alt="">
+        <p class="p-heading--four" class="p-heading--five p-tab__title">Linux</p>
+      </a>
+
+      <a id="tab-two" href="#tab-two__content"
+        class="col-small-2 col-medium-2 col-4 p-card p-tab u-align--center u-vertically-center js-tab" role="tab">
+        <img src="https://assets.ubuntu.com/v1/11ecbd2d-2018-logo-windows.svg" style="height: 145px;" alt="Windows">
+      </a>
+
+      <a id="tab-three" href="#tab-three__content"
+        class="col-small-2 col-medium-2 col-4 p-card p-tab u-align--center u-vertically-center js-tab" role="tab">
+        <img src="https://assets.ubuntu.com/v1/236f314d-macos.svg" style="height: 145px;" alt="macOS">
+      </a>
+   </div>
+
    <div class="row">
      <div class="col-8 js-tab__content" id="tab-one__content" role="tabpanel" aria-labelledby="tab-one">
        {% include "/partial/_get-started-linux.html" %}
