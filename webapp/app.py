@@ -52,6 +52,6 @@ def thankyou():
     return render_template("thank-you.html")
 
 
-@app.route("/high-availability")
+@app.route("/features/high-availability")
 def ha():
-    return render_template("high-availability.html")
+    return render_template("/features/high-availability.html")
