@@ -51,6 +51,6 @@
     "stylelint-config-prettier": "8.0.2",
     "stylelint-config-standard": "20.0.0",
     "stylelint-order": "4.1.0",
-    "terser-webpack-plugin": "4.2.2"
+    "terser-webpack-plugin": "4.2.3"
   }
 }
