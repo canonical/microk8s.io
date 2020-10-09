@@ -21,7 +21,7 @@
     "test-js": "jest"
   },
   "dependencies": {
-    "@canonical/cookie-policy": "3.0.3",
+    "@canonical/cookie-policy": "3.0.4",
     "@canonical/global-nav": "2.4.3",
     "autoprefixer": "10.0.1",
     "babel-eslint": "10.1.0",
