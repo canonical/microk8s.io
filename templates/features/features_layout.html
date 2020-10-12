@@ -1,0 +1,49 @@
+{% extends 'base_layout.html' %}
+
+{% block content %}
+<section class="p-strip--suru-topped is-shallow">
+  <div class="row">
+    <div class="col-3">
+      <div class="p-side-navigation" id="drawer">
+        <a href="#drawer" class="p-side-navigation__toggle js-drawer-toggle u-hide--medium u-hide--large" style="display: inline-block" aria-controls="drawer">
+          Toggle side navigation
+        </a>
+
+        <div class="p-side-navigation__overlay js-drawer-toggle" aria-controls="drawer"></div>
+
+        <div class="p-side-navigation__drawer">
+          <div class="p-side-navigation__drawer-header">
+            <a href="#" class="p-side-navigation__toggle--in-drawer js-drawer-toggle" aria-controls="drawer">
+              Toggle side navigation
+            </a>
+          </div>
+
+          <ul class="p-side-navigation__list">
+            <li class="p-side-navigation__item">
+              <a class="p-side-navigation__link{% if request.path == '/high-availability' %} is-active{% endif %}" href="/high-availability">High availability</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-9 col-start-large-4">
+
+      {% block features_content %}{% endblock features_content %}
+
+    </div>
+  </div>
+</section>
+
+<section class="p-strip--light">
+  <div class="row">
+    <div class="col-6 u-hide--small u-align--center">
+      <img src="https://assets.ubuntu.com/v1/c4b290c8-Contact+us.svg" alt="" width="250" height="178" loading="lazy">
+    </div>
+    <div class="col-6">
+      <h2>Need help?</h2>
+      <p>Get in touch with one of our engineers.</p>
+      <p><a href="/contact-us" class="p-button--positive">Contact us</a></p>
+    </div>
+  </div>
+</section>
+{% endblock %}

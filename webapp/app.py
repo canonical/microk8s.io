@@ -50,3 +50,8 @@ def contact():
 @app.route("/thank-you")
 def thankyou():
     return render_template("thank-you.html")
+
+
+@app.route("/high-availability")
+def ha():
+    return render_template("/features/high-availability.html")
