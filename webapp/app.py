@@ -55,3 +55,8 @@ def thankyou():
 @app.route("/high-availability")
 def ha():
     return render_template("/features/high-availability.html")
+
+
+@app.route("/tutorials")
+def tutorials():
+    return render_template("/tutorials/index.html")

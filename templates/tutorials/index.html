@@ -1,0 +1,75 @@
+{% extends "base_layout.html" %}
+
+{% block title %}MicroK8s tutorials{% endblock %}
+
+{% block content %}
+
+<section class="p-strip--suru-topped is-shallow">
+  <div class="u-fixed-width">
+    <h1 class="p-heading--two">Tutorials</h1>
+  </div>
+
+  <div class="row u-equal-height">
+    <div class="col-4 p-card">
+      <div class="p-card__content">
+        <h3 class="p-heading--four"><a class="p-link--external" href="https://ubuntu.com/tutorials/install-microk8s-on-windows#1-overview">Install MicroK8s on Windows</a></h3>
+        <p>
+          Get a local Kubernetes on Windows with MicroK8s and Miltipass.
+        </p>
+      </div>
+      <p>
+        Difficulty: <span class="p-tutorials-meter p-tutorials-meter--3">3 out of 5</span>
+      </p>
+    </div>
+
+    <div class="col-4 p-card">
+      <div class="p-card__content">
+        <h3 class="p-heading--four"><a class="p-link--external" href="https://ubuntu.com/tutorials/install-microk8s-on-mac-os#1-overview">Install MicroK8s on a Mac</a></h3>
+        <p>
+          Get a local Kubernetes on MacOS with MicroK8s and Multipass.
+        </p>
+      </div>
+      <p>
+        Difficulty: <span class="p-tutorials-meter p-tutorials-meter--3">3 out of 5</span>
+      </p>
+    </div>
+    <div class="col-4 p-card">
+      <div class="p-card__content">
+        <h3 class="p-heading--four"><a class="p-link--external" href="https://ubuntu.com/tutorials/install-a-local-kubernetes-with-microk8s#1-overview">Install a local Kubernetes with MicroK8s</a></h3>
+        <p>
+          Get a local Kubernetes on your workstation or edge device with MicroK8s. Possibly the fastest path to this great open-source orchestration system, Kubernetes.
+        </p>
+      </div>
+      <p>
+        Difficulty: <span class="p-tutorials-meter p-tutorials-meter--3">3 out of 5</span>
+      </p>
+    </div>
+  </div>
+
+
+  <div class="row u-equal-height">
+    <div class="col-4 p-card">
+      <div class="p-card__content">
+        <h3 class="p-heading--four"><a class="p-link--external" href="https://ubuntu.com/tutorials/getting-started-with-kubernetes-ha#1-overview">How to build a highly available Kubernetes cluster with MicroK8s</a></h3>
+        <p>
+          Learn how to build and deploy a highly available Kubernetes cluster using the MicroK8s HA feature.
+        </p>
+      </div>
+      <p>
+        Difficulty: <span class="p-tutorials-meter p-tutorials-meter--2">2 out of 5</span>
+      </p>
+    </div>
+    <div class="col-4 p-card">
+      <div class="p-card__content">
+        <h3 class="p-heading--four"><a class="p-link--external" href="https://ubuntu.com/tutorials/how-to-kubernetes-cluster-on-raspberry-pi#1-overview">How to build a Raspberry Pi Kubernetes cluster using MicroK8s</a></h3>
+        <p>
+          How to deploy a multi-node Kubernetes cluster on your Raspberry Pi 4, 3 or 2. At the end of this tutorial, you will have a production-grade K*s cluster, easy to scale, running on top of MicroK8s.
+        </p>
+      </div>
+      <p>
+        Difficulty: <span class="p-tutorials-meter p-tutorials-meter--2">2 out of 5</span>
+      </p>
+    </div>
+  </div>
+</section>
+{% endblock %}
