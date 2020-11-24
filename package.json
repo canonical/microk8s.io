@@ -21,7 +21,7 @@
     "test-js": "jest"
   },
   "dependencies": {
-    "@canonical/cookie-policy": "3.0.5",
+    "@canonical/cookie-policy": "3.1.0",
     "@canonical/global-nav": "2.4.5",
     "autoprefixer": "10.0.1",
     "babel-eslint": "10.1.0",
@@ -35,7 +35,7 @@
     "postcss": "8.1.1",
     "postcss-cli": "8.1.0",
     "prettier": "2.1.2",
-    "vanilla-framework": "2.19.2",
+    "vanilla-framework": "2.20.0",
     "watch-cli": "0.2.3",
     "webpack": "5.1.0",
     "webpack-cli": "4.0.0"
