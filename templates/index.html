@@ -1,24 +1,24 @@
 {% extends 'base_layout.html' %}
- 
+
 {% block content %}
 <main id="main-content">
- 
+
  <section class="p-strip--suru is-dark">
    <div class="row u-vertically-center u-equal-height">
      <div class="col-7">
-       <h1>Zero-ops high availability <span class="p-label--new" style="position: relative; top: -1rem;">New</span></h1>
+       <h1>High availability K8s <span class="p-label--new" style="position: relative; top: -1rem;">New</span></h1>
        <p class="p-heading--four">
-         Autonomous, production-grade Kubernetes,
-         <br />
-         on cloud, clusters, workstations, Edge and IoT.
+        Low-ops, minimal production Kubernetes,
+        <br />
+        for devs, cloud, clusters, workstations, Edge and IoT.
        </p>
      </div>
      <div class="col-5 u-align--center u-hide--small u-embedded-media">
-       <iframe title="MicroK8s intro video" class="u-embedded-media__element" src="https://player.vimeo.com/video/466106710" allowfullscreen=""></iframe>
+       <iframe class="u-embedded-media__element" width="560" height="315" src="https://www.youtube.com/embed/v9KI2BAF5QU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
      </div>
    </div>
  </section>
- 
+
  <section class="p-strip" id="get-started" role="tablist">
    <div class="row">
      <div class="col-12">
@@ -57,7 +57,7 @@
      </div>
    </div>
  </section>
- 
+
  <section class="p-strip--light is-deep">
    <div class="row u-equal-height">
      <div class="col-4 u-vertically-center u-align--center u-hide--small">
@@ -65,12 +65,12 @@
      </div>
      <div class="col-8">
        <h2>Self-healing high availability clusters</h2>
-       <p class="p-heading--four">Automatic API services and leader election</p>
-       <p>MicroK8s automatically chooses the best nodes for the Kubernetes datastore. When you lose a cluster database node, another node is promoted. No admin needed.</p>
+       <p class="p-heading--four">Automatic data store, API services and leader election</p>
+       <p>MicroK8s automatically chooses the best nodes for the Kubernetes datastore. When you lose a cluster database node, another node is promoted. No admin needed for your bulletproof edge.</p>
      </div>
    </div>
  </section>
- 
+
  <section class="p-strip is-deep">
    <div class="row u-equal-height">
      <div class="col-7">
@@ -86,7 +86,7 @@
      </div>
    </div>
  </section>
- 
+
  <section class="p-strip--light is-deep">
    <div class="row">
      <h2>Best of breed</h2>
@@ -142,7 +142,7 @@
      </div>
    </div>
  </section>
- 
+
  <section class="p-strip is-deep">
    <div class="row u-equal-height">
      <div class="col-8">
@@ -156,7 +156,7 @@
      </div>
    </div>
  </section>
- 
+
  <section class="p-strip--light is-deep">
    <div class="row u-equal-height">
      <div class="col-5 u-hide--small u-align--center u-vertically-center">
@@ -170,7 +170,7 @@
      </div>
    </div>
  </section>
- 
+
  <section class="p-strip is-deep">
    <div class="row u-equal-height">
      <div class="col-7">
@@ -185,7 +185,7 @@
      </div>
    </div>
  </section>
- 
+
  <section class="p-strip--light is-deep">
    <div class="row u-equal-height">
      <div class="col-5 u-align--center u-vertically-center">
@@ -199,7 +199,7 @@
      </div>
    </div>
  </section>
- 
+
  <section class="p-strip is-deep">
    <div class="row u-equal-height">
      <div class="col-7">
@@ -212,7 +212,7 @@
      </div>
    </div>
  </section>
- 
+
  <section class="p-strip--light is-deep">
    <div class="row u-equal-height">
      <div class="col-5 u-hide--small u-align--center u-vertically-center">
@@ -226,7 +226,7 @@
      </div>
    </div>
  </section>
- 
+
  <section class="p-strip">
    <div class="row u-equal-height">
      <div class="col-6">
@@ -240,7 +240,7 @@
      </div>
    </div>
  </section>
- 
+
  <section class="p-strip--light">
    <div class="row u-equal-height">
      <div class="col-6 u-hide--small u-align--center u-vertically-center">
@@ -254,7 +254,7 @@
      </div>
    </div>
  </section>
- 
+
  <section class="p-strip is-deep">
    <div class="row u-equal-height">
      <div class="col-6">
@@ -267,7 +267,7 @@
      </div>
    </div>
  </section>
- 
+
  <section class="p-strip--light u-hide--small">
    <div class="row">
      <h2>Experience MicroK8s</h2>
@@ -275,7 +275,7 @@
      <div class="asciinema-container"></div>
    </div>
  </section>
- 
+
  <section class="p-strip is-deep">
    <div class="row u-equal-height">
      <div class="col-7">
@@ -287,7 +287,7 @@
      </div>
    </div>
  </section>
- 
+
  {# Need help? #}
  <section class="p-strip--light">
    <div class="row">
@@ -302,7 +302,7 @@
    </div>
  </section>
 </main>
- 
+
 <script>
  var asciinemaContainer = document.querySelector('.asciinema-container');
  var clientWidth = document.documentElement.clientWidth;
@@ -314,13 +314,12 @@
    'title="A number to steps to get started with MicroK8s">'+
    '</iframe>'+
    '</div>';
- 
+
  if (clientWidth >= 620 && asciinemaContainer) {
    asciinemaContainer.innerHTML = asciinemaContent;
  }
 </script>
- 
+
 <script src="https://assets.ubuntu.com/v1/703e23c9-lazysizes+noscript+native-loading.5.1.2.min.js" defer></script>
- 
+
 {% endblock %}
- 
