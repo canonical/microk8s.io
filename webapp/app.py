@@ -3,11 +3,7 @@ from canonicalwebteam.flask_base.app import FlaskBase
 from flask import render_template
 import talisker
 
-from canonicalwebteam.discourse_docs import (
-    DiscourseDocs,
-    DocParser,
-    DiscourseAPI,
-)
+from canonicalwebteam.discourse import Docs, DocParser, DiscourseAPI
 
 # Rename your project below
 app = FlaskBase(
@@ -20,21 +16,19 @@ app = FlaskBase(
 )
 
 session = talisker.requests.get_session()
-doc_parser = DocParser(
-    api=DiscourseAPI(
-        base_url="https://discuss.kubernetes.io/", session=session
+
+discourse = Docs(
+    parser=DocParser(
+        api=DiscourseAPI(
+            base_url="https://discuss.kubernetes.io/", session=session
+        ),
+        index_topic_id=11243,
+        url_prefix="/docs",
     ),
-    index_topic_id=11243,
-    url_prefix="/docs",
-)
-if app.debug:
-    doc_parser.api.session.adapters["https://"].timeout = 99
-discourse_docs = DiscourseDocs(
-    parser=doc_parser,
     document_template="docs/document.html",
     url_prefix="/docs",
 )
-discourse_docs.init_app(app)
+discourse.init_app(app)
 
 
 @app.route("/")
