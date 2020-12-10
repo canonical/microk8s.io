@@ -20,7 +20,7 @@ production:
     }
     more_set_headers "Link: <https://assets.ubuntu.com>; rel=preconnect; crossorigin, <https://assets.ubuntu.com>; rel=preconnect";
   nginxServerSnippet: |
-    location /install/ {
+    location ^~ /install/ {
       rewrite ^/install/(.*).exe /ubuntu/microk8s/releases/download/installer-$1/microk8s-installer.exe break;
       proxy_pass https://github.com/;
     }
