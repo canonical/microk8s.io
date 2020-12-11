@@ -3,9 +3,6 @@
 
 // Import Vanilla
 @import "vanilla-framework/scss/build";
-@import "layout_docs";
-
-@include microk8s-l-docs;
 
 // import cookie policy
 @import "@canonical/cookie-policy/build/css/cookie-policy";
@@ -13,12 +10,10 @@
 // import additional styles
 @import "sidebar";
 @import "blockquote";
-@import "docs";
 @import "pattern_github_buttons";
 @import "pattern_tiles";
 @import "pattern_tutorials";
 
-@include docs;
 @include microk8s-github-buttons;
 @include microk8s-tiles;
 
