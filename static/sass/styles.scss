@@ -208,3 +208,7 @@
     color: $color-x-light;
   }
 }
+
+.no-js .js-tab__content {
+  display: block !important;
+}
