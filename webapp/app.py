@@ -3,7 +3,13 @@ from canonicalwebteam.flask_base.app import FlaskBase
 from flask import render_template
 import talisker
 
-from canonicalwebteam.discourse import Docs, DocParser, DiscourseAPI
+from canonicalwebteam.discourse import (
+    Docs,
+    DocParser,
+    DiscourseAPI,
+)
+from canonicalwebteam.search import build_search_view
+
 
 # Rename your project below
 app = FlaskBase(
@@ -27,6 +33,13 @@ discourse = Docs(
     ),
     document_template="docs/document.html",
     url_prefix="/docs",
+)
+app.add_url_rule(
+    "/docs/search",
+    "docs-search",
+    build_search_view(
+        site="microk8s.io/docs", template_path="docs/search.html"
+    ),
 )
 discourse.init_app(app)
 
