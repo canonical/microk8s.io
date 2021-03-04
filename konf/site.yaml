@@ -10,6 +10,11 @@ extraHosts:
 env:
   - name: SENTRY_DSN
     value: https://3c9a25a1976d4a97981997bb5a1ca7b4@sentry.is.canonical.com//28
+  
+  - name: SEARCH_API_KEY
+    secretKeyRef:
+      key: google-custom-search-key
+      name: google-api
 
 # Overrides for production
 production:
