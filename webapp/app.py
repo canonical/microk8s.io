@@ -38,7 +38,9 @@ app.add_url_rule(
     "/docs/search",
     "docs-search",
     build_search_view(
-        site="microk8s.io/docs", template_path="docs/search.html"
+        session=session,
+        site="microk8s.io/docs",
+        template_path="docs/search.html",
     ),
 )
 discourse.init_app(app)
