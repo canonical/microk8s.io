@@ -17,7 +17,8 @@ jobs:
         run: sudo pip install LinkChecker
 
       - name: Run linkchecker
-        run: linkchecker --threads 2 --ignore-url "https://assets.ubuntu.com$" --ignore-url "https*://127.0.0.1.*" --ignore-url ".*.xip.io/.*" --check-extern --no-warnings https://microk8s.io/docs
+        run: linkchecker --threads 2 --ignore-url "https://assets.ubuntu.com$" --ignore-url "https*://127.0.0.1.*" --ignore-url ".*.nip.io.*" --check-extern --no-warnings https://microk8s.io/docs
+
 
       - name: Send message on failure
         if: failure()
