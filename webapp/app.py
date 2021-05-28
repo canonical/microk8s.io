@@ -28,7 +28,7 @@ discourse = Docs(
         api=DiscourseAPI(
             base_url="https://discuss.kubernetes.io/", session=session
         ),
-        index_topic_id=15974,
+        index_topic_id=11243,
         url_prefix="/docs",
     ),
     document_template="docs/document.html",
