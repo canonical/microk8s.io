@@ -2,6 +2,7 @@
 from canonicalwebteam.flask_base.app import FlaskBase
 from flask import render_template
 import talisker
+import flask
 
 from canonicalwebteam.discourse import (
     Docs,
@@ -69,3 +70,21 @@ def ha():
 @app.route("/tutorials")
 def tutorials():
     return render_template("/tutorials/index.html")
+
+
+@app.route("/sitemap.xml")
+def sitemap_index():
+    xml_sitemap = flask.render_template("sitemap/sitemap-index.xml")
+    response = flask.make_response(xml_sitemap)
+    response.headers["Content-Type"] = "application/xml"
+
+    return response
+
+
+@app.route("/sitemap-links.xml")
+def sitemap_links():
+    xml_sitemap = flask.render_template("sitemap/sitemap-links.xml")
+    response = flask.make_response(xml_sitemap)
+    response.headers["Content-Type"] = "application/xml"
+
+    return response
