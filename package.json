@@ -28,7 +28,7 @@
     "expose-loader": "1.0.3",
     "postcss": "8.2.10",
     "sass": "1.27.0",
-    "vanilla-framework": "2.34.0",
+    "vanilla-framework": "2.36.0",
     "webpack-cli": "4.5.0"
   },
   "devDependencies": {
