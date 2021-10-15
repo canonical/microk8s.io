@@ -1,0 +1,14 @@
+[checking]
+maxrequestspersecond=5
+
+[filtering]
+nofollow=!https:\/\/microk8s.io\/docs\/
+checkextern=1
+ignore=
+  https://assets\.ubuntu\.com
+  https://127\.0\.0\.1\.*
+  \.*\.nip\.io\.
+
+[output]
+status=0
+warnings=0
