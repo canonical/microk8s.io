@@ -24,7 +24,7 @@ jobs:
       - name: Run linkchecker
         continue-on-error: true
         run: |
-          linkchecker https://microk8s.io/docs > ~/.linkchecker-out.txt
+          linkchecker https://microk8s.io/docs > ~/.linkchecker/linkchecker-out.txt
 
       - name: Parse linkchecker output
         run: |
