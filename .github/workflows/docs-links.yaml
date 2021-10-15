@@ -2,24 +2,39 @@ name: docs links on microk8s.io/docs
 
 on:
   schedule:
-    - cron: "0 13 * * 1"
+    - cron: "0 13 * * *"
+  workflow_dispatch:
 
 jobs:
   check-links:
-    if: github.repository == 'canonical-web-and-design/microk8s.io'
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout master
         uses: actions/checkout@v2
 
       - name: Install linkchecker
         run: sudo pip install LinkChecker
 
+      - name: Write linkchecker config file
+        run: |
+          mkdir -p ~/.linkchecker
+          cp scripts/linkcheckerrc ~/.linkchecker/
+
       - name: Run linkchecker
-        run: linkchecker --threads 2 --ignore-url "https://assets.ubuntu.com$" --ignore-url "https*://127.0.0.1.*" --ignore-url ".*.nip.io.*" --check-extern --no-warnings https://microk8s.io/docs
+        continue-on-error: true
+        run: |
+          linkchecker https://microk8s.io/docs > ~/.linkchecker-out.txt
+
+      - name: Parse linkchecker output
+        run: |
+          scripts/parseDocsLinkcheckerOutput
 
 
       - name: Send message on failure
         if: failure()
-        run: curl -X POST -F "workflow=${GITHUB_WORKFLOW}" -F "repo_name=${GITHUB_REPOSITORY}" -F "action_id=${GITHUB_RUN_ID}" ${{ secrets.BOT_URL }}?room=docs
+        run: |
+          curl -X POST \
+          -F "workflow=${GITHUB_WORKFLOW}" \
+          -F "repo_name=${GITHUB_REPOSITORY}" \
+          -F "action_id=${GITHUB_RUN_ID}" \
+          ${{ secrets.BOT_URL }}?room=docs
