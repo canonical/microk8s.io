@@ -1,3 +1,5 @@
+@use 'sass:math';
+
 .docs-container {
   display: flex;
   flex-wrap: wrap;
@@ -17,20 +19,20 @@
   &__list {
     @extend .p-list;
 
-    margin-bottom: $spv-inner--scaleable;
-    margin-top: -$spv-inner--x-small--scaleable;
+    margin-bottom: $spv--large;
+    margin-top: -$spv--small;
   }
 
   &__item {
-    padding-bottom: $spv-inner--x-small--scaleable / 2;
-    padding-top: $spv-inner--x-small--scaleable / 2;
+    padding-bottom: math.div($spv--small, 2);
+    padding-top: math.div($spv--small, 2);
 
     &:first-of-type {
-      padding-top: $spv-inner--scaleable;
+      padding-top: $spv--large;
     }
 
     &:last-of-type {
-      padding-bottom: $spv-inner--scaleable + $spv-inner--x-small--scaleable;
+      padding-bottom: $spv--large + $spv--small;
     }
 
     .is-active {
@@ -38,18 +40,18 @@
 
       &::before {
         background-color: $color-mid-light;
-        bottom: -$spv-inner--x-small--scaleable;
-        content: '';
-        left: -$sph-inner;
+        bottom: -$spv--small;
+        content: "";
+        left: -$sph--large;
         position: absolute;
-        top: -$spv-inner--x-small--scaleable;
+        top: -$spv--small;
         width: $bar-thickness;
       }
     }
   }
 
   &__item > &__list {
-    padding-left: $sph-inner;
+    padding-left: $sph--large;
   }
 }
 
