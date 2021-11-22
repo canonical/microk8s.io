@@ -2,29 +2,27 @@
   <div class="p-navigation__row">
     <div class="p-navigation__banner">
       <div class="p-navigation__logo u-vertically-center">
-        <a class="p-navigation__link" href="/" style="color:white">
+        <a class="p-navigation__item" href="/" style="color:white;">
           MicroK8s
         </a>
       </div>
       <a href="#navigation" class="p-navigation__toggle--open" title="menu">Menu</a>
       <a href="#navigation-closed" class="p-navigation__toggle--close" title="close menu">Close menu</a>
     </div>
-    <nav class="p-navigation__nav">
-      <span class="u-off-screen">
-        <a href="#main-content">Jump to main content</a>
-      </span>
-      <ul class="p-navigation__links" role="menu">
-        <li class="p-navigation__link {% if request.path in ['/high-availability',] %}is-selected{% endif %}" role="menuitem">
-          <a href="/high-availability">Features</a>
+
+    <nav class="p-navigation__nav" aria-label="Main">
+      <ul class="p-navigation__items">
+        <li class="p-navigation__item {% if request.path in ['/high-availability',] %}is-selected{% endif %}">
+          <a class="p-navigation__link" href="/high-availability">Features</a>
         </li>
-        <li class="p-navigation__link {% if request.path in ['/tutorials',] %}is-selected{% endif %}" role="menuitem">
-          <a href="/tutorials">Tutorials</a>
+        <li class="p-navigation__item {% if request.path in ['/tutorials',] %}is-selected{% endif %}">
+          <a class="p-navigation__link" href="/tutorials">Tutorials</a>
         </li>
-        <li class="p-navigation__link {% if request.path in ['/docs', '/docs/faq', '/docs/protocol'] %}is-selected{% endif %}" role="menuitem">
-          <a href="/docs/">Docs</a>
+        <li class="p-navigation__item {% if request.path in ['/docs', '/docs/faq', '/docs/protocol'] %}is-selected{% endif %}">
+          <a class="p-navigation__link" href="/docs/">Docs</a>
         </li>
-        <li class="p-navigation__link" role="menuitem">
-          <a class="p-link--external" href="https://discuss.kubernetes.io/c/general-discussions/microk8s/26">Community</a>
+        <li class="p-navigation__item">
+          <a class="p-navigation__link" class="p-link--external" href="https://discuss.kubernetes.io/c/general-discussions/microk8s/26">Community</a>
         </li>
       </ul>
       <div class="p-github-buttons">
