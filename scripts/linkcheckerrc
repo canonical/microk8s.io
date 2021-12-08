@@ -8,6 +8,8 @@ ignore=
   https://assets\.ubuntu\.com
   https://127\.0\.0\.1\.*
   \.*\.nip\.io\.
+  http://127.0.0.1:*
+  http://x.x.x.x.nip.io/
 
 [output]
 status=0
