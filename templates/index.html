@@ -275,7 +275,9 @@
    <div class="row">
      <h2>Experience MicroK8s</h2>
      <p>Here’s a quick intro video. Pause and copy commands straight from this text console.</p>
-     <div class="asciinema-container"></div>
+     <div class="asciinema-container">
+      <script id="asciicast-KUqQaDt7p3iNO5DP0xC7W4Ufj" src="https://asciinema.org/a/KUqQaDt7p3iNO5DP0xC7W4Ufj.js" async> </script>
+     </div>
    </div>
  </section>
 
@@ -345,24 +347,6 @@
    </div>
  </section>
 </main>
-
-<script>
- var asciinemaContainer = document.querySelector('.asciinema-container');
- var clientWidth = document.documentElement.clientWidth;
- var asciinemaContent = '<script src="https://asciinema.org/a/KUqQaDt7p3iNO5DP0xC7W4Ufj.js" id="asciicast-KUqQaDt7p3iNO5DP0xC7W4Ufj"'+
- 'async="" data-player="[object HTMLDivElement]"><\/script>'+
- '<div id="asciicast-container-KUqQaDt7p3iNO5DP0xC7W4Ufj" class="asciicast" style="display: block; float: none; overflow: hidden; padding: 0px; margin: 20px 0px;">'+
-   '<iframe class="lazyload" data-src="https://asciinema.org/a/KUqQaDt7p3iNO5DP0xC7W4Ufj/embed?" id="asciicast-iframe-KUqQaDt7p3iNO5DP0xC7W4Ufj"'+
-   'name="asciicast-iframe-KUqQaDt7p3iNO5DP0xC7W4Ufj" allow="fullscreen" style="overflow: hidden; margin: 0px; border: 0px; display: inline-block; width: 1140px; float: none; visibility: visible; height: 525px;"'+
-   'title="A number to steps to get started with MicroK8s">'+
-   '</iframe>'+
-   '</div>';
-
- if (clientWidth >= 620 && asciinemaContainer) {
-   asciinemaContainer.innerHTML = asciinemaContent;
- }
-</script>
-
 <script src="https://assets.ubuntu.com/v1/703e23c9-lazysizes+noscript+native-loading.5.1.2.min.js" defer></script>
 
 {% endblock %}
