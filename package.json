@@ -25,7 +25,7 @@
     "@canonical/global-nav": "2.5.0",
     "autoprefixer": "10.2.4",
     "babel-loader": "8.2.2",
-    "expose-loader": "1.0.3",
+    "expose-loader": "3.1.0",
     "postcss": "8.2.10",
     "postcss-cli": "8.3.1",
     "sass": "1.27.0",
