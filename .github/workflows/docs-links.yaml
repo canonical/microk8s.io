@@ -1,6 +1,8 @@
 name: docs links on microk8s.io/docs
 
 on:
+  schedule:
+    - cron: "0 13 * * *"
   workflow_dispatch:
 
 jobs:
