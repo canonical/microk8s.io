@@ -29,8 +29,8 @@
 .p-navigation {
   .p-navigation__row {
     .p-navigation__banner {
-      padding: 0 ($sph--small + $sph--large);
       background-color: $ubuntu-orange;
+      padding: 0 ($sph--small + $sph--large);
 
       .p-navigation__logo {
         font-weight: 400;
