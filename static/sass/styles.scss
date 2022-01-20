@@ -32,6 +32,10 @@
       background-color: $ubuntu-orange;
       padding: 0 ($sph--small + $sph--large);
 
+      @media only screen and (max-width: $breakpoint-small) {
+        padding-left: 1rem;
+      }
+
       .p-navigation__logo {
         font-weight: 400;
         margin-right: 0;
@@ -43,12 +47,6 @@
           font-weight: 400;
         }
       }
-    }
-
-    .p-navigation__link a {
-      height: 100%;
-      padding-left: ($sph--small + $sph--large);
-      padding-right: ($sph--small + $sph--large);
     }
   }
 }
