@@ -2,20 +2,17 @@
 @import "settings";
 
 // Import Vanilla
-@import "vanilla-framework/scss/build";
+@import "vanilla-framework";
+@include vanilla;
 
 // import cookie policy
 @import "@canonical/cookie-policy/build/css/cookie-policy";
 
 // import additional styles
-@import "sidebar";
-@import "blockquote";
 @import "pattern_github_buttons";
-@import "pattern_tiles";
 @import "pattern_tutorials";
 
 @include microk8s-github-buttons;
-@include microk8s-tiles;
 
 // Custom styles
 .p-tab {
@@ -29,16 +26,15 @@
   }
 }
 
-.p-navigation__banner {
-  background-color: $ubuntu-orange;
-}
-
 .p-navigation {
   .p-navigation__row {
-    padding: 0;
-
     .p-navigation__banner {
-      padding: 0 $sph-inner--large;
+      background-color: $ubuntu-orange;
+      padding: 0 ($sph--small + $sph--large);
+
+      @media only screen and (max-width: $breakpoint-small) {
+        padding-left: 1rem;
+      }
 
       .p-navigation__logo {
         font-weight: 400;
@@ -52,83 +48,12 @@
         }
       }
     }
-
-    .p-navigation__link a {
-      height: 100%;
-      padding-left: $sph-inner--large;
-      padding-right: $sph-inner--large;
-    }
   }
 }
 
 .p-matrix__item:last-of-type {
   @media only screen and (max-width: $breakpoint-x-small) {
     padding-bottom: 0;
-  }
-}
-
-.p-strip--header {
-  @extend %vf-strip;
-
-  background-blend-mode: multiply, multiply, normal, normal;
-  background-color: #111;
-  background-image: linear-gradient(
-      to bottom left,
-      rgba(216, 216, 216, 0.54) 0,
-      rgba(216, 216, 216, 0.54) 49.9%,
-      transparent 50%
-    ),
-    linear-gradient(
-      to bottom right,
-      rgba(228, 228, 228, 0.54) 0,
-      rgba(228, 228, 228, 0.54) 49.9%,
-      transparent 50%
-    ),
-    linear-gradient(
-      to top left,
-      rgba(247, 247, 247, 1) 0%,
-      rgba(247, 247, 247, 1) 49.3%,
-      rgba(247, 247, 247, 0) 50%,
-      rgba(247, 247, 247, 0) 100%
-    ),
-    linear-gradient(201deg, #4e4e4e 0%, #333 46%, #111 90%);
-  background-position: top right, top left, right bottom -1px, left top;
-  background-repeat: no-repeat;
-  background-size: 74% 99.83%, 98% 91%, 192.8% 23.26%, 100% 99.8%;
-  color: $color-x-light;
-  margin: 0;
-  padding-bottom: 6rem;
-  padding-top: 2rem;
-
-  @supports not (background-blend-mode: multiply) {
-    background-image: linear-gradient(
-        to bottom left,
-        rgba(216, 216, 216, 0.14) 0,
-        rgba(216, 216, 216, 0.14) 49.9%,
-        transparent 50%
-      ),
-      linear-gradient(
-        to bottom right,
-        rgba(228, 228, 228, 0.14) 0,
-        rgba(228, 228, 228, 0.14) 49.9%,
-        transparent 50%
-      ),
-      linear-gradient(
-        to top left,
-        rgba(247, 247, 247, 1) 0%,
-        rgba(247, 247, 247, 1) 49.3%,
-        rgba(247, 247, 247, 0) 50%,
-        rgba(247, 247, 247, 0) 100%
-      ),
-      linear-gradient(201deg, #4e4e4e 0%, #333 46%, #111 90%);
-  }
-
-  @media (max-width: $breakpoint-medium) {
-    background-position: top right, top left, right bottom -1px, left top;
-    background-repeat: no-repeat;
-    background-size: 74% 99.83%, 148% 83%, 119% 13%, 100% 99.83%;
-    padding-bottom: 8rem;
-    padding-top: 4rem;
   }
 }
 
@@ -154,32 +79,6 @@
   background-repeat: no-repeat;
   background-size: 77% 115%, 71% 104%, 100% 99.8%;
   color: $color-x-light;
-}
-
-.p-strip--lightsuru {
-  @extend %vf-strip;
-
-  background-color: #f7f7f7;
-
-  @media (min-width: $breakpoint-medium) {
-    background-blend-mode: initial;
-    background-image: linear-gradient(
-        to bottom left,
-        rgba(216, 216, 216, 0.54) 0,
-        rgba(216, 216, 216, 0.54) 49.9%,
-        transparent 50%
-      ),
-      linear-gradient(
-        to bottom right,
-        rgba(228, 228, 228, 0.54) 0,
-        rgba(228, 228, 228, 0.54) 49.9%,
-        transparent 50%
-      ),
-      linear-gradient(201deg, #f7f7f7 30%, #e5e5e5 90%);
-    background-position: top right, top left, left top;
-    background-repeat: no-repeat;
-    background-size: 86% 125%, 77% 57%, 100% 99.8%;
-  }
 }
 
 .u-hide--x-small {

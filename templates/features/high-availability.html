@@ -9,10 +9,12 @@
 
 {% block features_content %}
   <section class="p-strip u-no-padding--top">
+    <div class="u-fixed-width">
       <h1>High availability (HA)</h1>
+    </div>
     <div class="row">
       <div class="col-6">
-        <p class="p-heading--three">Automatic, autonomous and self-healing HA</p>
+        <p class="p-heading--3">Automatic, autonomous and self-healing HA</p>
         <p>
          Mission-critical applications require a resilient Kubernetes cluster, which can lose any node and still provide reliable services. Zero downtime is a necessity in production environments. Fault tolerance is especially critical for remote, unattended clusters, appliances and industrial IoT, where access is limited and distributed across a country, a continent or the globe.
         </p>
@@ -20,7 +22,7 @@
          MicroK8s makes high availability resilient and self-healing with no administrative interventions required.
         </p>
       </div>
-      <div class="col-3 u-hide--small u-align--right">
+      <div class="col-3 u-hide--small u-hide--medium u-align--right">
         <img src="https://assets.ubuntu.com/v1/9d785fad-Automatic+node+allocation.svg" width="230" alt=""/>
       </div>
     </div>
@@ -31,7 +33,7 @@
         <ul class="p-list">
           <li class="p-list__item is-ticked">There <b>must be more than one worker node</b>. Since MicroK8s uses every node as a worker node, there is always more than one worker if there is more than one node in the cluster.</li>
           <li class="p-list__item is-ticked">The <b>Kubernetes API services must be running on more than one node</b> so that losing a single node would not render the cluster inoperable. Every node in the MicroK8s cluster is an API server, which simplifies load-balancing and means we can switch instantaneously to a different API endpoint if one fails.</li>
-          <li class="p-list__item is-ticked"><b>The cluster state must be in a reliable datastore</b>. By default, MicroK8s uses <a class="p-link--external" href="https://dqlite.io/">Dqlite</a>, a high-availability SQLite, as its datastore.</li>
+          <li class="p-list__item is-ticked"><b>The cluster state must be in a reliable datastore</b>. By default, MicroK8s uses <a  href="https://dqlite.io/">Dqlite</a>, a high-availability SQLite, as its datastore.</li>
         </ul>
         <p>
           All that is required for HA MicroK8s is three or more nodes in the cluster, at which point Dqlite is automatically highly available. If the cluster has more than three nodes, then additional nodes will be standby candidates for the datastore and promoted automatically if the datastore loses one of its nodes. The automatic promotion of standby nodes into the voting cluster of Dqlite makes MicroK8s HA autonomous and ensures that quorum is maintained even if no administrative action is taken.
