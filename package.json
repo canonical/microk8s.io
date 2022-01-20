@@ -21,8 +21,8 @@
     "test-js": "jest"
   },
   "dependencies": {
-    "@canonical/cookie-policy": "3.3.0",
-    "@canonical/global-nav": "2.5.0",
+    "@canonical/cookie-policy": "3.4.0",
+    "@canonical/global-nav": "2.6.0",
     "autoprefixer": "10.4.1",
     "babel-loader": "8.2.3",
     "expose-loader": "1.0.3",
