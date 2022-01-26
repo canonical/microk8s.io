@@ -66,9 +66,11 @@ def thankyou():
 def ha():
     return render_template("/features/high-availability.html")
 
+
 @app.route("/compare")
 def compare():
     return render_template("/compare/index.html")
+
 
 @app.route("/tutorials")
 def tutorials():
