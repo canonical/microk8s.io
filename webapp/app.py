@@ -77,6 +77,11 @@ def tutorials():
     return render_template("/tutorials/index.html")
 
 
+@app.route("/isv")
+def isv():
+    return render_template("/isv.html")
+
+
 @app.route("/sitemap.xml")
 def sitemap_index():
     xml_sitemap = flask.render_template("sitemap/sitemap-index.xml")
