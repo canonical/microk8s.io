@@ -79,7 +79,12 @@ def tutorials():
 
 @app.route("/isv")
 def isv():
-    return render_template("/isv.html")
+    return render_template("/isv/index.html")
+
+
+@app.route("/isv/contact-us")
+def isv_contact():
+    return render_template("/isv/contact-us.html")
 
 
 @app.route("/sitemap.xml")
