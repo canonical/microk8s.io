@@ -1,0 +1,111 @@
+{% extends 'base_layout.html' %}
+{% block title %}MicroK8s - Contact-us{% endblock %}
+{% block meta_copydoc %}https://docs.google.com/document/d/1KkLHMrGipY4zgIXreujpyJlLvYUs-iAlP-FtpYrZmWA/edit {% endblock meta_copydoc %}
+
+{% block content %}
+<main id="main-content">
+  <section class="p-strip">
+    <div class="row">
+      <div class="col-8">
+        <h1>Talk to our Kubernetes experts</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-8">
+        <form action="https://ubuntu.com/marketo/submit" method="post" id="mktoForm_3230">
+          <fieldset class="u-no-margin--bottom">
+            <h3>Tell us more about how you'd like to Kubernetes / MicroK8s:</h3>
+            <ul class="p-list">
+              <li class="p-list__item">
+                <textarea id="Comments_from_lead__c" name="Comments_from_lead__c" rows="4" maxlength="2000" placeholder="Anything you'd like to communicate about your needs or interests?"></textarea>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="u-no-margin--bottom">
+            <h3>How should we get in touch?</h3>
+            <ul class="p-list">
+              <li class="p-list__item">
+                <label for="firstName">First name:</label>
+                <input required id="firstName" name="firstName" maxlength="255" type="text" />
+              </li>
+              <li class="p-list__item">
+                <label for="lastName">Last name:</label>
+                <input required id="lastName" name="lastName" maxlength="255" type="text" />
+              </li>
+              <li class="p-list__item">
+                <label for="companyName">Company name:</label>
+                <input required id="companyName" name="companyName" maxlength="255" type="text" />
+              </li>
+              <li class="p-list__item">
+                <label for="jobTitle">Job title:</label>
+                <input required id="jobTitle" name="jobTitle" maxlength="255" type="text" />
+              </li>                            
+              <li class="p-list__item">
+                <label for="email">Work email:</label>
+                <input required id="email" name="email" maxlength="255" type="email" pattern="^[^ ]+@[^ ]+\.[a-z]{2,26}$" />
+              </li>
+              <li class="p-list__item">
+                <label for="phone">Mobile/cell phone number:</label>
+                <input id="phone" name="phone" maxlength="255" type="tel" />
+              </li>
+              <li class="p-list__item">
+                <p>Is your company a software vendor?</p>
+                <label>
+                  <input id="yes" name="software-vendor" type="radio" value="yes"/>
+                  <span>Yes</span>
+                </label>
+                <label>
+                  <input id="no" name="software-vendor" type="radio" value="no"/>
+                  <span>No</span>
+                </label>                
+              </li>              
+            </ul>
+          </fieldset>
+          <fieldset class="u-no-margin--bottom">
+            <ul class="p-list">
+              <li class="p-list__item">
+                <input value="yes" id="canonicalUpdatesOptIn" name="canonicalUpdatesOptIn" type="checkbox" />
+                <label for="canonicalUpdatesOptIn">I agree to receive information about Canonical's products and services.</label>
+              </li>
+              <li class="p-list__item">In submitting this form, I confirm that I have read and agree to Canonical's <a href="https://ubuntu.com/legal/data-privacy">Privacy Policy</a>.</li>
+            </ul>
+            <ul class="p-list">
+              <li class="p-list__item">
+                <button type="submit" class="p-button--positive" onclick="dataLayer.push({'event' : 'GAEvent', 'eventCategory' : 'Form', 'eventAction' : 'cloud contact-us', 'eventLabel' : '{{product}}', 'eventValue' : undefined });">Let's discuss</button>
+              </li>
+            </ul>
+            <!-- hidden fields -->
+            <input type="hidden" aria-hidden="true" aria-label="hidden field" name="formid" value="3230" />
+            <input type="hidden" aria-hidden="true" aria-label="hidden field" name="returnURL" value="https://microk8s.io/thank-you" />
+            <input type="hidden" aria-hidden="true" aria-label="hidden field" name="Consent_to_Processing__c" value="yes" />
+          </fieldset>
+        </form>
+      </div>
+
+      <div class="col-4">
+        <div class="p-card">
+          <h3 class="p-card__title">Any questions? Call us</h3>
+          <ul class="p-list--divided">
+            <li class="p-list__item">Americas <a href="tel:+17372040291" class="u-float-right">+1 737 2040291</a></li>
+            <li class="p-list__item">France <a href="tel:+33184889319" class="u-float-right">+33 184889319</a></li>
+            <li class="p-list__item">Germany <a href="tel:+4961512746816" class="u-float-right">+49 615 127 46816</a></li>
+            <li class="p-list__item">Japan <a href="tel:+81362053075" class="u-float-right">+81 3 6205 3075</a></li>
+            <li class="p-list__item">Spain <a href="tel:+34932201131" class="u-float-right">+34 932 201131</a></li>
+            <li class="p-list__item">UK <a href="tel:+442036565291" class="u-float-right">+44 203 656 5291</a></li>
+            <li class="p-list__item">Rest of World <a href="tel:+442036565291" class="u-float-right">+44 203 656 5291</a></li>
+          </ul>
+        </div>
+        <div class="p-card">
+          <h3 class="p-card__title">Need help with Ubuntu?</h3>
+          <p>If you are just looking for some free support for yourself, you can try:</p>
+          <ul class="p-list--divided">
+            <li class="p-list__item"><a href="https://askubuntu.com/">Ask Ubuntu</a></li>
+            <li class="p-list__item"><a href="https://ubuntuforums.org/">The Ubuntu forum</a></li>
+            <li class="p-list__item"><a href="https://help.ubuntu.com/">Help docs</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+{% endblock %}
