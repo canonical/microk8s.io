@@ -6,282 +6,189 @@
 <main id="main-content">
 
  <section class="p-strip--suru is-dark">
-   <div class="row u-vertically-center u-equal-height">
-     <div class="col-7">
-       <h1>High availability K8s <span class="p-label--positive" style="position: relative; top: -1rem;">New</span></h1>
-       <p class="p-heading--4">
-        Low-ops, minimal production Kubernetes,
-        <br />
-        for devs, cloud, clusters, workstations, Edge and IoT.
-       </p>
-       <p><a class="p-button--positive" href="/contact-us">Get in touch</a></p>
+   <div class="row">
+     <div class="col-6">
+       <h1>The lightweight Kubernetes</h1>
+     <p class="p-heading--4">
+       Zero-ops, pure-upstream Kubernetes,
+       <br />
+       from developer workstations to production.
+     </p>
+      <p>
+        <a class="p-button--positive" href="/contact-us">Get started</a> 
+        <a href="https://www.brighttalk.com/webcast/6793/378029?utm_source=brighttalk-portal&utm_medium=web&utm_content=microk8s&utm_campaign=webcasts-search-results-feed">Watch an intro to MicroK8s &nbsp;&rsaquo;</a>
+      </p>
      </div>
-     <div class="col-5 u-align--center u-hide--small u-hide--medium u-embedded-media">
-       <iframe class="u-embedded-media__element" width="560" height="315" src="https://www.youtube.com/embed/v9KI2BAF5QU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+     <div class="col-6">
+       <!-- logo to go here -->
+     </div>
+     
+   </div>
+ </section>
+
+ <section class="p-strip">
+   <div class="u-fixed-width u-sv3">
+     <h2>Why Microk8s</h2>
+     <p class="p-heading--4">The best Kubernetes experience for developers, DevOps, cloud and edge</p>
+   </div>
+   <div class="row u-equal-height">
+     <div class="col-4">
+       <h4>For Develoeprs</h4>
+       <p>MicroK8s is the easiest and fastest way to get Kubernetes up and running. Experiment with the latest upstream features and toggle services on and off. Seamlessly move your work from dev to production.</p>
+     </div>
+     <div class="col-4">
+       <h4>For DevOps</h4>
+       <p>With self-healing high availability, transactional OTA updates and secure sandboxed kubelet environments, MicroK8s is the go-to platform for mission-critical workloads. Quickly spin nodes up in your CI/CD and reduce your production maintenance costs.</p>
+     </div>
+     <div class="col-4">
+       <h4>For software vendors</h4>
+       <p>Leverage the simplicity, robustness and security of MicroK8s as a full embedded Kubernetes platform. Build containerised solutions with a system that doesn’t require your attention. Focus on your customers, not the infrastructure.</p>
+     </div>
+   </div>
+   <div class="u-fixed-width">
+     <p><a href="https://vimeo.com/466106710">MicroK8s intro video &nbsp;&rsaquo;</a></p>
+   </div>
+ </section>
+
+ <section class="p-strip--light">
+   <div class="row">
+     <div class="col-6">
+       <!-- img to go here -->
+     </div>
+     <div class="col-6">
+       <h2>Hassle-free Kubernetes</h2>
+       <p class="p-heading--4">The simplest way to get K8s anywhere</p>
+       <p>ARM or Intel. Under the cell tower. On Raspberry Pis. On clouds or everyday appliances. MicroK8s delivers the full Kubernetes experience with a single command. Install. Cluster. Enable the services you need. No hassle.</p>
+       <p>A fully isolated deployment package protects your underlying system. Self-healing high-availability and over-the-air updates for ultra-reliable operations.</p>
+       <p>MicroK8s architecture and OS compatibility allows you to deploy on COTS hardware and develop on any workstation.</p>
      </div>
    </div>
  </section>
 
  <section class="p-strip" id="get-started" role="tablist">
-   <div class="row">
-     <div class="col-12">
-       <h2 class="u-align--left u-no-max-width u-sv2">
-           Select platform for install steps
-       </h2>
-     </div>
-   </div>
-   <div class="row u-equal-height u-sv3">
-      <a id="tab-one" href="#tab-one__content"
-        class="col-small-2 col-medium-2 col-4 p-card p-tab u-align--center u-vertically-center js-tab" role="tab">
-        <img src="https://assets.ubuntu.com/v1/53c3be42-linuc-logo.svg" style="height: 90px; margin-top: 1rem;" alt="">
-        <p class="p-heading--4" class="p-heading--5 p-tab__title">Linux</p>
-      </a>
+  <div class="row">
+    <div class="col-12">
+      <h2 class="u-align--left u-no-max-width u-sv2">
+        Install MicroK8s
+      </h2>
+    </div>
+  </div>
+  <div class="row u-equal-height u-sv3">
+     <a id="tab-one" href="#tab-one__content"
+       class="col-small-2 col-medium-2 col-4 p-card p-tab u-align--center u-vertically-center js-tab" role="tab">
+       <img src="https://assets.ubuntu.com/v1/53c3be42-linuc-logo.svg" style="height: 90px; margin-top: 1rem;" alt="">
+       <p class="p-heading--4" class="p-heading--5 p-tab__title">Linux</p>
+     </a>
 
-      <a id="tab-two" href="#tab-two__content"
-        class="col-small-2 col-medium-2 col-4 p-card p-tab u-align--center u-vertically-center js-tab" role="tab">
-        <img src="https://assets.ubuntu.com/v1/11ecbd2d-2018-logo-windows.svg" style="height: 145px;" alt="Windows">
-      </a>
+     <a id="tab-two" href="#tab-two__content"
+       class="col-small-2 col-medium-2 col-4 p-card p-tab u-align--center u-vertically-center js-tab" role="tab">
+       <img src="https://assets.ubuntu.com/v1/11ecbd2d-2018-logo-windows.svg" style="height: 145px;" alt="Windows">
+     </a>
 
-      <a id="tab-three" href="#tab-three__content"
-        class="col-small-2 col-medium-2 col-4 p-card p-tab u-align--center u-vertically-center js-tab" role="tab">
-        <img src="https://assets.ubuntu.com/v1/236f314d-macos.svg" style="height: 145px;" alt="macOS">
-      </a>
-   </div>
+     <a id="tab-three" href="#tab-three__content"
+       class="col-small-2 col-medium-2 col-4 p-card p-tab u-align--center u-vertically-center js-tab" role="tab">
+       <img src="https://assets.ubuntu.com/v1/236f314d-macos.svg" style="height: 145px;" alt="macOS">
+     </a>
+  </div>
 
-   <div class="row">
-     <div class="col-8 js-tab__content u-hide" id="tab-one__content" role="tabpanel" aria-labelledby="tab-one">
-       {% include "/partial/_get-started-linux.html" %}
-     </div>
-     <div class="col-8 js-tab__content u-hide" id="tab-two__content" role="tabpanel" aria-labelledby="tab-two">
-       {% include "/partial/_get-started-windows.html" %}
-     </div>
-     <div class="col-8 js-tab__content u-hide" id="tab-three__content" role="tabpanel" aria-labelledby="tab-three">
-       {% include "/partial/_get-started-macos.html" %}
-     </div>
-   </div>
- </section>
+  <div class="row">
+    <div class="col-8 js-tab__content u-hide" id="tab-one__content" role="tabpanel" aria-labelledby="tab-one">
+      {% include "/partial/_get-started-linux.html" %}
+    </div>
+    <div class="col-8 js-tab__content u-hide" id="tab-two__content" role="tabpanel" aria-labelledby="tab-two">
+      {% include "/partial/_get-started-windows.html" %}
+    </div>
+    <div class="col-8 js-tab__content u-hide" id="tab-three__content" role="tabpanel" aria-labelledby="tab-three">
+      {% include "/partial/_get-started-macos.html" %}
+    </div>
+  </div>
+</section>
 
- <section class="p-strip--light is-deep">
-   <div class="row u-equal-height">
-     <div class="col-4 u-vertically-center u-align--center u-hide--small u-hide--medium">
-       <img src="https://assets.ubuntu.com/v1/9d785fad-Automatic+node+allocation.svg" alt="Automatic node allocation" width="230"/>
-     </div>
-     <div class="col-8">
-       <h2>Self-healing high availability clusters</h2>
-       <p class="p-heading--4">Automatic data store, API services and leader election</p>
-       <p>MicroK8s automatically chooses the best nodes for the Kubernetes datastore. When you lose a cluster database node, another node is promoted. No admin needed for your bulletproof edge.</p>
-     </div>
-   </div>
- </section>
+<section class="p-strip--light">
+  <div class="row">
+    <div class="col-6">
+      <h2>Enterprise support option, no licence fees</h2>
+      <p class="p-heading--4">99.9% uptime SLA and 10-year security maintenance</p>
+      <p>As the publishers of MicroK8s, we deliver the world's most efficient multi-cloud, multi-arch Kubernetes through high quality packages and distribution channels.</p>
+      <p>A <a href="https://ubuntu.com/advantage">single subscription</a> covers your physical and cloud native infrastructure and your applications on top.</p>
+      <p><a class="p-button--positive" href="/contact-us">Contact us</a></p>
+    </div>
+    <div class="col-6 u-hide--small u-hide--medium u-align--center u-vertically-center">
+      <img src="https://assets.ubuntu.com/v1/4218366f-Operate_K8s-01.svg" alt="" style="height: 250px; width: 438px;"/>
+    </div>
+  </div>
+</section>
 
- <section class="p-strip is-deep">
-   <div class="row u-equal-height">
-     <div class="col-7">
-       <h2>Lightweight upstream Kubernetes</h2>
-       <p class="p-heading--4">No APIs added or removed</p>
-       <p class="u-no-margin--bottom u-sv3">MicroK8s is small, with sensible defaults that ‘just work’. A quick install, easy upgrades and great security make it perfect for micro clouds and edge computing.</p>
-       <p>
-         <a  href="https://ubuntu.com/engage/microk8s-451research">Read the whitepaper</a>
-       </p>
-     </div>
-     <div class="col-5 u-hide--small u-hide--medium u-align--center u-vertically-center">
-       <img src="https://assets.ubuntu.com/v1/3e64aa42-Canonical_451Research_MicroK8s_Final-1.png" alt="Kubernetes brief" width="500">
-     </div>
-   </div>
- </section>
+<section class="p-strip">
+  <div class="row">
+    <div class="col-6 u-hide--small u-align--center u-vertically-center">
+      <img src="https://assets.ubuntu.com/v1/af9d1822-Kubernetes-dedicated+platforms.svg" alt="" style="height: 172px; width: 342px;"/>
+    </div>
+    <div class="col-6">
+      <h2>Zero-ops infrastructure</h2>
+      <p class="p-heading--4">Set it up and let it run</p>
+      <p>Our goal is to eliminate toil from Kubernetes cluster administration.</p>
+      <p>MicroK8s needs  just a few minutes to setup fully functional highly available clusters, with automated K8s datastore maintenance and unattended security updates.</p>
+      <p>Fire and forget or customise it for your needs.</p>
+    </div>
+  </div>
+</section>
 
- <section class="p-strip--light is-deep">
-   <div class="row">
-     <h2>Best of breed</h2>
-   </div>
-   <div class="row u-equal-height">
-     <div class="col-2">
-       <h3 class="p-heading--4">Enterprise</h3>
-       <ul class="p-list--divided u-no-margin--bottom">
-         <li class="p-list__item is-ticked">Clustering</li>
-         <li class="p-list__item is-ticked">Auto-updating</li>
-         <li class="p-list__item is-ticked">Confinement</li>
-         <li class="p-list__item is-ticked">Storage</li>
-       </ul>
-       <hr class="u-hide u-show--small u-no-margin--bottom"/>
-     </div>
-     <div class="col-2">
-       <h3 class="p-heading--4">Platforms</h3>
-       <ul class="p-list--divided u-no-margin--bottom">
-         <li class="p-list__item is-ticked">Windows</li>
-         <li class="p-list__item is-ticked">macOS</li>
-         <li class="p-list__item is-ticked">Intel</li>
-         <li class="p-list__item is-ticked">ARM</li>
-       </ul>
-       <hr class="u-hide u-show--small u-no-margin--bottom"/>
-     </div>
-     <div class="col-2">
-       <h3 class="p-heading--4">Networking</h3>
-       <ul class="p-list--divided u-no-margin--bottom">
-         <li class="p-list__item is-ticked">CoreDNS</li>
-         <li class="p-list__item is-ticked">Ingress</li>
-         <li class="p-list__item is-ticked">Istio</li>
-         <li class="p-list__item is-ticked">Linkerd</li>
-       </ul>
-       <hr class="u-hide u-show--small u-no-margin--bottom"/>
-     </div>
-     <div class="col-2">
-       <h3 class="p-heading--4">Usability</h3>
-       <ul class="p-list--divided u-no-margin--bottom">
-         <li class="p-list__item is-ticked">Dashboard</li>
-         <li class="p-list__item is-ticked">Prometheus</li>
-         <li class="p-list__item is-ticked">Fluentd</li>
-         <li class="p-list__item is-ticked">Jaeger</li>
-       </ul>
-     </div>
-     <div class="col-2">
-       <h3 class="p-heading--4">Built-in</h3>
-       <ul class="p-list--divided u-no-margin--bottom">
-         <li class="p-list__item is-ticked">Registry</li>
-         <li class="p-list__item is-ticked">Knative</li>
-         <li class="p-list__item is-ticked">Kubeflow</li>
-         <li class="p-list__item is-ticked">GPU support</li>
-       </ul>
-     </div>
-   </div>
- </section>
+<section class="p-strip--light">
+  <div class="row">
+    <div class="col-6">
+      <h2>Batteries included and sensible defaults</h2>
+      <p class="p-heading--4">The most popular cloud native projects at your fingertips. No config needed</p>
+      <p>Prometheus is popular for metrics, so we bundled it. Just like Jaeger, Istio, LinkerD and KNative.</p>
+      <p>Turn them on or off with one command. Or bring your own add-on if you like.</p>
+      <p>MicroK8s also comes with sensible defaults for the most widely used Kubernetes options, so it 'just works' with no config necessary.</p>
+    </div>
+    <div class="col-6 u-hide--small u-align--center u-vertically-center">
+      <img src="https://assets.ubuntu.com/v1/cbe37336-MicroK8s-Apps.svg" alt="" style="height: 200px; width: 347px;"/>
+    </div>
+  </div>
+</section>
 
- <section class="p-strip is-deep">
-   <div class="row u-equal-height">
-     <div class="col-8">
-       <h2>Full enterprise support available, <br />no license fees</h2>
-       <p class="p-heading--4">Optional 24/7 support with 10 year security maintenance</p>
-       <p>As the publishers of MicroK8s, we deliver the world’s most efficient multi-cloud, multi-arch Kubernetes.</p>
-       <p><a href="/contact-us" class="p-button--positive">Contact us</a></p>
-     </div>
-     <div class="col-3 col-start-large-9 u-hide--small u-hide--medium u-align--center u-vertically-center">
-       <img src="https://assets.ubuntu.com/v1/5d6da5c4-logo-canonical-aubergine.svg" alt="">
-     </div>
-   </div>
- </section>
+<section class="p-strip">
+  <div class="row">
+    <div class="col-6 u-hide--small u-align--center u-vertically-center">
+      <img src="https://assets.ubuntu.com/v1/f89832c6-Kubernetes-CNCF+compliant.svg" alt="" style="height: 262px; width:301px"/>
+    </div>
+    <div class="col-6 ">
+      <h2>Minimal, CNCF-certified distribution</h2>
+      <p class="p-heading--4">All upstream services in an efficient package</p>
+      <p>Build your container strategy on a conformant platform, leverage the cloud native ecosystem, no vendor lock in.</p>
+      <p>Get all Kubernetes services in a single, fully contained package. No moving parts and dependencies, better security and simpler ops.</p>
+    </div>
+  </div>
+</section>
 
- <section class="p-strip--light is-deep">
-   <div class="row u-equal-height">
-     <div class="col-5 u-hide--small u-hide--medium u-align--center u-vertically-center">
-       <img src="https://assets.ubuntu.com/v1/a0bcf947-IoT+gateways-Kubernetes.svg" alt="" width="400" loading="auto">
-     </div>
-     <div class="col-7">
-       <h2>Embedded Kubernetes &ndash; try a Raspberry Pi cluster</h2>
-       <p class="p-heading--4">ARM or Intel. Standalone or cluster. Minimal space, maximum edge.</p>
-       <p>Under the cell tower. On the racecar. On satellites or everyday appliances, MicroK8s delivers the full Kubernetes experience on IoT and micro clouds.</p>
-       <p>Fully containerized deployment with compressed over-the-air updates for ultra-reliable operations.</p>
-     </div>
-   </div>
- </section>
+<section class="p-strip--light">
+  <div class="row">
+    <div class="col-6">
+      <h2>Automatic security updates and streamlined upgrades</h2>
+      <p class="p-heading--4">Let it roll, or take control</p>
+      <p>MicroK8s will apply security updates automatically by default, and roll back on failure. Defer them if you want.</p>
+      <p>Upgrade to a newer version of Kubernetes with a single command. It's really that easy.</p>
+      <p>Stick with a major version, or follow the latest upstream work. Go with the flow, or take control in the enterprise to specify versions with perfect precision.</p>
+    </div>
+    <div class="col-6 u-hide--small u-align--center u-vertically-center">
+      <img src="https://assets.ubuntu.com/v1/6c0471ea-Kubernetes-Easier+deployments.svg" alt="" style="height: 311px; width:457px"/>
+    </div>
+  </div>
+</section>
 
- <section class="p-strip is-deep">
-   <div class="row u-equal-height">
-     <div class="col-7">
-       <h2>Zero-ops infrastructure</h2>
-       <p class="p-heading--4">Set it up and let it run</p>
-       <p>Our goal is to eliminate everyday  administration from Kubernetes clusters.</p>
-       <p> Install, cluster, and then just watch it fly. You can configure MicroK8s if you want. Most people don’t bother.</p>
-       <p>MicroK8s will apply security updates automatically by default, defer them if you want. Upgrade to a newer version of Kubernetes with a single command. It’s really that easy.</p>
-     </div>
-     <div class="col-5 u-hide--small u-hide--medium u-align--center u-vertically-center">
-       <img src="https://assets.ubuntu.com/v1/dc735dc5-single-line-install.svg" alt="" style="height: 200px; width: 350px;" />
-     </div>
-   </div>
- </section>
+<section class="p-strip u-hide--small u-hide--medium">
+  <div class="row">
+    <h2>Experience MicroK8s</h2>
+    <p>Here's a quick intro video. Pause and copy commands straight from this text console.</p>
+    <div class="asciinema-container">
+     <script id="asciicast-KUqQaDt7p3iNO5DP0xC7W4Ufj" src="https://asciinema.org/a/KUqQaDt7p3iNO5DP0xC7W4Ufj.js" async> </script>
+    </div>
+  </div>
+</section>
 
- <section class="p-strip--light is-deep">
-   <div class="row u-equal-height">
-     <div class="col-5 u-align--center u-vertically-center">
-       <img class="u-hide--small u-hide--medium" src="https://assets.ubuntu.com/v1/3ed91139-MicroK8s-%231+for+Containers.svg" alt="" style="height: 200px;width: 267px;" loading="auto">
-     </div>
-     <div class="col-7">
-       <h2>Fully containerised Kubernetes</h2>
-       <p class="p-heading--4">MicroK8s runs in an immutable container</p>
-       <p>People love Docker images because they have no moving parts, for better security and simpler ops.</p>
-       <p>MicroK8s also runs in an immutable container, so your Kubernetes itself is fully containerised. It sounds like an infinite loop, but it works quite nicely.</p>
-     </div>
-   </div>
- </section>
-
- <section class="p-strip is-deep">
-   <div class="row u-equal-height">
-     <div class="col-7">
-       <h2>Sensible defaults</h2>
-       <p class="p-heading--4">Kubernetes has a million options. We select the most popular and reliable.</p>
-       <p>MicroK8s defaults to the most widely used Kubernetes options, so it ‘just works’ with no config necessary. Networking, storage and standard services are all provided out of the box with best of breed defaults.</p>
-     </div>
-     <div class="col-5 u-align--center u-vertically-center u-hide--small u-hide--medium">
-       <img src="https://assets.ubuntu.com/v1/cbe37336-MicroK8s-Apps.svg" alt="" width="347" height="200" style="height: 200px; width: 347px;" loading="auto">
-     </div>
-   </div>
- </section>
-
- <section class="p-strip--light is-deep">
-   <div class="row u-equal-height">
-     <div class="col-5 u-hide--small u-hide--medium u-align--center u-vertically-center">
-       <img src="https://assets.ubuntu.com/v1/9afbad2b-Networking.svg" alt="" style="height: 200px; width: 290px;" loading="auto">
-     </div>
-     <div class="col-7">
-       <h2>GPU acceleration</h2>
-       <p class="p-heading--4">Nvidia auto-detection with CUDA at the ready</p>
-       <p>Pass GPUs to docker apps for deep learning. Define AI pipelines with Kubeflow on your workstation.</p>
-       <p>We work with Amazon, Azure, Google, Oracle and IBM to simplify multi-cloud GPU enablement. Build and test locally on MicroK8s, then deploy to EKS, AKS or GKE with confidence.</p>
-     </div>
-   </div>
- </section>
-
- <section class="p-strip">
-   <div class="row u-equal-height">
-     <div class="col-6">
-       <h2>Batteries included</h2>
-       <p class="p-heading--4">Tracing. Metrics. Service Mesh. Registry.</p>
-       <p>Prometheus is popular for metrics, so we bundled it. Just like Jaeger, Istio, LinkerD and KNative.</p>
-       <p>Turn them on or off with one command.</p>
-     </div>
-     <div class="col-6 u-equal-height u-hide--small u-hide--medium u-align--center u-vertically-center">
-       <img src="https://assets.ubuntu.com/v1/3520f0fe-Prometheus-Dashboard1-No-stroke.png" alt="" />
-     </div>
-   </div>
- </section>
-
- <section class="p-strip--light">
-   <div class="row u-equal-height">
-     <div class="col-6 u-hide--small u-hide--medium u-align--center u-vertically-center">
-       <img src="https://assets.ubuntu.com/v1/c711b814-reliable_updates.svg" alt="" style="height: 200px; width: 350px;" loading="auto">
-     </div>
-     <div class="col-6">
-       <h2>Automatic security updates</h2>
-       <p class="p-heading--4">Let it roll, or take control</p>
-       <p>Choose stable security releases only, or try release candidates, betas and daily builds. MicroK8s can update automatically, with rollback on failure.</p>
-       <p>Stick with a major version, or follow the latest upstream work. Go with the flow, or take control in the enterprise to specify versions with perfect precision.</p>
-     </div>
-   </div>
- </section>
-
- <section class="p-strip is-deep">
-   <div class="row u-equal-height">
-     <div class="col-6">
-       <h2>Safe and easy CI/CD</h2>
-       <p class="p-heading--4">Docker app developers love pipelines</p>
-       <p>So your CI/CD machine spins up a clean VM for each test run? Just install MicroK8s at the top of your script for a crisp, clean K8s to run your tests.</p>
-     </div>
-     <div class="col-6  u-equal-height u-hide--small u-hide--medium u-align--center u-vertically-center">
-       <img src="https://assets.ubuntu.com/v1/dec3872d-MicroK8s-Managed+securely.svg" alt="" style="height:200px; width:339px;" />
-     </div>
-   </div>
- </section>
-
- <section class="p-strip--light u-hide--small u-hide--medium">
-   <div class="row">
-     <h2>Experience MicroK8s</h2>
-     <p>Here’s a quick intro video. Pause and copy commands straight from this text console.</p>
-     <div class="asciinema-container">
-      <script id="asciicast-KUqQaDt7p3iNO5DP0xC7W4Ufj" src="https://asciinema.org/a/KUqQaDt7p3iNO5DP0xC7W4Ufj.js" async> </script>
-     </div>
-   </div>
- </section>
-
-  <section class="p-strip">
+<section class="p-strip--light">
     <div class="row">
       <h2>MicroK8s and Kubernetes resources</h2>
     </div>
@@ -317,32 +224,36 @@
             <h3 class="p-heading-icon__title p-heading--4">Whitepaper</h3>
           </div>
             <p><a  href="https://ubuntu.com/engage/microk8s-451research">Kubernetes: a secure, flexible and automated edge for IoT developers</a></p>
-        </div>
+            <p><a href="/resources">Find more resources &nbsp;&rsaquo;</a></p>
+          </div>
       </div>
     </div>
-  </section>
+</section>
 
- <section class="p-strip--light is-deep">
-   <div class="row u-equal-height">
-     <div class="col-7">
-       <h2>The team behind MicroK8s</h2>
-       <p>Microk8s is built by the <a  href="https://www.ubuntu.com/kubernetes">Kubernetes team at Canonical</a>. We work with public cloud K8s teams, and also have two K8s distributions of our own. MicroK8s is on-rails and opinionated, for the zero-ops experience. We also make <a  href="https://ubuntu.com/kubernetes/install#cluster">Charmed Kubernetes</a>  for total control of all the permutations of Kubernetes components.</p>
-     </div>
-     <div class="col-5 u-hide--small u-hide--medium u-align--center u-vertically-center">
-       <img src="https://assets.ubuntu.com/v1/74abf1f6-vanilla-canonical.svg" width="180" height="180" style="height: 180px;"  alt="">
-     </div>
-   </div>
- </section>
+<section class="p-strip">
+  <div class="row u-vertically-center">
+    <div class="col-6 ">
+      <h2>Looking for a more composable Kubernetes?</h2>
+      <p>If MicroK8s is too opinionated for you, do not worry. Microk8s is built by the Kubernetes team at Canonical. We also make <a href="https://ubuntu.com/kubernetes">Charmed Kubernetes</a> for total control of all the permutations of Kubernetes components. Build your clusters from the ground up and tailor them to your needs.</p>
+      <p>
+        <a href="https://ubuntu.com/kubernetes/install#cluster">Get started with Charmed Kubernetes &nbsp;&rsaquo;</a>
+      </p>
+    </div>
+    <div class="col-6 u-hide--small u-hide--medium u-align--center u-vertically-center">
+      <img src="https://assets.ubuntu.com/v1/5a71594a-updated-charmed-k8s-calico.svg.svg" alt="" style="height: 456px; width:400px"/>
+    </div>
+  </div>  
+</section>
 
  {# Need help? #}
- <section class="p-strip">
+ <section class="p-strip--light">
    <div class="row">
      <div class="col-5 u-hide--small u-hide--medium u-align--center">
        <img src="https://assets.ubuntu.com/v1/c4b290c8-Contact+us.svg" alt="" width="250" height="178" loading="lazy">
      </div>
      <div class="col-7">
-       <h2>Need help with Kubernetes?</h2>
-       <p>Get in touch with one of our engineers.</p>
+       <h2>Insure your MicroK8s clusters with enterprise support</h2>
+       <p>Get in touch with our team of Kubernetes experts</p>
        <p><a href="/contact-us" class="p-button--positive">Contact us</a></p>
      </div>
    </div>
