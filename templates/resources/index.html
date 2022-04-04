@@ -1,0 +1,238 @@
+{% extends "base_layout.html" %}
+
+{% block title %}Resources{% endblock %}
+
+{% block meta_description %}A collection of useful and educational material and information about MicroK8s. Learn more about Kubernetes from some of the industry’s best.{% endblock meta_description %}
+
+{% block meta_copydoc %}https://docs.google.com/document/d/1PB5-CamGmSjhbuyuGSariC9zUW-8krAJD0l8JyvNk20/edit#{% endblock %}
+
+{% block content %}
+
+<section class="p-strip--suru">
+  <div class="row u-equal-height">
+    <div class="col-7">
+      <h1>Understand MicroK8s: Resources</h1>
+      <p>Explore a collection of useful resources that will help you understand and evaluate MicroK8s when building your Kubernetes cluster.</p>
+      <p>Whitepapers, blogs, customer presentations, webinars, and more are conveniently collected here for you. We’ll guide you through what each resource is about, and add more to this page over time.</p>
+    </div>
+  </div>
+</section>
+<section class="p-strip">
+  <div class="row">
+    <div class="col-7">
+      <h2>Videos and webinars</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-4 p-card">
+      <div class="p-card__content">
+        <h3 class="p-heading--4"><a href="https://www.youtube.com/watch?v=v9KI2BAF5QU">What is MicroK8s?</a></h3>
+        <div class="col-6 u-align--center">
+          <img src="https://assets.ubuntu.com/v1/920467d2-Compare_MicroK8s-K3S-Minikube.svg" alt="" width="240" height="150" loading="lazy" />
+        </div>
+        <p>
+          This super short video gives an overview of MicroK8s: A lightweight, zero-ops, pure upstream Kubernetes which is at home on your laptop, in CI workflows, on a cloud or even embedded in your IoT Edge production environment.
+        </p>
+        <p><a class="p-button--positive" href="https://www.youtube.com/watch?v=v9KI2BAF5QU">Watch it here</a></p>
+      </div>
+    </div>
+    <div class="col-4 p-card">
+      <div class="p-card__content">
+        <h3 class="p-heading--4"><a href="https://www.brighttalk.com/webcast/6793/378029">An intro to MicroK8s</a></h3>
+        <div class="col-6 u-align--center">
+          <img src="https://assets.ubuntu.com/v1/920467d2-Compare_MicroK8s-K3S-Minikube.svg" alt="" width="240" height="150" loading="lazy" />
+        </div>
+        <p>
+          This webinar gives a more detailed overview of MicroK8s. Learn about its main features, addons, use cases, and supported platforms. Whether you are a developer experimenting with the latest Kubernetes features or a business looking to deploy Kubernetes at the edge at scale, you will enjoy the comprehensive demo of building a MicroK8s cluster.
+        </p>
+        <p><a class="p-button--positive" href="https://www.brighttalk.com/webcast/6793/378029">Watch it here</a></p>
+      </div>
+    </div>
+    <div class="col-4 p-card">
+      <div class="p-card__content">
+        <h3 class="p-heading--4"><a href="https://www.youtube.com/watch?v=v9KI2BAF5QU">K8s at the edge: easy as “Pi”</a></h3>
+        <div class="col-6 u-align--center">
+          <img src="https://assets.ubuntu.com/v1/920467d2-Compare_MicroK8s-K3S-Minikube.svg" alt="" width="240" height="150" loading="lazy" />
+        </div>
+        <p>
+          Discover how to build your own home cloud in this step-by-step video tutorial which combines the power of technologies such as LXD, MicroK8s, Charmed Operators, and Raspberry Pis.
+        </p>
+        <p><a class="p-button--positive" href="https://ubuntu.com/engage/edge-kubernetes-raspberry-pi-webinar">Watch it here</a></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-4 p-card">
+      <div class="p-card__content">
+        <h3 class="p-heading--4"><a href="https://ubuntu.com/engage/edge-kubernetes-raspberry-pi-webinar">Embedded Kubernetes for secure IoT Edge</a></h3>
+        <div class="col-6 u-align--center">
+          <img src="https://assets.ubuntu.com/v1/920467d2-Compare_MicroK8s-K3S-Minikube.svg" alt="" width="240" height="150" loading="lazy" />
+        </div>
+        <p>
+          Discover how to build your own home cloud in this step-by-step video tutorial which combines the power of technologies such as LXD, MicroK8s, Charmed Operators, and Raspberry Pis.
+        </p>
+        <p><a class="p-button--positive" href="https://ubuntu.com/engage/edge-kubernetes-raspberry-pi-webinar">Watch it here</a></p>
+      </div>
+    </div>
+    <div class="col-4 p-card">
+      <div class="p-card__content">
+        <h3 class="p-heading--4"><a href="https://www.brighttalk.com/webcast/6793/456663">Homelab: Cloud-native ad-blocking on Raspberry Pi</a></h3>
+        <div class="col-6 u-align--center">
+          <img src="https://assets.ubuntu.com/v1/920467d2-Compare_MicroK8s-K3S-Minikube.svg" alt="" width="240" height="150" loading="lazy" />
+        </div>
+        <p>
+          In this hands-on session, you will learn how to set up the Pi-Hole ad blocker using several Raspberry Pis as a MicroK8s multi-node cluster – high availability, load balancing, and Kubernetes configuration included.
+        </p>
+        <p><a class="p-button--positive" href="https://www.brighttalk.com/webcast/6793/456663">Watch it here</a></p>
+      </div>
+    </div>
+    <div class="col-4 p-card">
+      <div class="p-card__content">
+        <h3 class="p-heading--4"><a href="https://ubuntu.com/blog/kubernetes-on-windows-with-microk8s-and-wsl-2">Kubernetes on Windows with MicroK8s and WSL 2</a></h3>
+        <div class="col-6 u-align--center">
+          <img src="https://assets.ubuntu.com/v1/920467d2-Compare_MicroK8s-K3S-Minikube.svg" alt="" width="240" height="150" loading="lazy" />
+        </div>
+        <p>Running Windows is no longer a barrier to a rich and rewarding Kubernetes experience.</p>
+        <p>In this video, Canonical Product Managers Alex Chalkias and Sohini Roy are joined by WSL Corsair and Microsoft MVP, Nuno do Carmo, to discuss the latest features of WSL 2. They demo the installation of MicroK8s within the WSL 2 environment, the setup of a multi-node Kubernetes cluster and monitoring of the cluster through the Kubernetes dashboard.</p>
+        <p><a class="p-button--positive" href="https://ubuntu.com/blog/kubernetes-on-windows-with-microk8s-and-wsl-2">Watch it here</a></p>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-4 p-card">
+      <div class="p-card__content">
+        <h3 class="p-heading--4"><a href="https://ubuntu.com/engage/edge-kubernetes-raspberry-pi-webinar">Self-healing Kubernetes at the edge: MicroK8s, Raspberry Pis and Portainer</a></h3>
+        <div class="col-6 u-align--center">
+          <img src="https://assets.ubuntu.com/v1/920467d2-Compare_MicroK8s-K3S-Minikube.svg" alt="" width="240" height="150" loading="lazy" />
+        </div>
+        <p>Application vendors are often challenged by the complexity of Kubernetes.</p>
+        <p>Using MicroK8s and Ubuntu as the building blocks for cloud-native solutions removes infrastructure dependencies, ensuring software will run anywhere in a predictable manner.</p>
+        <p>This session gives a high-level overview of the benefits of embedded Kubernetes for ISVs and the MicroK8s container delivery methodology.</p>
+        <p><a class="p-button--positive" href="https://ubuntu.com/engage/edge-kubernetes-raspberry-pi-webinar">Watch it here</a></p>
+      </div>
+    </div>
+    <div class="col-4 p-card">
+      <div class="p-card__content">
+        <h3 class="p-heading--4"><a href="https://ubuntu.com/engage/microk8s-nvidia-tech-stack">Simplifying Kubernetes across the Clouds: MicroK8s on NVIDIA Tech Stack
+        </a></h3>
+        <div class="col-6 u-align--center">
+          <img src="https://assets.ubuntu.com/v1/920467d2-Compare_MicroK8s-K3S-Minikube.svg" alt="" width="240" height="150" loading="lazy" />
+        </div>
+        <p>Kubernetes is an enabler for Data scientists to do AI/MLOps as it combines open source components to easily create workflows.</p>
+        <p>In this webinar, we highlight the details of MicroK8s’ simplicity and robustness and demonstrate the different usage scenarios, running it on NVIDIA DGX, EGX, DPU and Jetson hardware using real applications from the NVIDIA ecosystem.</p>
+        <p><a class="p-button--positive" href="https://ubuntu.com/engage/microk8s-nvidia-tech-stack">Watch it here</a></p>
+      </div>
+    </div>
+    <div class="col-4 p-card">
+      <div class="p-card__content">
+        <h3 class="p-heading--4"><a href="https://ubuntu.com/engage/webinar-microk8s-on-z">MicroK8s on IBM Z — minimal footprint meets zero downtime</a></h3>
+        <div class="col-6 u-align--center">
+          <img src="https://assets.ubuntu.com/v1/920467d2-Compare_MicroK8s-K3S-Minikube.svg" alt="" width="240" height="150" loading="lazy" />
+        </div>
+        <p>Mission-critical applications require resilient Kubernetes that can lose any node and still provide reliable services.</p>
+        <p>This webinar presents the case for running MicroK8s on IBM Z/Linux ONE/s390x systems: combining a robust, low-touch Kubernetes with the most reliable hardware platform available.</p>
+        <p><a class="p-button--positive" href="https://ubuntu.com/engage/webinar-microk8s-on-z">Watch it here</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="p-strip--light">
+  <div class="row">
+    <div class="col-7">
+      <h2>Case studies/Whitepapers/Industry reports</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-4 p-card">
+      <div class="p-card__content">
+        <h3 class="p-heading--4"><a href="https://ubuntu.com/engage/microk8s-451research">Kubernetes: a secure, flexible and automated edge for IoT developers</a></h3>
+        <div class="col-6 u-align--center">
+          <img src="https://assets.ubuntu.com/v1/920467d2-Compare_MicroK8s-K3S-Minikube.svg" alt="" width="240" height="150" loading="lazy" />
+        </div>
+        <p>This 451 Research whitepaper focuses on the key factors that drive the evolution of IoT edge and the requirements around which Kubernetes need to optimise to become the standard edge platform.</p>
+        <p>MicroK8s, being a low-touch, low-footprint Kubernetes distribution, already addresses many of the key essentials!</p>
+        <p><a class="p-button--positive" href="https://ubuntu.com/engage/microk8s-451research">Learn more</a></p>
+      </div>
+    </div>
+    <div class="col-4 p-card">
+      <div class="p-card__content">
+        <h3 class="p-heading--4"><a href="https://juju.is/cloud-native-kubernetes-usage-report-2021">Kubernetes and cloud-native operations report</a></h3>
+        <div class="col-6 u-align--center">
+          <img src="https://assets.ubuntu.com/v1/920467d2-Compare_MicroK8s-K3S-Minikube.svg" alt="" width="240" height="150" loading="lazy" />
+        </div>
+        <p>Canonical is a proud member of the CNCF and MicroK8s is a very popular Kubernetes distribution for developers and enterprises alike.</p>
+        <p>In this industry report, we wanted to leverage our user base to share important data around the usage and operations of Kubernetes and cloud-native technologies. We also asked industry experts to provide their insights - this makes for a fascinating read.</p>
+        <p><a class="p-button--positive" href="https://juju.is/cloud-native-kubernetes-usage-report-2021">Read the full report here</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="p-strip">
+  <div class="row">
+    <div class="col-7">
+      <h2>Blogs</h2>
+      <p>All Canonical blogs related to MicroK8s can be found here. This rich set of content covers everything from high-level product announcements to hands-on technical guides that dig into more complicated topics.</p> 
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-4 p-card">
+      <div class="p-card__content">
+        <h3 class="p-heading--4"><a href="https://ubuntu.com/blog/kubernetes-ci-cd-pipelines-what-why-and-how">Kubernetes CI/CD pipelines: What, why, and how</a></h3>
+        <div class="col-6 u-align--center">
+          <img src="https://assets.ubuntu.com/v1/920467d2-Compare_MicroK8s-K3S-Minikube.svg" alt="" width="240" height="150" loading="lazy" />
+        </div>
+        <p>Alex Chalkias, Kubernetes Product Manager, walks us through the details of CI/CD pipelines.</p>
+        <p>In this introductory blog, we learn about the basics of continuous integration and continuous delivery, what are the benefits of Kubernetes CI/CD and how to combine MicroK8s with Gitlab to build a full DevOps environment.</p>
+        <p><a class="p-button--positive" href="https://ubuntu.com/blog/kubernetes-ci-cd-pipelines-what-why-and-how">Read it here.</a></p>
+      </div>
+    </div>
+    <div class="col-4 p-card">
+      <div class="p-card__content">
+        <h3 class="p-heading--4"><a href="https://ubuntu.com/blog/kubernetes-ci-cd-pipelines-what-why-and-how">From lightweight to featherweight: MicroK8s memory optimisation</a></h3>
+        <div class="col-6 u-align--center">
+          <img src="https://assets.ubuntu.com/v1/920467d2-Compare_MicroK8s-K3S-Minikube.svg" alt="" width="240" height="150" loading="lazy" />
+        </div>
+        <p>What makes MicroK8s a lightweight Kubernetes distribution is its efficient packaging of all upstream Kubernetes services in a single artefact, called a snap.</p>
+        <p>In this blog post, we shed light on some memory footprint optimisations which make MicroK8s even better for Kubernetes deployments on small form factor devices such as the Raspberry Pi or the NVIDIA Jetson.</p>
+        <p><a class="p-button--positive" href="https://ubuntu.com/blog/microk8s-memory-optimisation">Read it here.</a></p>
+      </div>
+    </div>
+    <div class="col-4 p-card">
+      <div class="p-card__content">
+        <h3 class="p-heading--4"><a href="https://ubuntu.com/blog/ros-2-on-kubernetes-a-simple-talker-and-listener-setup">ROS 2 on Kubernetes: a simple talker and listener setup</a></h3>
+        <div class="col-6 u-align--center">
+          <img src="https://assets.ubuntu.com/v1/920467d2-Compare_MicroK8s-K3S-Minikube.svg" alt="" width="240" height="150" loading="lazy" />
+        </div>
+        <p>In this blog series, Sid Faber, Senior Robotics engineer, explains why Kubernetes and robotics are a great match.</p>
+        <p>Learn how to run ROS 2 on Kubernetes and set up a simple talker/listener system using a MicroK8s cluster on Ubuntu.</p>
+        <p><a class="p-button--positive" href="https://ubuntu.com/blog/ros-2-on-kubernetes-a-simple-talker-and-listener-setup">Read it here.</a></p>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-4 p-card">
+      <div class="p-card__content">
+        <h3 class="p-heading--4"><a href="https://ubuntu.com/blog/microk8s-installers-windows-and-macos">MicroK8s now native on Windows and macOS</a></h3>
+        <div class="col-6 u-align--center">
+          <img src="https://assets.ubuntu.com/v1/920467d2-Compare_MicroK8s-K3S-Minikube.svg" alt="" width="240" height="150" loading="lazy" />
+        </div>
+        <p>In the summer of 2020, the MicroK8s native installers for Windows and macOS were made generally available.</p>
+        <p>This was a big milestone for the lightweight Kubernetes distribution, making it even simpler for developers to spin up nodes and clusters on their platform of choice.</p>
+        <p>This blog outlines the consistent experience of installing MicroK8s on Linux, Windows and macOS. You will also learn about Multipass, the simple VM utility, used under the hood in the Windows and macOS installers.</p>
+        <p><a class="p-button--positive" href="https://ubuntu.com/blog/microk8s-installers-windows-and-macos">Read it here.</a></p>
+      </div>
+    </div>
+    <div class="col-4 p-card">
+      <div class="p-card__content">
+        <h3 class="p-heading--4"><a href="https://ubuntu.com/blog/microk8s-windows-workers">Windows containers on Kubernetes with MicroK8s</a></h3>
+        <div class="col-6 u-align--center">
+          <img src="https://assets.ubuntu.com/v1/920467d2-Compare_MicroK8s-K3S-Minikube.svg" alt="" width="240" height="150" loading="lazy" />
+        </div>
+        <p>This blog explains how to create a hybrid Kubernetes cluster with MicroK8s, running Windows containers for specific workloads.</p>
+        <p>Learn about the K8s components required to host Windows-native workloads as well as the networking and support options for Windows worker nodes.</p>
+        <p><a class="p-button--positive" href="https://ubuntu.com/blog/microk8s-windows-workers">Read it here.</a></p>
+      </div>
+    </div>
+</section>
+{% endblock %}

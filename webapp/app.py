@@ -77,6 +77,11 @@ def tutorials():
     return render_template("/tutorials/index.html")
 
 
+@app.route("/resources")
+def resources():
+    return render_template("/resources/index.html")
+
+
 @app.route("/isv")
 def isv():
     return render_template("/isv.html")
