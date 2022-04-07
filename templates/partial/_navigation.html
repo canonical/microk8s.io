@@ -24,6 +24,9 @@
         <li class="p-navigation__item {% if request.path in ['/docs', '/docs/faq', '/docs/protocol'] %}is-selected{% endif %}">
           <a class="p-navigation__link" href="/docs/">Docs</a>
         </li>
+        <li class="p-navigation__item {% if request.path in ['/resources',] %}is-selected{% endif %}">
+          <a class="p-navigation__link" href="/resources/">Resources</a>
+        </li>
         <li class="p-navigation__item">
           <a class="p-navigation__link"  href="https://discuss.kubernetes.io/c/general-discussions/microk8s/26">Community</a>
         </li>
