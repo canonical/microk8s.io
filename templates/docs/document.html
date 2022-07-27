@@ -10,7 +10,7 @@
     <li class="p-side-navigation__item">
       {% if element.navlink_href %}
         <a class="p-side-navigation__link" href="{{ element.navlink_href }}" 
-          {% if element.is_active %}aria-current="page"{% endif %}>
+          {% if element.is_active and element.navlink_fragment == "" %}aria-current="page"{% endif %}>
           {{ element.navlink_text }}</a>
       {% else %}
         <span class="p-side-navigation__text">{{ element.navlink_text }}</span>
@@ -57,7 +57,7 @@
             {% if nav_group.navlink_text %}
               {% if nav_group.navlink_href %}
                 <h3 class="p-side-navigation__heading--linked">
-                  <a class="p-side-navigation__link" href="{{ nav_group.navlink_href }}" {% if nav_group.is_active %}aria-current="page"{% endif %}>
+                  <a class="p-side-navigation__link" href="{{ nav_group.navlink_href }}" {% if nav_group.is_active and nav_group.navlink_fragment == "" %}aria-current="page"{% endif %}>
                     {{ nav_group.navlink_text }}
                   </a>
                 </h3>
