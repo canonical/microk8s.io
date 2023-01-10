@@ -45,8 +45,7 @@
     "lint-staged": "13.1.0",
     "prettier": "2.8.2",
     "stylelint": "14.16.1",
-    "stylelint-config-prettier": "9.0.4",
-    "stylelint-config-standard": "29.0.0",
+    "stylelint-config-standard-scss": "5.0.0",
     "stylelint-order": "6.0.1",
     "watch-cli": "0.2.3",
     "webpack": "5.75.0"

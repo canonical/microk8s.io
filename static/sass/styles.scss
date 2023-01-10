@@ -11,7 +11,6 @@
 // import additional styles
 @import "pattern_github_buttons";
 @import "pattern_tutorials";
-
 @include microk8s-github-buttons;
 
 // Custom styles
@@ -62,16 +61,17 @@
 
   background-blend-mode: multiply, multiply, normal;
   background-color: #111;
-  background-image: linear-gradient(
+  background-image:
+    linear-gradient(
       to bottom left,
-      rgba(216, 216, 216, 0.54) 0,
-      rgba(216, 216, 216, 0.54) 49.9%,
+      rgb(216 216 216 / 54%) 0,
+      rgb(216 216 216 / 54%) 49.9%,
       transparent 50%
     ),
     linear-gradient(
       to bottom right,
-      rgba(228, 228, 228, 0.54) 0,
-      rgba(228, 228, 228, 0.54) 49.9%,
+      rgb(228 228 228 / 54%) 0,
+      rgb(228 228 228 / 54%) 49.9%,
       transparent 50%
     ),
     linear-gradient(201deg, #4e4e4e 0%, #333 46%, #111 90%);
