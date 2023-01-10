@@ -28,7 +28,7 @@ RUN yarn run build-js
 
 # Build the production image
 # ===
-FROM ubuntu:jammy
+FROM ubuntu:focal
 
 ENV LANG C.UTF-8
 WORKDIR /srv
