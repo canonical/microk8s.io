@@ -86,11 +86,34 @@
     </aside>
 
     <main class="col-9">
-      {% if document.title %}
       <div class="p-strip is-shallow is-bordered u-no-padding--top">
         <h1 class="u-no-margin--bottom">{{ document.title }}</h1>
       </div>
+      {% if document.headings_map and not document.disable_toc %}
+      <div class="p-strip is-shallow u-no-padding--bottom">
+        <ol class="p-list--nested-counter">
+          {% for heading in document.headings_map %}
+          <li>
+            <a href="#{{ heading.heading_slug }}">
+              {{ heading.heading_text }}
+            </a>
+            {% if heading.children %}
+              <ol>
+                {% for sub_heading in heading.children %}
+                  <li>
+                    <a href="#{{ sub_heading.heading_slug }}">
+                      {{ sub_heading.heading_text }}
+                    </a>
+                  </li>
+                {% endfor %}
+              </ol>
+            {% endif %}
+          </li>
+          {% endfor %}
+        </ol>
+      </div>
       {% endif %}
+
       <div class="p-strip is-shallow" style="overflow: visible;">
       {{ document.body_html | safe }}
       </div>
