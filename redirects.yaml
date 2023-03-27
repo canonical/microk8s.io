@@ -1,2 +1,2 @@
 /install.exe: /install/v2.0.1.exe
-/microk8s-installer.exe: "https://github.com/ubuntu/microk8s/releases/download/installer-v2.3.1/microk8s-2.3.1-installer-signed.exe"
+/microk8s-installer.exe: "https://github.com/canonical/microk8s/releases/download/installer-v2.3.2/microk8s-2.3.2-installer-signed.exe"
