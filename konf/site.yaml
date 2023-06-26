@@ -1,6 +1,6 @@
 domain: microk8s.io
 
-image: prod-comms.docker-registry.canonical.com/microk8s.io
+image: prod-comms.ps5.docker-registry.canonical.com/microk8s.io
 
 useProxy: true
 
