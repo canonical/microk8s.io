@@ -4,6 +4,7 @@ from flask import render_template
 import talisker
 import flask
 
+from canonicalwebteam import image_template
 from canonicalwebteam.discourse import (
     Docs,
     DocParser,
@@ -46,6 +47,9 @@ app.add_url_rule(
 )
 discourse.init_app(app)
 
+@app.context_processor
+def utility_processor():
+    return {"image": image_template}
 
 @app.route("/")
 def index():
