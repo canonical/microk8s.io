@@ -1,6 +1,6 @@
 .p-tutorials {
-  @extend .p-text--small-caps;
-  
+  @extend %p-text--small-caps;
+
   display: flex;
   flex-direction: column;
 
