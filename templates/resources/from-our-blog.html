@@ -18,8 +18,60 @@
 </article>
 <hr class="is-muted">
 <article class="p-section--shallow">
-  <h2><a href="https://juju.is/cloud-native-kubernetes-usage-report-2021">Kubernetes and cloud-native<br class="u-hide--small"> operations report</a></h2>
-  <p>Canonical is a proud member of the CNCF and MicroK8s is a very popular Kubernetes distribution for developers and enterprises alike.</p>
-  <p>In this industry report, we wanted to leverage our user base to share important data around the usage and operations of Kubernetes and cloud-native technologies. We also asked industry experts to provide their insights &ndash; this makes for a fascinating read.</p>
+  <h2><a href="https://ubuntu.com/blog/microk8s-memory-optimisation">From lightweight to featherweight: MicroK8s memory optimisation</a></h2>
+  <p>What makes MicroK8s a lightweight Kubernetes distribution is its efficient packaging of all upstream Kubernetes services in a single artefact, called a snap.</p>
+  <p>In this blog post, we shed light on some memory footprint optimisations which make MicroK8s even better for Kubernetes deployments on small form factor devices such as the Raspberry Pi or the NVIDIA Jetson.</p>
+  <div>
+    {{ 
+      image (
+      url="https://assets.ubuntu.com/v1/a73d594b-MicroK8s-lightweight.png",
+      alt="",
+      width="696",
+      height="407",
+      hi_def=True,
+      loading="lazy"
+      ) | safe
+    }}
+  </div>
 </article>
 <hr class="is-muted">
+<article class="p-section--shallow">
+  <h2><a href="https://ubuntu.com/blog/ros-2-on-kubernetes-a-simple-talker-and-listener-setup">ROS 2 on Kubernetes: a simple talker and listener setup</a></h2>
+  <p>In this blog series, Sid Faber, Senior Robotics engineer, explains why Kubernetes and robotics are a great match.</p>
+  <p>Learn how to run ROS 2 on Kubernetes and set up a simple talker/listener system using a MicroK8s cluster on Ubuntu.</p>
+  <div>
+    {{ 
+      image (
+      url="https://assets.ubuntu.com/v1/ffd66058-rosk8s.pt2_.cover_.jpg",
+      alt="",
+      width="640",
+      height="427",
+      hi_def=True,
+      loading="lazy"
+      ) | safe
+    }}
+  </div>
+</article>
+<hr class="is-muted">
+<article class="p-section--shallow">
+  <h2><a href="https://ubuntu.com/blog/microk8s-installers-windows-and-macos">MicroK8s now native on Windows and macOS</a></h2>
+  <p>In the summer of 2020, the MicroK8s native installers for Windows and macOS were made generally available.</p>
+  <p>This was a big milestone for the lightweight Kubernetes distribution, making it even simpler for developers to spin up nodes and clusters on their platform of choice.</p>
+  <p>This blog outlines the consistent experience of installing MicroK8s on Linux, Windows and macOS. You will also learn about Multipass, the simple VM utility, used under the hood in the Windows and macOS installers.</p>
+</article>
+<hr class="is-muted">
+<article class="p-section--shallow">
+  <h2><a href="https://ubuntu.com/blog/microk8s-windows-workers">Windows containers on Kubernetes with MicroK8s</a></h2>
+  <p>This blog explains how to create a hybrid Kubernetes cluster with MicroK8s, running Windows containers for specific workloads.</p>
+  <p>Learn about the K8s components required to host Windows-native workloads as well as the networking and support options for Windows worker nodes.</p>
+  {{ 
+    image (
+    url="https://assets.ubuntu.com/v1/a1f200ea-MicroK8sWindows.png",
+    alt="",
+    width="643",
+    height="362",
+    hi_def=True,
+    loading="lazy"
+    ) | safe
+  }}
+</article>
