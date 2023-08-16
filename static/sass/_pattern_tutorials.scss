@@ -5,10 +5,11 @@
   flex-direction: column;
 
   &__meter {
-    background-image: url("https://assets.ubuntu.com/v1/adb66183-level-of-difficulty-updated.png");
+    background-image: url("https://assets.ubuntu.com/v1/469e7934-difficulty-dots.png");
     background-position-x: -75px;
     background-position-y: center;
     background-repeat: no-repeat;
+    background-size: 200%;
     display: inline-block;
     height: $sp-large;
     margin-left: $sp-xx-small;
