@@ -111,3 +111,9 @@
 .no-js .js-tab__content {
   display: block !important;
 }
+
+.table-container {
+  @media screen and (max-width: $breakpoint-small - 1) {
+    overflow: scroll;
+  }
+}
