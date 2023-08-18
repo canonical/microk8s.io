@@ -112,6 +112,7 @@
   display: block !important;
 }
 
+
 .p-strip--whitesuru {
   @extend .p-strip;
 
@@ -135,5 +136,11 @@
   .row--25-75 {
     padding-left: 0;
     padding-right: 0;
+  }
+}
+
+.table-container {
+  @media screen and (max-width: $breakpoint-small - 1) {
+    overflow: scroll;
   }
 }
