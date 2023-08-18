@@ -112,14 +112,13 @@
   display: block !important;
 }
 
-
 .p-strip--whitesuru {
   @extend .p-strip;
 
   background: url("https://assets.ubuntu.com/v1/25538a5e-Suru%20top%20left%20angle.jpg");
   background-position: top left;
-  background-size: contain;
   background-repeat: no-repeat;
+  background-size: contain;
 
   @media screen and (max-width: $breakpoint-small - 1) {
     background: none;
@@ -132,7 +131,7 @@
   }
 }
 
-[role=tabpanel] {
+[role="tabpanel"] {
   .row--25-75 {
     padding-left: 0;
     padding-right: 0;
