@@ -143,3 +143,9 @@
     overflow: scroll;
   }
 }
+
+.p-list--divided.is-contact {
+  li {
+    padding-bottom: 0;
+  }
+}
