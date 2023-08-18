@@ -1,6 +1,7 @@
 .p-card--resources {
   background: #000 url("https://assets.ubuntu.com/v1/134d6bc1-video-background-suru.jpg");
   background-size: cover;
+  color: white;
   display: flex;
   flex-direction: column;
   height: 338px;
@@ -8,10 +9,6 @@
   padding-left: 1rem;
   padding-right: 1rem;
   position: relative;
-
-  h2 {
-    color: white;
-  }
 
   .icon-container {
     align-self: center;
