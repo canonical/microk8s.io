@@ -8,13 +8,15 @@
 
 {% block content %}
 
-<section class="p-strip is-shallow u-no-padding--bottom">
-  <div class="row">
-    <div class="col-start-large-4 col-9">
-      <div class="p-section--shallow">
-        <h1>Understand MicroK8s:<br class="u-hide--small"> Resources</h1>
+<section class="p-strip--whitesuru is-shallow u-no-padding--bottom">
+  <div class="p-section--deep">
+    <div class="row">
+      <div class="col-start-large-4 col-9">
+        <div class="p-section--shallow">
+          <h1>Understand MicroK8s:<br class="u-hide--small"> Resources</h1>
+        </div>
+        <p>Explore a collection of useful resources that will help you understand and evaluate MicroK8s when building your Kubernetes cluster.</p>
       </div>
-      <p>Explore a collection of useful resources that will help you understand and evaluate MicroK8s when building your Kubernetes cluster.</p>
     </div>
   </div>
 </section>
@@ -24,13 +26,13 @@
       {% include "resources/_side-navigation-resources.html" %}
     </div>
     <div class="col-9">
-      <div id="videos-and-webinars">
+      <div id="videos-and-webinars" class="content-container">
         {% include "resources/videos-and-webinars.html" %}
       </div>
-      <div id="publications">
+      <div id="publications" class="content-container">
         {% include "resources/publications.html" %}
       </div>
-      <div id="from-our-blog">
+      <div id="from-our-blog" class="content-container">
         {% include "resources/from-our-blog.html" %}
       </div>
     </div>
