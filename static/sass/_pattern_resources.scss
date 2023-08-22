@@ -1,4 +1,4 @@
-#videos-and-webinars a{
+#videos-and-webinars a {
   display: flex;
   height: 338px;
   overflow: hidden;
@@ -15,11 +15,11 @@
   height: 100%;
   padding-left: 1rem;
   padding-right: 1rem;
-  transition: all .1s;
+  transition: all 0.1s;
   width: 100%;
 
   .icon-container {
-    margin-top: calc(.5rem - 1px);
+    margin-top: calc(0.5rem - 1px);
 
     i {
       height: 1.5rem;
