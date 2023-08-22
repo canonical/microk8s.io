@@ -63,7 +63,7 @@ def thankyou():
 
 
 @app.route("/features")
-def ha():
+def features():
     return render_template("/features/index.html")
 
 
