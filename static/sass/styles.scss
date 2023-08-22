@@ -112,6 +112,32 @@
   display: block !important;
 }
 
+.p-strip--whitesuru {
+  @extend .p-strip;
+
+  background: url("https://assets.ubuntu.com/v1/25538a5e-Suru%20top%20left%20angle.jpg");
+  background-position: top left;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  @media screen and (max-width: $breakpoint-small - 1) {
+    background: none;
+  }
+}
+
+.p-stepped-list__item:first-child {
+  &::after {
+    display: none;
+  }
+}
+
+[role="tabpanel"] {
+  .row--25-75 {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
 .table-container {
   @media screen and (max-width: $breakpoint-small - 1) {
     overflow: scroll;
