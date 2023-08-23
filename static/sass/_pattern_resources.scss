@@ -3,7 +3,7 @@
   height: 338px;
   overflow: hidden;
   text-decoration: none;
-  width: 567px;
+  max-width: 567px;
 }
 
 .p-card--resources {
@@ -32,4 +32,10 @@
   @media screen and (min-width: $breakpoint-large) {
     background: none !important;
   }
+}
+
+#from-our-blog img {
+  width:  35rem;
+  height: auto;
+  background-size: cover;
 }

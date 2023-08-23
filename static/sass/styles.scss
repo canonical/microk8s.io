@@ -98,7 +98,12 @@
   background-repeat: no-repeat;
   background-size: contain;
 
+  // Hide suru on small and medium screens
   @media screen and (max-width: $breakpoint-small - 1) {
+    background: none;
+  }
+
+  @media screen and (min-width: $breakpoint-small) and (max-width: $breakpoint-large - 1) {
     background: none;
   }
 }
