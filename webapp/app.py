@@ -62,9 +62,9 @@ def thankyou():
     return render_template("thank-you.html")
 
 
-@app.route("/high-availability")
-def ha():
-    return render_template("/features/high-availability.html")
+@app.route("/features")
+def features():
+    return render_template("/features/index.html")
 
 
 @app.route("/compare")
