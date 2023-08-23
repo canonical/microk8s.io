@@ -1,5 +1,7 @@
 {% extends 'base_layout.html' %}
+
 {% block title %}MicroK8s - Contact-us{% endblock %}
+
 {% block meta_copydoc %}https://docs.google.com/document/d/1KkLHMrGipY4zgIXreujpyJlLvYUs-iAlP-FtpYrZmWA/edit {% endblock meta_copydoc %}
 
 {% block content %}
@@ -14,7 +16,7 @@
 </section>
 
 <section class="p-section">
-  <div class="row--25-75">
+  <div class="row--25-75 is-split-on-medium">
     <hr class="p-rule">
     <div class="col">
       <h2 class="p-text--small-caps">Call us</h2>
@@ -91,7 +93,7 @@
 </section>
 
 <section class="p-section">
-  <div class="row--25-75">
+  <div class="row--25-75 is-split-on-medium">
     <hr class="p-rule">
     <div class="col">
       <h2 class="p-text--small-caps">Submit a question</h2>
@@ -99,16 +101,12 @@
     <div class="col">
       <div class="row">
         <div class="col-6">
-          <form action="https://ubuntu.com/marketo/submit" method="post" id="mktoForm_3230">
-
+          <form action="https://ubuntu.com/marketo/submit" method="post" id="mktoForm_5364">
             <p>Tell us about your Kubernetes use case</p>
             <ul class="p-list">
               <li class="p-list__item">
                 <textarea id="Comments_from_lead__c" name="Comments_from_lead__c" rows="4" maxlength="2000"></textarea>
               </li>
-            </ul>
-
-            <ul class="p-list">
               <li class="p-list__item">
                 <label for="firstName">First name</label>
                 <input id="firstName" name="firstName" maxlength="255" type="text" />
@@ -125,25 +123,22 @@
                 <label for="phone">Phone number</label>
                 <input  id="phone" name="phone" maxlength="255" type="tel" />
               </li>
+              <li class="p-list__item">
+                <label class="p-checkbox">
+                  <input type="checkbox" aria-labelledby="canonicalUpdatesOptIn" class="p-checkbox__input" value="yes">
+                  <span class="p-checkbox__label" id="canonicalUpdatesOptIn">I agree to receive information about Canonical's products and services.</span>
+                </label>
+              </li>
             </ul>
+            
+            <div class="u-fixed-width">
+              <p>By submitting this form, I confirm that I have read and agree to Canonical's <a href="https://ubuntu.com/legal/data-privacy">Privacy Policy</a>.</p>
+              <button type="submit" class="p-button--positive" onclick="dataLayer.push({'event' : 'GAEvent', 'eventCategory' : 'Form', 'eventAction' : 'cloud contact-us', 'eventLabel' : '{{product}}', 'eventValue' : undefined });">Submit form</button>
+              <p>* Mandatory field</p>
+            </div>
 
-            <ul class="p-list">
-              <li class="p-list__item">
-                <input value="yes" id="canonicalUpdatesOptIn" name="canonicalUpdatesOptIn" type="checkbox" />
-                <label for="canonicalUpdatesOptIn">I agree to receive information about Canonical's products and services.</label>
-              </li>
-              <li class="p-list__item">By submitting this form, I confirm that I have read and agree to Canonical's <a href="https://ubuntu.com/legal/data-privacy">Privacy Policy</a>.</li>
-            </ul>
-            <ul class="p-list">
-              <li class="p-list__item">
-                <button type="submit" class="p-button--positive" onclick="dataLayer.push({'event' : 'GAEvent', 'eventCategory' : 'Form', 'eventAction' : 'cloud contact-us', 'eventLabel' : '{{product}}', 'eventValue' : undefined });">Submit form</button>
-              </li>
-              <li class="p-list__item">
-                <p>* Mandatory field</p>
-              </li>
-            </ul>
             <!-- hidden fields -->
-            <input type="hidden" aria-hidden="true" aria-label="hidden field" name="formid" value="3230" />
+            <input type="hidden" aria-hidden="true" aria-label="hidden field" name="formid" value="5364" />
             <input type="hidden" aria-hidden="true" aria-label="hidden field" name="returnURL" value="https://microk8s.io/thank-you" />
             <input type="hidden" aria-hidden="true" aria-label="hidden field" name="Consent_to_Processing__c" value="yes" />
           </form>
@@ -154,7 +149,7 @@
 </section>
 
 <section class="p-section">
-  <div class="row--25-75">
+  <div class="row--25-75 is-split-on-medium">
     <hr class="p-rule">
     <div class="col">
       <h2 class="p-text--small-caps">Get help with MicorK8s</h2>
