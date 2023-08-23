@@ -28,7 +28,6 @@
 .p-navigation {
   .p-navigation__row {
     .p-navigation__banner {
-      background-color: $ubuntu-orange;
       padding: 0 ($sph--small + $sph--large);
 
       @media only screen and (max-width: $breakpoint-small) {
