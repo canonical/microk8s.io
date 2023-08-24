@@ -1,9 +1,9 @@
 #videos-and-webinars a {
   display: flex;
   height: 21rem;
+  max-width: auto;
   overflow: hidden;
   text-decoration: none;
-  max-width: auto;
 }
 
 .p-card--resources {
@@ -35,7 +35,7 @@
 }
 
 #from-our-blog img {
-  width:  100%;
-  height: auto;
   background-size: cover;
+  height: auto;
+  width: 100%;
 }
