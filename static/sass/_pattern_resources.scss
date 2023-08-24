@@ -1,0 +1,41 @@
+#videos-and-webinars a {
+  display: flex;
+  height: 21rem;
+  max-width: auto;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.p-card--resources {
+  background: #000 url("https://assets.ubuntu.com/v1/134d6bc1-video-background-suru.jpg");
+  background-size: cover;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  transition: all 0.1s;
+  width: 100%;
+
+  .icon-container {
+    margin-top: calc(0.5rem - 1px);
+
+    i {
+      height: 1.5rem;
+      width: 1.5rem;
+    }
+  }
+}
+
+.p-side-navigation__drawer {
+  @media screen and (min-width: $breakpoint-large) {
+    background: none !important;
+  }
+}
+
+#from-our-blog img {
+  background-size: cover;
+  height: auto;
+  width: 100%;
+}
