@@ -11,7 +11,9 @@
 // import additional styles
 @import "pattern_github_buttons";
 @import "pattern_tutorials";
+@import "pattern_footer";
 @include microk8s-github-buttons;
+@include canonical-p-footer;
 
 // Custom styles
 .p-tab {
@@ -28,7 +30,6 @@
 .p-navigation {
   .p-navigation__row {
     .p-navigation__banner {
-      background-color: $ubuntu-orange;
       padding: 0 ($sph--small + $sph--large);
 
       @media only screen and (max-width: $breakpoint-small) {
