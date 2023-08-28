@@ -23,7 +23,7 @@ class TestRoutes(unittest.TestCase):
         When given the /features URL,
         we should return a 200 status code
         """
-        
+
         self.assertEqual(self.client.get("/features").status_code, 200)
 
     def test_compare(self):
@@ -31,7 +31,7 @@ class TestRoutes(unittest.TestCase):
         When given the /compare URL,
         we should return a 200 status code
         """
-        
+
         self.assertEqual(self.client.get("/compare").status_code, 200)
 
     def test_tutorials(self):
@@ -39,15 +39,15 @@ class TestRoutes(unittest.TestCase):
         When given the /tutorials URL,
         we should return a 200 status code
         """
-        
+
         self.assertEqual(self.client.get("/tutorials").status_code, 200)
-    
+
     def test_docs(self):
         """
         When given the /docs URL,
         we should return a 200 status code
         """
-        
+
         self.assertEqual(self.client.get("/docs").status_code, 200)
 
     def test_resources(self):
@@ -55,7 +55,7 @@ class TestRoutes(unittest.TestCase):
         When given the /resources URL,
         we should return a 200 status code
         """
-        
+
         self.assertEqual(self.client.get("/resources").status_code, 200)
 
     def test_contact_us(self):
@@ -63,9 +63,8 @@ class TestRoutes(unittest.TestCase):
         When given the /contact-us URL,
         we should return a 200 status code
         """
-        
-        self.assertEqual(self.client.get("/contact-us").status_code, 200)
 
+        self.assertEqual(self.client.get("/contact-us").status_code, 200)
 
     def test_not_found(self):
         """
