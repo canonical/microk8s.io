@@ -5,50 +5,50 @@
 {% block meta_description %}MicroK8s is the simplest production-grade conformant K8s. Lightweight and focused. Single command install on Linux, Windows and macOS. Made for devOps, great for edge, appliances and IoT. Full high availability Kubernetes with autonomous clusters and distributed storage.{% endblock %}
 
 {% block content %}
-<main id="main-content">
-  <section class="p-strip--whitesuru is-shallow u-no-padding--bottom">
-    <div class="p-section--deep">
-     <div class="row">
-       <div class="col-start-large-4 col-9">
+<section class="p-strip--whitesuru is-shallow u-no-padding--bottom">
+  <div class="p-section--deep">
+    <div class="row">
+      <div class="col-start-large-4 col-9">
         <div class="p-section">
           <h1 class="u-no-margin--bottom">The lightweight Kubernetes</h1>
-          <p class="p-heading--2">Zero-ops, pure-upstream, HA Kubernetes,<br class="u-hide--small"/> from developer workstations to production.</p>
-        </div>
+          <p class="p-heading--2">Zero-ops, pure-upstream, HA Kubernetes,<br class="u-hide--small"> from developer workstations to production.</p>
         </div>
       </div>
-      <div class="row">
-        <div class="col-start-large-4 col-9">
-          <hr class="p-rule">
-          <div class="p-stection" style="display: flex; justify-content: space-between; padding-top: .5rem;">
-            <div>
-              <a class="p-button--positive" href="#install-microk8s">Get started</a> 
-              <a href="https://www.brighttalk.com/webcast/6793/378029?utm_source=brighttalk-portal&utm_medium=web&utm_content=microk8s&utm_campaign=webcasts-search-results-feed">Watch an intro to MicroK8s &nbsp;&rsaquo;</a>
-            </div>
-            <div>
-              {% include "/partial/_github-buttons.html" %}
-            </div>
+    </div>
+    <div class="row">
+      <div class="col-start-large-4 col-9">
+        <hr class="p-rule">
+        <div class="p-stection" style="display: flex; justify-content: space-between; padding-top: .5rem;">
+          <div>
+            <a class="p-button--positive" href="#install-microk8s">Get started</a> 
+            <a href="https://www.brighttalk.com/webcast/6793/378029?utm_source=brighttalk-portal&utm_medium=web&utm_content=microk8s&utm_campaign=webcasts-search-results-feed">Watch an intro to MicroK8s &nbsp;&rsaquo;</a>
+          </div>
+          <div>
+            {% include "/partial/_github-buttons.html" %}
           </div>
         </div>
+      </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="p-section">
-    <div class="row--25-75">
-      <hr class="p-rule">
-      <div class="col">
-        <h2 class="p-text--small-caps">What is MicroK8s</h2>
-      </div>
-      <div class="col">
-        <div class="row">
-          <div class="col-6 u-embedded-media">
-            <iframe class="u-embedded-media__element" src="https://player.vimeo.com/video/466106710?h=206809c045&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="560" height="315" frameborder="0" title="What is MicroK8s?"></iframe>
-          </div>
+<section class="p-section">
+  <div class="row--25-75">
+    <hr class="p-rule">
+    <div class="col">
+      <h2 class="p-text--small-caps">What is MicroK8s</h2>
+    </div>
+    <div class="col">
+      <div class="row">
+        <div class="col-6 u-embedded-media">
+          <iframe class="u-embedded-media__element" src="https://player.vimeo.com/video/466106710?h=206809c045&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="560" height="315" title="What is MicroK8s?"></iframe>
         </div>
       </div>
     </div>
-  </section>
-  
- <section class="p-section">
+  </div>
+</section>
+
+<section class="p-section">
   <div class="row--25-75 p-section">
     <hr class="p-rule">
     <div class="col">
@@ -73,9 +73,9 @@
       <p>Leverage the simplicity, robustness and security of MicroK8s as a full embedded Kubernetes platform. Build containerised solutions with a system that doesn't require your attention. Focus on your customers, not the infrastructure.</p>
     </div>
   </div>
- </section>
+</section>
 
- <section class="p-section">
+<section class="p-section">
   <div class="row--50-50">
     <hr class="p-rule">
     <div class="col">
@@ -92,16 +92,16 @@
       </p>
     </div>
   </div>
- </section>
+</section>
 
- <section class="p-section" id="get-started" role="tablist">
+<section class="p-section" id="get-started">
   <div class="u-fixed-width p-section">
     <hr class="p-rule">
     <h2 id="install-microk8s">Install MicroK8s</h2>
   </div>
   <div class="u-fixed-width">
     <div class="p-tabs">
-      <div class="p-tabs__list js-tabbed-content u-no-margin--bottom" role="tab-list" aria-label="Install MicroK8s">
+      <div class="p-tabs__list js-tabbed-content u-no-margin--bottom" role="tablist" aria-label="Install MicroK8s">
         <div class="p-tabs__item">
           <button class="p-tabs__link" role="tab" aria-selected="true" aria-controls="linux-tab" id="linux">Linux</button>
         </div>
@@ -201,115 +201,114 @@
   </div>
 </section>
 
-  <section class="p-section">
-    <div class="row--50-50">
-      <hr class="p-rule">
-      <div class="col">
-        <h2>Automatic security updates and streamlined upgrades</h2>
-      </div>
-      <div class="col">
-        <p class="p-heading--5">Let it roll, or take control</p>
-        <p>MicroK8s will apply security updates automatically by default, and roll back on failure. Defer them if you want.</p>
-        <p>Upgrade to a newer version of Kubernetes with a single command. It's really that easy. Stick with a major version, or follow the latest upstream work. Go with the flow, or take control in the enterprise to specify versions with perfect precision.</p>
-      </div>
+<section class="p-section">
+  <div class="row--50-50">
+    <hr class="p-rule">
+    <div class="col">
+      <h2>Automatic security updates and streamlined upgrades</h2>
     </div>
-  </section>
+    <div class="col">
+      <p class="p-heading--5">Let it roll, or take control</p>
+      <p>MicroK8s will apply security updates automatically by default, and roll back on failure. Defer them if you want.</p>
+      <p>Upgrade to a newer version of Kubernetes with a single command. It's really that easy. Stick with a major version, or follow the latest upstream work. Go with the flow, or take control in the enterprise to specify versions with perfect precision.</p>
+    </div>
+  </div>
+</section>
 
-  <section class="p-section">
-    <div class="row--50-50">
-      <hr class="p-rule">
-      <div class="col">
-        <h2>Experience MicroK8s</h2>
-      </div>
-      <div class="col">
-        <p>Watch the intro video.<br class="u-hide--small"> Pause and copy commands straight from this text console.</p>
-      </div>
+<section class="p-section">
+  <div class="row--50-50">
+    <hr class="p-rule">
+    <div class="col">
+      <h2>Experience MicroK8s</h2>
     </div>
-    <div class="u-fixed-width">
-      <div class="asciinema-container">
-      <script id="asciicast-KUqQaDt7p3iNO5DP0xC7W4Ufj" src="https://asciinema.org/a/KUqQaDt7p3iNO5DP0xC7W4Ufj.js" async> </script>
-      </div>
+    <div class="col">
+      <p>Watch the intro video.<br class="u-hide--small"> Pause and copy commands straight from this text console.</p>
     </div>
-  </section>
+  </div>
+  <div class="u-fixed-width">
+    <div class="asciinema-container">
+    <script id="asciicast-KUqQaDt7p3iNO5DP0xC7W4Ufj" src="https://asciinema.org/a/KUqQaDt7p3iNO5DP0xC7W4Ufj.js" async> </script>
+    </div>
+  </div>
+</section>
 
-  <section class="p-section">
-    <div class="row--50-50">
-      <hr class="p-rule">
-      <div class="col">
-        <h2>MicroK8s and Kubernetes resources</h2>
-      </div>
-      <div class="col">
-        <div class="row">
-          <div class="col-2">
-            <h3 class="p-text--small-caps">Webinars</h3>
-          </div>
-          <div class="col-4">
-            <ul class="p-list--divided">
-              <li class="p-list__item"><a href="https://www.brighttalk.com/webcast/6793/378029?utm_source=brighttalk-portal&utm_medium=web&utm_content=microk8s&utm_campaign=webcasts-search-results-feed">An intro to MicroK8s</a></li>
-              <li class="p-list__item"><a href="https://www.brighttalk.com/webcast/6793/488796/kubernetes-at-the-edge-easy-as-pi">K8s at the edge: easy as “Pi”</a></li>
-            </ul>
-          </div>
+<section class="p-section">
+  <div class="row--50-50">
+    <hr class="p-rule">
+    <div class="col">
+      <h2>MicroK8s and Kubernetes resources</h2>
+    </div>
+    <div class="col">
+      <div class="row">
+        <div class="col-2">
+          <h3 class="p-text--small-caps">Webinars</h3>
+        </div>
+        <div class="col-4">
+          <ul class="p-list--divided">
+            <li class="p-list__item"><a href="https://www.brighttalk.com/webcast/6793/378029?utm_source=brighttalk-portal&utm_medium=web&utm_content=microk8s&utm_campaign=webcasts-search-results-feed">An intro to MicroK8s</a></li>
+            <li class="p-list__item"><a href="https://www.brighttalk.com/webcast/6793/488796/kubernetes-at-the-edge-easy-as-pi">K8s at the edge: easy as “Pi”</a></li>
+          </ul>
         </div>
       </div>
     </div>
-    <div class="row">
-      <div class="col-start-large-7 col-6 col-start-medium-4 col-medium-3">
-        <hr class="p-rule">
-        <div class="row">
-          <div class="col-2">
-            <h3 class="p-text--small-caps">Datasheet</h3>
-          </div>
-          <div class="col-4">
-            <ul class="p-list--divided">
-              <li class="p-list__item"><a href="https://assets.ubuntu.com/v1/80a86843-MicroK8s.for.ISVs.DS.pdf">Microk8s for ISVs</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-start-large-7 col-6 col-start-medium-4 col-medium-3">
-        <hr class="p-rule">
-        <div class="row">
-          <div class="col-2">
-            <h3 class="p-text--small-caps">Whitepaper</h3>
-          </div>
-          <div class="col-4">
-            <ul class="p-list--divided">
-              <li class="p-list__item"><a  href="https://ubuntu.com/engage/microk8s-451research">Kubernetes: a secure, flexible and automated edge for IoT developers</a></li>
-              <li class="p-list__item"><a href="/resources">Find more resources &nbsp;&rsaquo;</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="p-section">
-    <div class="row--50-50">
+  </div>
+  <div class="row">
+    <div class="col-start-large-7 col-6 col-start-medium-4 col-medium-3">
       <hr class="p-rule">
-      <div class="col">
-        <h2>Looking for a more composable Kubernetes?</h2>
-      </div>
-      <div class="col">
-        <p>If MicroK8s is too opinionated for you, do not worry. MicroK8s is built by the Kubernetes team at Canonical. We also make <a href="https://ubuntu.com/kubernetes">Charmed Kubernetes</a> for total control of all the permutations of Kubernetes components. Build your clusters from the ground up and tailor them to your needs.</p>
-        <p>
-          <a href="https://ubuntu.com/kubernetes/install#cluster">Get started with Charmed Kubernetes&nbsp;&rsaquo;</a>
-        </p>
-      </div>
-    </div>  
-  </section>
-
-  <section class="p-strip--white">
-    <div class="row">
-      <div class="col-start-large-4 col-9">
-        <h2>Insure your MicroK8s clusters with&nbsp;enterprise&nbsp;support</h2>
-        <p>Get in touch with our team of Kubernetes experts</p>
-        <p><a href="/contact-us" class="p-button--positive">Contact us</a></p>
+      <div class="row">
+        <div class="col-2">
+          <h3 class="p-text--small-caps">Datasheet</h3>
+        </div>
+        <div class="col-4">
+          <ul class="p-list--divided">
+            <li class="p-list__item"><a href="https://assets.ubuntu.com/v1/80a86843-MicroK8s.for.ISVs.DS.pdf">Microk8s for ISVs</a></li>
+          </ul>
+        </div>
       </div>
     </div>
-  </section>
-</main>
+  </div>
+  <div class="row">
+    <div class="col-start-large-7 col-6 col-start-medium-4 col-medium-3">
+      <hr class="p-rule">
+      <div class="row">
+        <div class="col-2">
+          <h3 class="p-text--small-caps">Whitepaper</h3>
+        </div>
+        <div class="col-4">
+          <ul class="p-list--divided">
+            <li class="p-list__item"><a  href="https://ubuntu.com/engage/microk8s-451research">Kubernetes: a secure, flexible and automated edge for IoT developers</a></li>
+            <li class="p-list__item"><a href="/resources">Find more resources &nbsp;&rsaquo;</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="p-section">
+  <div class="row--50-50">
+    <hr class="p-rule">
+    <div class="col">
+      <h2>Looking for a more composable Kubernetes?</h2>
+    </div>
+    <div class="col">
+      <p>If MicroK8s is too opinionated for you, do not worry. MicroK8s is built by the Kubernetes team at Canonical. We also make <a href="https://ubuntu.com/kubernetes">Charmed Kubernetes</a> for total control of all the permutations of Kubernetes components. Build your clusters from the ground up and tailor them to your needs.</p>
+      <p>
+        <a href="https://ubuntu.com/kubernetes/install#cluster">Get started with Charmed Kubernetes&nbsp;&rsaquo;</a>
+      </p>
+    </div>
+  </div>  
+</section>
+
+<section class="p-strip--white">
+  <div class="row">
+    <div class="col-start-large-4 col-9">
+      <h2>Insure your MicroK8s clusters with&nbsp;enterprise&nbsp;support</h2>
+      <p>Get in touch with our team of Kubernetes experts</p>
+      <p><a href="/contact-us" class="p-button--positive">Contact us</a></p>
+    </div>
+  </div>
+</section>
 <script src="https://assets.ubuntu.com/v1/703e23c9-lazysizes+noscript+native-loading.5.1.2.min.js" defer></script>
 
 <script src="{{ versioned_static('js/tabbed-content.js') }}"></script>
