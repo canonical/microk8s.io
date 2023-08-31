@@ -126,3 +126,13 @@
     overflow: scroll;
   }
 }
+
+.is-landing {
+  display: flex;
+  justify-content: space-between;
+  padding-top: .5rem;
+
+  @media screen and (max-width: $breakpoint-small - 1) {
+    flex-direction: column;
+  }
+}
