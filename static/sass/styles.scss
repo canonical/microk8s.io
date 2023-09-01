@@ -126,3 +126,21 @@
     overflow: scroll;
   }
 }
+
+.is-landing {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: space-between;
+  padding-top: $spv--small;
+
+  @media screen and (max-width: $breakpoint-small - 1) {
+    grid-auto-flow: row;
+  }
+}
+
+// Maintain typography bottom padding on mobile
+#resources-heading {
+  @media screen and (max-width: $breakpoint-small - 1) {
+    padding-bottom: $spv--strip-regular;
+  }
+}
