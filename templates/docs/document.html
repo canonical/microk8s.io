@@ -42,12 +42,12 @@
   <div class="row">
     <form class="p-search-box u-no-margin--bottom" action="/docs/search">
       <input type="search" class="p-search-box__input" name="q" {% if query %}value="{{ query }}"{% endif %} placeholder="Search documentation" required/>
-      <button type="submit" class="p-search-box__button" alt="search"><i class="p-icon--search">Search</i></button>
+      <button type="submit" class="p-search-box__button"><i class="p-icon--search">Search</i></button>
     </form>
   </div>
 </section>
 
-<div class="p-strip is-shallow">
+<div class="p-strip--white is-shallow">
   <div class="row">
     <aside class="col-3">
       <nav data-js="navigation" class="p-side-navigation" id="{{ navigation['path'] or 'default' }}">
@@ -87,7 +87,7 @@
 
     <main class="col-9">
       {% if document.title %}
-      <div class="p-strip is-shallow is-bordered u-no-padding--top">
+      <div class="p-strip is-shallow u-no-padding--top">
         <h1 class="u-no-margin--bottom">{{ document.title }}</h1>
       </div>
       {% endif %}

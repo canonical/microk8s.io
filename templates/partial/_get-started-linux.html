@@ -1,85 +1,112 @@
-<ol class="p-stepped-list u-no-margin--left">
-  <li class="p-stepped-list__item">
-    <h3 class="p-stepped-list__title">
-      Install MicroK8s on Linux
-    </h3>
-    <div class="p-stepped-list__content">
-      <p>
-        <code>sudo snap install microk8s --classic</code>
-      </p>
-      <p>Don’t have the <code>snap</code> command? <a href="https://docs.snapcraft.io/installing-snapd" >Get set up for snaps</a></p>
+<div class="row--25-75">
+  <div class="col usv-2">
+    <img src="https://assets.ubuntu.com/v1/6d9cf05a-Linux-var-width.svg" height="144" alt="Linux">
+  </div>
+  <div class="col">
+    <ol class="p-stepped-list--detailed">
+      <li class="p-stepped-list__item">
+        <div class="row">
+          <div class="col-3">
+            <p class="p-stepped-list__title p-heading--5">Install MicroK8s on Linux</p>
+          </div>
+          <div class="col-6">
+            <div class="p-stepped-list__content">
+              <div class="p-code-snippet">
+                <pre class="p-code-snippet__block"><code>sudo snap install microk8s --classic</code></pre>
+              </div>
+              <p>Don't have the <code>snap</code> command? <a href="https://docs.snapcraft.io/installing-snapd" >Get set up for snaps</a></p>
+            </div>   
+          </div>
+        </div>
+      </li>
+    
+      <li class="p-stepped-list__item">
+        <div class="row">
+          <div class="col-3">
+            <p class="p-stepped-list__title p-heading--5">Check the status while Kubernetes starts</p>
+          </div>
+          <div class="col-6">
+            <div class="p-stepped-list__content">
+              <div class="p-code-snippet">
+                <pre class="p-code-snippet__block"><code>microk8s status --wait-ready</code></pre>
+              </div>
+            </div>      
+          </div>
+        </div>
+      </li>
+    
+      <li class="p-stepped-list__item">
+        <div class="row">
+          <div class="col-3">
+            <p class="p-stepped-list__title p-heading--5">Turn on the services you want</p>
+          </div>
+          <div class="col-6">
+            <div class="p-stepped-list__content">
+              <div class="p-code-snippet">
+                <pre class="p-code-snippet__block"><code>microk8s enable dashboard dns registry istio</code></pre>
+              </div>
+              <p>Try <code>microk8s enable --help</code> for a list of available services and optional features. <code>microk8s disable &lt;name&gt;</code> turns off a service.</p>
+            </div>     
+          </div>
+        </div>
+      </li>
+    
+      <li class="p-stepped-list__item">
+        <div class="row">
+          <div class="col-3">
+            <p class="p-stepped-list__title p-heading--5">Start using Kubernetes</p>
+          </div>
+          <div class="col-6">
+            <div class="p-stepped-list__content">
+              <div class="p-code-snippet">
+                <pre class="p-code-snippet__block"><code>microk8s kubectl get all --all-namespaces</code></pre>
+              </div>
+              <p>If you mainly use MicroK8s you can make our kubectl the default one on your command-line with <code>alias mkctl="microk8s kubectl"</code>. Since it is a standard upstream kubectl, you can also drive other Kubernetes clusters with it by pointing to the respective kubeconfig file via the <code>--kubeconfig</code> argument.</p>
+            </div>      
+          </div>
+        </div>
+      </li>
+
+      <li class="p-stepped-list__item">
+        <div class="row">
+          <div class="col-3">
+            <p class="p-stepped-list__title p-heading--5">Access the Kubernetes dashboard</p>
+          </div>
+          <div class="col-6">
+            <div class="p-stepped-list__content">
+              <div class="p-code-snippet">
+                <pre class="p-code-snippet__block"><code>microk8s dashboard-proxy</code></pre>
+              </div>
+            </div>  
+          </div>
+        </div>
+      </li>
+
+      <li class="p-stepped-list__item">
+        <div class="row">
+          <div class="col-3">
+            <p class="p-stepped-list__title p-heading--5">Start and stop Kubernetes to save battery</p>
+          </div>
+          <div class="col-6">
+            <div class="p-stepped-list__content">
+              <p>Kubernetes is a collection of system services that talk to each other all the time. If you don't need them running in the background then you will save battery by stopping them. <code>microk8s start</code> and <code>microk8s stop</code> will do the work for you.</p>
+              <p><a href="/docs">Read the docs to learn more&nbsp;&rsaquo;</a></p>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ol>
+
+    <hr class="p-rule">
+    <div class="row">
+      <div class="col-3">
+        <p class="p-heading--5">Join the community</p>
+      </div>
+      <div class="col-6">
+        <p>
+          <a href="https://discuss.kubernetes.io/c/general-discussions/microk8s/26">Connect with our community and see what others are doing with MicroK8s&nbsp;&rsaquo;</a>
+        </p>
+      </div>
     </div>
-  </li>
-
-  <li class="p-stepped-list__item">
-    <h3 class="p-stepped-list__title">
-      Check the status while Kubernetes starts
-    </h3>
-    <div class="p-stepped-list__content">
-      <p>
-        <code>microk8s status --wait-ready</code>
-      </p>
-    </div>
-  </li>
-
-  <li class="p-stepped-list__item">
-    <h3 class="p-stepped-list__title">
-      Turn on the services you want
-    </h3>
-    <div class="p-stepped-list__content">
-      <p>
-        <code>microk8s enable dashboard dns registry istio</code>
-      </p>
-      <p>
-        Try <code>microk8s enable --help</code> for a list of available services and optional features. <code>microk8s disable &lt;name&gt;</code> turns off a service.
-      </p>
-    </div>
-  </li>
-
-  <li class="p-stepped-list__item">
-    <h3 class="p-stepped-list__title">
-      Start using Kubernetes
-    </h3>
-    <div class="p-stepped-list__content">
-      <p>
-        <code>microk8s kubectl get all --all-namespaces</code>
-      </p>
-      <p>
-        If you mainly use MicroK8s you can make our kubectl the default one on your command-line with <code>alias mkctl="microk8s kubectl"</code>. Since it is a standard upstream kubectl, you can also drive other Kubernetes clusters with it by pointing to the respective kubeconfig file via the <code>--kubeconfig</code> argument.
-      </p>
-    </div>
-  </li>
-
-  <li class="p-stepped-list__item">
-    <h3 class="p-stepped-list__title">
-      Access the Kubernetes dashboard
-    </h3>
-    <div class="p-stepped-list__content">
-      <p>
-        <code>microk8s dashboard-proxy</code>
-      </p>
-    </div>
-  </li>
-
-  <li class="p-stepped-list__item">
-    <h3 class="p-stepped-list__title">
-      Start and stop Kubernetes to save battery
-    </h3>
-    <div class="p-stepped-list__content">
-      <p>
-        Kubernetes is a collection of system services that talk to each other all the time. If you don’t need them running in the background then you will save battery by stopping them. <code>microk8s start</code> and <code>microk8s stop</code> will do the work for you.
-      </p>
-      <p>
-        <a href="/docs">Read the docs to learn more&nbsp;&rsaquo;</a>
-      </p>
-      <h3>
-        Join the community
-      </h3>
-      <p>
-        <a href="https://discuss.kubernetes.io/c/general-discussions/microk8s/26">Connect with our community and see what others are doing with MicroK8s&nbsp;&rsaquo;</a>
-      </p>
-    </div>
-
-  </li>
-
-</ol>
+  </div>
+</div>

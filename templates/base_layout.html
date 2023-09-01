@@ -12,7 +12,7 @@
 
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
   <meta name="copydoc" content="{% block meta_copydoc %}https://drive.google.com/drive/folders/1p6lHFpMFXFeSmVUx3Hyw-zlySn8MZHpP{% endblock %}">
@@ -77,10 +77,10 @@
 
   {% block head_extra %}{% endblock %}
 
-  <link rel="stylesheet" type="text/css" media="screen" href="{{ versioned_static('css/styles.css') }}" />
+  <link rel="stylesheet" type="text/css" media="screen" href="{{ versioned_static('css/styles.css') }}">
 </head>
 
-<body class="no-js">
+<body class="no-js is-paper l-site">
   <script>document.querySelector('body').classList.remove('no-js')</script>
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T5SMPTS" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -88,9 +88,9 @@
 
   {% include "partial/_navigation.html" %}
 
-  <div id="main-content">
+  <main id="main-content">
     {% block content %}{% endblock content %}
-  </div>
+  </main>
 
   {% include "partial/_footer.html" %}
 

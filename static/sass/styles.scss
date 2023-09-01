@@ -4,6 +4,7 @@
 // Import Vanilla
 @import "vanilla-framework";
 @include vanilla;
+@include vf-p-icon-video-play;
 
 // import cookie policy
 @import "@canonical/cookie-policy/build/css/cookie-policy";
@@ -11,7 +12,10 @@
 // import additional styles
 @import "pattern_github_buttons";
 @import "pattern_tutorials";
+@import "pattern_footer";
+@import "pattern_resources";
 @include microk8s-github-buttons;
+@include canonical-p-footer;
 
 // Custom styles
 .p-tab {
@@ -28,7 +32,6 @@
 .p-navigation {
   .p-navigation__row {
     .p-navigation__banner {
-      background-color: $ubuntu-orange;
       padding: 0 ($sph--small + $sph--large);
 
       @media only screen and (max-width: $breakpoint-small) {
@@ -54,31 +57,6 @@
   @media only screen and (max-width: $breakpoint-x-small) {
     padding-bottom: 0;
   }
-}
-
-.p-strip--darksuru {
-  @extend %vf-strip;
-
-  background-blend-mode: multiply, multiply, normal;
-  background-color: #111;
-  background-image:
-    linear-gradient(
-      to bottom left,
-      rgb(216 216 216 / 54%) 0,
-      rgb(216 216 216 / 54%) 49.9%,
-      transparent 50%
-    ),
-    linear-gradient(
-      to bottom right,
-      rgb(228 228 228 / 54%) 0,
-      rgb(228 228 228 / 54%) 49.9%,
-      transparent 50%
-    ),
-    linear-gradient(201deg, #4e4e4e 0%, #333 46%, #111 90%);
-  background-position: top right, top left, left top;
-  background-repeat: no-repeat;
-  background-size: 77% 115%, 71% 104%, 100% 99.8%;
-  color: $color-x-light;
 }
 
 .u-hide--x-small {
@@ -110,4 +88,59 @@
 
 .no-js .js-tab__content {
   display: block !important;
+}
+
+.p-strip--whitesuru {
+  @extend .p-strip;
+
+  background: url("https://assets.ubuntu.com/v1/25538a5e-Suru%20top%20left%20angle.jpg");
+  background-position: top left;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  // Hide suru on small and medium screens
+  @media screen and (max-width: $breakpoint-small - 1) {
+    background: none;
+  }
+
+  @media screen and (min-width: $breakpoint-small) and (max-width: $breakpoint-large - 1) {
+    background: none;
+  }
+}
+
+.p-stepped-list__item:first-child {
+  &::after {
+    display: none;
+  }
+}
+
+[role="tabpanel"] {
+  .row--25-75 {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.table-container {
+  @media screen and (max-width: $breakpoint-small - 1) {
+    overflow: scroll;
+  }
+}
+
+.is-landing {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: space-between;
+  padding-top: $spv--small;
+
+  @media screen and (max-width: $breakpoint-small - 1) {
+    grid-auto-flow: row;
+  }
+}
+
+// Maintain typography bottom padding on mobile
+#resources-heading {
+  @media screen and (max-width: $breakpoint-small - 1) {
+    padding-bottom: $spv--strip-regular;
+  }
 }

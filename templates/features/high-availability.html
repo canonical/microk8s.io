@@ -1,71 +1,38 @@
-{% extends 'features/features_layout.html' %}
-
-{% block title %}High availability (HA){% endblock title %}
-
-{% block meta_copydoc %}https://docs.google.com/document/d/1G6FijpahZCSfxcuFAkv22wKCILEkF2u4Q0TQUfkW5i4/edit#{% endblock meta_copydoc %}
-
-{% block meta_description %}MicroK8s is the simplest production-grade upstream K8s. Lightweight and focused. Single command install on Linux, Windows and macOS. Made for DevOps, great for edge, appliances and IoT. Full high availability Kubernetes with autonomous clusters.{% endblock %}
-
-
-{% block features_content %}
-  <section class="p-strip u-no-padding--top">
-    <div class="u-fixed-width">
-      <h1>High availability (HA)</h1>
-    </div>
-    <div class="row">
-      <div class="col-6">
-        <p class="p-heading--3">Automatic, autonomous and self-healing HA</p>
-        <p>
-         Mission-critical applications require a resilient Kubernetes cluster, which can lose any node and still provide reliable services. Zero downtime is a necessity in production environments. Fault tolerance is especially critical for remote, unattended clusters, appliances and industrial IoT, where access is limited and distributed across a country, a continent or the globe.
-        </p>
-        <p>
-         MicroK8s makes high availability resilient and self-healing with no administrative interventions required.
-        </p>
-      </div>
-      <div class="col-3 u-hide--small u-hide--medium u-align--right">
-        <img src="https://assets.ubuntu.com/v1/9d785fad-Automatic+node+allocation.svg" width="230" alt=""/>
-      </div>
-    </div>
-      <h2>What is high availability Kubernetes?</h2>
-        <p>
-          A highly available Kubernetes cluster can withstand a failure on any component and continue serving workloads without interruption. Three factors are necessary for a highly available Kubernetes cluster:
-        </p>
-        <ul class="p-list">
-          <li class="p-list__item is-ticked">There <b>must be more than one worker node</b>. Since MicroK8s uses every node as a worker node, there is always more than one worker if there is more than one node in the cluster.</li>
-          <li class="p-list__item is-ticked">The <b>Kubernetes API services must be running on more than one node</b> so that losing a single node would not render the cluster inoperable. Every node in the MicroK8s cluster is an API server, which simplifies load-balancing and means we can switch instantaneously to a different API endpoint if one fails.</li>
-          <li class="p-list__item is-ticked"><b>The cluster state must be in a reliable datastore</b>. By default, MicroK8s uses <a  href="https://dqlite.io/">Dqlite</a>, a high-availability SQLite, as its datastore.</li>
-        </ul>
-        <p>
-          All that is required for HA MicroK8s is three or more nodes in the cluster, at which point Dqlite is automatically highly available. If the cluster has more than three nodes, then additional nodes will be standby candidates for the datastore and promoted automatically if the datastore loses one of its nodes. The automatic promotion of standby nodes into the voting cluster of Dqlite makes MicroK8s HA autonomous and ensures that quorum is maintained even if no administrative action is taken.
-        </p>
-        <h2>HA Kubernetes cluster with MicroK8s</h2>
-        <p>
-          MicroK8s delivers a production-grade Kubernetes cluster simply by adding more MicroK8s nodes. There is no extra configuration required - install MicroK8s on three machines, run the join command to link them together and in moments you have a production-grade Kubernetes cluster with HA enabled automatically.
-        </p>
-        <p class="u-sv3">
-          HA MicroK8s provides API services on all nodes. This means that any node in the cluster can be a target for kubectl. Administrators can perform tasks on any node. Three of the nodes are automatically selected to provide the datastore for the Kubernetes control plane, based on their capacity and utilisation. In the event of a datastore node failure, a different node is promoted to participate in the datastore consensus.
-        </p>
-        <div class="u-align--center u-embedded-media">
-	       <iframe title="MicroK8s HA setup demonstration video" class="u-embedded-media__element" src="https://www.youtube.com/embed/pRVCxNSf-Oo" allowfullscreen=""></iframe>
+<section class="p-section--shallow">
+  <hr class="p-rule">
+  <div class="row">
+    <div class="col-6">
+      <div class="p-section--shallow">
+        <div class="p-section--shallow">
+          <h2>High availability (HA)</h2>
         </div>
-        <br />
-        <h2>Autonomous HA Kubernetes</h2>
+        <p>HA Kubernetes clusters can withstand a failure on any component and continue serving workloads without interruption. </p>
+        <p>MicroK8s delivers a production-grade Kubernetes cluster simply by adding more MicroK8s nodes. There is no extra configuration required - install MicroK8s on three machines, run the join command to link them together and in moments, you have a production-grade Kubernetes cluster with HA enabled automatically.</p>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-9">
+      <div class="p-section--shallow">
+        <div class="u-embedded-media u-no-margin--top">
+          <iframe class="u-embedded-media__element" src="https://www.youtube.com/embed/pRVCxNSf-Oo" width="560" height="315" title="What is MicroK8s?"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr class="p-rule">
+  <div class="row">
+    <div class="col-6">
+      <div class="p-section--shallow">
+        <h3 class="p-heading--5">Autonomous HA Kubernetes</h3>
+      </div>
+      <div class="p-section--shallow">
+        <p>Autonomy combined with high availability delivers a full Kubernetes with minimal setup, able to support mission-critical workloads with operational efficiency.</p>
+        <p>MicroK8s uses Dqlite, a high-availability SQLite, as its datastore. As soon as the cluster includes three or more nodes, Dqlite is resilient and the API services are distributed on all of them. If one node should fail or be restarted, Kubernetes keeps running and will recover itself back to full HA when the node becomes available again, with no administrative action. </p>
         <p>
-          HA Kubernetes can be complex, but MicroK8s set-up and configuration is automated with a single command to install or cluster it. As soon as the cluster includes three or more nodes, Dqlite is resilient and the API services are distributed on all of them. If one node should fail or be restarted, Kubernetes keeps running and will recover itself back to full HA when the node becomes available again, with no administrative action. Autonomy combined with high availability delivers a full Kubernetes with minimal setup, able to support mission-critical workloads with operational efficiency.
+          <a>Learn more about how HA MicroK8s works&nbsp;&rsaquo;</a>
         </p>
-        <h2>Dqlite datastore for autonomous high availability</h2>
-        <p>
-          MicroK8s supports high availability using Dqlite as the datastore for cluster state. Dqlite is a fast, embedded, persistent SQL database that is perfect for fault-tolerant IoT devices and micro clouds. In conjunction with MicroK8s, it removes process overhead by embedding the database inside Kubernetes itself and reduces the overall memory footprint of the cluster.
-        </p>
-        <h3>Raft Consensus Algorithm</h3>
-        <p>
-          Fault-tolerant distributed systems need to reach consensus. Multiple servers need to ‘agree’ on replicated state values. Once consensus is reached the values are final, even in the event of failure of a minority of the servers. Raft is the best-practice consensus algorithm.
-        </p>
-        <p>
-          Using raft, Dqlite automatically handles leader election, elects a replacement leader if one fails and ensures that the cluster state is always preserved. Nodes that are not part of the voting group can either be standby, waiting to be added to the voting quorum, or spare, ready to be added if required. The processes of HA cluster formation, Dqlite syncing, voter and leader elections are fully autonomous to ensure minimum administration is needed.
-        </p>
-        <p>
-          <a href="/docs/high-availability">Read more about how HA MicroK8s works in the documentation&nbsp;&rsaquo;</a>
-        </p>
-
-{% endblock %}
+      </div>
+    </div>
+  </div>
+</section>

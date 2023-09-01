@@ -1,0 +1,69 @@
+{% extends 'base_layout.html' %}
+
+{% block title %}MicroK8s features{% endblock %}
+
+{% block meta_description %}MicroK8s high availability is automatic when three or more nodes are joined into the cluster. If there are more than three nodes, then a spare one is automatically promoted if a data store node goes offline, creating a zero-ops resilient HA Kubernetes which can lose nodes and heal itself.{% endblock meta_description %}
+
+{% block meta_copydoc %}https://docs.google.com/document/d/1G6FijpahZCSfxcuFAkv22wKCILEkF2u4Q0TQUfkW5i4/edit{% endblock %}
+
+{% block content %}
+<section class="p-strip is-shallow u-no-padding--bottom">
+  <div class="p-section">
+    <div class="row">
+      <div class="col-start-large-4 col-9">
+        <div class="p-section--shallow">
+          <h1>MicroK8s features</h1>
+        </div>
+        <p>MicroK8s is a lightweight Kubernetes distribution. Run enterprise-grade Kubernetes on your laptop, Raspberry Pi, or Intel NUC, or in any public cloud while consuming minimal resources.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="p-section">
+  <div class="row">
+    <div class="col-3">
+      {% include "/features/_side-navigation-features.html" %}
+    </div>
+    <div class="col-9">
+      <div id="high-availability">
+        {% include "/features/high-availability.html" %}
+      </div>
+      <div id="strict-confinement">
+        {% include "/features/strict-confinement.html" %}
+      </div>
+      <div id="automated-cluster-creation">
+        {% include "/features/automated-cluster-creation.html" %}
+      </div>
+      <div id="nvidia-gpu-support">
+        {% include "/features/nvidia-gpu-support.html" %}
+      </div>
+      <div id="custom-launch-configurations">
+        {% include "/features/custom-launch-configurations.html" %}
+      </div>
+      <div id="addons">
+        {% include "/features/addons.html" %}
+      </div>
+      <div id="microk8s-and-ubuntu-core">
+        {% include "/features/microk8s-and-ubuntu-core.html" %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="p-strip--white is-deep">
+  <div class="row">
+    <div class="col-start-large-4 col-9">
+      <div class="p-section--shallow">
+        <h2>Get enterprise-grade security and support for MicroK8s with Ubuntu Pro</h2>
+      </div>
+      <p>
+        <a class="p-button--positive" href="/contact-us">Contact us</a>
+        <a class="p-button" href="https://ubuntu.com/pro">Get Ubuntu Pro</a>
+      </p>
+    </div>
+  </div>
+</section>
+<script src="{{ versioned_static('js/side-navigation.js') }}"></script>
+
+{% endblock %}
