@@ -128,11 +128,19 @@
 }
 
 .is-landing {
-  display: flex;
+  display: grid;
+  grid-auto-flow: column;
   justify-content: space-between;
-  padding-top: .5rem;
+  padding-top: $spv--small;
 
   @media screen and (max-width: $breakpoint-small - 1) {
-    flex-direction: column;
+    grid-auto-flow: row;
+  }
+}
+
+// Maintain typography bottom padding on mobile
+#resources-heading {
+  @media screen and (max-width: $breakpoint-small - 1) {
+    padding-bottom: $spv--strip-regular;
   }
 }
