@@ -1,44 +1,68 @@
+{% macro nav_logo() %}
+<div class="p-navigation__banner {% if not is_docs %}u-no-padding--left{% endif %}">
+  <div class="p-navigation__tagged-logo">
+    <a class="p-navigation__link" href="/">
+      <div class="p-navigation__logo-tag">
+        <img class="p-navigation__logo-icon" src="https://assets.ubuntu.com/v1/82818827-CoF_white.svg" alt="Canonical" width="95">
+      </div>
+      <span class="p-navigation__logo-title">MicroK8s</span>
+    </a>
+  </div>
+  <a href="#navigation" class="p-navigation__toggle--open" title="menu">Menu</a>
+  <a href="#navigation-closed" class="p-navigation__toggle--close" title="close menu">Close menu</a>
+</div>
+{% endmacro %}
+
+{% macro nav_items() %}
+<nav class="p-navigation__nav" aria-label="main-navigation">
+  <ul class="p-navigation__items" {% if not is_docs %}style="margin-left: -.75rem;"{% endif %}>
+    <li class="p-navigation__item {% if request.path in ['/features',] %}is-selected{% endif %}">
+      <a href="/features" class="p-navigation__link">Features</a>
+    </li>
+    <li class="p-navigation__item {% if request.path in ['/compare',] %}is-selected{% endif %}">
+      <a href="/compare" class="p-navigation__link">Compare</a>
+    </li>
+    <li class="p-navigation__item {% if request.path in ['/tutorials',] %}is-selected{% endif %}">
+      <a href="/tutorials" class="p-navigation__link">Tutorials</a>
+    </li>
+    <li class="p-navigation__item {% if request.path in ['/docs',] %}is-selected{% endif %}">
+      <a href="/docs" class="p-navigation__link">Docs</a>
+    </li>
+    <li class="p-navigation__item {% if request.path in ['/resources',] %}is-selected{% endif %}">
+      <a href="/resources" class="p-navigation__link">Resources</a>
+    </li>
+    <li class="p-navigation__item">
+      <a href="https://discuss.kubernetes.io/c/general-discussions/microk8s/26" class="p-navigation__link">Community</a>
+    </li>
+  </ul>
+  <ul class="p-navigation__items global-nav"></ul>
+</nav>
+{% endmacro %}
+
 <a href="#main-content" class="p-link--skip">Jump to main content</a>
 
 <header id="navigation" class="p-navigation is-dark">
   {% block header_banner %}
-  <div class="row">
-    <div class="p-navigation__banner col-3 u-no-padding--left">
-      <div class="p-navigation__tagged-logo">
-        <a class="p-navigation__link" href="/">
-          <div class="p-navigation__logo-tag">
-            <img class="p-navigation__logo-icon" src="https://assets.ubuntu.com/v1/82818827-CoF_white.svg" alt="Canonical" width="95">
-          </div>
-          <span class="p-navigation__logo-title">MicroK8s</span>
-        </a>
-      </div>
-      <a href="#navigation" class="p-navigation__toggle--open" title="menu">Menu</a>
-      <a href="#navigation-closed" class="p-navigation__toggle--close" title="close menu">Close menu</a>
+  {% if is_docs %}
+  <div class="l-docs__subgrid">
+    <div class="l-docs__sidebar">
+      {{ nav_logo() }}
     </div>
-
-    <nav class="p-navigation__nav col-9" aria-label="main-navigation">
-      <ul class="p-navigation__items" style="margin-left: -.75rem;">
-        <li class="p-navigation__item {% if request.path in ['/features',] %}is-selected{% endif %}">
-          <a href="/features" class="p-navigation__link">Features</a>
-        </li>
-        <li class="p-navigation__item {% if request.path in ['/compare',] %}is-selected{% endif %}">
-          <a href="/compare" class="p-navigation__link">Compare</a>
-        </li>
-        <li class="p-navigation__item {% if request.path in ['/tutorials',] %}is-selected{% endif %}">
-          <a href="/tutorials" class="p-navigation__link">Tutorials</a>
-        </li>
-        <li class="p-navigation__item {% if request.path in ['/docs',] %}is-selected{% endif %}">
-          <a href="/docs" class="p-navigation__link">Docs</a>
-        </li>
-        <li class="p-navigation__item {% if request.path in ['/resources',] %}is-selected{% endif %}">
-          <a href="/resources" class="p-navigation__link">Resources</a>
-        </li>
-        <li class="p-navigation__item">
-          <a href="https://discuss.kubernetes.io/c/general-discussions/microk8s/26" class="p-navigation__link">Community</a>
-        </li>
-      </ul>
-      <ul class="p-navigation__items global-nav"></ul>
-    </nav>
+    <div class="l-docs__main">
+      <div class="p-navigation__row u-fixed-width">
+        {{ nav_items() }}
+      </div>
+    </div>
   </div>
+  {% else %}
+  <div class="row">
+    <div class="col-3">
+      {{ nav_logo() }}
+    </div>
+    <div class="col-9">
+      {{ nav_items() }}
+    </div>
+  </div>
+  {% endif %}
   {% endblock header_banner %}
 </header>

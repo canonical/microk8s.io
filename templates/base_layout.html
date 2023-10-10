@@ -80,12 +80,13 @@
   <link rel="stylesheet" type="text/css" media="screen" href="{{ versioned_static('css/styles.css') }}">
 </head>
 
-<body class="no-js is-paper l-site">
+
+<body class="no-js is-paper {% block body_class %}l-site{% endblock %}">
   <script>document.querySelector('body').classList.remove('no-js')</script>
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T5SMPTS" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
-
+  {% block body %}
   {% include "partial/_navigation.html" %}
 
   <main id="main-content">
@@ -93,11 +94,11 @@
   </main>
 
   {% include "partial/_footer.html" %}
+  {% endblock %}
 
   <script src="{{ versioned_static('js/dist/global-nav.js') }}"></script>
   <script src="{{ versioned_static('js/dist/main.js') }}"></script>
   <script src="{{ versioned_static('js/dist/cookie-policy.js') }}"></script>
-
 </body>
 
 </html>

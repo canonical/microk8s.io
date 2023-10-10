@@ -3,9 +3,7 @@ $ubuntu-orange: #e95420;
 $persian-red: #ce2d2d;
 $theme-default-nav: dark;
 $color-navigation-active-bar: $ubuntu-orange;
-$breakpoint-navigation-threshold: 875px;
 $table-layout-fixed: false;
 
-// Sidebar
-$content-padding: 0 5%;
-$sidebar-width: 18rem;
+// update documentation sidebar width for deeper nesting
+$l-documentation-sidebar-width: 18rem;
