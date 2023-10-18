@@ -144,3 +144,12 @@
     padding-bottom: $spv--strip-regular;
   }
 }
+
+// TODO: to be removed when properly fixed on Vanilla side
+// https://github.com/canonical/vanilla-framework/issues/4898
+@media screen and (min-width: $breakpoint-navigation-threshold) {
+  // align navigation items with grid in docs layout
+  .l-docs__subgrid .p-navigation__row {
+    padding-left: 0.5rem;
+  }
+}
