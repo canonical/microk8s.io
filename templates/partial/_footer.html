@@ -1,3 +1,34 @@
+{% if is_docs %}
+<footer class="p-footer">
+  <div class="l-docs__subgrid">
+    <div class="l-docs__sidebar">
+      <div class="u-fixed-width">
+        <p>© {{ now("%Y") }} Canonical Ltd.</p>
+      </div>
+    </div>
+    <div class="l-docs__main">
+      <div class="row">
+        <div class="col-3 col-medium-2">
+          <ul class="p-list is-dark" style="padding-top: .4rem;">
+            <li class="p-list__item--condensed">
+              <a href="https://www.ubuntu.com/legal">Legal information</a>
+            </li>
+            <li class="p-list__item--condensed">
+              <a href="" class="js-revoke-cookie-manager">Manage your tracker settings</a>
+            </li>
+            <li class="p-list__item--condensed">
+              <a class="p-footer__link" href="https://github.com/canonical-websites/microk8s.io/issues/new">Report a bug on this site</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-9 col-medium-4">
+          <p>Ubuntu and Canonical are registered trademarks of Canonical&nbsp;Ltd.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+{% else %}
 <footer class="p-footer l-footer--sticky">
   <div class="row">
     <div class="col-3 col-medium-2">
@@ -21,3 +52,5 @@
     </div>
   </div>
 </footer>
+{% endif %}
+
