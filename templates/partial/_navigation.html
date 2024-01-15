@@ -1,9 +1,12 @@
 <header id="navigation" class="p-navigation">
   <div class="p-navigation__row">
     <div class="p-navigation__banner">
-      <div class="p-navigation__logo u-vertically-center">
-        <a class="p-navigation__item" href="/" style="color:white;">
-          MicroK8s
+      <div class="p-navigation__tagged-logo">
+        <a class="p-navigation__link" href="/">
+          <div class="p-navigation__logo-tag">
+            <img class="p-navigation__logo-icon" src="https://assets.ubuntu.com/v1/82818827-CoF_white.svg" alt="">
+          </div>
+          <span class="p-navigation__logo-title">Canonical Microk8s</span>
         </a>
       </div>
       <a href="#navigation" class="p-navigation__toggle--open" title="menu">Menu</a>
@@ -31,9 +34,7 @@
           <a class="p-navigation__link"  href="https://discuss.kubernetes.io/c/general-discussions/microk8s/26">Community</a>
         </li>
       </ul>
-      <div class="p-github-buttons">
-        {% include "/partial/_github-buttons.html" %}
-      </div>
+      <ul class="p-navigation__items global-nav" role="menuitem"></ul>
     </nav>
   </div>
 </header>

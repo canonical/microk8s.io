@@ -3,9 +3,12 @@ $ubuntu-orange: #e95420;
 $persian-red: #ce2d2d;
 $theme-default-nav: dark;
 $color-navigation-active-bar: $ubuntu-orange;
-$breakpoint-navigation-threshold: 875px;
+$breakpoint-navigation-threshold: 1036px;
 $table-layout-fixed: false;
 
 // Sidebar
 $content-padding: 0 5%;
 $sidebar-width: 18rem;
+
+// General
+$grid-max-width: 80rem;

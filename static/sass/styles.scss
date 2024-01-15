@@ -9,9 +9,7 @@
 @import "@canonical/cookie-policy/build/css/cookie-policy";
 
 // import additional styles
-@import "pattern_github_buttons";
 @import "pattern_tutorials";
-@include microk8s-github-buttons;
 
 // Custom styles
 .p-tab {
@@ -28,18 +26,6 @@
 .p-navigation {
   .p-navigation__row {
     .p-navigation__banner {
-      background-color: $ubuntu-orange;
-      padding: 0 ($sph--small + $sph--large);
-
-      @media only screen and (max-width: $breakpoint-small) {
-        padding-left: 1rem;
-      }
-
-      .p-navigation__logo {
-        font-weight: 400;
-        margin-right: 0;
-      }
-
       .p-navigation__toggle {
         &--open,
         &--close {
