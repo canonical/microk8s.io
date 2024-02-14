@@ -153,3 +153,24 @@
     padding-left: 0.5rem;
   }
 }
+
+.p-anchor-link {
+  color: $color-dark;
+
+  &:visited {
+    color: $color-dark;
+  }
+
+  &:after {
+    content: "¶";
+    display: inline-block;
+    visibility: hidden;
+    margin-left: 0.5rem;
+  }
+
+  &:hover {
+    &::after {
+      visibility: visible;
+    }
+  }
+}
