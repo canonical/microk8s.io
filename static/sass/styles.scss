@@ -162,10 +162,13 @@
   }
 
   &:after {
+    @extend .p-icon--anchor;
     content: "¶";
     display: inline-block;
+    padding: 1rem;
+    top: 0.6rem;
     visibility: hidden;
-    margin-left: 0.5rem;
+    margin-left: 0.75rem;
   }
 
   &:hover {
