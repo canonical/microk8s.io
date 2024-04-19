@@ -16,6 +16,7 @@
 @import "pattern_resources";
 @include microk8s-github-buttons;
 @include canonical-p-footer;
+@include vf-p-icon-get-link;
 
 // Custom styles
 .p-tab {
@@ -162,7 +163,7 @@
   }
 
   &:after {
-    @extend .p-icon--anchor;
+    @extend .p-icon--get-link;
     content: "¶";
     display: inline-block;
     padding: 1rem;
