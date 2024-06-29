@@ -16,6 +16,7 @@
 @import "pattern_resources";
 @include microk8s-github-buttons;
 @include canonical-p-footer;
+@include vf-p-icon-get-link;
 
 // Custom styles
 .p-tab {
@@ -151,5 +152,29 @@
   // align navigation items with grid in docs layout
   .l-docs__subgrid .p-navigation__row {
     padding-left: 0.5rem;
+  }
+}
+
+.p-anchor-link {
+  color: $color-dark;
+
+  &:visited {
+    color: $color-dark;
+  }
+
+  &:after {
+    @extend .p-icon--get-link;
+    content: "¶";
+    display: inline-block;
+    padding: 1rem;
+    top: 0.6rem;
+    visibility: hidden;
+    margin-left: 0.75rem;
+  }
+
+  &:hover {
+    &::after {
+      visibility: visible;
+    }
   }
 }
