@@ -19,7 +19,21 @@
           </div>
         </div>
       </li>
-    
+      <li class="p-stepped-list__item">
+        <div class="row">
+          <div class="col-3">
+            <p class="p-stepped-list__title p-heading--5">Add yourself to the group</p>
+          </div>
+          <div class="col-6">
+            <div class="p-stepped-list__content">
+              <div class="p-code-snippet">
+                <pre class="p-code-snippet__block"><code>sudo usermod -a -G microk8s $USER</code></pre>
+                <pre class="p-code-snippet__block"><code>su - $USER</code></pre>
+              </div>
+            </div>      
+          </div>
+        </div>
+      </li>
       <li class="p-stepped-list__item">
         <div class="row">
           <div class="col-3">
@@ -44,7 +58,6 @@
             <div class="p-stepped-list__content">
               <div class="p-code-snippet">
                 <pre class="p-code-snippet__block"><code>microk8s enable dashboard</code></pre>
-                <pre class="p-code-snippet__block"><code>microk8s enable dns</code></pre>
                 <pre class="p-code-snippet__block"><code>microk8s enable registry</code></pre>
                 <pre class="p-code-snippet__block"><code>microk8s enable community</code></pre>
                 <pre class="p-code-snippet__block"><code>microk8s enable istio</code></pre>
