@@ -39,6 +39,7 @@ app.add_url_rule(
     "/docs/search",
     "docs-search",
     build_search_view(
+        app=app,
         session=session,
         site="microk8s.io/docs",
         template_path="docs/search.html",
