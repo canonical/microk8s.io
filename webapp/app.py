@@ -43,7 +43,6 @@ app.add_url_rule(
         session=session,
         site="microk8s.io/docs",
         template_path="docs/search.html",
-        request_limit="1/day",
     ),
 )
 discourse.init_app(app)
