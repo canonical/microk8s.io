@@ -1116,10 +1116,10 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
-"@canonical/cookie-policy@3.6.4":
-  version "3.6.4"
-  resolved "https://registry.yarnpkg.com/@canonical/cookie-policy/-/cookie-policy-3.6.4.tgz#895c3770f621b73d88b0d5843c43a32d99e4a462"
-  integrity sha512-kfwamTpAaBhtH5TzlMb8wE814a8lIbONUuSYnS7VPiHDfcdmw4NoBPNpldmNY1j3CAT5vMKOx5kulRTWpEXpag==
+"@canonical/cookie-policy@3.6.5":
+  version "3.6.5"
+  resolved "https://registry.yarnpkg.com/@canonical/cookie-policy/-/cookie-policy-3.6.5.tgz#50d82df6da2970b6b5d78d066dd94fcc1317e591"
+  integrity sha512-CQJKSkuLXhSumkIIw4YPSjR7k9561hZ3EEdMPQTkAVTxXURhm3WzJm/uyrvcAuU/a//jzWa8ScltCaHFBdACew==
 
 "@canonical/global-nav@3.6.4":
   version "3.6.4"
@@ -5446,10 +5446,10 @@ validate-npm-package-license@^3.0.1:
     spdx-correct "^3.0.0"
     spdx-expression-parse "^3.0.0"
 
-vanilla-framework@4.16.0:
-  version "4.16.0"
-  resolved "https://registry.yarnpkg.com/vanilla-framework/-/vanilla-framework-4.16.0.tgz#54e7a51e073de043d45a7bac37ffaa4f4351ac4a"
-  integrity sha512-LrxZLiNOm0cTpG++1X4MMy2efg8Xhc08JUAwNAybeSQ5FaaBGiAodbV1Fx3QvJxlaPFQqsjOdT6uZDwuOD7YJg==
+vanilla-framework@4.23.2:
+  version "4.23.2"
+  resolved "https://registry.yarnpkg.com/vanilla-framework/-/vanilla-framework-4.23.2.tgz#41e1055502b70707c3e86a7eb8c2fd03fd15624a"
+  integrity sha512-+tPWTMjmzaH0M0AratJQO5iXnieIzzbwx1HLEDpEh9dA+SrLdzDd1MrNSBhKsnFlHMjDrhCzKSP4zID2DrVM+w==
 
 vanilla-framework@4.9.0:
   version "4.9.0"
