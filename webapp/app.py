@@ -1,8 +1,10 @@
 # Packages
+from datetime import timedelta
 from canonicalwebteam.flask_base.app import FlaskBase
 from flask import render_template
 import talisker
 import flask
+from flask_caching import Cache
 
 from canonicalwebteam.discourse import (
     Docs,
@@ -10,6 +12,7 @@ from canonicalwebteam.discourse import (
     DiscourseAPI,
 )
 from canonicalwebteam.search import build_search_view
+from canonicalwebteam.cookie_service import CookieConsent
 
 
 # Rename your project below
@@ -23,6 +26,35 @@ app = FlaskBase(
 )
 
 session = talisker.requests.get_session()
+
+# Configuration for shared cookie service
+
+# Configure Flask session
+app.config["PERMANENT_SESSION_LIFETIME"] = timedelta(days=365)
+app.config["SESSION_COOKIE_SAMESITE"] = "Lax"
+app.config["SESSION_COOKIE_HTTPONLY"] = True
+app.config["SESSION_COOKIE_SECURE"] = True
+
+# Initialize Flask-Caching
+app.config["CACHE_TYPE"] = "SimpleCache"
+cache = Cache(app)
+
+
+# Set up cache functions for cookie consent service
+def get_cache(key):
+    return cache.get(key)
+
+
+def set_cache(key, value, timeout):
+    cache.set(key, value, timeout)
+
+
+cookie_service = CookieConsent().init_app(
+    app,
+    get_cache_func=get_cache,
+    set_cache_func=set_cache,
+    start_health_check=True,
+)
 
 discourse = Docs(
     parser=DocParser(

@@ -16,6 +16,11 @@ env:
       key: google-custom-search-key
       name: google-api
 
+  - name: COOKIES_API_KEY
+    secretKeyRef:
+      key: cookies-api-key
+      name: cookies-canonical-com-credentials
+
 # Overrides for production
 production:
   replicas: 5
