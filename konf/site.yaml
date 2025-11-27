@@ -17,9 +17,10 @@ env:
       name: google-api
 
   - name: COOKIES_API_KEY
-    secretKeyRef:
-      key: cookies-api-key
-      name: cookies-canonical-com-credentials
+    valueFrom:
+      secretKeyRef:
+        key: cookies-api-key
+        name: cookies-canonical-com-credentials
 
 # Overrides for production
 production:
